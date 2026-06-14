@@ -192,8 +192,21 @@ def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
 
     latest_mrs = mrs.iloc[-1].dropna().sort_values(ascending=False)
     
+    # Calculate Last Price and Change %
+    latest_prices = stock_data.iloc[-1]
+    if len(stock_data) >= 2:
+        prev_prices = stock_data.iloc[-2]
+        pct_changes = ((latest_prices - prev_prices) / prev_prices.replace(0, np.nan)) * 100
+    else:
+        pct_changes = pd.Series(0.0, index=stock_data.columns)
+
     ranking_df = latest_mrs.reset_index()
     ranking_df.columns = ['Symbol', 'Mansfield_RS']
+    
+    # Map metrics to the ranking dataframe
+    ranking_df['Last_Price'] = ranking_df['Symbol'].map(latest_prices)
+    ranking_df['Chg_Pct'] = ranking_df['Symbol'].map(pct_changes)
+    
     ranking_df['Symbol'] = ranking_df['Symbol'].str.replace('.BK', '', regex=False)
     ranking_df.index = ranking_df.index + 1
     
@@ -625,6 +638,29 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             color: #ffffff;
         }}
 
+        .price-cell {{
+            font-weight: 600;
+            color: #ffffff;
+            width: 120px;
+        }}
+
+        .chg-cell {{
+            font-weight: 600;
+            width: 120px;
+        }}
+
+        .chg-positive {{
+            color: #34d399;
+        }}
+
+        .chg-negative {{
+            color: #f87171;
+        }}
+
+        .chg-zero {{
+            color: var(--text-muted);
+        }}
+
         .rs-cell {{
             width: 160px;
         }}
@@ -779,9 +815,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                         <tr>
                             <th onclick="sortTable(0)">Rank</th>
                             <th onclick="sortTable(1)">Symbol</th>
-                            <th onclick="sortTable(2)">Mansfield RS</th>
-                            <th onclick="sortTable(3)">Market Cap</th>
-                            <th onclick="sortTable(4)">Status</th>
+                            <th onclick="sortTable(2)">Last Price</th>
+                            <th onclick="sortTable(3)">Chg (%)</th>
+                            <th onclick="sortTable(4)">Mansfield RS</th>
+                            <th onclick="sortTable(5)">Market Cap</th>
+                            <th onclick="sortTable(6)">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -789,6 +827,10 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                         <tr>
                             <td class="rank-cell">{i+1}</td>
                             <td class="symbol-cell">{x['Symbol']}</td>
+                            <td class="price-cell">{f"{x['Last_Price']:.2f}" if pd.notna(x['Last_Price']) else 'N/A'}</td>
+                            <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
+                                {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
+                            </td>
                             <td class="rs-cell">
                                 <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
                                     {x['Mansfield_RS']:.2f}
@@ -820,7 +862,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             
             for (let i = 1; i < tr.length; i++) {{
                 let symbolTd = tr[i].getElementsByTagName("td")[1]; // Symbol column
-                let mcapTd = tr[i].getElementsByTagName("td")[3]; // Market Cap column
+                let mcapTd = tr[i].getElementsByTagName("td")[5]; // Market Cap column
                 
                 if (symbolTd && mcapTd) {{
                     let symbolText = symbolTd.textContent || symbolTd.innerText;
@@ -842,13 +884,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             document.getElementById("visibleCount").innerText = count;
         }}
 
-        let sortDirections = [1, 1, 1, 1, 1]; // Toggle direction for each column
+        let sortDirections = [1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column
         
         function sortTable(columnIndex) {{
             let table = document.getElementById("rankingTable");
             let tbody = table.tBodies[0];
             let rows = Array.from(tbody.rows);
-            let isNumeric = (columnIndex === 0 || columnIndex === 2 || columnIndex === 3); // Rank, RS, or Market Cap
+            let isNumeric = (columnIndex === 0 || columnIndex === 2 || columnIndex === 3 || columnIndex === 4 || columnIndex === 5); // Rank, Last Price, Chg %, RS, or Market Cap
             
             let direction = sortDirections[columnIndex];
             
@@ -857,8 +899,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                 let cellB = rowB.cells[columnIndex].textContent.trim();
                 
                 if (isNumeric) {{
-                    let valA = parseFloat(cellA.replace(/,/g, '').replace('M', ''));
-                    let valB = parseFloat(cellB.replace(/,/g, '').replace('M', ''));
+                    let valA = parseFloat(cellA.replace(/,/g, '').replace('M', '').replace('%', '').replace('+', ''));
+                    let valB = parseFloat(cellB.replace(/,/g, '').replace('M', '').replace('%', '').replace('+', ''));
                     if (isNaN(valA)) valA = -999999999;
                     if (isNaN(valB)) valB = -999999999;
                     return direction * (valA - valB);
