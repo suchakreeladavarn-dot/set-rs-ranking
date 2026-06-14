@@ -255,6 +255,18 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stan Weinstein RS Ranking</title>
+    
+    <!-- Open Graph / Facebook Link Preview Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stan Weinstein RS Ranking Leaderboard">
+    <meta property="og:description" content="Stage 2 stock breakout scanner using Mansfield Relative Strength (RS) to track institutional flow.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/suchakreeladavarn-dot/set-rs-ranking/main/stock_scanner_icon.png">
+    
+    <!-- Twitter Link Preview Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Stan Weinstein RS Ranking Leaderboard">
+    <meta property="twitter:description" content="Stage 2 stock breakout scanner using Mansfield Relative Strength (RS) to track institutional flow.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/suchakreeladavarn-dot/set-rs-ranking/main/stock_scanner_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
