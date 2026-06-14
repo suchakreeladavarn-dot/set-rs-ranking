@@ -598,16 +598,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             user-select: none;
             border-bottom: 1px solid var(--border-color);
             transition: color 0.2s;
+            white-space: nowrap;
         }}
 
         th:hover {{
             color: #ffffff;
-        }}
-
-        th::after {{
-            content: ' ↕';
-            font-size: 0.7rem;
-            opacity: 0.5;
         }}
 
         td {{
@@ -813,13 +808,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                 <table id="rankingTable">
                     <thead>
                         <tr>
-                            <th onclick="sortTable(0)">Rank</th>
-                            <th onclick="sortTable(1)">Symbol</th>
-                            <th onclick="sortTable(2)">Last Price</th>
-                            <th onclick="sortTable(3)">Chg (%)</th>
-                            <th onclick="sortTable(4)">Mansfield RS</th>
-                            <th onclick="sortTable(5)">Market Cap</th>
-                            <th onclick="sortTable(6)">Status</th>
+                            <th onclick="sortTable(0)">Rank ↕</th>
+                            <th onclick="sortTable(1)">Symbol ↕</th>
+                            <th onclick="sortTable(2)">Last Price ↕</th>
+                            <th onclick="sortTable(3)">Chg (%) ↕</th>
+                            <th onclick="sortTable(4)">Mansfield RS ↕</th>
+                            <th onclick="sortTable(5)">Market Cap ↕</th>
+                            <th onclick="sortTable(6)">Status ↕</th>
                         </tr>
                     </thead>
                     <tbody>
