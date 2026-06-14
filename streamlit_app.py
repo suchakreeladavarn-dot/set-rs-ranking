@@ -17,37 +17,104 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling
+# Custom premium styling to match the dark theme of the HTML report
 st.markdown("""
 <style>
-    /* Styling for Title */
+    /* Force page background to match the dark theme */
+    .stApp {
+        background-color: #090d16 !important;
+        background-image: 
+            radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.15) 0px, transparent 50%),
+            radial-gradient(at 50% 0%, rgba(76, 29, 149, 0.1) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.8) 0px, transparent 50%) !important;
+        background-attachment: fixed !important;
+        color: #f3f4f6 !important;
+    }
+    
+    /* Force sidebar background to be dark */
+    section[data-testid="stSidebar"] {
+        background-color: #111827 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    
+    /* Make text in main app and sidebar white/light-grey */
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6, .stApp p, .stApp span, .stApp label, .stApp li {
+        color: #f3f4f6 !important;
+    }
+    
+    /* Markdown text container */
+    div[data-testid="stMarkdownContainer"] {
+        color: #f3f4f6 !important;
+    }
+    
+    /* Sidebar text color overrides */
+    section[data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] p,
+    section[data-testid="stSidebar"] label {
+        color: #e5e7eb !important;
+    }
+
+    /* Style the header card */
     .app-header {
         font-family: 'Outfit', sans-serif;
-        background: linear-gradient(135deg, #090d16, #111827, #1e3a8a);
+        background: rgba(22, 30, 49, 0.6) !important;
+        backdrop-filter: blur(12px) !important;
         padding: 2rem;
         border-radius: 20px;
-        color: white;
         margin-bottom: 2rem;
         box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
         background-image: 
-            radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.25) 0px, transparent 50%),
-            radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.8) 0px, transparent 50%);
+            radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.2) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.6) 0px, transparent 50%) !important;
     }
     .app-header h1 {
-        margin: 0;
-        font-size: 2.2rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        margin: 0 !important;
+        font-size: 2.2rem !important;
+        font-weight: 800 !important;
+        background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
     }
     .app-header p {
-        margin: 0.5rem 0 0 0;
-        font-size: 1rem;
-        color: #9ca3af;
+        margin: 0.5rem 0 0 0 !important;
+        font-size: 1rem !important;
+        color: #9ca3af !important;
     }
-    /* Buttons styling */
+
+    /* Inputs fields styling */
+    input[type="text"], input[type="number"], select {
+        background-color: rgba(17, 24, 39, 0.8) !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    /* Make dropdown select boxes dark */
+    div[data-baseweb="select"] > div {
+        background-color: rgba(17, 24, 39, 0.8) !important;
+        color: white !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+    }
+    
+    /* Dropdown options list styling */
+    ul[role="listbox"] {
+        background-color: #111827 !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    ul[role="listbox"] li:hover {
+        background-color: rgba(59, 130, 246, 0.2) !important;
+    }
+
+    /* Style the file uploader widget */
+    section[data-testid="stFileUploader"] {
+        background-color: rgba(17, 24, 39, 0.4) !important;
+        border: 1px dashed rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px !important;
+        padding: 1rem !important;
+    }
+
+    /* Action Buttons styling */
     .stButton>button {
         background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
         color: white !important;
@@ -62,6 +129,26 @@ st.markdown("""
     .stButton>button:hover {
         transform: translateY(-2px) !important;
         box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5) !important;
+    }
+    
+    /* Download buttons (secondary buttons styling) */
+    .stDownloadButton>button {
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: #f3f4f6 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding: 0.4rem 1.2rem !important;
+        border-radius: 8px !important;
+        transition: all 0.2s !important;
+    }
+    .stDownloadButton>button:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(59, 130, 246, 0.4) !important;
+        color: white !important;
+    }
+    
+    /* Divider styling */
+    hr {
+        border-color: rgba(255, 255, 255, 0.08) !important;
     }
 </style>
 """, unsafe_allow_html=True)
