@@ -162,14 +162,27 @@ def fetch_indices_data(max_workers=12):
         ticker = item["ticker"]
         try:
             t_obj = yf.Ticker(ticker)
-            hist = t_obj.history(period="5d")
-            if not hist.empty:
-                latest = hist.iloc[-1]
-                prev = hist.iloc[-2] if len(hist) >= 2 else latest
-                price = float(latest["Close"])
-                prev_price = float(prev["Close"])
-                chg_pct = float(((price - prev_price) / prev_price) * 100)
-                return ticker, price, chg_pct
+            info = t_obj.info
+            price = info.get("regularMarketPrice")
+            chg_pct = info.get("regularMarketChangePercent")
+            
+            # Fallback to history if info does not provide the required fields
+            if price is None or chg_pct is None:
+                hist = t_obj.history(period="5d")
+                if not hist.empty:
+                    latest = hist.iloc[-1]
+                    prev = hist.iloc[-2] if len(hist) >= 2 else latest
+                    if price is None:
+                        price = float(latest["Close"])
+                    if chg_pct is None:
+                        prev_price = float(prev["Close"])
+                        if prev_price != 0:
+                            chg_pct = float(((price - prev_price) / prev_price) * 100)
+                        else:
+                            chg_pct = 0.0
+            
+            if price is not None:
+                return ticker, float(price), float(chg_pct) if chg_pct is not None else 0.0
             return ticker, None, None
         except Exception as e:
             print(f"[WARNING] Error fetching index {ticker}: {e}")
@@ -454,7 +467,6 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                 <img src="https://flagcdn.com/w40/{flag}.png" class="flag-icon" alt="{flag.upper()}">
                 <div class="index-name-ticker">
                     <span class="index-display-name">{name}</span>
-                    <span class="index-ticker-code">{ticker}</span>
                 </div>
             </div>
             <span class="index-price">{price_str}</span>
