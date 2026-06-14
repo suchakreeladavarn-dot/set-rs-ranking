@@ -287,13 +287,18 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         last = row.get('Last_Price')
         if pd.isna(target) or target <= 0 or pd.isna(last) or last <= 0:
             return '<div class="consensus-target">N/A</div>'
-        diff_pct = ((target - last) / last) * 100
+        
+        # Round to 2 decimal places to be consistent with what is displayed on the screen
+        target_rounded = round(float(target), 2)
+        last_rounded = round(float(last), 2)
+        
+        diff_pct = ((target_rounded - last_rounded) / last_rounded) * 100
         if diff_pct > 0:
-            return f'<div class="consensus-target">{target:.2f}</div><div class="consensus-upside upside-positive">Upside +{diff_pct:.2f}%</div>'
+            return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-positive">Upside +{diff_pct:.2f}%</div>'
         elif diff_pct < 0:
-            return f'<div class="consensus-target">{target:.2f}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
+            return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
         else:
-            return f'<div class="consensus-target">{target:.2f}</div><div class="consensus-upside upside-neutral">0.00%</div>'
+            return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-neutral">0.00%</div>'
     
     # Convert to Thailand time (UTC+7) since Streamlit Cloud servers run in UTC by default
     thailand_time = datetime.utcnow() + timedelta(hours=7)
