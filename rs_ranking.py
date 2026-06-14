@@ -892,7 +892,7 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
     stock_source can be a file path (str), a list of symbols (list), or a pandas DataFrame.
     """
     if progress_callback:
-        progress_callback("กำลังประมวลผลรายชื่อหุ้น...", 0.1)
+        progress_callback("Processing stock list...", 0.1)
     
     if isinstance(stock_source, list):
         symbols = sorted(list(set(stock_source)))
@@ -921,26 +921,26 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
         symbols = clean_stock_list(stock_source)
         
     if not symbols:
-        return False, "ไม่พบรายชื่อหุ้นที่ถูกต้องสำหรับการวิเคราะห์"
+        return False, "No valid stock symbols found for analysis."
 
     if progress_callback:
-        progress_callback(f"โหลดหุ้นสำเร็จ {len(symbols)} ตัว กำลังดาวน์โหลดราคาและคำนวณ RS...", 0.3)
+        progress_callback(f"Successfully loaded {len(symbols)} stocks. Downloading price data and calculating RS...", 0.3)
         
     ranking_df = calculate_rs_ranking(symbols, benchmark, ma_length)
     if ranking_df.empty:
-        return False, "ไม่สามารถดาวน์โหลดข้อมูลราคาหรือคำนวณ RS ได้"
+        return False, "Failed to download price data or calculate RS."
         
     succeeded_symbols = ranking_df['Symbol'].tolist()
     
     if progress_callback:
-        progress_callback(f"คำนวณ RS สำเร็จ {len(succeeded_symbols)} ตัว กำลังดึงข้อมูล Market Cap...", 0.6)
+        progress_callback(f"RS calculated for {len(succeeded_symbols)} stocks. Fetching market capitalization...", 0.6)
         
     mcaps = fetch_market_caps(succeeded_symbols)
     ranking_df['Market_Cap_M'] = ranking_df['Symbol'].map(mcaps)
     
     if min_mcap > 0:
         if progress_callback:
-            progress_callback(f"กำลังกรองหุ้นตาม Market Cap >= {min_mcap:,.0f} ล้านบาท...", 0.8)
+            progress_callback(f"Filtering stocks by Market Cap >= {min_mcap:,.0f}M Baht...", 0.8)
         ranking_df = ranking_df[
             (ranking_df['Market_Cap_M'].notna()) & 
             (ranking_df['Market_Cap_M'] >= min_mcap)
@@ -949,20 +949,20 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
         ranking_df.index = ranking_df.index + 1
         
         if ranking_df.empty:
-            return False, "ไม่มีหุ้นตัวใดผ่านเงื่อนไขการกรอง Market Cap"
+            return False, "No stocks passed the market cap filter."
 
     if progress_callback:
-        progress_callback("กำลังสร้างรายงาน HTML แดชบอร์ด...", 0.9)
+        progress_callback("Generating HTML dashboard...", 0.9)
         
     success = build_html_report(ranking_df, benchmark, ma_length, output_path)
     
     if progress_callback:
-        progress_callback("แสกนเสร็จสมบูรณ์!", 1.0)
+        progress_callback("Scan completed!", 1.0)
         
     if success:
         return True, ranking_df
     else:
-        return False, "เกิดข้อผิดพลาดในการบันทึกไฟล์รายงาน HTML"
+        return False, "Error saving the HTML report."
 
 def main():
     parser = argparse.ArgumentParser(description="Stan Weinstein Mansfield Relative Strength Ranking Tool")

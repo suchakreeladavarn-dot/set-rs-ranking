@@ -152,91 +152,90 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
 # App Title Area
 st.markdown("""
 <div class="app-header">
     <h1>📈 Stan Weinstein RS Ranking Dashboard</h1>
-    <p>ระบบสแกนและจัดอันดับความแข็งแกร่งสัมพัทธ์ของหุ้นด้วย Mansfield Relative Strength (RS) คัดกรองหุ้นแนวโน้มขาขึ้นรอบใหญ่</p>
+    <p>Real-time stock relative strength scanning and ranking tool using Mansfield Relative Strength (RS) to screen for Stage 2 breakout stocks.</p>
 </div>
 """, unsafe_allow_html=True)
 
 # Sidebar Configuration
-st.sidebar.markdown("### ⚙️ ตั้งค่าการสแกน")
+st.sidebar.markdown("### ⚙️ Scan Configuration")
 
 benchmark = st.sidebar.text_input(
-    "Benchmark Ticker (ดัชนีอ้างอิง)",
+    "Benchmark Ticker",
     value="^SET.BK",
-    help="เช่น ^SET.BK (ดัชนี SET ของไทย), ^GSPC (ดัชนี S&P 500)"
+    help="e.g. ^SET.BK (Thai SET Index), ^GSPC (S&P 500 Index)"
 ).strip()
 
 ma_length = st.sidebar.number_input(
-    "Moving Average (สัปดาห์/วัน)",
+    "Moving Average Period",
     min_value=10,
     max_value=300,
     value=200,
     step=10,
-    help="ช่วงเวลาที่ใช้คำนวณเส้นค่าเฉลี่ย Mansfield RS (ค่าปกติคือ 200 วัน/สัปดาห์ ในสูตรทั่วไปดั้งเดิมใช้ 30 สัปดาห์หรือ 200 วัน)"
+    help="Period length for calculating Mansfield RS moving average (Default is 200 bars/weeks, or 30 weeks in Stan Weinstein's original setup)"
 )
 
 min_mcap = st.sidebar.number_input(
-    "ขั้นต่ำ Market Cap (ล้านบาท)",
+    "Min Market Cap (M Baht)",
     min_value=0.0,
     value=0.0,
     step=500.0,
-    help="ใช้สำหรับกรองหุ้นที่มีมูลค่าหลักทรัพย์ตามราคาตลาดต่ำกว่าเกณฑ์ออก (ระบุ 0 หากไม่ต้องการกรอง)"
+    help="Filters out stocks with market cap below this threshold in Million Baht (Set to 0 to disable filter)"
 )
 
 # Stock Source Selection
-st.sidebar.markdown("### 📋 แหล่งข้อมูลรายชื่อหุ้น")
+st.sidebar.markdown("### 📋 Stock List Source")
 stock_source_type = st.sidebar.selectbox(
-    "เลือกรายชื่อหุ้น:",
-    ["ใช้รายชื่อหุ้นเริ่มต้น (709 หุ้น)", "อัปโหลดไฟล์ CSV ของตนเอง"]
+    "Select Stock List:",
+    ["Use Default List (709 Stocks)", "Upload Custom CSV File"]
 )
 
 stock_source = "set_stocks.csv"
 uploaded_file = None
 
-if stock_source_type == "อัปโหลดไฟล์ CSV ของตนเอง":
+if stock_source_type == "Upload Custom CSV File":
     uploaded_file = st.sidebar.file_uploader(
-        "อัปโหลดไฟล์ CSV ที่มีคอลัมน์ symbol",
+        "Upload CSV file containing stock symbols",
         type=["csv"],
-        help="ไฟล์ต้องมีหัวคอลัมน์ชื่อ symbol, Ticker, หรือ SYMBOL ตัวอย่างเช่น symbol ในบรรทัดแรก และชื่อหุ้นในบรรทัดถัดไป"
+        help="CSV file must have a column header like 'symbol', 'Ticker', or 'SYMBOL' containing stock tickers."
     )
     if uploaded_file is not None:
         try:
             df_uploaded = pd.read_csv(uploaded_file)
             stock_source = df_uploaded
-            st.sidebar.success(f"อัปโหลดสำเร็จ! พบข้อมูล {len(df_uploaded)} แถว")
+            st.sidebar.success(f"Successfully uploaded! Found {len(df_uploaded)} rows.")
         except Exception as e:
-            st.sidebar.error(f"ไม่สามารถอ่านไฟล์ได้: {str(e)}")
+            st.sidebar.error(f"Error reading file: {str(e)}")
             stock_source = None
     else:
-        st.sidebar.warning("กรุณาอัปโหลดไฟล์ CSV หรือใช้รายชื่อเริ่มต้น")
+        st.sidebar.warning("Please upload a CSV file or choose the default list.")
         stock_source = None
 
 # Action Area
-st.markdown("### 🔍 ดำเนินการค้นหา")
+st.markdown("### 🔍 Execution")
 col_btn, col_info = st.columns([1, 3])
 
 with col_btn:
-    analyze_button = st.button("🚀 เริ่มคำนวณและสแกนหุ้น")
+    analyze_button = st.button("🚀 Start RS Ranking Scan")
 
 output_filename = "rs_ranking_report.html"
 
 # Run calculation if button is clicked
 if analyze_button:
     if stock_source is None:
-        st.error("กรุณาเตรียมแหล่งข้อมูลรายชื่อหุ้นที่ถูกต้องก่อนเริ่มสแกน")
+        st.error("Please prepare a valid stock list source before scanning.")
     else:
         progress_bar = st.progress(0.0)
         status_text = st.empty()
         
         def update_progress(message, percent):
-            status_text.markdown(f"**สถานะการคำนวณ:** {message}")
+            status_text.markdown(f"**Calculation Status:** {message}")
             progress_bar.progress(percent)
             
-        with st.spinner("ระบบกำลังแสกนและดาวน์โหลดข้อมูล..."):
+        with st.spinner("Scanning and downloading data in progress..."):
             try:
                 success, result = rs_ranking.run_scan(
                     stock_source=stock_source,
@@ -248,18 +247,18 @@ if analyze_button:
                 )
                 
                 if success:
-                    st.success("คำนวณและสแกนเสร็จสิ้นเรียบร้อยแล้ว!")
+                    st.success("Calculations and scanning completed successfully!")
                     st.balloons()
                 else:
-                    st.error(f"การสแกนล้มเหลว: {result}")
+                    st.error(f"Scan failed: {result}")
             except Exception as e:
-                st.error(f"เกิดข้อผิดพลาดในการวิเคราะห์: {str(e)}")
-                st.info("คำแนะนำ: กรุณาตรวจสอบว่าชื่อย่อของ Benchmark หรือไฟล์ CSV ถูกต้อง")
+                st.error(f"An error occurred during analysis: {str(e)}")
+                st.info("Tip: Please check if the Benchmark symbol is correct or if your CSV file is formatted properly.")
 
 # Render Area: Load and show report if it exists
 if os.path.exists(output_filename):
     st.markdown("---")
-    st.markdown("### 📊 รายงานผลการจัดอันดับ RS Ranking ล่าสุด")
+    st.markdown("### 📊 Latest RS Ranking Report")
     
     # Download Button
     try:
@@ -267,23 +266,23 @@ if os.path.exists(output_filename):
             html_content = f.read()
             
         st.download_button(
-            label="📥 ดาวน์โหลดไฟล์รายงาน HTML",
+            label="📥 Download HTML Report File",
             data=html_content,
             file_name="rs_ranking_report.html",
             mime="text/html"
         )
         
-        # Embed the generated HTML
-        components.html(html_content, height=1200, scrolling=True)
+        # Embed the generated HTML without an inner iframe scrollbar
+        components.html(html_content, height=1350, scrolling=False)
     except Exception as e:
-        st.error(f"ไม่สามารถโหลดไฟล์รายงานมาแสดงผลได้: {str(e)}")
+        st.error(f"Could not load the report file for rendering: {str(e)}")
 else:
-    st.info("ยังไม่มีข้อมูลรายงานล่าสุด กรุณากดปุ่มด้านบนเพื่อเริ่มทำการสแกนหุ้นเป็นครั้งแรก")
+    st.info("No report data available yet. Please click the button above to start your first stock scan.")
 
 # Footer
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #6b7280; font-size: 0.85rem; padding: 1rem 0;">
-    Stan Weinstein Mansfield RS Web Dashboard • อ้างอิงข้อมูลเรียลไทม์จาก Yahoo Finance • ออกแบบมาเพื่อเปิดดูรายงานได้ทุกที่ ทุกเวลา
+    Stan Weinstein Mansfield RS Web Dashboard • Real-time data powered by Yahoo Finance • Access reports anytime, anywhere.
 </div>
 """, unsafe_allow_html=True)
