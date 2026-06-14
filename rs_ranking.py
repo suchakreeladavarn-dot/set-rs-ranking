@@ -743,6 +743,33 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             background: rgba(255, 255, 255, 0.25);
         }}
 
+        .scan-btn {{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            font-family: 'Outfit', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 100;
+            text-decoration: none;
+        }}
+
+        .scan-btn:hover {{
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }}
+
         /* Responsive adjustments */
         @media (max-width: 768px) {{
             body {{
@@ -779,6 +806,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                 <span class="badge">Benchmark: <strong style="color:white">{benchmark}</strong></span>
                 <span class="badge highlight">Updated: {now_str}</span>
             </div>
+            <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
 
         <!-- Top Performers Carousel/Grid -->
@@ -934,6 +962,10 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                     ths[i].innerHTML = baseText + " ↕";
                 }}
             }}
+        }}
+
+        function triggerParentScan() {{
+            window.parent.location.href = window.location.origin + "/?scan=true";
         }}
     </script>
 </body>

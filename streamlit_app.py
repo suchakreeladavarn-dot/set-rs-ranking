@@ -103,16 +103,17 @@ min_mcap = 0.0
 stock_source = "set_stocks.csv"
 output_filename = "rs_ranking_report.html"
 
-# Render the floating Scan button
-analyze_button = st.button("🚀 Scan Now")
-
-# Run calculation if button is clicked
-if analyze_button:
+# Check if scan query parameter is set to trigger a new calculation
+if "scan" in st.query_params:
+    # Remove parameter to prevent infinite loop on page refresh
+    st.query_params.pop("scan")
+    
     # Use toast notifications to show progress cleanly on full-screen app
     def update_progress(message, percent):
         st.toast(f"⏳ {message} ({int(percent * 100)}%)")
         
     try:
+        st.toast("🚀 Initiating stock scan...")
         success, result = rs_ranking.run_scan(
             stock_source=stock_source,
             benchmark=benchmark,
@@ -141,4 +142,7 @@ if os.path.exists(output_filename):
     except Exception as e:
         st.write(f"Error loading report: {str(e)}")
 else:
-    st.write("No report data available yet. Click 'Scan Now' at the top-right to start your first stock scan.")
+    st.write("No report data available yet.")
+    if st.button("🚀 Start First Scan Now"):
+        st.query_params["scan"] = "true"
+        st.rerun()
