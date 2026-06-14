@@ -421,7 +421,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     display_benchmark = "SET INDEX" if benchmark == "^SET.BK" else benchmark
     bg_colors, text_colors = generate_color_map(ranking_df)
     
-    top_12 = ranking_df.head(12).to_dict('records')
+    top_15 = ranking_df.head(15).to_dict('records')
     all_stocks = ranking_df.to_dict('records')
     
     def get_consensus_html(row):
@@ -1234,7 +1234,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                             <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
                         </div>
                     </div>
-                    ''' for i, x in enumerate(top_12)])}
+                    ''' for i, x in enumerate(top_15)])}
                 </div>
 
                 <!-- Full Interactive Table -->
