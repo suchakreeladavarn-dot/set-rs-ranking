@@ -90,14 +90,17 @@ def save_mcap_cache(cache):
 
 def fetch_market_caps(tickers, max_workers=15):
     """
-    Downloads market capitalization for tickers in parallel, utilizing a local cache
-    to avoid Yahoo Finance rate limits.
+    Downloads market capitalization and IAA consensus mean price for tickers in parallel,
+    utilizing a local cache to avoid Yahoo Finance rate limits.
+    Returns:
+        tuple: (mcaps_dict, consensus_dict)
     """
     cache = load_mcap_cache()
     today_str = datetime.now().strftime('%Y-%m-%d')
     cache_expiry_date = datetime.now() - timedelta(days=5)
     
     mcaps = {}
+    consensus = {}
     tickers_to_fetch = []
     
     # 1. Identify which tickers need fetching
@@ -106,55 +109,76 @@ def fetch_market_caps(tickers, max_workers=15):
         if cached_data:
             try:
                 updated_date = datetime.strptime(cached_data.get("updated_at", "2000-01-01"), "%Y-%m-%d")
-                if updated_date >= cache_expiry_date and cached_data.get("market_cap_m") is not None:
+                # We also check that "target_mean_price" key is in the cached data (even if its value is None/null)
+                # to trigger migration for old cache records that only have "market_cap_m"
+                if updated_date >= cache_expiry_date and cached_data.get("market_cap_m") is not None and "target_mean_price" in cached_data:
                     mcaps[t] = cached_data.get("market_cap_m")
+                    consensus[t] = cached_data.get("target_mean_price")
                     continue
             except Exception:
                 pass
         tickers_to_fetch.append(t)
 
     if not tickers_to_fetch:
-        print(f"[INFO] All {len(tickers)} market caps loaded from local cache.")
-        return mcaps
+        print(f"[INFO] All {len(tickers)} market caps and consensus target prices loaded from local cache.")
+        return mcaps, consensus
 
     print(f"[INFO] Cache status: {len(mcaps)} from cache, need to fetch {len(tickers_to_fetch)} from Yahoo Finance...")
 
-    # 2. Fetch missing market caps in parallel with throttling
+    # 2. Fetch missing market caps and consensus prices in parallel with throttling
     formatted_tickers = [t + ".BK" if not t.endswith(".BK") and not t.startswith("^") else t for t in tickers_to_fetch]
     
     new_data = {}
     
-    def get_single_mcap(ticker):
+    def get_single_stock_data(ticker):
         # Add a tiny delay between thread starts to avoid hitting Yahoo at the exact same millisecond
         time.sleep(0.05)
         clean_t = ticker.replace('.BK', '')
         try:
             t_obj = yf.Ticker(ticker)
-            mcap = t_obj.fast_info.market_cap
+            # Try to fetch info which has targetMeanPrice and marketCap
+            info = t_obj.info
+            mcap = info.get("marketCap")
+            target_mean = info.get("targetMeanPrice")
+            
+            # Fallback to fast_info for market cap if not in info
+            if mcap is None:
+                mcap = t_obj.fast_info.market_cap
+                
             if mcap is not None:
                 mcap_m = mcap / 1e6
-                return clean_t, mcap_m
-            return clean_t, None
+                return clean_t, mcap_m, target_mean
+            return clean_t, None, target_mean
         except Exception:
-            return clean_t, None
+            # Full fallback to fast_info for market cap
+            try:
+                t_obj = yf.Ticker(ticker)
+                mcap = t_obj.fast_info.market_cap
+                if mcap is not None:
+                    return clean_t, mcap / 1e6, None
+            except Exception:
+                pass
+            return clean_t, None, None
 
     # We use fewer workers (max_workers=15) to prevent API rate limiting
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(get_single_mcap, t): t for t in formatted_tickers}
+        futures = {executor.submit(get_single_stock_data, t): t for t in formatted_tickers}
         for future in as_completed(futures):
-            symbol, mcap_m = future.result()
-            new_data[symbol] = mcap_m
+            symbol, mcap_m, target_mean = future.result()
+            new_data[symbol] = (mcap_m, target_mean)
 
     # 3. Update cache
-    for symbol, mcap_m in new_data.items():
+    for symbol, (mcap_m, target_mean) in new_data.items():
         mcaps[symbol] = mcap_m
+        consensus[symbol] = target_mean
         cache[symbol] = {
             "market_cap_m": mcap_m,
+            "target_mean_price": target_mean,
             "updated_at": today_str
         }
         
     save_mcap_cache(cache)
-    return mcaps
+    return mcaps, consensus
 
 def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
     """
@@ -691,6 +715,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             width: 160px;
         }}
 
+        .consensus-cell {{
+            font-weight: 500;
+            color: var(--text-main);
+            width: 150px;
+        }}
+
         .status-cell {{
             width: 140px;
         }}
@@ -854,7 +884,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                             <th onclick="sortTable(2)">Last Price ↕</th>
                             <th onclick="sortTable(3)">Chg (%) ↕</th>
                             <th onclick="sortTable(4)">Market Cap ↕</th>
-                            <th onclick="sortTable(5)">Mansfield RS ↕</th>
+                            <th onclick="sortTable(5)">IAA Consensus ↕</th>
+                            <th onclick="sortTable(6)">Mansfield RS ↕</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -869,6 +900,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                             </td>
                             <td class="mcap-cell">
                                 {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
+                            </td>
+                            <td class="consensus-cell">
+                                {f"{x['Target_Mean_Price']:.2f}" if pd.notna(x['Target_Mean_Price']) and x['Target_Mean_Price'] > 0 else 'N/A'}
                             </td>
                             <td class="rs-cell">
                                 <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
@@ -920,13 +954,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             document.getElementById("visibleCount").innerText = count;
         }}
 
-        let sortDirections = [1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column
+        let sortDirections = [1, 1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column (8 columns total)
         
         function sortTable(columnIndex) {{
             let table = document.getElementById("rankingTable");
             let tbody = table.tBodies[0];
             let rows = Array.from(tbody.rows);
-            let isNumeric = (columnIndex === 0 || columnIndex === 2 || columnIndex === 3 || columnIndex === 4 || columnIndex === 5); // Rank, Last Price, Chg %, RS, or Market Cap
+            let isNumeric = (columnIndex === 0 || columnIndex === 2 || columnIndex === 3 || columnIndex === 4 || columnIndex === 5 || columnIndex === 6); // Rank, Last Price, Chg %, Market Cap, IAA Consensus, or Mansfield RS
             
             let direction = sortDirections[columnIndex];
             
@@ -955,8 +989,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             let ths = table.getElementsByTagName("th");
             for(let i=0; i<ths.length; i++) {{
                 let baseText = ths[i].textContent.replace(/[▲▼↕]/g, "").trim();
-                if(i === 6) {{
-                    ths[i].innerHTML = baseText; // No arrow for Status
+                if(i === 7) {{
+                    ths[i].innerHTML = baseText; // No arrow for Status (index 7)
                 }} else if(i === columnIndex) {{
                     ths[i].innerHTML = baseText + (direction === 1 ? " ▲" : " ▼");
                 }} else {{
@@ -1030,8 +1064,9 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
     if progress_callback:
         progress_callback(f"RS calculated for {len(succeeded_symbols)} stocks. Fetching market capitalization...", 0.6)
         
-    mcaps = fetch_market_caps(succeeded_symbols)
+    mcaps, consensus = fetch_market_caps(succeeded_symbols)
     ranking_df['Market_Cap_M'] = ranking_df['Symbol'].map(mcaps)
+    ranking_df['Target_Mean_Price'] = ranking_df['Symbol'].map(consensus)
     
     if min_mcap > 0:
         if progress_callback:
