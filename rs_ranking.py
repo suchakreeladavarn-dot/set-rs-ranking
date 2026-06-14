@@ -245,7 +245,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     top_12 = ranking_df.head(12).to_dict('records')
     all_stocks = ranking_df.to_dict('records')
     
-    now_str = datetime.now().strftime('%Y-%m-%d %H:%M')
+    # Convert to Thailand time (UTC+7) since Streamlit Cloud servers run in UTC by default
+    thailand_time = datetime.utcnow() + timedelta(hours=7)
+    now_str = thailand_time.strftime('%Y-%m-%d %H:%M')
     
     html_template = f"""<!DOCTYPE html>
 <html lang="en">
