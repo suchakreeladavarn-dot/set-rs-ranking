@@ -633,6 +633,20 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             color: #ffffff;
         }}
 
+        .tv-link {{
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.15s, border-bottom 0.15s;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+            padding-bottom: 1px;
+            display: inline-block;
+        }}
+
+        .tv-link:hover {{
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }}
+
         .price-cell {{
             font-weight: 600;
             color: #ffffff;
@@ -821,7 +835,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                         {"".join([f'''
                         <tr>
                             <td class="rank-cell">{i+1}</td>
-                            <td class="symbol-cell">{x['Symbol']}</td>
+                            <td class="symbol-cell"><a href="https://www.tradingview.com/chart/?symbol=SET:{x['Symbol']}" target="_blank" class="tv-link">{x['Symbol']}</a></td>
                             <td class="price-cell">{f"{x['Last_Price']:.2f}" if pd.notna(x['Last_Price']) else 'N/A'}</td>
                             <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
                                 {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
