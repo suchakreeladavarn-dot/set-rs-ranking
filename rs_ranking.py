@@ -732,7 +732,6 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
                 <span class="badge">Benchmark: <strong style="color:white">{benchmark}</strong></span>
-                <span class="badge">MA Period: <strong style="color:white">{ma_length} Weeks</strong></span>
                 <span class="badge highlight">Updated: {now_str}</span>
             </div>
         </header>
