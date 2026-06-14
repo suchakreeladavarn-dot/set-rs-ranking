@@ -521,8 +521,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .container {{
-            max-width: 1200px;
+            max-width: 1600px;
             margin: 0 auto;
+            width: 95%;
         }}
 
         /* Header Styling */
@@ -1031,33 +1032,41 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             }}
         }}
 
-        /* Top Row Flex Layout */
-        .top-layout-row {{
+        /* Main Layout Row (Content + Sidebar) */
+        .main-layout-row {{
             display: flex;
             gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
             width: 100%;
+            align-items: flex-start;
         }}
 
-        .leaderboard-section {{
-            flex: 2.3;
-            min-width: 320px;
+        .main-left-column {{
+            flex: 2.5;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }}
 
-        .indices-section {{
+        .main-right-column {{
             flex: 1;
             min-width: 320px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 2rem;
         }}
 
-        @media (max-width: 768px) {{
-            .top-layout-row {{
+        @media (max-width: 1024px) {{
+            .main-layout-row {{
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 2rem;
             }}
-            .leaderboard-section, .indices-section {{
+            .main-left-column, .main-right-column {{
                 width: 100%;
                 flex: none;
+            }}
+            .main-right-column {{
+                position: static;
             }}
         }}
 
@@ -1192,10 +1201,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
 
-        <!-- Top Section Layout Row (Leaderboard + Market Indices) -->
-        <div class="top-layout-row">
-            <!-- Left Column: Top Leaderboard -->
-            <div class="leaderboard-section">
+        <!-- Main Layout Row (Left: Leaderboard + Table, Right: Market Indices Sidebar) -->
+        <div class="main-layout-row">
+            <!-- Left Column: Top Leaderboard and Table -->
+            <div class="main-left-column">
+                <!-- Top Leaderboard -->
                 <div class="section-title">
                     <span>⚡</span> Top Leaderboard
                 </div>
@@ -1213,10 +1223,73 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                     </div>
                     ''' for i, x in enumerate(top_12)])}
                 </div>
+
+                <!-- Full Interactive Table -->
+                <div class="table-container-card">
+                    <div class="controls-row">
+                        <div class="search-wrapper">
+                            <!-- SVG Search Icon -->
+                            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            <input type="text" id="searchInput" class="search-input" onkeyup="filterTable()" placeholder="Search symbol...">
+                        </div>
+                        <div class="mcap-filter-wrapper">
+                            <input type="number" id="mcapInput" class="mcap-input" onkeyup="filterTable()" onchange="filterTable()" placeholder="Min Market Cap (M Baht)...">
+                        </div>
+                        <div class="stats-summary">
+                            Showing <strong id="visibleCount">{len(all_stocks)}</strong> of <strong>{len(all_stocks)}</strong> Stocks
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="rankingTable">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0)">Rank ↕</th>
+                                    <th onclick="sortTable(1)">Symbol ↕</th>
+                                    <th onclick="sortTable(2)">Last Price ↕</th>
+                                    <th onclick="sortTable(3)">Chg (%) ↕</th>
+                                    <th onclick="sortTable(4)">Market Cap ↕</th>
+                                    <th onclick="sortTable(5)">IAA Consensus ↕</th>
+                                    <th onclick="sortTable(6)">Mansfield RS ↕</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {"".join([f'''
+                                <tr>
+                                    <td class="rank-cell">{i+1}</td>
+                                    <td class="symbol-cell"><a href="https://www.tradingview.com/chart/?symbol=SET:{x['Symbol']}" target="_blank" class="tv-link">{x['Symbol']}</a></td>
+                                    <td class="price-cell">{f"{x['Last_Price']:.2f}" if pd.notna(x['Last_Price']) else 'N/A'}</td>
+                                    <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
+                                        {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
+                                    </td>
+                                    <td class="mcap-cell">
+                                        {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
+                                    </td>
+                                    <td class="consensus-cell">
+                                        {get_consensus_html(x)}
+                                    </td>
+                                    <td class="rs-cell">
+                                        <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
+                                            {x['Mansfield_RS']:.2f}
+                                        </span>
+                                    </td>
+                                    <td class="status-cell">
+                                        <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
+                                            {('Bullish' if x['Mansfield_RS'] > 0 else ('Bearish' if x['Mansfield_RS'] < -10 else 'Neutral'))}
+                                        </span>
+                                    </td>
+                                </tr>
+                                ''' for i, x in enumerate(all_stocks)])}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Right Column: Market Indices -->
-            <div class="indices-section">
+
+            <!-- Right Column: Sidebar (Market Indices) -->
+            <div class="main-right-column">
                 <div class="section-title">
                     <span>🌍</span> Market Indices
                 </div>
@@ -1232,71 +1305,6 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                 </div>
             </div>
         </div>
-
-        <!-- Full Interactive Table -->
-        <div class="table-container-card">
-            <div class="controls-row">
-                <div class="search-wrapper">
-                    <!-- SVG Search Icon -->
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    <input type="text" id="searchInput" class="search-input" onkeyup="filterTable()" placeholder="Search symbol...">
-                </div>
-                <div class="mcap-filter-wrapper">
-                    <input type="number" id="mcapInput" class="mcap-input" onkeyup="filterTable()" onchange="filterTable()" placeholder="Min Market Cap (M Baht)...">
-                </div>
-                <div class="stats-summary">
-                    Showing <strong id="visibleCount">{len(all_stocks)}</strong> of <strong>{len(all_stocks)}</strong> Stocks
-                </div>
-            </div>
-            <div class="table-responsive">
-                <table id="rankingTable">
-                    <thead>
-                        <tr>
-                            <th onclick="sortTable(0)">Rank ↕</th>
-                            <th onclick="sortTable(1)">Symbol ↕</th>
-                            <th onclick="sortTable(2)">Last Price ↕</th>
-                            <th onclick="sortTable(3)">Chg (%) ↕</th>
-                            <th onclick="sortTable(4)">Market Cap ↕</th>
-                            <th onclick="sortTable(5)">IAA Consensus ↕</th>
-                            <th onclick="sortTable(6)">Mansfield RS ↕</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {"".join([f'''
-                        <tr>
-                            <td class="rank-cell">{i+1}</td>
-                            <td class="symbol-cell"><a href="https://www.tradingview.com/chart/?symbol=SET:{x['Symbol']}" target="_blank" class="tv-link">{x['Symbol']}</a></td>
-                            <td class="price-cell">{f"{x['Last_Price']:.2f}" if pd.notna(x['Last_Price']) else 'N/A'}</td>
-                            <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
-                                {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
-                            </td>
-                            <td class="mcap-cell">
-                                {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
-                            </td>
-                            <td class="consensus-cell">
-                                {get_consensus_html(x)}
-                            </td>
-                            <td class="rs-cell">
-                                <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
-                                    {x['Mansfield_RS']:.2f}
-                                </span>
-                            </td>
-                            <td class="status-cell">
-                                <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
-                                    {('Bullish' if x['Mansfield_RS'] > 0 else ('Bearish' if x['Mansfield_RS'] < -10 else 'Neutral'))}
-                                </span>
-                            </td>
-                        </tr>
-                        ''' for i, x in enumerate(all_stocks)])}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
     <script>
         function filterTable() {{
             let searchInput = document.getElementById("searchInput").value.toUpperCase();
