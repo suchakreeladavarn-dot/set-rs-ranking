@@ -845,7 +845,6 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                     Showing <strong id="visibleCount">{len(all_stocks)}</strong> of <strong>{len(all_stocks)}</strong> Stocks
                 </div>
             </div>
-
             <div class="table-responsive">
                 <table id="rankingTable">
                     <thead>
@@ -854,9 +853,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                             <th onclick="sortTable(1)">Symbol ↕</th>
                             <th onclick="sortTable(2)">Last Price ↕</th>
                             <th onclick="sortTable(3)">Chg (%) ↕</th>
-                            <th onclick="sortTable(4)">Mansfield RS ↕</th>
-                            <th onclick="sortTable(5)">Market Cap ↕</th>
-                            <th onclick="sortTable(6)">Status ↕</th>
+                            <th onclick="sortTable(4)">Market Cap ↕</th>
+                            <th onclick="sortTable(5)">Mansfield RS ↕</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -868,13 +867,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                             <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
                                 {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
                             </td>
+                            <td class="mcap-cell">
+                                {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
+                            </td>
                             <td class="rs-cell">
                                 <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
                                     {x['Mansfield_RS']:.2f}
                                 </span>
-                            </td>
-                            <td class="mcap-cell">
-                                {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
                             </td>
                             <td class="status-cell">
                                 <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
@@ -899,7 +898,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             
             for (let i = 1; i < tr.length; i++) {{
                 let symbolTd = tr[i].getElementsByTagName("td")[1]; // Symbol column
-                let mcapTd = tr[i].getElementsByTagName("td")[5]; // Market Cap column
+                let mcapTd = tr[i].getElementsByTagName("td")[4]; // Market Cap column is now index 4
                 
                 if (symbolTd && mcapTd) {{
                     let symbolText = symbolTd.textContent || symbolTd.innerText;
@@ -956,7 +955,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             let ths = table.getElementsByTagName("th");
             for(let i=0; i<ths.length; i++) {{
                 let baseText = ths[i].textContent.replace(/[▲▼↕]/g, "").trim();
-                if(i === columnIndex) {{
+                if(i === 6) {{
+                    ths[i].innerHTML = baseText; // No arrow for Status
+                }} else if(i === columnIndex) {{
                     ths[i].innerHTML = baseText + (direction === 1 ? " ▲" : " ▼");
                 }} else {{
                     ths[i].innerHTML = baseText + " ↕";
