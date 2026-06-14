@@ -1029,6 +1029,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             .search-wrapper, .mcap-filter-wrapper {{
                 max-width: 100%;
             }}
+        }}
+
         /* Top Row Flex Layout */
         .top-layout-row {{
             display: flex;
@@ -1048,7 +1050,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             min-width: 320px;
         }}
 
-        @media (max-width: 1024px) {{
+        @media (max-width: 768px) {{
             .top-layout-row {{
                 flex-direction: column;
                 gap: 1.5rem;
