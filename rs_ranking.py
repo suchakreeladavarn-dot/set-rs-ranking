@@ -418,6 +418,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     """
     Creates a premium, responsive HTML report.
     """
+    display_benchmark = "SET INDEX" if benchmark == "^SET.BK" else benchmark
     bg_colors, text_colors = generate_color_map(ranking_df)
     
     top_12 = ranking_df.head(12).to_dict('records')
@@ -1207,7 +1208,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             </div>
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
-                <span class="badge">Benchmark: <strong style="color:white">{benchmark}</strong></span>
+                <span class="badge">Benchmark: <strong style="color:white">{display_benchmark}</strong></span>
                 <span class="badge highlight">Updated: {now_str}</span>
             </div>
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
