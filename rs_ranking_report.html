@@ -560,6 +560,150 @@
             .search-wrapper, .mcap-filter-wrapper {
                 max-width: 100%;
             }
+        /* Top Row Flex Layout */
+        .top-layout-row {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .leaderboard-section {
+            flex: 2.3;
+            min-width: 320px;
+        }
+
+        .indices-section {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        @media (max-width: 1024px) {
+            .top-layout-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .leaderboard-section, .indices-section {
+                width: 100%;
+                flex: none;
+            }
+        }
+
+        /* Indices Card Widget */
+        .indices-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.25rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .index-row-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            padding: 0 0.5rem 0.5rem 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .index-row-header span:nth-child(1) {
+            width: 50%;
+        }
+
+        .index-row-header span:nth-child(2) {
+            width: 25%;
+            text-align: right;
+        }
+
+        .index-row-header span:nth-child(3) {
+            width: 25%;
+            text-align: right;
+        }
+
+        .indices-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .index-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0.5rem;
+            border-radius: 10px;
+            transition: background 0.15s;
+        }
+
+        .index-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .index-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            width: 50%;
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            object-fit: cover;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .index-name-ticker {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .index-display-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .index-ticker-code {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .index-price {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            width: 25%;
+            text-align: right;
+        }
+
+        .index-chg {
+            font-weight: 700;
+            font-size: 0.85rem;
+            width: 25%;
+            text-align: right;
+        }
+
+        .index-chg.positive {
+            color: #34d399;
+        }
+
+        .index-chg.negative {
+            color: #f87171;
+        }
+
+        .index-chg.neutral {
+            color: var(--text-muted);
         }
     </style>
 </head>
@@ -572,149 +716,315 @@
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
                 <span class="badge">Benchmark: <strong style="color:white">^SET.BK</strong></span>
-                <span class="badge highlight">Updated: 2026-06-14 14:59</span>
+                <span class="badge highlight">Updated: 2026-06-14 15:08</span>
             </div>
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
 
-        <!-- Top Performers Carousel/Grid -->
-        <div class="section-title">
-            <span>⚡</span> Top Leaderboard
+        <!-- Top Section Layout Row (Leaderboard + Market Indices) -->
+        <div class="top-layout-row">
+            <!-- Left Column: Top Leaderboard -->
+            <div class="leaderboard-section">
+                <div class="section-title">
+                    <span>⚡</span> Top Leaderboard
+                </div>
+                <div class="top-grid">
+                    
+                    <div class="top-card" style="--card-accent-color: #006837; --card-text-color: #ffffff;">
+                        <div class="card-header">
+                            <span class="ticker-name">ML</span>
+                            <span class="rank-badge">1</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">164.08</div>
+                            <div class="mcap-subtext">1,587M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #30a356; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">SMT</span>
+                            <span class="rank-badge">2</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">121.69</div>
+                            <div class="mcap-subtext">3,048M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #7fc866; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">CTW</span>
+                            <span class="rank-badge">3</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">85.18</div>
+                            <div class="mcap-subtext">2,765M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #82c966; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">TAE</span>
+                            <span class="rank-badge">4</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">83.72</div>
+                            <div class="mcap-subtext">1,610M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #abdb6d; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">TEAM</span>
+                            <span class="rank-badge">5</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">62.13</div>
+                            <div class="mcap-subtext">3,134M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #abdb6d; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">FORTH</span>
+                            <span class="rank-badge">6</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">61.62</div>
+                            <div class="mcap-subtext">13,844M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #afdd70; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">STECON</span>
+                            <span class="rank-badge">7</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">59.15</div>
+                            <div class="mcap-subtext">25,824M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #afdd70; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">GUNKUL</span>
+                            <span class="rank-badge">8</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">59.06</div>
+                            <div class="mcap-subtext">36,063M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #c1e57b; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">CCET</span>
+                            <span class="rank-badge">9</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">48.50</div>
+                            <div class="mcap-subtext">100,320M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #c1e57b; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">EPG</span>
+                            <span class="rank-badge">10</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">48.29</div>
+                            <div class="mcap-subtext">15,960M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #c7e77f; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">EASTW</span>
+                            <span class="rank-badge">11</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">43.73</div>
+                            <div class="mcap-subtext">7,287M Baht</div>
+                        </div>
+                    </div>
+                    
+                    <div class="top-card" style="--card-accent-color: #cbe982; --card-text-color: #0f172a;">
+                        <div class="card-header">
+                            <span class="ticker-name">ASAP</span>
+                            <span class="rank-badge">12</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">41.22</div>
+                            <div class="mcap-subtext">1,539M Baht</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Right Column: Market Indices -->
+            <div class="indices-section">
+                <div class="section-title">
+                    <span>🌍</span> Market Indices
+                </div>
+                <div class="indices-card">
+                    <div class="index-row-header">
+                        <span>INDEX</span>
+                        <span>LAST</span>
+                        <span>CHG</span>
+                    </div>
+                    <div class="indices-list">
+                        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/us.png" class="flag-icon" alt="US">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">S&P 500</span>
+                    <span class="index-ticker-code">^GSPC</span>
+                </div>
+            </div>
+            <span class="index-price">7,431.46</span>
+            <span class="index-chg positive">+0.50%</span>
         </div>
-        <div class="top-grid">
-            
-            <div class="top-card" style="--card-accent-color: #006837; --card-text-color: #ffffff;">
-                <div class="card-header">
-                    <span class="ticker-name">ML</span>
-                    <span class="rank-badge">1</span>
-                </div>
-                <div>
-                    <div class="rs-badge">164.08</div>
-                    <div class="mcap-subtext">1,587M Baht</div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/us.png" class="flag-icon" alt="US">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">Dow Jones</span>
+                    <span class="index-ticker-code">^DJI</span>
                 </div>
             </div>
-            
-            <div class="top-card" style="--card-accent-color: #30a356; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">SMT</span>
-                    <span class="rank-badge">2</span>
-                </div>
-                <div>
-                    <div class="rs-badge">121.69</div>
-                    <div class="mcap-subtext">3,048M Baht</div>
-                </div>
-            </div>
-            
-            <div class="top-card" style="--card-accent-color: #7fc866; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">CTW</span>
-                    <span class="rank-badge">3</span>
-                </div>
-                <div>
-                    <div class="rs-badge">85.18</div>
-                    <div class="mcap-subtext">2,765M Baht</div>
+            <span class="index-price">51,202.26</span>
+            <span class="index-chg positive">+0.70%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/us.png" class="flag-icon" alt="US">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">NASDAQ</span>
+                    <span class="index-ticker-code">^IXIC</span>
                 </div>
             </div>
-            
-            <div class="top-card" style="--card-accent-color: #82c966; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">TAE</span>
-                    <span class="rank-badge">4</span>
-                </div>
-                <div>
-                    <div class="rs-badge">83.72</div>
-                    <div class="mcap-subtext">1,610M Baht</div>
-                </div>
-            </div>
-            
-            <div class="top-card" style="--card-accent-color: #abdb6d; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">TEAM</span>
-                    <span class="rank-badge">5</span>
-                </div>
-                <div>
-                    <div class="rs-badge">62.13</div>
-                    <div class="mcap-subtext">3,134M Baht</div>
+            <span class="index-price">25,888.84</span>
+            <span class="index-chg positive">+0.31%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/th.png" class="flag-icon" alt="TH">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">SET Index</span>
+                    <span class="index-ticker-code">^SET.BK</span>
                 </div>
             </div>
-            
-            <div class="top-card" style="--card-accent-color: #abdb6d; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">FORTH</span>
-                    <span class="rank-badge">6</span>
-                </div>
-                <div>
-                    <div class="rs-badge">61.62</div>
-                    <div class="mcap-subtext">13,844M Baht</div>
-                </div>
-            </div>
-            
-            <div class="top-card" style="--card-accent-color: #afdd70; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">STECON</span>
-                    <span class="rank-badge">7</span>
-                </div>
-                <div>
-                    <div class="rs-badge">59.15</div>
-                    <div class="mcap-subtext">25,824M Baht</div>
+            <span class="index-price">1,592.41</span>
+            <span class="index-chg positive">+1.28%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/th.png" class="flag-icon" alt="TH">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">SET50</span>
+                    <span class="index-ticker-code">^SET50.BK</span>
                 </div>
             </div>
-            
-            <div class="top-card" style="--card-accent-color: #afdd70; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">GUNKUL</span>
-                    <span class="rank-badge">8</span>
-                </div>
-                <div>
-                    <div class="rs-badge">59.06</div>
-                    <div class="mcap-subtext">36,063M Baht</div>
-                </div>
-            </div>
-            
-            <div class="top-card" style="--card-accent-color: #c1e57b; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">CCET</span>
-                    <span class="rank-badge">9</span>
-                </div>
-                <div>
-                    <div class="rs-badge">48.50</div>
-                    <div class="mcap-subtext">100,320M Baht</div>
+            <span class="index-price">1,026.89</span>
+            <span class="index-chg neutral">0.00%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/th.png" class="flag-icon" alt="TH">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">mai Index</span>
+                    <span class="index-ticker-code">^MAI.BK</span>
                 </div>
             </div>
-            
-            <div class="top-card" style="--card-accent-color: #c1e57b; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">EPG</span>
-                    <span class="rank-badge">10</span>
-                </div>
-                <div>
-                    <div class="rs-badge">48.29</div>
-                    <div class="mcap-subtext">15,960M Baht</div>
-                </div>
-            </div>
-            
-            <div class="top-card" style="--card-accent-color: #c7e77f; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">EASTW</span>
-                    <span class="rank-badge">11</span>
-                </div>
-                <div>
-                    <div class="rs-badge">43.73</div>
-                    <div class="mcap-subtext">7,287M Baht</div>
+            <span class="index-price">217.42</span>
+            <span class="index-chg neutral">0.00%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/jp.png" class="flag-icon" alt="JP">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">NIKKEI 225</span>
+                    <span class="index-ticker-code">^N225</span>
                 </div>
             </div>
-            
-            <div class="top-card" style="--card-accent-color: #cbe982; --card-text-color: #0f172a;">
-                <div class="card-header">
-                    <span class="ticker-name">ASAP</span>
-                    <span class="rank-badge">12</span>
-                </div>
-                <div>
-                    <div class="rs-badge">41.22</div>
-                    <div class="mcap-subtext">1,539M Baht</div>
+            <span class="index-price">66,020.04</span>
+            <span class="index-chg positive">+2.81%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/hk.png" class="flag-icon" alt="HK">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">Hang Seng</span>
+                    <span class="index-ticker-code">^HSI</span>
                 </div>
             </div>
-            
+            <span class="index-price">24,718.10</span>
+            <span class="index-chg positive">+1.93%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/kr.png" class="flag-icon" alt="KR">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">KOSPI</span>
+                    <span class="index-ticker-code">^KS11</span>
+                </div>
+            </div>
+            <span class="index-price">8,123.62</span>
+            <span class="index-chg positive">+4.63%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/sg.png" class="flag-icon" alt="SG">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">Straits Times</span>
+                    <span class="index-ticker-code">^STI</span>
+                </div>
+            </div>
+            <span class="index-price">5,025.80</span>
+            <span class="index-chg positive">+0.76%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/de.png" class="flag-icon" alt="DE">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">DAX Index</span>
+                    <span class="index-ticker-code">^GDAXI</span>
+                </div>
+            </div>
+            <span class="index-price">24,635.30</span>
+            <span class="index-chg positive">+1.76%</span>
+        </div>
+        
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/gb.png" class="flag-icon" alt="GB">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">FTSE 100</span>
+                    <span class="index-ticker-code">^FTSE</span>
+                </div>
+            </div>
+            <span class="index-price">10,471.70</span>
+            <span class="index-chg positive">+1.63%</span>
+        </div>
+        
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Full Interactive Table -->

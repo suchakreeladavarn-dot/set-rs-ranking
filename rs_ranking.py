@@ -24,6 +24,7 @@ if sys.stdout.encoding != 'utf-8':
 warnings.filterwarnings('ignore')
 
 CACHE_FILE = "market_caps_cache.json"
+INDICES_CACHE_FILE = "indices_cache.json"
 
 def clean_stock_list(file_path):
     """
@@ -87,6 +88,133 @@ def save_mcap_cache(cache):
             json.dump(cache, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print(f"[WARNING] Could not save market cap cache: {e}")
+
+def load_indices_cache():
+    if os.path.exists(INDICES_CACHE_FILE):
+        try:
+            with open(INDICES_CACHE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"[WARNING] Could not load indices cache: {e}")
+    return {}
+
+def save_indices_cache(cache):
+    try:
+        with open(INDICES_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[WARNING] Could not save indices cache: {e}")
+
+def fetch_indices_data(max_workers=12):
+    cache = load_indices_cache()
+    # Cache for 2 hours
+    cache_expiry_time = datetime.now() - timedelta(hours=2)
+    
+    results = []
+    tickers_to_fetch = []
+    
+    indices_info = [
+        {"name": "S&P 500", "ticker": "^GSPC", "flag_code": "us"},
+        {"name": "Dow Jones", "ticker": "^DJI", "flag_code": "us"},
+        {"name": "NASDAQ", "ticker": "^IXIC", "flag_code": "us"},
+        {"name": "SET Index", "ticker": "^SET.BK", "flag_code": "th"},
+        {"name": "SET50", "ticker": "^SET50.BK", "flag_code": "th"},
+        {"name": "mai Index", "ticker": "^MAI.BK", "flag_code": "th"},
+        {"name": "NIKKEI 225", "ticker": "^N225", "flag_code": "jp"},
+        {"name": "Hang Seng", "ticker": "^HSI", "flag_code": "hk"},
+        {"name": "KOSPI", "ticker": "^KS11", "flag_code": "kr"},
+        {"name": "Straits Times", "ticker": "^STI", "flag_code": "sg"},
+        {"name": "DAX Index", "ticker": "^GDAXI", "flag_code": "de"},
+        {"name": "FTSE 100", "ticker": "^FTSE", "flag_code": "gb"}
+    ]
+    
+    for item in indices_info:
+        ticker = item["ticker"]
+        cached_item = cache.get(ticker)
+        if cached_item:
+            try:
+                updated_at_str = cached_item.get("updated_at", "2000-01-01 00:00:00")
+                updated_at = datetime.strptime(updated_at_str, "%Y-%m-%d %H:%M:%S")
+                if updated_at >= cache_expiry_time and cached_item.get("price") is not None:
+                    results.append({
+                        "name": item["name"],
+                        "ticker": ticker,
+                        "flag_code": item["flag_code"],
+                        "price": cached_item["price"],
+                        "chg_pct": cached_item["chg_pct"]
+                    })
+                    continue
+            except Exception:
+                pass
+        tickers_to_fetch.append(item)
+        
+    if not tickers_to_fetch:
+        # Sort results to match original indices_info order
+        ticker_order = {x["ticker"]: i for i, x in enumerate(indices_info)}
+        results.sort(key=lambda x: ticker_order[x["ticker"]])
+        return results
+        
+    print(f"[INFO] Need to fetch {len(tickers_to_fetch)} indices from Yahoo Finance...")
+    
+    new_data = {}
+    
+    def get_single_index(item):
+        ticker = item["ticker"]
+        try:
+            t_obj = yf.Ticker(ticker)
+            hist = t_obj.history(period="5d")
+            if not hist.empty:
+                latest = hist.iloc[-1]
+                prev = hist.iloc[-2] if len(hist) >= 2 else latest
+                price = float(latest["Close"])
+                prev_price = float(prev["Close"])
+                chg_pct = float(((price - prev_price) / prev_price) * 100)
+                return ticker, price, chg_pct
+            return ticker, None, None
+        except Exception as e:
+            print(f"[WARNING] Error fetching index {ticker}: {e}")
+            return ticker, None, None
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(get_single_index, item): item for item in tickers_to_fetch}
+        for future in as_completed(futures):
+            ticker, price, chg_pct = future.result()
+            if price is not None:
+                new_data[ticker] = {
+                    "price": price,
+                    "chg_pct": chg_pct,
+                    "updated_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                }
+                
+    # Update cache
+    for ticker, data in new_data.items():
+        cache[ticker] = data
+        
+    save_indices_cache(cache)
+    
+    # Rebuild final list matching the original indices_info order
+    final_results = []
+    for item in indices_info:
+        ticker = item["ticker"]
+        data = cache.get(ticker)
+        if data and data.get("price") is not None:
+            final_results.append({
+                "name": item["name"],
+                "ticker": ticker,
+                "flag_code": item["flag_code"],
+                "price": data["price"],
+                "chg_pct": data["chg_pct"]
+            })
+        else:
+            final_results.append({
+                "name": item["name"],
+                "ticker": ticker,
+                "flag_code": item["flag_code"],
+                "price": None,
+                "chg_pct": None
+            })
+            
+    return final_results
 
 def fetch_market_caps(tickers, max_workers=15):
     """
@@ -299,6 +427,41 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
         else:
             return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-neutral">0.00%</div>'
+    
+    
+    # Fetch indices data
+    indices_data = fetch_indices_data()
+    indices_html = []
+    for item in indices_data:
+        name = item["name"]
+        ticker = item["ticker"]
+        flag = item["flag_code"]
+        price = item["price"]
+        chg = item["chg_pct"]
+        
+        if price is None:
+            price_str = "N/A"
+            chg_str = "N/A"
+            chg_class = "neutral"
+        else:
+            price_str = f"{price:,.2f}"
+            chg_str = f"{'+' if chg > 0 else ''}{chg:.2f}%"
+            chg_class = "positive" if chg > 0 else ("negative" if chg < 0 else "neutral")
+            
+        indices_html.append(f'''
+        <div class="index-item">
+            <div class="index-info">
+                <img src="https://flagcdn.com/w40/{flag}.png" class="flag-icon" alt="{flag.upper()}">
+                <div class="index-name-ticker">
+                    <span class="index-display-name">{name}</span>
+                    <span class="index-ticker-code">{ticker}</span>
+                </div>
+            </div>
+            <span class="index-price">{price_str}</span>
+            <span class="index-chg {chg_class}">{chg_str}</span>
+        </div>
+        ''')
+    indices_list_html = "".join(indices_html)
     
     # Convert to Thailand time (UTC+7) since Streamlit Cloud servers run in UTC by default
     thailand_time = datetime.utcnow() + timedelta(hours=7)
@@ -866,6 +1029,150 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             .search-wrapper, .mcap-filter-wrapper {{
                 max-width: 100%;
             }}
+        /* Top Row Flex Layout */
+        .top-layout-row {{
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }}
+
+        .leaderboard-section {{
+            flex: 2.3;
+            min-width: 320px;
+        }}
+
+        .indices-section {{
+            flex: 1;
+            min-width: 320px;
+        }}
+
+        @media (max-width: 1024px) {{
+            .top-layout-row {{
+                flex-direction: column;
+                gap: 1.5rem;
+            }}
+            .leaderboard-section, .indices-section {{
+                width: 100%;
+                flex: none;
+            }}
+        }}
+
+        /* Indices Card Widget */
+        .indices-card {{
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.25rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }}
+
+        .index-row-header {{
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            padding: 0 0.5rem 0.5rem 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }}
+
+        .index-row-header span:nth-child(1) {{
+            width: 50%;
+        }}
+
+        .index-row-header span:nth-child(2) {{
+            width: 25%;
+            text-align: right;
+        }}
+
+        .index-row-header span:nth-child(3) {{
+            width: 25%;
+            text-align: right;
+        }}
+
+        .indices-list {{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }}
+
+        .index-item {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0.5rem;
+            border-radius: 10px;
+            transition: background 0.15s;
+        }}
+
+        .index-item:hover {{
+            background: rgba(255, 255, 255, 0.03);
+        }}
+
+        .index-info {{
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            width: 50%;
+        }}
+
+        .flag-icon {{
+            width: 24px;
+            height: 16px;
+            object-fit: cover;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }}
+
+        .index-name-ticker {{
+            display: flex;
+            flex-direction: column;
+        }}
+
+        .index-display-name {{
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+        }}
+
+        .index-ticker-code {{
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }}
+
+        .index-price {{
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            width: 25%;
+            text-align: right;
+        }}
+
+        .index-chg {{
+            font-weight: 700;
+            font-size: 0.85rem;
+            width: 25%;
+            text-align: right;
+        }}
+
+        .index-chg.positive {{
+            color: #34d399;
+        }}
+
+        .index-chg.negative {{
+            color: #f87171;
+        }}
+
+        .index-chg.neutral {{
+            color: var(--text-muted);
         }}
     </style>
 </head>
@@ -883,23 +1190,45 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
 
-        <!-- Top Performers Carousel/Grid -->
-        <div class="section-title">
-            <span>⚡</span> Top Leaderboard
-        </div>
-        <div class="top-grid">
-            {"".join([f'''
-            <div class="top-card" style="--card-accent-color: {bg_colors.get(x['Symbol'], '#1e293b')}; --card-text-color: {text_colors.get(x['Symbol'], '#ffffff')};">
-                <div class="card-header">
-                    <span class="ticker-name">{x['Symbol']}</span>
-                    <span class="rank-badge">{i+1}</span>
+        <!-- Top Section Layout Row (Leaderboard + Market Indices) -->
+        <div class="top-layout-row">
+            <!-- Left Column: Top Leaderboard -->
+            <div class="leaderboard-section">
+                <div class="section-title">
+                    <span>⚡</span> Top Leaderboard
                 </div>
-                <div>
-                    <div class="rs-badge">{x['Mansfield_RS']:.2f}</div>
-                    <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
+                <div class="top-grid">
+                    {"".join([f'''
+                    <div class="top-card" style="--card-accent-color: {bg_colors.get(x['Symbol'], '#1e293b')}; --card-text-color: {text_colors.get(x['Symbol'], '#ffffff')};">
+                        <div class="card-header">
+                            <span class="ticker-name">{x['Symbol']}</span>
+                            <span class="rank-badge">{i+1}</span>
+                        </div>
+                        <div>
+                            <div class="rs-badge">{x['Mansfield_RS']:.2f}</div>
+                            <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
+                        </div>
+                    </div>
+                    ''' for i, x in enumerate(top_12)])}
                 </div>
             </div>
-            ''' for i, x in enumerate(top_12)])}
+            
+            <!-- Right Column: Market Indices -->
+            <div class="indices-section">
+                <div class="section-title">
+                    <span>🌍</span> Market Indices
+                </div>
+                <div class="indices-card">
+                    <div class="index-row-header">
+                        <span>INDEX</span>
+                        <span>LAST</span>
+                        <span>CHG</span>
+                    </div>
+                    <div class="indices-list">
+                        {indices_list_html}
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Full Interactive Table -->
