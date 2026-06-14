@@ -685,7 +685,7 @@
     "updated_at": "2026-06-14"
   },
   "AKS": {
-    "market_cap_m": null,
+    "market_cap_m": 40.732996,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -820,7 +820,7 @@
     "updated_at": "2026-06-14"
   },
   "WAVE": {
-    "market_cap_m": null,
+    "market_cap_m": 229.258752,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2345,7 +2345,7 @@
     "updated_at": "2026-06-14"
   },
   "SAM": {
-    "market_cap_m": null,
+    "market_cap_m": 125.415008,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2490,12 +2490,12 @@
     "updated_at": "2026-06-14"
   },
   "PPP": {
-    "market_cap_m": null,
+    "market_cap_m": 249.0,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "IHL": {
-    "market_cap_m": null,
+    "market_cap_m": 806.21568,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2560,7 +2560,7 @@
     "updated_at": "2026-06-14"
   },
   "PERM": {
-    "market_cap_m": null,
+    "market_cap_m": 183.99808,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2660,7 +2660,7 @@
     "updated_at": "2026-06-14"
   },
   "JTS": {
-    "market_cap_m": null,
+    "market_cap_m": 25853.048832,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2725,7 +2725,7 @@
     "updated_at": "2026-06-14"
   },
   "TKT": {
-    "market_cap_m": null,
+    "market_cap_m": 242.038192,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2740,7 +2740,7 @@
     "updated_at": "2026-06-14"
   },
   "CPL": {
-    "market_cap_m": null,
+    "market_cap_m": 277.101888,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2770,7 +2770,7 @@
     "updated_at": "2026-06-14"
   },
   "MATI": {
-    "market_cap_m": null,
+    "market_cap_m": 537.512704,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2800,7 +2800,7 @@
     "updated_at": "2026-06-14"
   },
   "AJA": {
-    "market_cap_m": null,
+    "market_cap_m": 804.049728,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2820,7 +2820,7 @@
     "updated_at": "2026-06-14"
   },
   "SAWANG": {
-    "market_cap_m": null,
+    "market_cap_m": 147.6,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2860,8 +2860,8 @@
     "updated_at": "2026-06-14"
   },
   "CPAXT": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 152243.863552,
+    "target_mean_price": 16.36471,
     "updated_at": "2026-06-14"
   },
   "KAMART": {
@@ -2870,8 +2870,8 @@
     "updated_at": "2026-06-14"
   },
   "BCH": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 22817.792,
+    "target_mean_price": 11.46429,
     "updated_at": "2026-06-14"
   },
   "GFPT": {
@@ -2915,7 +2915,7 @@
     "updated_at": "2026-06-14"
   },
   "NOBLE": {
-    "market_cap_m": null,
+    "market_cap_m": 2437.556224,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2925,7 +2925,7 @@
     "updated_at": "2026-06-14"
   },
   "MK": {
-    "market_cap_m": null,
+    "market_cap_m": 726.345984,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2940,7 +2940,7 @@
     "updated_at": "2026-06-14"
   },
   "OHTL": {
-    "market_cap_m": null,
+    "market_cap_m": 3865.0368,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2960,17 +2960,17 @@
     "updated_at": "2026-06-14"
   },
   "NC": {
-    "market_cap_m": null,
+    "market_cap_m": 262.29984,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SISB": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 9024.0,
+    "target_mean_price": 13.05,
     "updated_at": "2026-06-14"
   },
   "DCON": {
-    "market_cap_m": null,
+    "market_cap_m": 1077.268096,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -2980,8 +2980,8 @@
     "updated_at": "2026-06-14"
   },
   "AAI": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 7323.609088,
+    "target_mean_price": 4.95,
     "updated_at": "2026-06-14"
   },
   "PF": {
@@ -2990,22 +2990,22 @@
     "updated_at": "2026-06-14"
   },
   "SAMTEL": {
-    "market_cap_m": null,
+    "market_cap_m": 2076.480128,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "AS": {
-    "market_cap_m": null,
+    "market_cap_m": 1128.2976,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "NOVA": {
-    "market_cap_m": null,
+    "market_cap_m": 820.61856,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "MILL": {
-    "market_cap_m": null,
+    "market_cap_m": 189.417872,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3015,82 +3015,82 @@
     "updated_at": "2026-06-14"
   },
   "PEACE": {
-    "market_cap_m": null,
+    "market_cap_m": 791.276352,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PHG": {
-    "market_cap_m": null,
+    "market_cap_m": 3030.000128,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "ORI": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 4049.302016,
+    "target_mean_price": 2.045,
     "updated_at": "2026-06-14"
   },
   "TNL": {
-    "market_cap_m": null,
+    "market_cap_m": 6336.15104,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "BEAUTY": {
-    "market_cap_m": null,
+    "market_cap_m": 1077.909632,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SAWAD": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 33894.742016,
+    "target_mean_price": 29.01562,
     "updated_at": "2026-06-14"
   },
   "INSURE": {
-    "market_cap_m": null,
+    "market_cap_m": 669.0,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "NTV": {
-    "market_cap_m": null,
+    "market_cap_m": 2960.0,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "RICHY": {
-    "market_cap_m": null,
+    "market_cap_m": 244.248432,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "MFC": {
-    "market_cap_m": null,
+    "market_cap_m": 2399.26016,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PR9": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 12816.690176,
+    "target_mean_price": 22.92308,
     "updated_at": "2026-06-14"
   },
   "NCH": {
-    "market_cap_m": null,
+    "market_cap_m": 485.66064,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "FMT": {
-    "market_cap_m": null,
+    "market_cap_m": 950.399936,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "NKI": {
-    "market_cap_m": null,
+    "market_cap_m": 724.992896,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PDJ": {
-    "market_cap_m": null,
+    "market_cap_m": 563.282304,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "MJD": {
-    "market_cap_m": null,
+    "market_cap_m": 266.727712,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3100,22 +3100,22 @@
     "updated_at": "2026-06-14"
   },
   "BRI": {
-    "market_cap_m": null,
+    "market_cap_m": 1831.045888,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "MTC": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 59360.002048,
+    "target_mean_price": 41.71875,
     "updated_at": "2026-06-14"
   },
   "MENA": {
-    "market_cap_m": null,
+    "market_cap_m": 477.099968,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "CWT": {
-    "market_cap_m": null,
+    "market_cap_m": 466.434208,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3125,17 +3125,17 @@
     "updated_at": "2026-06-14"
   },
   "DDD": {
-    "market_cap_m": null,
+    "market_cap_m": 1518.588544,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TGE": {
-    "market_cap_m": null,
+    "market_cap_m": 2612.15872,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "WIN": {
-    "market_cap_m": null,
+    "market_cap_m": 151.50888,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3145,38 +3145,38 @@
     "updated_at": "2026-06-14"
   },
   "PK": {
-    "market_cap_m": null,
+    "market_cap_m": 234.34032,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SUN": {
-    "market_cap_m": null,
+    "market_cap_m": 1888.551808,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TIPCO": {
-    "market_cap_m": null,
+    "market_cap_m": 2895.47776,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TCMC": {
-    "market_cap_m": null,
+    "market_cap_m": 228.960352,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "RML": {
-    "market_cap_m": null,
+    "market_cap_m": 579.522112,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "CITY": {
-    "market_cap_m": null,
+    "market_cap_m": 354.0,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SVI": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 11842.655232,
+    "target_mean_price": 6.05,
     "updated_at": "2026-06-14"
   },
   "MSC": {
@@ -3185,112 +3185,112 @@
     "updated_at": "2026-06-14"
   },
   "THAI": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 195292.725248,
+    "target_mean_price": 7.58929,
     "updated_at": "2026-06-14"
   },
   "ANAN": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 1374.864256,
+    "target_mean_price": 0.5,
     "updated_at": "2026-06-14"
   },
   "TGPRO": {
-    "market_cap_m": null,
+    "market_cap_m": 141.583792,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "APURE": {
-    "market_cap_m": null,
+    "market_cap_m": 1877.97056,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "VGI": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 18780.143616,
+    "target_mean_price": 1.25,
     "updated_at": "2026-06-14"
   },
   "AIMCG": {
-    "market_cap_m": null,
+    "market_cap_m": 391.68,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "AMANAH": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 769.679168,
+    "target_mean_price": 0.64,
     "updated_at": "2026-06-14"
   },
   "DTCI": {
-    "market_cap_m": null,
+    "market_cap_m": 183.0,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "BTS": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 32831.358976,
+    "target_mean_price": 2.83333,
     "updated_at": "2026-06-14"
   },
   "KUN": {
-    "market_cap_m": null,
+    "market_cap_m": 458.8552,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "NV": {
-    "market_cap_m": null,
+    "market_cap_m": 293.751904,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PTECH": {
-    "market_cap_m": null,
+    "market_cap_m": 470.164864,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "GRAMMY": {
-    "market_cap_m": null,
+    "market_cap_m": 2459.849216,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TRITN": {
-    "market_cap_m": null,
+    "market_cap_m": 437.935776,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "B52": {
-    "market_cap_m": null,
+    "market_cap_m": 231.444448,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "CMC": {
-    "market_cap_m": null,
+    "market_cap_m": 385.774592,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SCM": {
-    "market_cap_m": null,
+    "market_cap_m": 97.492272,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "KC": {
-    "market_cap_m": null,
+    "market_cap_m": 103.509736,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SST": {
-    "market_cap_m": null,
+    "market_cap_m": 521.191968,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "NVD": {
-    "market_cap_m": null,
+    "market_cap_m": 1055.583872,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "A": {
-    "market_cap_m": null,
+    "market_cap_m": 2842.000128,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "AQUA": {
-    "market_cap_m": null,
+    "market_cap_m": 571.24576,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3300,67 +3300,67 @@
     "updated_at": "2026-06-14"
   },
   "CEN": {
-    "market_cap_m": null,
+    "market_cap_m": 439.64592,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PLE": {
-    "market_cap_m": null,
+    "market_cap_m": 220.079536,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TFI": {
-    "market_cap_m": null,
+    "market_cap_m": 673.04896,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "RS": {
-    "market_cap_m": null,
+    "market_cap_m": 283.688352,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PRECHA": {
-    "market_cap_m": null,
+    "market_cap_m": 124.32,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "FNS": {
-    "market_cap_m": null,
+    "market_cap_m": 255.332048,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "NRF": {
-    "market_cap_m": null,
+    "market_cap_m": 345.880288,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "AE": {
-    "market_cap_m": null,
+    "market_cap_m": 231.43824,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SQ": {
-    "market_cap_m": null,
+    "market_cap_m": 195.357184,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PLUS": {
-    "market_cap_m": null,
-    "target_mean_price": null,
+    "market_cap_m": 783.899968,
+    "target_mean_price": 6.4,
     "updated_at": "2026-06-14"
   },
   "XYZ": {
-    "market_cap_m": null,
+    "market_cap_m": 524.021888,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "MADAME": {
-    "market_cap_m": null,
+    "market_cap_m": 403.904416,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "MONO": {
-    "market_cap_m": null,
+    "market_cap_m": 3228.080384,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3370,7 +3370,7 @@
     "updated_at": "2026-06-14"
   },
   "ETL": {
-    "market_cap_m": null,
+    "market_cap_m": 241.799984,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
@@ -3380,47 +3380,47 @@
     "updated_at": "2026-06-14"
   },
   "EMC": {
-    "market_cap_m": null,
+    "market_cap_m": 251.412656,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "SDC": {
-    "market_cap_m": null,
+    "market_cap_m": 690.32736,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "PPPM": {
-    "market_cap_m": null,
+    "market_cap_m": 173.101472,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TWZ": {
-    "market_cap_m": null,
+    "market_cap_m": 317.774496,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TPOLY": {
-    "market_cap_m": null,
+    "market_cap_m": 68.731136,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TTCL": {
-    "market_cap_m": null,
+    "market_cap_m": 49.280004,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "TSR": {
-    "market_cap_m": null,
+    "market_cap_m": 24.174348,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "XBIO": {
-    "market_cap_m": null,
+    "market_cap_m": 1093.591552,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   },
   "WSOL": {
-    "market_cap_m": null,
+    "market_cap_m": 72.953048,
     "target_mean_price": null,
     "updated_at": "2026-06-14"
   }

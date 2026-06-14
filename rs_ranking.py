@@ -282,6 +282,19 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     top_12 = ranking_df.head(12).to_dict('records')
     all_stocks = ranking_df.to_dict('records')
     
+    def get_consensus_html(row):
+        target = row.get('Target_Mean_Price')
+        last = row.get('Last_Price')
+        if pd.isna(target) or target <= 0 or pd.isna(last) or last <= 0:
+            return '<div class="consensus-target">N/A</div>'
+        diff_pct = ((target - last) / last) * 100
+        if diff_pct > 0:
+            return f'<div class="consensus-target">{target:.2f}</div><div class="consensus-upside upside-positive">Upside +{diff_pct:.2f}%</div>'
+        elif diff_pct < 0:
+            return f'<div class="consensus-target">{target:.2f}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
+        else:
+            return f'<div class="consensus-target">{target:.2f}</div><div class="consensus-upside upside-neutral">0.00%</div>'
+    
     # Convert to Thailand time (UTC+7) since Streamlit Cloud servers run in UTC by default
     thailand_time = datetime.utcnow() + timedelta(hours=7)
     now_str = thailand_time.strftime('%Y-%m-%d %H:%M')
@@ -719,6 +732,32 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             font-weight: 500;
             color: var(--text-main);
             width: 150px;
+            vertical-align: middle;
+        }}
+
+        .consensus-target {{
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #ffffff;
+        }}
+
+        .consensus-upside {{
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-top: 0.2rem;
+            display: inline-block;
+        }}
+
+        .upside-positive {{
+            color: #34d399; /* Green */
+        }}
+
+        .upside-negative {{
+            color: #f87171; /* Red */
+        }}
+
+        .upside-neutral {{
+            color: var(--text-muted);
         }}
 
         .status-cell {{
@@ -902,7 +941,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                                 {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
                             </td>
                             <td class="consensus-cell">
-                                {f"{x['Target_Mean_Price']:.2f}" if pd.notna(x['Target_Mean_Price']) and x['Target_Mean_Price'] > 0 else 'N/A'}
+                                {get_consensus_html(x)}
                             </td>
                             <td class="rs-cell">
                                 <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
