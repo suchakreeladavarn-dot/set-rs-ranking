@@ -20,10 +20,35 @@ st.set_page_config(
 # Custom premium styling to make the iframe cover the entire screen
 st.markdown("""
 <style>
-    /* Hide Streamlit top header and bottom footer */
+    /* Make the top header bar transparent so the toggle button floats naturally */
     header[data-testid="stHeader"] {
-        display: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        box-shadow: none !important;
     }
+    
+    /* Style the floating sidebar toggle button so it looks professional on the dark background */
+    button[data-testid="stSidebarCollapseButton"] {
+        background-color: rgba(17, 24, 39, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        color: #f3f4f6 !important;
+        border-radius: 8px !important;
+        backdrop-filter: blur(8px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35) !important;
+        z-index: 101 !important;
+        transition: all 0.2s !important;
+        margin-left: 1rem !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    button[data-testid="stSidebarCollapseButton"]:hover {
+        background-color: rgba(59, 130, 246, 0.2) !important;
+        border-color: rgba(59, 130, 246, 0.5) !important;
+        color: #ffffff !important;
+    }
+    
+    /* Hide the footer */
     footer {
         display: none !important;
     }
@@ -44,15 +69,21 @@ st.markdown("""
         overflow: hidden !important;
     }
     
-    /* Force the iframe and its container to occupy full screen */
+    /* Force the iframe to occupy full screen, positioned absolutely to the viewport */
     iframe {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
         border: none !important;
         margin: 0 !important;
         padding: 0 !important;
         display: block !important;
+        z-index: 1 !important;
     }
+    
+    /* Make sure Streamlit wrapper divs don't block the layout */
     div[data-testid="stHtml"] {
         height: 100vh !important;
     }
@@ -61,6 +92,7 @@ st.markdown("""
     section[data-testid="stSidebar"] {
         background-color: #111827 !important;
         border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+        z-index: 100 !important; /* Higher z-index to overlay on top of the iframe */
     }
     
     /* Ensure all sidebar labels and headings are readable */
@@ -139,6 +171,7 @@ st.markdown("""
         border-color: rgba(255, 255, 255, 0.08) !important;
     }
 </style>
+
 """, unsafe_allow_html=True)
 
 # Sidebar Header & Controls
