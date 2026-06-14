@@ -1,0 +1,41 @@
+name: Daily RS Scanner Auto-Update
+
+on:
+  schedule:
+    # Runs at 11:30 UTC (18:30 Thailand Time) Monday through Friday
+    - cron: '30 11 * * 1-5'
+  workflow_dispatch: # Allows manual trigger from GitHub UI at any time
+
+permissions:
+  contents: write
+
+jobs:
+  update-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run RS Ranking Scan
+        run: |
+          # Run scan using local CSV and output to rs_ranking_report.html
+          python rs_ranking.py --csv set_stocks.csv --output rs_ranking_report.html --no-open
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add rs_ranking_report.html market_caps_cache.json
+          git commit -m "Auto-update RS Ranking report [skip ci]" || echo "No changes to commit"
+          git push
