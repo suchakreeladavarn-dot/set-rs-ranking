@@ -5,6 +5,7 @@
     "pe_ttm": 12.000001,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.86590505,
+    "roic_ttm": 17.035033641719483,
     "updated_at": "2026-06-15"
   },
   "EASTW": {
@@ -13,6 +14,7 @@
     "pe_ttm": 108.00001,
     "div_yield_ttm": 0.2283105,
     "pbv_latest": 0.62608695,
+    "roic_ttm": 2.392085696828129,
     "updated_at": "2026-06-15"
   },
   "FORTH": {
@@ -21,6 +23,7 @@
     "pe_ttm": 15.555555,
     "div_yield_ttm": 1.4189188,
     "pbv_latest": 4.9044585,
+    "roic_ttm": 18.320379728046465,
     "updated_at": "2026-06-15"
   },
   "ASAP": {
@@ -29,6 +32,7 @@
     "pe_ttm": 43.600002,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.8288591,
+    "roic_ttm": 3.93888858963313,
     "updated_at": "2026-06-15"
   },
   "CCET": {
@@ -37,6 +41,7 @@
     "pe_ttm": 51.84211,
     "div_yield_ttm": 2.3958332999999996,
     "pbv_latest": 3.8794801,
+    "roic_ttm": 6.303551190534525,
     "updated_at": "2026-06-15"
   },
   "CTW": {
@@ -45,6 +50,7 @@
     "pe_ttm": 11.465518,
     "div_yield_ttm": 1.1510791,
     "pbv_latest": 0.65215266,
+    "roic_ttm": 8.161234542892856,
     "updated_at": "2026-06-15"
   },
   "HANA": {
@@ -53,6 +59,7 @@
     "pe_ttm": 111.02941,
     "div_yield_ttm": 2.739726,
     "pbv_latest": 1.250704,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SMT": {
@@ -61,6 +68,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.7936507,
     "pbv_latest": 1.7053528,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TEAM": {
@@ -69,6 +77,7 @@
     "pe_ttm": 14.787879,
     "div_yield_ttm": 4.0650405,
     "pbv_latest": 2.0783646,
+    "roic_ttm": 12.779382443539971,
     "updated_at": "2026-06-15"
   },
   "EPG": {
@@ -77,6 +86,7 @@
     "pe_ttm": 12.5,
     "div_yield_ttm": 3.5087720000000004,
     "pbv_latest": 1.2014209,
+    "roic_ttm": 5.23540792917727,
     "updated_at": "2026-06-15"
   },
   "GUNKUL": {
@@ -85,6 +95,7 @@
     "pe_ttm": 18.0,
     "div_yield_ttm": 3.448276,
     "pbv_latest": 2.309038,
+    "roic_ttm": 3.7884272359622626,
     "updated_at": "2026-06-15"
   },
   "STECON": {
@@ -93,6 +104,7 @@
     "pe_ttm": 13.206107,
     "div_yield_ttm": 3.2352943,
     "pbv_latest": 1.5799086,
+    "roic_ttm": 8.62382855929464,
     "updated_at": "2026-06-15"
   },
   "DELTA": {
@@ -101,6 +113,7 @@
     "pe_ttm": 157.64192,
     "div_yield_ttm": 0.16528927,
     "pbv_latest": 42.276615,
+    "roic_ttm": 31.482100782862737,
     "updated_at": "2026-06-15"
   },
   "ML": {
@@ -109,6 +122,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.77613515,
+    "roic_ttm": 0.6280027377613219,
     "updated_at": "2026-06-15"
   },
   "TFG": {
@@ -117,6 +131,7 @@
     "pe_ttm": 7.12,
     "div_yield_ttm": 7.977528,
     "pbv_latest": 2.5804582,
+    "roic_ttm": 22.665732688802404,
     "updated_at": "2026-06-15"
   },
   "INSET": {
@@ -125,6 +140,7 @@
     "pe_ttm": 44.75,
     "div_yield_ttm": 1.1363636,
     "pbv_latest": 2.039886,
+    "roic_ttm": 6.550001593867232,
     "updated_at": "2026-06-15"
   },
   "MGC": {
@@ -133,6 +149,7 @@
     "pe_ttm": 4.676259,
     "div_yield_ttm": 3.787879,
     "pbv_latest": 1.3510705,
+    "roic_ttm": 12.155024499791827,
     "updated_at": "2026-06-15"
   },
   "ASEFA": {
@@ -141,6 +158,7 @@
     "pe_ttm": 10.357143,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.4449427,
+    "roic_ttm": 12.166415017946044,
     "updated_at": "2026-06-15"
   },
   "TSE": {
@@ -149,6 +167,7 @@
     "pe_ttm": 72.00001,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.50209206,
+    "roic_ttm": 5.455654501185004,
     "updated_at": "2026-06-15"
   },
   "KCE": {
@@ -157,6 +176,7 @@
     "pe_ttm": 51.760567,
     "div_yield_ttm": 3.2653064,
     "pbv_latest": 3.2444603,
+    "roic_ttm": 4.653944752646959,
     "updated_at": "2026-06-15"
   },
   "SRICHA": {
@@ -165,6 +185,7 @@
     "pe_ttm": 3.912037,
     "div_yield_ttm": 6.097561,
     "pbv_latest": 2.6076221,
+    "roic_ttm": 157.45351221512936,
     "updated_at": "2026-06-15"
   },
   "CNT": {
@@ -173,6 +194,7 @@
     "pe_ttm": 23.857141,
     "div_yield_ttm": 2.9239766,
     "pbv_latest": 0.960322,
+    "roic_ttm": 4.583362158182104,
     "updated_at": "2026-06-15"
   },
   "AMATA": {
@@ -181,6 +203,7 @@
     "pe_ttm": 8.307453,
     "div_yield_ttm": 4.1904762,
     "pbv_latest": 1.2265579,
+    "roic_ttm": 10.45217992348829,
     "updated_at": "2026-06-15"
   },
   "CIVIL": {
@@ -189,6 +212,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.42814592,
+    "roic_ttm": 1.7620935718138373,
     "updated_at": "2026-06-15"
   },
   "STELLA": {
@@ -197,6 +221,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.1278195,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SCAP": {
@@ -205,6 +230,7 @@
     "pe_ttm": 10.3125,
     "div_yield_ttm": 4.2424243,
     "pbv_latest": 0.957632,
+    "roic_ttm": 5.095420808931773,
     "updated_at": "2026-06-15"
   },
   "IT": {
@@ -213,6 +239,7 @@
     "pe_ttm": 8.75,
     "div_yield_ttm": 5.2252248,
     "pbv_latest": 1.5761328,
+    "roic_ttm": 10.276266699502747,
     "updated_at": "2026-06-15"
   },
   "BKGI": {
@@ -221,6 +248,7 @@
     "pe_ttm": 26.25,
     "div_yield_ttm": 2.4038462,
     "pbv_latest": 2.1627188,
+    "roic_ttm": 23.450405865408648,
     "updated_at": "2026-06-15"
   },
   "IRPC": {
@@ -229,6 +257,7 @@
     "pe_ttm": 6.214286,
     "div_yield_ttm": 0.5586591999999999,
     "pbv_latest": 0.4813278,
+    "roic_ttm": 33.91220271019084,
     "updated_at": "2026-06-15"
   },
   "BAY": {
@@ -237,6 +266,7 @@
     "pe_ttm": 8.464126,
     "div_yield_ttm": 3.3986926,
     "pbv_latest": 0.6558602,
+    "roic_ttm": 7.6995689505575875,
     "updated_at": "2026-06-15"
   },
   "STA": {
@@ -245,6 +275,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 2.617801,
     "pbv_latest": 0.58775204,
+    "roic_ttm": 2.7459871901139925,
     "updated_at": "2026-06-15"
   },
   "SGC": {
@@ -253,6 +284,7 @@
     "pe_ttm": 18.000002,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.182266,
+    "roic_ttm": 4.403885456598688,
     "updated_at": "2026-06-15"
   },
   "TITLE": {
@@ -261,6 +293,7 @@
     "pe_ttm": 9.058823,
     "div_yield_ttm": 0.5194805,
     "pbv_latest": 3.1161473,
+    "roic_ttm": 6.71140706478025,
     "updated_at": "2026-06-15"
   },
   "STGT": {
@@ -269,6 +302,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 4.6728972,
     "pbv_latest": 0.7827059,
+    "roic_ttm": 3.2459218595039365,
     "updated_at": "2026-06-15"
   },
   "ALT": {
@@ -277,6 +311,7 @@
     "pe_ttm": 22.714287,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.0481213,
+    "roic_ttm": 2.5245843064355915,
     "updated_at": "2026-06-15"
   },
   "MCOT": {
@@ -285,6 +320,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5862388,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TRC": {
@@ -293,6 +329,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -13.043479,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ACG": {
@@ -301,6 +338,7 @@
     "pe_ttm": 12.166667,
     "div_yield_ttm": 5.333333,
     "pbv_latest": 0.58823526,
+    "roic_ttm": 6.601083155609748,
     "updated_at": "2026-06-15"
   },
   "WHAUP": {
@@ -309,6 +347,7 @@
     "pe_ttm": 21.206898,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.7036012,
+    "roic_ttm": 4.581293326517512,
     "updated_at": "2026-06-15"
   },
   "WHA": {
@@ -317,6 +356,7 @@
     "pe_ttm": 16.064516,
     "div_yield_ttm": 4.2369477,
     "pbv_latest": 2.017011,
+    "roic_ttm": 4.544842476684582,
     "updated_at": "2026-06-15"
   },
   "BGC": {
@@ -325,6 +365,7 @@
     "pe_ttm": 79.44444,
     "div_yield_ttm": 2.1126762,
     "pbv_latest": 0.924848,
+    "roic_ttm": 2.565739603334198,
     "updated_at": "2026-06-15"
   },
   "FTE": {
@@ -333,6 +374,7 @@
     "pe_ttm": 11.428573,
     "div_yield_ttm": 7.2033904,
     "pbv_latest": 1.7391305,
+    "roic_ttm": 21.592795483343732,
     "updated_at": "2026-06-15"
   },
   "BIZ": {
@@ -341,6 +383,7 @@
     "pe_ttm": 9.015151,
     "div_yield_ttm": 8.4033616,
     "pbv_latest": 3.3110738,
+    "roic_ttm": 70.8971601496332,
     "updated_at": "2026-06-15"
   },
   "KKP": {
@@ -349,6 +392,7 @@
     "pe_ttm": 10.705669,
     "div_yield_ttm": 6.4589229999999995,
     "pbv_latest": 1.084844,
+    "roic_ttm": 9.712638079200973,
     "updated_at": "2026-06-15"
   },
   "PROSPECT": {
@@ -357,6 +401,7 @@
     "pe_ttm": 9.845361,
     "div_yield_ttm": 8.808511,
     "pbv_latest": 1.1055801,
+    "roic_ttm": 6.577933804213298,
     "updated_at": "2026-06-15"
   },
   "PYLON": {
@@ -365,6 +410,7 @@
     "pe_ttm": 9.333333,
     "div_yield_ttm": 7.1856290000000005,
     "pbv_latest": 2.0973783,
+    "roic_ttm": 39.33760562994684,
     "updated_at": "2026-06-15"
   },
   "SEAFCO": {
@@ -373,6 +419,7 @@
     "pe_ttm": 0.010555595,
     "div_yield_ttm": 4.0,
     "pbv_latest": 1.4375911,
+    "roic_ttm": 26.076496359530516,
     "updated_at": "2026-06-15"
   },
   "JDF": {
@@ -381,6 +428,7 @@
     "pe_ttm": 11.588235,
     "div_yield_ttm": 9.1836736,
     "pbv_latest": 1.6471572,
+    "roic_ttm": 22.332300126227995,
     "updated_at": "2026-06-15"
   },
   "GABLE": {
@@ -389,6 +437,7 @@
     "pe_ttm": 7.052632,
     "div_yield_ttm": 8.080808000000001,
     "pbv_latest": 1.186891,
+    "roic_ttm": 31.359057463418466,
     "updated_at": "2026-06-15"
   },
   "INGRS": {
@@ -397,6 +446,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 6.3888885,
     "pbv_latest": 0.49861497,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SYMC": {
@@ -405,6 +455,7 @@
     "pe_ttm": 18.923079,
     "div_yield_ttm": 1.9958848000000002,
     "pbv_latest": 0.68772715,
+    "roic_ttm": 5.101048190239798,
     "updated_at": "2026-06-15"
   },
   "ITD": {
@@ -413,6 +464,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.59931505,
+    "roic_ttm": 0.09452980741622388,
     "updated_at": "2026-06-15"
   },
   "LHFG": {
@@ -421,6 +473,7 @@
     "pe_ttm": 7.666666,
     "div_yield_ttm": 5.2173913,
     "pbv_latest": 0.5796371,
+    "roic_ttm": 4.124617470347783,
     "updated_at": "2026-06-15"
   },
   "AJ": {
@@ -429,6 +482,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.44329396,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "GULF": {
@@ -437,6 +491,7 @@
     "pe_ttm": 36.723164,
     "div_yield_ttm": 2.1875,
     "pbv_latest": 2.8034158,
+    "roic_ttm": 3.2214513822493824,
     "updated_at": "2026-06-15"
   },
   "CSS": {
@@ -445,6 +500,7 @@
     "pe_ttm": 15.166667,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6293223,
+    "roic_ttm": 4.1986917971509365,
     "updated_at": "2026-06-15"
   },
   "BIOTEC": {
@@ -453,6 +509,7 @@
     "pe_ttm": 8.333334,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.66844916,
+    "roic_ttm": 4.8422433406742895,
     "updated_at": "2026-06-15"
   },
   "QTC": {
@@ -461,6 +518,7 @@
     "pe_ttm": 113.5,
     "div_yield_ttm": 4.3478259999999995,
     "pbv_latest": 0.9995597,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BBGI": {
@@ -469,6 +527,7 @@
     "pe_ttm": 13.724138,
     "div_yield_ttm": 3.5714287,
     "pbv_latest": 0.5942072,
+    "roic_ttm": 7.64087889677449,
     "updated_at": "2026-06-15"
   },
   "TSTH": {
@@ -477,6 +536,7 @@
     "pe_ttm": 3.9130433,
     "div_yield_ttm": 6.6666669999999995,
     "pbv_latest": 0.5050505,
+    "roic_ttm": 5.0460537244884796,
     "updated_at": "2026-06-15"
   },
   "SGP": {
@@ -485,6 +545,7 @@
     "pe_ttm": 11.381578,
     "div_yield_ttm": 2.2727273,
     "pbv_latest": 1.0361763,
+    "roic_ttm": 15.569354610378921,
     "updated_at": "2026-06-15"
   },
   "KTB": {
@@ -493,6 +554,7 @@
     "pe_ttm": 10.214286,
     "div_yield_ttm": 5.87234,
     "pbv_latest": 1.0629442,
+    "roic_ttm": 11.5210797670479,
     "updated_at": "2026-06-15"
   },
   "PTTGC": {
@@ -501,6 +563,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 1.4705882,
     "pbv_latest": 0.48619658,
+    "roic_ttm": 12.327836794376035,
     "updated_at": "2026-06-15"
   },
   "PRM": {
@@ -509,6 +572,7 @@
     "pe_ttm": 9.086021,
     "div_yield_ttm": 5.91716,
     "pbv_latest": 1.5154232,
+    "roic_ttm": 11.130474857687958,
     "updated_at": "2026-06-15"
   },
   "SPRC": {
@@ -517,6 +581,7 @@
     "pe_ttm": 3.2863848,
     "div_yield_ttm": 6.428571,
     "pbv_latest": 0.6498329,
+    "roic_ttm": 58.92464892475351,
     "updated_at": "2026-06-15"
   },
   "SCGP": {
@@ -525,6 +590,7 @@
     "pe_ttm": 22.727272,
     "div_yield_ttm": 2.419355,
     "pbv_latest": 1.4083714,
+    "roic_ttm": 6.18239206609266,
     "updated_at": "2026-06-15"
   },
   "SINGER": {
@@ -533,6 +599,7 @@
     "pe_ttm": 30.322578,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.57090795,
+    "roic_ttm": 6.0552973898762446,
     "updated_at": "2026-06-15"
   },
   "NYT": {
@@ -541,6 +608,7 @@
     "pe_ttm": 7.2307696,
     "div_yield_ttm": 13.513513,
     "pbv_latest": 1.2295618,
+    "roic_ttm": 11.490517090284854,
     "updated_at": "2026-06-15"
   },
   "MII": {
@@ -549,6 +617,7 @@
     "pe_ttm": 7.2151895,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PAP": {
@@ -557,6 +626,7 @@
     "pe_ttm": 10.695652,
     "div_yield_ttm": 3.2520324000000005,
     "pbv_latest": 0.806293,
+    "roic_ttm": 11.986484327665963,
     "updated_at": "2026-06-15"
   },
   "ALUCON": {
@@ -565,6 +635,7 @@
     "pe_ttm": 9.441543,
     "div_yield_ttm": 6.808510399999999,
     "pbv_latest": 1.2937251,
+    "roic_ttm": 26.19503857609835,
     "updated_at": "2026-06-15"
   },
   "ONEE": {
@@ -573,6 +644,7 @@
     "pe_ttm": 12.454546,
     "div_yield_ttm": 6.766917599999999,
     "pbv_latest": 0.90458894,
+    "roic_ttm": 5.780351421186176,
     "updated_at": "2026-06-15"
   },
   "UMI": {
@@ -581,6 +653,7 @@
     "pe_ttm": 1.9333334,
     "div_yield_ttm": 4.597701,
     "pbv_latest": 0.3661616,
+    "roic_ttm": 8.064723083154263,
     "updated_at": "2026-06-15"
   },
   "CPTREIT": {
@@ -589,6 +662,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 11.8769236,
     "pbv_latest": 0.69031435,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CHARAN": {
@@ -597,6 +671,7 @@
     "pe_ttm": 4.543081,
     "div_yield_ttm": 5.1724136,
     "pbv_latest": 0.33778536,
+    "roic_ttm": 18.590509796695244,
     "updated_at": "2026-06-15"
   },
   "HTECH": {
@@ -605,6 +680,7 @@
     "pe_ttm": 35.2,
     "div_yield_ttm": 4.9418606,
     "pbv_latest": 0.7985481,
+    "roic_ttm": 9.921344640078397,
     "updated_at": "2026-06-15"
   },
   "QHHRREIT": {
@@ -613,6 +689,7 @@
     "pe_ttm": 6.290323,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "WHAIR": {
@@ -621,6 +698,7 @@
     "pe_ttm": 22.727272,
     "div_yield_ttm": 7.8389265,
     "pbv_latest": 0.90252703,
+    "roic_ttm": 5.410822125540573,
     "updated_at": "2026-06-15"
   },
   "GJS": {
@@ -629,6 +707,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3291139,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CK": {
@@ -637,6 +716,7 @@
     "pe_ttm": 9.701492,
     "div_yield_ttm": 2.3936170999999997,
     "pbv_latest": 1.1486129,
+    "roic_ttm": 2.352212244438434,
     "updated_at": "2026-06-15"
   },
   "RBF": {
@@ -645,6 +725,7 @@
     "pe_ttm": 19.166666,
     "div_yield_ttm": 4.70852,
     "pbv_latest": 1.8691589,
+    "roic_ttm": 11.159786308450444,
     "updated_at": "2026-06-15"
   },
   "TRUBB": {
@@ -653,6 +734,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.27522936,
     "pbv_latest": 0.30626985,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TTA": {
@@ -661,6 +743,7 @@
     "pe_ttm": 10.212767,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.30600536,
+    "roic_ttm": 2.3414916795281755,
     "updated_at": "2026-06-15"
   },
   "2S": {
@@ -669,6 +752,7 @@
     "pe_ttm": 7.6,
     "div_yield_ttm": 6.5789476,
     "pbv_latest": 0.76670873,
+    "roic_ttm": 27.34967557452994,
     "updated_at": "2026-06-15"
   },
   "AMARIN": {
@@ -677,6 +761,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.59681404,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "RPC": {
@@ -685,6 +770,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 2.8571429,
     "pbv_latest": 0.19954391,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SVOA": {
@@ -693,6 +779,7 @@
     "pe_ttm": 6.481481,
     "div_yield_ttm": 4.6783622,
     "pbv_latest": 0.61859316,
+    "roic_ttm": 8.409709239136765,
     "updated_at": "2026-06-15"
   },
   "UVAN": {
@@ -701,6 +788,7 @@
     "pe_ttm": 7.2959185,
     "div_yield_ttm": 0.0,
     "pbv_latest": 2.413502,
+    "roic_ttm": 27.16771951057641,
     "updated_at": "2026-06-15"
   },
   "TKS": {
@@ -709,6 +797,7 @@
     "pe_ttm": 10.138888,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.0458453,
+    "roic_ttm": 3.228766327461436,
     "updated_at": "2026-06-15"
   },
   "KISS": {
@@ -717,6 +806,7 @@
     "pe_ttm": 11.4,
     "div_yield_ttm": 5.8479533,
     "pbv_latest": 1.9464998,
+    "roic_ttm": 30.68687875389422,
     "updated_at": "2026-06-15"
   },
   "S11": {
@@ -725,6 +815,7 @@
     "pe_ttm": 6.246154,
     "div_yield_ttm": 6.188119,
     "pbv_latest": 0.66470206,
+    "roic_ttm": 7.224894846690646,
     "updated_at": "2026-06-15"
   },
   "ESTAR": {
@@ -733,6 +824,7 @@
     "pe_ttm": 7.3333335,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.22199798,
+    "roic_ttm": 4.1267280411594385,
     "updated_at": "2026-06-15"
   },
   "SCP": {
@@ -741,6 +833,7 @@
     "pe_ttm": 8.181818,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.1553273,
+    "roic_ttm": 8.134999685768337,
     "updated_at": "2026-06-15"
   },
   "ETC": {
@@ -749,6 +842,7 @@
     "pe_ttm": 3.173913,
     "div_yield_ttm": 6.666666,
     "pbv_latest": 0.4643766,
+    "roic_ttm": 4.856088242706448,
     "updated_at": "2026-06-15"
   },
   "ROJNA": {
@@ -757,6 +851,7 @@
     "pe_ttm": 4.269231,
     "div_yield_ttm": 9.090909,
     "pbv_latest": 0.524426,
+    "roic_ttm": 4.33370691501534,
     "updated_at": "2026-06-15"
   },
   "LOXLEY": {
@@ -765,6 +860,7 @@
     "pe_ttm": 5.8148146,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.55752844,
+    "roic_ttm": 3.546668709316618,
     "updated_at": "2026-06-15"
   },
   "METCO": {
@@ -773,6 +869,7 @@
     "pe_ttm": 5.3669224,
     "div_yield_ttm": 10.169491,
     "pbv_latest": 0.85585535,
+    "roic_ttm": 23.440482026777786,
     "updated_at": "2026-06-15"
   },
   "GENCO": {
@@ -781,6 +878,7 @@
     "pe_ttm": 8.250001,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.33400813,
+    "roic_ttm": 3.305875307799181,
     "updated_at": "2026-06-15"
   },
   "DITTO": {
@@ -789,6 +887,7 @@
     "pe_ttm": 15.227272,
     "div_yield_ttm": 3.7037037,
     "pbv_latest": 2.346349,
+    "roic_ttm": 15.911024749050576,
     "updated_at": "2026-06-15"
   },
   "JMART": {
@@ -797,6 +896,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.7485151,
+    "roic_ttm": 2.5200687031147107,
     "updated_at": "2026-06-15"
   },
   "BKIH": {
@@ -805,6 +905,7 @@
     "pe_ttm": 10.707129,
     "div_yield_ttm": 3.6764707,
     "pbv_latest": 1.2651762,
+    "roic_ttm": 12.667137142779067,
     "updated_at": "2026-06-15"
   },
   "BWG": {
@@ -813,6 +914,7 @@
     "pe_ttm": 3.625,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3670886,
+    "roic_ttm": 7.9337233108517715,
     "updated_at": "2026-06-15"
   },
   "BLA": {
@@ -821,6 +923,7 @@
     "pe_ttm": 5.5477853,
     "div_yield_ttm": 3.4959350000000002,
     "pbv_latest": 0.7659136,
+    "roic_ttm": 8.929886143830588,
     "updated_at": "2026-06-15"
   },
   "EA": {
@@ -829,6 +932,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6703418,
+    "roic_ttm": 3.0629780623697793,
     "updated_at": "2026-06-15"
   },
   "STPI": {
@@ -837,6 +941,7 @@
     "pe_ttm": 93.333336,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.1470709,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "STANLY": {
@@ -845,6 +950,7 @@
     "pe_ttm": 9.514331,
     "div_yield_ttm": 8.438819,
     "pbv_latest": 0.86546534,
+    "roic_ttm": 10.702693327555082,
     "updated_at": "2026-06-15"
   },
   "MICRO": {
@@ -853,6 +959,7 @@
     "pe_ttm": 20.0,
     "div_yield_ttm": 2.783505,
     "pbv_latest": 0.51493305,
+    "roic_ttm": 5.1294608801202335,
     "updated_at": "2026-06-15"
   },
   "CPW": {
@@ -861,6 +968,7 @@
     "pe_ttm": 9.916667,
     "div_yield_ttm": 8.189655,
     "pbv_latest": 1.5404532,
+    "roic_ttm": 8.754302975561743,
     "updated_at": "2026-06-15"
   },
   "ICN": {
@@ -869,6 +977,7 @@
     "pe_ttm": 10.2,
     "div_yield_ttm": 7.3529415,
     "pbv_latest": 1.5632185,
+    "roic_ttm": 7.73043553991876,
     "updated_at": "2026-06-15"
   },
   "QHBREIT": {
@@ -877,6 +986,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 9.920635,
     "pbv_latest": 0.46306503,
+    "roic_ttm": 11.028668146704334,
     "updated_at": "2026-06-15"
   },
   "PSL": {
@@ -885,6 +995,7 @@
     "pe_ttm": 16.39535,
     "div_yield_ttm": 4.1666668,
     "pbv_latest": 0.6986424,
+    "roic_ttm": 3.4752994173273275,
     "updated_at": "2026-06-15"
   },
   "AOT": {
@@ -893,6 +1004,7 @@
     "pe_ttm": 46.45669,
     "div_yield_ttm": 1.3965517,
     "pbv_latest": 6.500661,
+    "roic_ttm": 13.938722455867062,
     "updated_at": "2026-06-15"
   },
   "MIDA": {
@@ -901,6 +1013,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.28499582,
+    "roic_ttm": 0.3823680577199861,
     "updated_at": "2026-06-15"
   },
   "CFRESH": {
@@ -909,6 +1022,7 @@
     "pe_ttm": 12.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.37632298,
+    "roic_ttm": 5.16467387738603,
     "updated_at": "2026-06-15"
   },
   "CREDIT": {
@@ -917,6 +1031,7 @@
     "pe_ttm": 5.4335256,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8450957,
+    "roic_ttm": 17.22179600123984,
     "updated_at": "2026-06-15"
   },
   "LHSC": {
@@ -925,6 +1040,7 @@
     "pe_ttm": 9.192547,
     "div_yield_ttm": 8.170068,
     "pbv_latest": 1.1594203,
+    "roic_ttm": 9.53441265285836,
     "updated_at": "2026-06-15"
   },
   "ADVICE": {
@@ -933,6 +1049,7 @@
     "pe_ttm": 12.45098,
     "div_yield_ttm": 5.511811,
     "pbv_latest": 3.5494688,
+    "roic_ttm": 38.75459977352931,
     "updated_at": "2026-06-15"
   },
   "CIMBT": {
@@ -941,6 +1058,7 @@
     "pe_ttm": 5.285714,
     "div_yield_ttm": 15.945946,
     "pbv_latest": 0.25101766,
+    "roic_ttm": 6.891233470735456,
     "updated_at": "2026-06-15"
   },
   "TMT": {
@@ -949,6 +1067,7 @@
     "pe_ttm": 20.875,
     "div_yield_ttm": 2.994012,
     "pbv_latest": 0.88289714,
+    "roic_ttm": 5.007120225240352,
     "updated_at": "2026-06-15"
   },
   "TOP": {
@@ -957,6 +1076,7 @@
     "pe_ttm": 3.190718,
     "div_yield_ttm": 4.0449437,
     "pbv_latest": 0.5054741,
+    "roic_ttm": 28.151476721986818,
     "updated_at": "2026-06-15"
   },
   "PTTEP": {
@@ -965,6 +1085,7 @@
     "pe_ttm": 9.68549,
     "div_yield_ttm": 0.19438597000000002,
     "pbv_latest": 1.0024679,
+    "roic_ttm": 0.4227068225247664,
     "updated_at": "2026-06-15"
   },
   "POPF": {
@@ -973,6 +1094,7 @@
     "pe_ttm": 10.342556,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.7947757,
+    "roic_ttm": 11.958496510177499,
     "updated_at": "2026-06-15"
   },
   "AYUD": {
@@ -981,6 +1103,7 @@
     "pe_ttm": 5.582865,
     "div_yield_ttm": 5.836478,
     "pbv_latest": 1.1049032,
+    "roic_ttm": 25.718216092595664,
     "updated_at": "2026-06-15"
   },
   "SKY": {
@@ -989,6 +1112,7 @@
     "pe_ttm": 14.181818,
     "div_yield_ttm": 1.9607843999999999,
     "pbv_latest": 1.8700552,
+    "roic_ttm": 8.777637516202446,
     "updated_at": "2026-06-15"
   },
   "PCC": {
@@ -997,6 +1121,7 @@
     "pe_ttm": 8.787879,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.0492041,
+    "roic_ttm": 3.9500110858732516,
     "updated_at": "2026-06-15"
   },
   "ASW": {
@@ -1005,6 +1130,7 @@
     "pe_ttm": 5.5241933,
     "div_yield_ttm": 7.2463766,
     "pbv_latest": 0.6720957,
+    "roic_ttm": 4.784362459709583,
     "updated_at": "2026-06-15"
   },
   "RCL": {
@@ -1013,6 +1139,7 @@
     "pe_ttm": 3.4078805,
     "div_yield_ttm": 7.407407500000001,
     "pbv_latest": 0.4641381,
+    "roic_ttm": 10.244642145361487,
     "updated_at": "2026-06-15"
   },
   "BEYOND": {
@@ -1021,6 +1148,7 @@
     "pe_ttm": 41.904762,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3811669,
+    "roic_ttm": 5.543922392912263,
     "updated_at": "2026-06-15"
   },
   "ASK": {
@@ -1029,6 +1157,7 @@
     "pe_ttm": 11.547619,
     "div_yield_ttm": 4.1666663999999995,
     "pbv_latest": 0.5655647,
+    "roic_ttm": 2.0793651032033624,
     "updated_at": "2026-06-15"
   },
   "TRUE": {
@@ -1037,6 +1166,7 @@
     "pe_ttm": 33.90244,
     "div_yield_ttm": 3.2142855,
     "pbv_latest": 6.361556,
+    "roic_ttm": 7.217329147417528,
     "updated_at": "2026-06-15"
   },
   "HPF": {
@@ -1045,6 +1175,7 @@
     "pe_ttm": 15.162909,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.65525836,
+    "roic_ttm": 5.128996898973799,
     "updated_at": "2026-06-15"
   },
   "BJCHI": {
@@ -1053,6 +1184,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 2.1794873999999997,
     "pbv_latest": 0.4110997,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "WFX": {
@@ -1061,6 +1193,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.2631579,
+    "roic_ttm": 2.5534730944410535,
     "updated_at": "2026-06-15"
   },
   "COM7": {
@@ -1069,6 +1202,7 @@
     "pe_ttm": 14.779006,
     "div_yield_ttm": 4.1121498,
     "pbv_latest": 5.9723153,
+    "roic_ttm": 23.999413411371194,
     "updated_at": "2026-06-15"
   },
   "TTB": {
@@ -1077,6 +1211,7 @@
     "pe_ttm": 10.260869,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.9496982,
+    "roic_ttm": 38.14047401155894,
     "updated_at": "2026-06-15"
   },
   "MFEC": {
@@ -1085,6 +1220,7 @@
     "pe_ttm": 10.535714,
     "div_yield_ttm": 8.620688999999999,
     "pbv_latest": 0.9688013,
+    "roic_ttm": 9.661216109778985,
     "updated_at": "2026-06-15"
   },
   "JMT": {
@@ -1093,6 +1229,7 @@
     "pe_ttm": 16.923077,
     "div_yield_ttm": 6.2616825,
     "pbv_latest": 0.5865103,
+    "roic_ttm": 2.311135325623172,
     "updated_at": "2026-06-15"
   },
   "AKS": {
@@ -1101,6 +1238,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -0.19607843,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TPP": {
@@ -1109,6 +1247,7 @@
     "pe_ttm": 7.2289157,
     "div_yield_ttm": 8.4033616,
     "pbv_latest": 0.46625483,
+    "roic_ttm": 9.522205344665325,
     "updated_at": "2026-06-15"
   },
   "AMATAR": {
@@ -1117,6 +1256,7 @@
     "pe_ttm": 8.963414,
     "div_yield_ttm": 8.191780999999999,
     "pbv_latest": 0.7143552,
+    "roic_ttm": 6.416102062148031,
     "updated_at": "2026-06-15"
   },
   "KBANK": {
@@ -1125,6 +1265,7 @@
     "pe_ttm": 9.532798,
     "div_yield_ttm": 5.91133,
     "pbv_latest": 0.80914575,
+    "roic_ttm": 21.494578599219466,
     "updated_at": "2026-06-15"
   },
   "QHOP": {
@@ -1133,6 +1274,7 @@
     "pe_ttm": 15.428572,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CMAN": {
@@ -1141,6 +1283,7 @@
     "pe_ttm": 6.8095236,
     "div_yield_ttm": 5.357143300000001,
     "pbv_latest": 0.9489051,
+    "roic_ttm": 10.584730154170114,
     "updated_at": "2026-06-15"
   },
   "CPN": {
@@ -1149,6 +1292,7 @@
     "pe_ttm": 14.988559,
     "div_yield_ttm": 3.6641220000000003,
     "pbv_latest": 2.5619965,
+    "roic_ttm": 9.828682126819276,
     "updated_at": "2026-06-15"
   },
   "SAMCO": {
@@ -1157,6 +1301,7 @@
     "pe_ttm": 3.7272727,
     "div_yield_ttm": 2.4691358,
     "pbv_latest": 0.2148847,
+    "roic_ttm": 15.70606469974664,
     "updated_at": "2026-06-15"
   },
   "TSI": {
@@ -1165,6 +1310,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.44776118,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ERW": {
@@ -1173,6 +1319,7 @@
     "pe_ttm": 16.666666,
     "div_yield_ttm": 2.4305554,
     "pbv_latest": 1.5649452,
+    "roic_ttm": 7.09072923056884,
     "updated_at": "2026-06-15"
   },
   "SAT": {
@@ -1181,6 +1328,7 @@
     "pe_ttm": 8.870056,
     "div_yield_ttm": 10.2564104,
     "pbv_latest": 0.79853517,
+    "roic_ttm": 13.757438639293614,
     "updated_at": "2026-06-15"
   },
   "KBSPIF": {
@@ -1189,6 +1337,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CPNREIT": {
@@ -1197,6 +1346,7 @@
     "pe_ttm": 13.655913,
     "div_yield_ttm": 8.692913500000001,
     "pbv_latest": 1.093602,
+    "roic_ttm": 4.581153989104851,
     "updated_at": "2026-06-15"
   },
   "SNC": {
@@ -1205,6 +1355,7 @@
     "pe_ttm": 6.553398,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.44189852,
+    "roic_ttm": 7.803622674931428,
     "updated_at": "2026-06-15"
   },
   "UP": {
@@ -1213,6 +1364,7 @@
     "pe_ttm": 9.147287,
     "div_yield_ttm": 10.59322,
     "pbv_latest": 0.95161295,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "EVER": {
@@ -1221,6 +1373,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.17492712,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "IVL": {
@@ -1229,6 +1382,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 2.3230087,
     "pbv_latest": 1.1217453,
+    "roic_ttm": 0.6794650020209617,
     "updated_at": "2026-06-15"
   },
   "THCOM": {
@@ -1237,6 +1391,7 @@
     "pe_ttm": 24.680853,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.2605956,
+    "roic_ttm": 16.049938681220823,
     "updated_at": "2026-06-15"
   },
   "SPRIME": {
@@ -1245,6 +1400,7 @@
     "pe_ttm": 6.633333,
     "div_yield_ttm": 10.10101,
     "pbv_latest": 0.3814453,
+    "roic_ttm": 4.623001308036146,
     "updated_at": "2026-06-15"
   },
   "KCG": {
@@ -1253,6 +1409,7 @@
     "pe_ttm": 10.510204,
     "div_yield_ttm": 4.8571426,
     "pbv_latest": 1.6753417,
+    "roic_ttm": 15.610799816066317,
     "updated_at": "2026-06-15"
   },
   "BTNC": {
@@ -1261,6 +1418,7 @@
     "pe_ttm": 5.6299214,
     "div_yield_ttm": 10.416667,
     "pbv_latest": 0.3368193,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "KTBSTMR": {
@@ -1269,6 +1427,7 @@
     "pe_ttm": 10.727273,
     "div_yield_ttm": 10.288135,
     "pbv_latest": 0.5778082,
+    "roic_ttm": 5.077350049270076,
     "updated_at": "2026-06-15"
   },
   "FM": {
@@ -1277,6 +1436,7 @@
     "pe_ttm": 5.9710145,
     "div_yield_ttm": 8.5784316,
     "pbv_latest": 1.0367388,
+    "roic_ttm": 15.213595185046872,
     "updated_at": "2026-06-15"
   },
   "ORN": {
@@ -1285,6 +1445,7 @@
     "pe_ttm": 5.2,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.44167608,
+    "roic_ttm": 4.400077204927885,
     "updated_at": "2026-06-15"
   },
   "BANPU": {
@@ -1293,6 +1454,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.18348624,
     "pbv_latest": 0.44592103,
+    "roic_ttm": 0.2574406695385224,
     "updated_at": "2026-06-15"
   },
   "TCOAT": {
@@ -1301,6 +1463,7 @@
     "pe_ttm": 83.870964,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5279617,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PTT": {
@@ -1309,6 +1472,7 @@
     "pe_ttm": 10.769231,
     "div_yield_ttm": 5.8333330000000005,
     "pbv_latest": 0.8442075,
+    "roic_ttm": 11.473510795225033,
     "updated_at": "2026-06-15"
   },
   "WAVE": {
@@ -1317,6 +1481,7 @@
     "pe_ttm": 0.59999996,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.71428573,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "GVREIT": {
@@ -1325,6 +1490,7 @@
     "pe_ttm": 44.375,
     "div_yield_ttm": 11.171429,
     "pbv_latest": 0.6934948,
+    "roic_ttm": 6.878605870309229,
     "updated_at": "2026-06-15"
   },
   "NNCL": {
@@ -1333,6 +1499,7 @@
     "pe_ttm": 11.571428,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8490566,
+    "roic_ttm": 7.236345699845775,
     "updated_at": "2026-06-15"
   },
   "TVH": {
@@ -1341,6 +1508,7 @@
     "pe_ttm": 5.6111116,
     "div_yield_ttm": 4.3999999999999995,
     "pbv_latest": 0.7189124,
+    "roic_ttm": 21.964413768551108,
     "updated_at": "2026-06-15"
   },
   "GC": {
@@ -1349,6 +1517,7 @@
     "pe_ttm": 8.823529,
     "div_yield_ttm": 0.0,
     "pbv_latest": 3.0,
+    "roic_ttm": 13.912899741785608,
     "updated_at": "2026-06-15"
   },
   "TKC": {
@@ -1357,6 +1526,7 @@
     "pe_ttm": 21.250002,
     "div_yield_ttm": 2.0833331999999998,
     "pbv_latest": 0.8884455,
+    "roic_ttm": 1.1462221172214495,
     "updated_at": "2026-06-15"
   },
   "TLI": {
@@ -1365,6 +1535,7 @@
     "pe_ttm": 10.090909,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8225269,
+    "roic_ttm": 9.100320555888649,
     "updated_at": "2026-06-15"
   },
   "BA": {
@@ -1373,6 +1544,7 @@
     "pe_ttm": 9.157895,
     "div_yield_ttm": 7.1428575,
     "pbv_latest": 2.3822563,
+    "roic_ttm": 23.208733940373467,
     "updated_at": "2026-06-15"
   },
   "AIMIRT": {
@@ -1381,6 +1553,7 @@
     "pe_ttm": 12.921349,
     "div_yield_ttm": 7.130433999999999,
     "pbv_latest": 0.92839265,
+    "roic_ttm": 4.791714042593105,
     "updated_at": "2026-06-15"
   },
   "ADVANC": {
@@ -1389,6 +1562,7 @@
     "pe_ttm": 21.06495,
     "div_yield_ttm": 4.1803278,
     "pbv_latest": 8.886914,
+    "roic_ttm": 20.951088237819214,
     "updated_at": "2026-06-15"
   },
   "GLOBAL": {
@@ -1397,6 +1571,7 @@
     "pe_ttm": 18.428572,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.3856068,
+    "roic_ttm": 8.933172770163637,
     "updated_at": "2026-06-15"
   },
   "TCAP": {
@@ -1405,6 +1580,7 @@
     "pe_ttm": 7.850708,
     "div_yield_ttm": 5.7613168,
     "pbv_latest": 0.7737288,
+    "roic_ttm": 6.013261554801814,
     "updated_at": "2026-06-15"
   },
   "TC": {
@@ -1413,6 +1589,7 @@
     "pe_ttm": 8.90625,
     "div_yield_ttm": 5.263158300000001,
     "pbv_latest": 0.6591119,
+    "roic_ttm": 8.329552562088562,
     "updated_at": "2026-06-15"
   },
   "INETREIT": {
@@ -1421,6 +1598,7 @@
     "pe_ttm": 16.447369,
     "div_yield_ttm": 6.4838715,
     "pbv_latest": 1.1218811,
+    "roic_ttm": 6.247010858953665,
     "updated_at": "2026-06-15"
   },
   "CRC": {
@@ -1429,6 +1607,7 @@
     "pe_ttm": 18.376068,
     "div_yield_ttm": 2.4999998999999997,
     "pbv_latest": 1.8558481,
+    "roic_ttm": 7.635178535844207,
     "updated_at": "2026-06-15"
   },
   "BBL": {
@@ -1437,6 +1616,7 @@
     "pe_ttm": 7.419355,
     "div_yield_ttm": 5.7971016,
     "pbv_latest": 0.5697601,
+    "roic_ttm": 6.153830607842576,
     "updated_at": "2026-06-15"
   },
   "FSX": {
@@ -1445,6 +1625,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3511012,
+    "roic_ttm": 3.218500070782067,
     "updated_at": "2026-06-15"
   },
   "TIF1": {
@@ -1453,6 +1634,7 @@
     "pe_ttm": 12.000001,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.74963963,
+    "roic_ttm": 5.199734437840079,
     "updated_at": "2026-06-15"
   },
   "KGI": {
@@ -1461,6 +1643,7 @@
     "pe_ttm": 8.816327,
     "div_yield_ttm": 7.242990000000001,
     "pbv_latest": 1.0193489,
+    "roic_ttm": 25.863506740618412,
     "updated_at": "2026-06-15"
   },
   "TNPC": {
@@ -1469,6 +1652,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8238387,
+    "roic_ttm": 1.0450592668512528,
     "updated_at": "2026-06-15"
   },
   "CPI": {
@@ -1477,6 +1661,7 @@
     "pe_ttm": 4.8857145,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6142242,
+    "roic_ttm": 0.80556220112524,
     "updated_at": "2026-06-15"
   },
   "MEGA": {
@@ -1485,6 +1670,7 @@
     "pe_ttm": 14.40678,
     "div_yield_ttm": 4.7058824,
     "pbv_latest": 2.9020145,
+    "roic_ttm": 40.15721283775718,
     "updated_at": "2026-06-15"
   },
   "SCC": {
@@ -1493,6 +1679,7 @@
     "pe_ttm": 15.0625,
     "div_yield_ttm": 2.1097047,
     "pbv_latest": 0.82450104,
+    "roic_ttm": 4.415083907153394,
     "updated_at": "2026-06-15"
   },
   "ALLY": {
@@ -1501,6 +1688,7 @@
     "pe_ttm": 6.5833325,
     "div_yield_ttm": 9.385593,
     "pbv_latest": 0.4733846,
+    "roic_ttm": 5.518966583521037,
     "updated_at": "2026-06-15"
   },
   "SSP": {
@@ -1509,6 +1697,7 @@
     "pe_ttm": 8.042553,
     "div_yield_ttm": 5.5107526,
     "pbv_latest": 0.62376237,
+    "roic_ttm": 5.931755557978607,
     "updated_at": "2026-06-15"
   },
   "SPI": {
@@ -1517,6 +1706,7 @@
     "pe_ttm": 27.350428,
     "div_yield_ttm": 1.875,
     "pbv_latest": 0.82200927,
+    "roic_ttm": 3.2060301417197032,
     "updated_at": "2026-06-15"
   },
   "BPP": {
@@ -1525,6 +1715,7 @@
     "pe_ttm": 4.065934,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.60195225,
+    "roic_ttm": 4.137106168262637,
     "updated_at": "2026-06-15"
   },
   "SOLAR": {
@@ -1533,6 +1724,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.4444443,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "FTREIT": {
@@ -1541,6 +1733,7 @@
     "pe_ttm": 12.020202,
     "div_yield_ttm": 0.5555555,
     "pbv_latest": 1.0618364,
+    "roic_ttm": 2.6957559144143444,
     "updated_at": "2026-06-15"
   },
   "BTG": {
@@ -1549,6 +1742,7 @@
     "pe_ttm": 6.744186,
     "div_yield_ttm": 7.5,
     "pbv_latest": 1.1755168,
+    "roic_ttm": 8.025182287376126,
     "updated_at": "2026-06-15"
   },
   "AIE": {
@@ -1557,6 +1751,7 @@
     "pe_ttm": 22.6,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.74933684,
+    "roic_ttm": 9.736279308526873,
     "updated_at": "2026-06-15"
   },
   "SO": {
@@ -1565,6 +1760,7 @@
     "pe_ttm": 9.428571,
     "div_yield_ttm": 8.225109,
     "pbv_latest": 1.8719611,
+    "roic_ttm": 8.616938208737231,
     "updated_at": "2026-06-15"
   },
   "SLP": {
@@ -1573,6 +1769,7 @@
     "pe_ttm": 15.666667,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.62583226,
+    "roic_ttm": 7.531859076948057,
     "updated_at": "2026-06-15"
   },
   "DMT": {
@@ -1581,6 +1778,7 @@
     "pe_ttm": 12.608696,
     "div_yield_ttm": 7.678261,
     "pbv_latest": 1.5587208,
+    "roic_ttm": 15.638413853375619,
     "updated_at": "2026-06-15"
   },
   "TPIPL": {
@@ -1589,6 +1787,7 @@
     "pe_ttm": 7.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.25709516,
+    "roic_ttm": 3.207580390120913,
     "updated_at": "2026-06-15"
   },
   "BKD": {
@@ -1597,6 +1796,7 @@
     "pe_ttm": 12.906977,
     "div_yield_ttm": 4.5045044,
     "pbv_latest": 0.832084,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "GBX": {
@@ -1605,6 +1805,7 @@
     "pe_ttm": 19.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4589372,
+    "roic_ttm": 1.9013955083650218,
     "updated_at": "2026-06-15"
   },
   "GGC": {
@@ -1613,6 +1814,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4203925,
+    "roic_ttm": 1.8893360190128647,
     "updated_at": "2026-06-15"
   },
   "TWPC": {
@@ -1621,6 +1823,7 @@
     "pe_ttm": 11.916666,
     "div_yield_ttm": 3.9860140000000004,
     "pbv_latest": 0.5224698,
+    "roic_ttm": 10.498898838257904,
     "updated_at": "2026-06-15"
   },
   "KLINIQ": {
@@ -1629,6 +1832,7 @@
     "pe_ttm": 14.22652,
     "div_yield_ttm": 5.631068,
     "pbv_latest": 2.9903612,
+    "roic_ttm": 27.873297214585584,
     "updated_at": "2026-06-15"
   },
   "KSL": {
@@ -1637,6 +1841,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 2.7586204999999997,
     "pbv_latest": 0.33238176,
+    "roic_ttm": 2.1154167246884024,
     "updated_at": "2026-06-15"
   },
   "SPREME": {
@@ -1645,6 +1850,7 @@
     "pe_ttm": 6.727273,
     "div_yield_ttm": 8.053691,
     "pbv_latest": 1.0578985,
+    "roic_ttm": 9.187214345476171,
     "updated_at": "2026-06-15"
   },
   "TFM": {
@@ -1653,6 +1859,7 @@
     "pe_ttm": 7.9878054,
     "div_yield_ttm": 9.2307694,
     "pbv_latest": 2.5817897,
+    "roic_ttm": 31.291840470605102,
     "updated_at": "2026-06-15"
   },
   "GROREIT": {
@@ -1661,6 +1868,7 @@
     "pe_ttm": 9.777779,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.7740346,
+    "roic_ttm": 5.533070444035522,
     "updated_at": "2026-06-15"
   },
   "PRG": {
@@ -1669,6 +1877,7 @@
     "pe_ttm": 11.5625,
     "div_yield_ttm": 8.306011,
     "pbv_latest": 0.7491698,
+    "roic_ttm": 0.3291989297260278,
     "updated_at": "2026-06-15"
   },
   "IMPACT": {
@@ -1677,6 +1886,7 @@
     "pe_ttm": 14.02439,
     "div_yield_ttm": 6.052632,
     "pbv_latest": 1.0321306,
+    "roic_ttm": 4.007002887708288,
     "updated_at": "2026-06-15"
   },
   "INET": {
@@ -1685,6 +1895,7 @@
     "pe_ttm": 8.638298,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.67779636,
+    "roic_ttm": 11.124498602847826,
     "updated_at": "2026-06-15"
   },
   "GPSC": {
@@ -1693,6 +1904,7 @@
     "pe_ttm": 16.834677,
     "div_yield_ttm": 3.5365853000000005,
     "pbv_latest": 1.1087211,
+    "roic_ttm": 4.267075713359186,
     "updated_at": "2026-06-15"
   },
   "ROCTEC": {
@@ -1701,6 +1913,7 @@
     "pe_ttm": 11.166667,
     "div_yield_ttm": 4.1791044,
     "pbv_latest": 0.8302355,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TPAC": {
@@ -1709,6 +1922,7 @@
     "pe_ttm": 5.4934216,
     "div_yield_ttm": 5.2771084,
     "pbv_latest": 0.9395747,
+    "roic_ttm": 10.445941452825489,
     "updated_at": "2026-06-15"
   },
   "RATCH": {
@@ -1717,6 +1931,7 @@
     "pe_ttm": 10.751749,
     "div_yield_ttm": 5.3333335,
     "pbv_latest": 0.6737216,
+    "roic_ttm": 0.04484118138437437,
     "updated_at": "2026-06-15"
   },
   "TISCO": {
@@ -1725,6 +1940,7 @@
     "pe_ttm": 13.625593,
     "div_yield_ttm": 6.768559000000001,
     "pbv_latest": 2.1228287,
+    "roic_ttm": 26.54633057036579,
     "updated_at": "2026-06-15"
   },
   "SUPER": {
@@ -1733,6 +1949,7 @@
     "pe_ttm": 6.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.16853932,
+    "roic_ttm": 3.0289995638210456,
     "updated_at": "2026-06-15"
   },
   "PROUD": {
@@ -1741,6 +1958,7 @@
     "pe_ttm": 5.875,
     "div_yield_ttm": 9.574468399999999,
     "pbv_latest": 0.51226157,
+    "roic_ttm": 7.273289332673172,
     "updated_at": "2026-06-15"
   },
   "SE": {
@@ -1749,6 +1967,7 @@
     "pe_ttm": 7.8333335,
     "div_yield_ttm": 5.531915,
     "pbv_latest": 0.6601123,
+    "roic_ttm": 2.6260122941622646,
     "updated_at": "2026-06-15"
   },
   "BOFFICE": {
@@ -1757,6 +1976,7 @@
     "pe_ttm": 10.612245,
     "div_yield_ttm": 10.6730774,
     "pbv_latest": 0.53925127,
+    "roic_ttm": 5.478779094827047,
     "updated_at": "2026-06-15"
   },
   "KTC": {
@@ -1765,6 +1985,7 @@
     "pe_ttm": 9.633758,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.683736,
+    "roic_ttm": 8.890204598494382,
     "updated_at": "2026-06-15"
   },
   "TPRIME": {
@@ -1773,6 +1994,7 @@
     "pe_ttm": 10.0,
     "div_yield_ttm": 5.3419355,
     "pbv_latest": 0.64402807,
+    "roic_ttm": 5.506949940554361,
     "updated_at": "2026-06-15"
   },
   "MBK": {
@@ -1781,6 +2003,7 @@
     "pe_ttm": 6.7753625,
     "div_yield_ttm": 5.9139784,
     "pbv_latest": 1.0750216,
+    "roic_ttm": 10.598551427214712,
     "updated_at": "2026-06-15"
   },
   "AH": {
@@ -1789,6 +2012,7 @@
     "pe_ttm": 6.425339,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.43793368,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DTCENT": {
@@ -1797,6 +2021,7 @@
     "pe_ttm": 11.625,
     "div_yield_ttm": 6.451613,
     "pbv_latest": 0.7692308,
+    "roic_ttm": 8.583879988831912,
     "updated_at": "2026-06-15"
   },
   "TQM": {
@@ -1805,6 +2030,7 @@
     "pe_ttm": 11.724138,
     "div_yield_ttm": 8.208956,
     "pbv_latest": 2.777778,
+    "roic_ttm": 30.036836591398718,
     "updated_at": "2026-06-15"
   },
   "GPI": {
@@ -1813,6 +2039,7 @@
     "pe_ttm": 10.687501,
     "div_yield_ttm": 9.941520500000001,
     "pbv_latest": 1.1422846,
+    "roic_ttm": 59.83140020646858,
     "updated_at": "2026-06-15"
   },
   "UPOIC": {
@@ -1821,6 +2048,7 @@
     "pe_ttm": 8.3950615,
     "div_yield_ttm": 4.9635038,
     "pbv_latest": 1.2497703,
+    "roic_ttm": 15.705486373354471,
     "updated_at": "2026-06-15"
   },
   "UTP": {
@@ -1829,6 +2057,7 @@
     "pe_ttm": 9.294118,
     "div_yield_ttm": 7.54717,
     "pbv_latest": 1.0301212,
+    "roic_ttm": 24.39174908962669,
     "updated_at": "2026-06-15"
   },
   "ILINK": {
@@ -1837,6 +2066,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.67933214,
+    "roic_ttm": 10.274554683037355,
     "updated_at": "2026-06-15"
   },
   "RABBIT": {
@@ -1845,6 +2075,7 @@
     "pe_ttm": 1.9444443,
     "div_yield_ttm": 0.0,
     "pbv_latest": -1.0174417,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "INOX": {
@@ -1853,6 +2084,7 @@
     "pe_ttm": 21.099998,
     "div_yield_ttm": 0.0,
     "pbv_latest": 3.5976129,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SAUCE": {
@@ -1861,6 +2093,7 @@
     "pe_ttm": 18.835615,
     "div_yield_ttm": 0.0,
     "pbv_latest": 4.509675,
+    "roic_ttm": 25.719520720253637,
     "updated_at": "2026-06-15"
   },
   "IP": {
@@ -1869,6 +2102,7 @@
     "pe_ttm": 20.272728,
     "div_yield_ttm": 1.6367713,
     "pbv_latest": 1.2886449,
+    "roic_ttm": 8.112699535561207,
     "updated_at": "2026-06-15"
   },
   "TVO": {
@@ -1877,6 +2111,7 @@
     "pe_ttm": 9.962406,
     "div_yield_ttm": 7.5047619999999995,
     "pbv_latest": 2.0378346,
+    "roic_ttm": 20.05091426139768,
     "updated_at": "2026-06-15"
   },
   "TEKA": {
@@ -1885,6 +2120,7 @@
     "pe_ttm": 5.375,
     "div_yield_ttm": 8.670521,
     "pbv_latest": 0.5575365,
+    "roic_ttm": 17.26009580779146,
     "updated_at": "2026-06-15"
   },
   "TSC": {
@@ -1893,6 +2129,7 @@
     "pe_ttm": 10.729927,
     "div_yield_ttm": 8.163266,
     "pbv_latest": 2.4676852,
+    "roic_ttm": 25.740124951581144,
     "updated_at": "2026-06-15"
   },
   "SPCG": {
@@ -1901,6 +2138,7 @@
     "pe_ttm": 25.882353,
     "div_yield_ttm": 7.4576270000000005,
     "pbv_latest": 0.57456255,
+    "roic_ttm": 2.986165337494928,
     "updated_at": "2026-06-15"
   },
   "CSR": {
@@ -1909,6 +2147,7 @@
     "pe_ttm": 20.692091,
     "div_yield_ttm": 2.7619047,
     "pbv_latest": 1.1772363,
+    "roic_ttm": 5.899453568118883,
     "updated_at": "2026-06-15"
   },
   "BH": {
@@ -1917,6 +2156,7 @@
     "pe_ttm": 21.337946,
     "div_yield_ttm": 2.8089888,
     "pbv_latest": 4.5031886,
+    "roic_ttm": 38.40506453730117,
     "updated_at": "2026-06-15"
   },
   "AWC": {
@@ -1925,6 +2165,7 @@
     "pe_ttm": 12.9,
     "div_yield_ttm": 3.2520324000000005,
     "pbv_latest": 0.84479374,
+    "roic_ttm": 2.0457804033407463,
     "updated_at": "2026-06-15"
   },
   "PTL": {
@@ -1933,6 +2174,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 1.2,
     "pbv_latest": 0.46421573,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TCC": {
@@ -1941,6 +2183,7 @@
     "pe_ttm": 33.000004,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.41561714,
+    "roic_ttm": 2.639833580892905,
     "updated_at": "2026-06-15"
   },
   "SUPEREIF": {
@@ -1949,6 +2192,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "LHHOTEL": {
@@ -1957,6 +2201,7 @@
     "pe_ttm": 10.64,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.0295712,
+    "roic_ttm": 6.885102322205738,
     "updated_at": "2026-06-15"
   },
   "KIAT": {
@@ -1965,6 +2210,7 @@
     "pe_ttm": 34.0,
     "div_yield_ttm": 6.060606,
     "pbv_latest": 0.94182825,
+    "roic_ttm": 5.925771004508164,
     "updated_at": "2026-06-15"
   },
   "AMC": {
@@ -1973,6 +2219,7 @@
     "pe_ttm": 70.666664,
     "div_yield_ttm": 3.6363635,
     "pbv_latest": 0.33244473,
+    "roic_ttm": 3.3090315435171602,
     "updated_at": "2026-06-15"
   },
   "BAREIT": {
@@ -1981,6 +2228,7 @@
     "pe_ttm": 12.643678,
     "div_yield_ttm": 7.407407500000001,
     "pbv_latest": 1.093983,
+    "roic_ttm": 6.13110600316851,
     "updated_at": "2026-06-15"
   },
   "CHOTI": {
@@ -1989,6 +2237,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.2353998,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "RT": {
@@ -1997,6 +2246,7 @@
     "pe_ttm": 3.625,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.31728664,
+    "roic_ttm": 3.8594314407601957,
     "updated_at": "2026-06-15"
   },
   "WHART": {
@@ -2005,6 +2255,7 @@
     "pe_ttm": 15.882353,
     "div_yield_ttm": 6.2685184000000005,
     "pbv_latest": 1.0237938,
+    "roic_ttm": 4.970421034678575,
     "updated_at": "2026-06-15"
   },
   "DIF": {
@@ -2013,6 +2264,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MDX": {
@@ -2021,6 +2273,7 @@
     "pe_ttm": 2.9756098,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.23156497,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SIS": {
@@ -2029,6 +2282,7 @@
     "pe_ttm": 7.969925,
     "div_yield_ttm": 5.7276998,
     "pbv_latest": 1.533343,
+    "roic_ttm": 14.789223524906697,
     "updated_at": "2026-06-15"
   },
   "IRC": {
@@ -2037,6 +2291,7 @@
     "pe_ttm": 9.36508,
     "div_yield_ttm": 4.1428573,
     "pbv_latest": 0.54155767,
+    "roic_ttm": 13.640737956361795,
     "updated_at": "2026-06-15"
   },
   "PRTR": {
@@ -2045,6 +2300,7 @@
     "pe_ttm": 9.444445,
     "div_yield_ttm": 8.875739600000001,
     "pbv_latest": 1.1451668,
+    "roic_ttm": 15.359660942000097,
     "updated_at": "2026-06-15"
   },
   "ALLA": {
@@ -2053,6 +2309,7 @@
     "pe_ttm": 10.545454,
     "div_yield_ttm": 8.62069,
     "pbv_latest": 0.710349,
+    "roic_ttm": 7.39779024966265,
     "updated_at": "2026-06-15"
   },
   "TIPH": {
@@ -2061,6 +2318,7 @@
     "pe_ttm": 12.111111,
     "div_yield_ttm": 6.8807339999999995,
     "pbv_latest": 1.3185749,
+    "roic_ttm": 12.730085447139686,
     "updated_at": "2026-06-15"
   },
   "HTC": {
@@ -2069,6 +2327,7 @@
     "pe_ttm": 10.821918,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.4301231,
+    "roic_ttm": 10.629275824613964,
     "updated_at": "2026-06-15"
   },
   "AURA": {
@@ -2077,6 +2336,7 @@
     "pe_ttm": 10.534351,
     "div_yield_ttm": 4.0,
     "pbv_latest": 2.5109172,
+    "roic_ttm": 8.455408429182864,
     "updated_at": "2026-06-15"
   },
   "WIIK": {
@@ -2085,6 +2345,7 @@
     "pe_ttm": 10.299999,
     "div_yield_ttm": 5.851064,
     "pbv_latest": 0.40250096,
+    "roic_ttm": 5.7317256807984425,
     "updated_at": "2026-06-15"
   },
   "TPBI": {
@@ -2093,6 +2354,7 @@
     "pe_ttm": 7.3170733,
     "div_yield_ttm": 7.666667,
     "pbv_latest": 0.424869,
+    "roic_ttm": 7.825638145672485,
     "updated_at": "2026-06-15"
   },
   "FUTURERT": {
@@ -2101,6 +2363,7 @@
     "pe_ttm": 9.166667,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.88942796,
+    "roic_ttm": 5.970192945854514,
     "updated_at": "2026-06-15"
   },
   "CPALL": {
@@ -2109,6 +2372,7 @@
     "pe_ttm": 13.948171,
     "div_yield_ttm": 3.6263734,
     "pbv_latest": 2.9483793,
+    "roic_ttm": 9.222230154155632,
     "updated_at": "2026-06-15"
   },
   "SSSC": {
@@ -2117,6 +2381,7 @@
     "pe_ttm": 7.851851,
     "div_yield_ttm": 7.783019500000001,
     "pbv_latest": 0.39633575,
+    "roic_ttm": 8.189915897535629,
     "updated_at": "2026-06-15"
   },
   "VRANDA": {
@@ -2125,6 +2390,7 @@
     "pe_ttm": 10.325582,
     "div_yield_ttm": 4.2045455,
     "pbv_latest": 0.7199611,
+    "roic_ttm": 7.178956382332771,
     "updated_at": "2026-06-15"
   },
   "SITHAI": {
@@ -2133,6 +2399,7 @@
     "pe_ttm": 10.2,
     "div_yield_ttm": 5.8252428,
     "pbv_latest": 0.6542655,
+    "roic_ttm": 9.117744494976387,
     "updated_at": "2026-06-15"
   },
   "CENTEL": {
@@ -2141,6 +2408,7 @@
     "pe_ttm": 14.342629,
     "div_yield_ttm": 1.9705882000000001,
     "pbv_latest": 1.953337,
+    "roic_ttm": 4.1639222320943015,
     "updated_at": "2026-06-15"
   },
   "SCB": {
@@ -2149,6 +2417,7 @@
     "pe_ttm": 10.424422,
     "div_yield_ttm": 8.057143,
     "pbv_latest": 0.9517141,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TLHPF": {
@@ -2157,6 +2426,7 @@
     "pe_ttm": 7.9928946,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4742333,
+    "roic_ttm": 5.472191304238289,
     "updated_at": "2026-06-15"
   },
   "TMD": {
@@ -2165,6 +2435,7 @@
     "pe_ttm": 10.802469,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.1678605,
+    "roic_ttm": 19.68214582533927,
     "updated_at": "2026-06-15"
   },
   "AFC": {
@@ -2173,6 +2444,7 @@
     "pe_ttm": 5.5072465,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.14503263,
+    "roic_ttm": 4.761195950360521,
     "updated_at": "2026-06-15"
   },
   "TEGH": {
@@ -2181,6 +2453,7 @@
     "pe_ttm": 7.7499995,
     "div_yield_ttm": 7.096774,
     "pbv_latest": 0.85258526,
+    "roic_ttm": 5.763541863656347,
     "updated_at": "2026-06-15"
   },
   "UBE": {
@@ -2189,6 +2462,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 2.6785712999999998,
     "pbv_latest": 0.37517056,
+    "roic_ttm": 0.7761614208258679,
     "updated_at": "2026-06-15"
   },
   "GREEN": {
@@ -2197,6 +2471,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8277405,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SC": {
@@ -2205,6 +2480,7 @@
     "pe_ttm": 4.888889,
     "div_yield_ttm": 8.4745765,
     "pbv_latest": 0.30240548,
+    "roic_ttm": 2.1570961382275216,
     "updated_at": "2026-06-15"
   },
   "CTARAF": {
@@ -2213,6 +2489,7 @@
     "pe_ttm": 12.666666,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8672499,
+    "roic_ttm": 8.566034631488014,
     "updated_at": "2026-06-15"
   },
   "BCP": {
@@ -2221,6 +2498,7 @@
     "pe_ttm": 15.745193,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.65649676,
+    "roic_ttm": 20.574243795825275,
     "updated_at": "2026-06-15"
   },
   "HFT": {
@@ -2229,6 +2507,7 @@
     "pe_ttm": 13.931035,
     "div_yield_ttm": 6.585366,
     "pbv_latest": 0.71745694,
+    "roic_ttm": 6.269353457446784,
     "updated_at": "2026-06-15"
   },
   "SSTRT": {
@@ -2237,6 +2516,7 @@
     "pe_ttm": 8.576923,
     "div_yield_ttm": 9.009008999999999,
     "pbv_latest": 0.5473064,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SCGD": {
@@ -2245,6 +2525,7 @@
     "pe_ttm": 8.62069,
     "div_yield_ttm": 6.800000000000001,
     "pbv_latest": 0.44802868,
+    "roic_ttm": 5.8663906368286405,
     "updated_at": "2026-06-15"
   },
   "NATION": {
@@ -2253,6 +2534,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 9.999999,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MOSHI": {
@@ -2261,6 +2543,7 @@
     "pe_ttm": 17.172895,
     "div_yield_ttm": 3.3197280000000005,
     "pbv_latest": 4.1511354,
+    "roic_ttm": 24.095065917993335,
     "updated_at": "2026-06-15"
   },
   "LHK": {
@@ -2269,6 +2552,7 @@
     "pe_ttm": 11.096774,
     "div_yield_ttm": 7.5581394,
     "pbv_latest": 0.9739524,
+    "roic_ttm": 17.982236749215392,
     "updated_at": "2026-06-15"
   },
   "KBS": {
@@ -2277,6 +2561,7 @@
     "pe_ttm": 6.785714,
     "div_yield_ttm": 8.695651999999999,
     "pbv_latest": 0.6912442,
+    "roic_ttm": 13.804201279925207,
     "updated_at": "2026-06-15"
   },
   "SELIC": {
@@ -2285,6 +2570,7 @@
     "pe_ttm": 11.923077,
     "div_yield_ttm": 1.1258279,
     "pbv_latest": 1.5593561,
+    "roic_ttm": 19.72183140597824,
     "updated_at": "2026-06-15"
   },
   "AXTRART": {
@@ -2293,6 +2579,7 @@
     "pe_ttm": 11.415929,
     "div_yield_ttm": 6.8571426,
     "pbv_latest": 1.0240533,
+    "roic_ttm": 5.735768535196784,
     "updated_at": "2026-06-15"
   },
   "ITEL": {
@@ -2301,6 +2588,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5386513,
+    "roic_ttm": 1.749619487506979,
     "updated_at": "2026-06-15"
   },
   "SIRI": {
@@ -2309,6 +2597,7 @@
     "pe_ttm": 5.9166665,
     "div_yield_ttm": 9.219858,
     "pbv_latest": 0.4899931,
+    "roic_ttm": 2.2585256269748513,
     "updated_at": "2026-06-15"
   },
   "SEAOIL": {
@@ -2317,6 +2606,7 @@
     "pe_ttm": 8.105263,
     "div_yield_ttm": 5.7692309999999996,
     "pbv_latest": 0.8165429,
+    "roic_ttm": 11.569030623244256,
     "updated_at": "2026-06-15"
   },
   "DCC": {
@@ -2325,6 +2615,7 @@
     "pe_ttm": 13.400001,
     "div_yield_ttm": 5.2631575999999995,
     "pbv_latest": 1.6813049,
+    "roic_ttm": 9.809717320929824,
     "updated_at": "2026-06-15"
   },
   "SCCC": {
@@ -2333,6 +2624,7 @@
     "pe_ttm": 11.270333,
     "div_yield_ttm": 7.508533000000001,
     "pbv_latest": 1.2614878,
+    "roic_ttm": 12.792054740112052,
     "updated_at": "2026-06-15"
   },
   "APCS": {
@@ -2341,6 +2633,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8464682,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PIN": {
@@ -2349,6 +2642,7 @@
     "pe_ttm": 7.288136,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.1472787,
+    "roic_ttm": 11.786202889270669,
     "updated_at": "2026-06-15"
   },
   "MC": {
@@ -2357,6 +2651,7 @@
     "pe_ttm": 11.956522,
     "div_yield_ttm": 2.7027028,
     "pbv_latest": 2.2854767,
+    "roic_ttm": 16.547452414748225,
     "updated_at": "2026-06-15"
   },
   "SSF": {
@@ -2365,6 +2660,7 @@
     "pe_ttm": 10.978261,
     "div_yield_ttm": 7.3999999999999995,
     "pbv_latest": 0.71357924,
+    "roic_ttm": 6.989424979686423,
     "updated_at": "2026-06-15"
   },
   "TTW": {
@@ -2373,6 +2669,7 @@
     "pe_ttm": 11.463414,
     "div_yield_ttm": 6.4171119999999995,
     "pbv_latest": 2.1698985,
+    "roic_ttm": 13.431295543258127,
     "updated_at": "2026-06-15"
   },
   "MST": {
@@ -2381,6 +2678,7 @@
     "pe_ttm": 15.106382,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.7711524,
+    "roic_ttm": 4.808816750684931,
     "updated_at": "2026-06-15"
   },
   "QH": {
@@ -2389,6 +2687,7 @@
     "pe_ttm": 7.882353,
     "div_yield_ttm": 6.716418,
     "pbv_latest": 0.4706709,
+    "roic_ttm": 0.9046116264625559,
     "updated_at": "2026-06-15"
   },
   "OCC": {
@@ -2397,6 +2696,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5831924,
+    "roic_ttm": 0.9940987442460433,
     "updated_at": "2026-06-15"
   },
   "SRIPANWA": {
@@ -2405,6 +2705,7 @@
     "pe_ttm": 6.011905,
     "div_yield_ttm": 8.543689,
     "pbv_latest": 0.3965761,
+    "roic_ttm": 5.42768947079912,
     "updated_at": "2026-06-15"
   },
   "AKR": {
@@ -2413,6 +2714,7 @@
     "pe_ttm": 12.714286,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.77056277,
+    "roic_ttm": 30.141335324721602,
     "updated_at": "2026-06-15"
   },
   "CGH": {
@@ -2421,6 +2723,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.38594073,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TOG": {
@@ -2429,6 +2732,7 @@
     "pe_ttm": 9.513888,
     "div_yield_ttm": 7.2992705,
     "pbv_latest": 1.2675796,
+    "roic_ttm": 8.682615654034889,
     "updated_at": "2026-06-15"
   },
   "CPT": {
@@ -2437,6 +2741,7 @@
     "pe_ttm": 11.444444,
     "div_yield_ttm": 2.4271846,
     "pbv_latest": 0.8758503,
+    "roic_ttm": 8.84386432580574,
     "updated_at": "2026-06-15"
   },
   "STARM": {
@@ -2445,6 +2750,7 @@
     "pe_ttm": 12.125001,
     "div_yield_ttm": 3.0612243,
     "pbv_latest": 0.8882784,
+    "roic_ttm": 7.287300122628951,
     "updated_at": "2026-06-15"
   },
   "EASON": {
@@ -2453,6 +2759,7 @@
     "pe_ttm": 6.294118,
     "div_yield_ttm": 7.407407000000001,
     "pbv_latest": 0.64966613,
+    "roic_ttm": 5.173241324486737,
     "updated_at": "2026-06-15"
   },
   "THE": {
@@ -2461,6 +2768,7 @@
     "pe_ttm": 76.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.43553007,
+    "roic_ttm": 6.857442363221333,
     "updated_at": "2026-06-15"
   },
   "KYE": {
@@ -2469,6 +2777,7 @@
     "pe_ttm": 9.839744,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6169465,
+    "roic_ttm": 24.35226996615107,
     "updated_at": "2026-06-15"
   },
   "STECH": {
@@ -2477,6 +2786,7 @@
     "pe_ttm": 5.2499995,
     "div_yield_ttm": 3.809524,
     "pbv_latest": 0.44491526,
+    "roic_ttm": 10.308353174012142,
     "updated_at": "2026-06-15"
   },
   "BR": {
@@ -2485,6 +2795,7 @@
     "pe_ttm": 9.349999,
     "div_yield_ttm": 1.081081,
     "pbv_latest": 0.34136546,
+    "roic_ttm": 5.848410602605707,
     "updated_at": "2026-06-15"
   },
   "TRU": {
@@ -2493,6 +2804,7 @@
     "pe_ttm": 10.378378,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6369215,
+    "roic_ttm": 7.710687831503033,
     "updated_at": "2026-06-15"
   },
   "FPT": {
@@ -2501,6 +2813,7 @@
     "pe_ttm": 5.8333335,
     "div_yield_ttm": 5.03937,
     "pbv_latest": 0.40040678,
+    "roic_ttm": 5.40370656805376,
     "updated_at": "2026-06-15"
   },
   "SENA": {
@@ -2509,6 +2822,7 @@
     "pe_ttm": 9.722221,
     "div_yield_ttm": 7.9310339999999995,
     "pbv_latest": 0.295908,
+    "roic_ttm": 2.5356700288356357,
     "updated_at": "2026-06-15"
   },
   "PRAKIT": {
@@ -2517,6 +2831,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8247591,
+    "roic_ttm": 18.36772723558178,
     "updated_at": "2026-06-15"
   },
   "BGRIM": {
@@ -2525,6 +2840,7 @@
     "pe_ttm": 51.25,
     "div_yield_ttm": 2.7651008,
     "pbv_latest": 1.2310464,
+    "roic_ttm": 4.8944285073374685,
     "updated_at": "2026-06-15"
   },
   "ICHI": {
@@ -2533,6 +2849,7 @@
     "pe_ttm": 12.380953,
     "div_yield_ttm": 8.846153,
     "pbv_latest": 2.9898803,
+    "roic_ttm": 24.359467513445992,
     "updated_at": "2026-06-15"
   },
   "LRH": {
@@ -2541,6 +2858,7 @@
     "pe_ttm": 3.6804798,
     "div_yield_ttm": 4.2962964999999995,
     "pbv_latest": 0.30413625,
+    "roic_ttm": 8.755135280563717,
     "updated_at": "2026-06-15"
   },
   "LST": {
@@ -2549,6 +2867,7 @@
     "pe_ttm": 6.882353,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.693436,
+    "roic_ttm": 9.624163625749373,
     "updated_at": "2026-06-15"
   },
   "CSP": {
@@ -2557,6 +2876,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.47397768,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "JCT": {
@@ -2565,6 +2885,7 @@
     "pe_ttm": 9.093407,
     "div_yield_ttm": 5.962733,
     "pbv_latest": 0.7538558,
+    "roic_ttm": 10.345733387107774,
     "updated_at": "2026-06-15"
   },
   "SMPC": {
@@ -2573,6 +2894,7 @@
     "pe_ttm": 7.6694922,
     "div_yield_ttm": 7.692307,
     "pbv_latest": 1.4787582,
+    "roic_ttm": 23.159464502875593,
     "updated_at": "2026-06-15"
   },
   "TEAMG": {
@@ -2581,6 +2903,7 @@
     "pe_ttm": 12.5,
     "div_yield_ttm": 5.333333,
     "pbv_latest": 1.6835017,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SKR": {
@@ -2589,6 +2912,7 @@
     "pe_ttm": 21.81818,
     "div_yield_ttm": 3.5211270000000003,
     "pbv_latest": 1.875,
+    "roic_ttm": 8.208906217518093,
     "updated_at": "2026-06-15"
   },
   "NER": {
@@ -2597,6 +2921,7 @@
     "pe_ttm": 4.3333335,
     "div_yield_ttm": 7.013574,
     "pbv_latest": 0.841424,
+    "roic_ttm": 7.236982915429997,
     "updated_at": "2026-06-15"
   },
   "PAF": {
@@ -2605,6 +2930,7 @@
     "pe_ttm": 19.5,
     "div_yield_ttm": 1.2820513,
     "pbv_latest": 0.67474043,
+    "roic_ttm": 9.46231968590254,
     "updated_at": "2026-06-15"
   },
   "SHR": {
@@ -2613,6 +2939,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 4.4585984000000005,
     "pbv_latest": 0.44880408,
+    "roic_ttm": 5.5086388468400695,
     "updated_at": "2026-06-15"
   },
   "ITC": {
@@ -2621,6 +2948,7 @@
     "pe_ttm": 15.523809,
     "div_yield_ttm": 5.2147243,
     "pbv_latest": 2.0066476,
+    "roic_ttm": 17.970726606223955,
     "updated_at": "2026-06-15"
   },
   "PSP": {
@@ -2629,6 +2957,7 @@
     "pe_ttm": 9.836065,
     "div_yield_ttm": 4.7457628000000005,
     "pbv_latest": 1.8844221,
+    "roic_ttm": 18.99869621022724,
     "updated_at": "2026-06-15"
   },
   "WP": {
@@ -2637,6 +2966,7 @@
     "pe_ttm": 11.354838,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.3907547,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TTI": {
@@ -2645,6 +2975,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 1.8691588,
     "pbv_latest": 0.63126844,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "KDH": {
@@ -2653,6 +2984,7 @@
     "pe_ttm": 10.207824,
     "div_yield_ttm": 3.2335330000000004,
     "pbv_latest": 1.7882766,
+    "roic_ttm": 26.376143949279363,
     "updated_at": "2026-06-15"
   },
   "WHABT": {
@@ -2661,6 +2993,7 @@
     "pe_ttm": 14.04762,
     "div_yield_ttm": 10.169492,
     "pbv_latest": 0.5212935,
+    "roic_ttm": 4.657361004733853,
     "updated_at": "2026-06-15"
   },
   "VIH": {
@@ -2669,6 +3002,7 @@
     "pe_ttm": 11.25,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.2727845,
+    "roic_ttm": 16.454201123356064,
     "updated_at": "2026-06-15"
   },
   "SCN": {
@@ -2677,6 +3011,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.21597187,
+    "roic_ttm": 1.7981626623097335,
     "updated_at": "2026-06-15"
   },
   "SIAM": {
@@ -2685,6 +3020,7 @@
     "pe_ttm": 15.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.17601502,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TFFIF": {
@@ -2693,6 +3029,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "LUXF": {
@@ -2701,6 +3038,7 @@
     "pe_ttm": 28.08642,
     "div_yield_ttm": 9.392265,
     "pbv_latest": 0.72348547,
+    "roic_ttm": 6.532363878712891,
     "updated_at": "2026-06-15"
   },
   "RJH": {
@@ -2709,6 +3047,7 @@
     "pe_ttm": 11.981982,
     "div_yield_ttm": 4.4776123000000005,
     "pbv_latest": 1.7662683,
+    "roic_ttm": 7.970715344066487,
     "updated_at": "2026-06-15"
   },
   "GLAND": {
@@ -2717,6 +3056,7 @@
     "pe_ttm": 9.25,
     "div_yield_ttm": 7.4324325,
     "pbv_latest": 0.29295328,
+    "roic_ttm": 3.304620560223489,
     "updated_at": "2026-06-15"
   },
   "MNIT2": {
@@ -2725,6 +3065,7 @@
     "pe_ttm": 30.30303,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.94428706,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TPA": {
@@ -2733,6 +3074,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.9200137,
+    "roic_ttm": 4.766544630648125,
     "updated_at": "2026-06-15"
   },
   "RPH": {
@@ -2741,6 +3083,7 @@
     "pe_ttm": 15.187501,
     "div_yield_ttm": 5.7377048,
     "pbv_latest": 1.4776528,
+    "roic_ttm": 9.639713284825527,
     "updated_at": "2026-06-15"
   },
   "HYDROGEN": {
@@ -2749,6 +3092,7 @@
     "pe_ttm": 11.351351,
     "div_yield_ttm": 6.904762000000001,
     "pbv_latest": 0.93917704,
+    "roic_ttm": 5.467057697783787,
     "updated_at": "2026-06-15"
   },
   "CCP": {
@@ -2757,6 +3101,7 @@
     "pe_ttm": 8.666667,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4642857,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PLAT": {
@@ -2765,6 +3110,7 @@
     "pe_ttm": 7.5999994,
     "div_yield_ttm": 1.7391304,
     "pbv_latest": 0.37000972,
+    "roic_ttm": 5.864069793558243,
     "updated_at": "2026-06-15"
   },
   "EAST": {
@@ -2773,6 +3119,7 @@
     "pe_ttm": 6.9,
     "div_yield_ttm": 2.9411763,
     "pbv_latest": 0.40707964,
+    "roic_ttm": 2.1078136943153867,
     "updated_at": "2026-06-15"
   },
   "PCSGH": {
@@ -2781,6 +3128,7 @@
     "pe_ttm": 8.705882,
     "div_yield_ttm": 9.121622,
     "pbv_latest": 0.8312272,
+    "roic_ttm": 16.643669876483713,
     "updated_at": "2026-06-15"
   },
   "EGCO": {
@@ -2789,6 +3137,7 @@
     "pe_ttm": 30.649351,
     "div_yield_ttm": 5.6034483,
     "pbv_latest": 0.6078307,
+    "roic_ttm": 1.392745101400993,
     "updated_at": "2026-06-15"
   },
   "PG": {
@@ -2797,6 +3146,7 @@
     "pe_ttm": 215.0,
     "div_yield_ttm": 7.407407500000001,
     "pbv_latest": 0.47076854,
+    "roic_ttm": 1.536980025511658,
     "updated_at": "2026-06-15"
   },
   "SMIT": {
@@ -2805,6 +3155,7 @@
     "pe_ttm": 11.862069,
     "div_yield_ttm": 6.9364159999999995,
     "pbv_latest": 0.6710886,
+    "roic_ttm": 6.3882003642291405,
     "updated_at": "2026-06-15"
   },
   "CSC": {
@@ -2813,6 +3164,7 @@
     "pe_ttm": 9.421842,
     "div_yield_ttm": 5.0847456,
     "pbv_latest": 0.5293615,
+    "roic_ttm": 13.995033903228816,
     "updated_at": "2026-06-15"
   },
   "EKH": {
@@ -2821,6 +3173,7 @@
     "pe_ttm": 15.437501,
     "div_yield_ttm": 6.0728747,
     "pbv_latest": 1.7406625,
+    "roic_ttm": 14.972410231278769,
     "updated_at": "2026-06-15"
   },
   "PJW": {
@@ -2829,6 +3182,7 @@
     "pe_ttm": 8.32,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8163265,
+    "roic_ttm": 5.219928484835624,
     "updated_at": "2026-06-15"
   },
   "KPNREIT": {
@@ -2837,6 +3191,7 @@
     "pe_ttm": 8.166667,
     "div_yield_ttm": 4.568528000000001,
     "pbv_latest": 0.20521413,
+    "roic_ttm": 1.801192545165073,
     "updated_at": "2026-06-15"
   },
   "AGE": {
@@ -2845,6 +3200,7 @@
     "pe_ttm": 4.133333,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4651163,
+    "roic_ttm": 4.467752384030396,
     "updated_at": "2026-06-15"
   },
   "MNIT": {
@@ -2853,6 +3209,7 @@
     "pe_ttm": 11.875,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3740894,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SNPS": {
@@ -2861,6 +3218,7 @@
     "pe_ttm": 15.066666,
     "div_yield_ttm": 4.2035397,
     "pbv_latest": 2.040632,
+    "roic_ttm": 26.168909298774,
     "updated_at": "2026-06-15"
   },
   "SVT": {
@@ -2869,6 +3227,7 @@
     "pe_ttm": 9.214286,
     "div_yield_ttm": 3.937008,
     "pbv_latest": 0.7288135,
+    "roic_ttm": 11.893567767657993,
     "updated_at": "2026-06-15"
   },
   "BUI": {
@@ -2877,6 +3236,7 @@
     "pe_ttm": 7.218543,
     "div_yield_ttm": 1.6697248000000002,
     "pbv_latest": 0.47145325,
+    "roic_ttm": 6.7850357380411275,
     "updated_at": "2026-06-15"
   },
   "TASCO": {
@@ -2885,6 +3245,7 @@
     "pe_ttm": 19.178082,
     "div_yield_ttm": 7.2463766,
     "pbv_latest": 1.5794224,
+    "roic_ttm": 9.699389685488025,
     "updated_at": "2026-06-15"
   },
   "III": {
@@ -2893,6 +3254,7 @@
     "pe_ttm": 8.775511,
     "div_yield_ttm": 5.8685444,
     "pbv_latest": 0.81485695,
+    "roic_ttm": 0.6276475913221549,
     "updated_at": "2026-06-15"
   },
   "PMTA": {
@@ -2901,6 +3263,7 @@
     "pe_ttm": 6.847826,
     "div_yield_ttm": 7.3298424,
     "pbv_latest": 0.57954127,
+    "roic_ttm": 6.092801322878043,
     "updated_at": "2026-06-15"
   },
   "DREIT": {
@@ -2909,6 +3272,7 @@
     "pe_ttm": 10.434783,
     "div_yield_ttm": 8.125,
     "pbv_latest": 0.5772006,
+    "roic_ttm": 5.615176146413845,
     "updated_at": "2026-06-15"
   },
   "THANI": {
@@ -2917,6 +3281,7 @@
     "pe_ttm": 8.842105,
     "div_yield_ttm": 6.6666669999999995,
     "pbv_latest": 0.72601557,
+    "roic_ttm": 3.261109093798922,
     "updated_at": "2026-06-15"
   },
   "KWC": {
@@ -2925,6 +3290,7 @@
     "pe_ttm": 16.394434,
     "div_yield_ttm": 4.2435423,
     "pbv_latest": 1.8525227,
+    "roic_ttm": 18.96053799580708,
     "updated_at": "2026-06-15"
   },
   "DRT": {
@@ -2933,6 +3299,7 @@
     "pe_ttm": 11.111112,
     "div_yield_ttm": 6.425702599999999,
     "pbv_latest": 1.7934002,
+    "roic_ttm": 8.535123456494418,
     "updated_at": "2026-06-15"
   },
   "PL": {
@@ -2941,6 +3308,7 @@
     "pe_ttm": 11.727272,
     "div_yield_ttm": 4.84375,
     "pbv_latest": 0.23143165,
+    "roic_ttm": 2.9052600468404655,
     "updated_at": "2026-06-15"
   },
   "BCT": {
@@ -2949,6 +3317,7 @@
     "pe_ttm": 8.143323,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.42760625,
+    "roic_ttm": 1.6153603877745777,
     "updated_at": "2026-06-15"
   },
   "RAM": {
@@ -2957,6 +3326,7 @@
     "pe_ttm": 8.035714,
     "div_yield_ttm": 0.55555557,
     "pbv_latest": 0.9729204,
+    "roic_ttm": 2.2994599201726555,
     "updated_at": "2026-06-15"
   },
   "MODERN": {
@@ -2965,6 +3335,7 @@
     "pe_ttm": 18.727272,
     "div_yield_ttm": 7.3529415,
     "pbv_latest": 0.7312744,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TK": {
@@ -2973,6 +3344,7 @@
     "pe_ttm": 34.333332,
     "div_yield_ttm": 4.830918,
     "pbv_latest": 0.38605696,
+    "roic_ttm": 1.1637956512099026,
     "updated_at": "2026-06-15"
   },
   "BLC": {
@@ -2981,6 +3353,7 @@
     "pe_ttm": 16.0,
     "div_yield_ttm": 6.25,
     "pbv_latest": 1.4224751,
+    "roic_ttm": 6.950222397504456,
     "updated_at": "2026-06-15"
   },
   "ACE": {
@@ -2989,6 +3362,7 @@
     "pe_ttm": 14.333332,
     "div_yield_ttm": 0.7751938,
     "pbv_latest": 0.77710843,
+    "roic_ttm": 4.8807814924089925,
     "updated_at": "2026-06-15"
   },
   "FN": {
@@ -2997,6 +3371,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5485714,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TOPP": {
@@ -3005,6 +3380,7 @@
     "pe_ttm": 7.4291825,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4754217,
+    "roic_ttm": 7.077478515038867,
     "updated_at": "2026-06-15"
   },
   "PLANB": {
@@ -3013,6 +3389,7 @@
     "pe_ttm": 15.307693,
     "div_yield_ttm": 5.222772,
     "pbv_latest": 1.3785937,
+    "roic_ttm": 9.685889244447546,
     "updated_at": "2026-06-15"
   },
   "POLY": {
@@ -3021,6 +3398,7 @@
     "pe_ttm": 11.694916,
     "div_yield_ttm": 0.0,
     "pbv_latest": 2.335816,
+    "roic_ttm": 20.22450895145399,
     "updated_at": "2026-06-15"
   },
   "EGATIF": {
@@ -3029,6 +3407,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SABINA": {
@@ -3037,6 +3416,7 @@
     "pe_ttm": 12.796611,
     "div_yield_ttm": 7.8145690000000005,
     "pbv_latest": 2.863645,
+    "roic_ttm": 23.995078536472093,
     "updated_at": "2026-06-15"
   },
   "LEE": {
@@ -3045,6 +3425,7 @@
     "pe_ttm": 8.714286,
     "div_yield_ttm": 8.196721,
     "pbv_latest": 0.74209243,
+    "roic_ttm": 9.588432558914178,
     "updated_at": "2026-06-15"
   },
   "VIBHA": {
@@ -3053,6 +3434,7 @@
     "pe_ttm": 9.642858,
     "div_yield_ttm": 4.4117644,
     "pbv_latest": 1.5643107,
+    "roic_ttm": 2.513898769382924,
     "updated_at": "2026-06-15"
   },
   "A5": {
@@ -3061,6 +3443,7 @@
     "pe_ttm": 36.4,
     "div_yield_ttm": 2.7472528,
     "pbv_latest": 1.3169321,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MANRIN": {
@@ -3069,6 +3452,7 @@
     "pe_ttm": 15.862068,
     "div_yield_ttm": 1.0869564999999999,
     "pbv_latest": 1.2636669,
+    "roic_ttm": 10.048610397626137,
     "updated_at": "2026-06-15"
   },
   "UAC": {
@@ -3077,6 +3461,7 @@
     "pe_ttm": 37.142857,
     "div_yield_ttm": 7.633588500000001,
     "pbv_latest": 1.1674899,
+    "roic_ttm": 12.597249765653856,
     "updated_at": "2026-06-15"
   },
   "ASP": {
@@ -3085,6 +3470,7 @@
     "pe_ttm": 16.46154,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8953975,
+    "roic_ttm": 6.509191031119455,
     "updated_at": "2026-06-15"
   },
   "TNITY": {
@@ -3093,6 +3479,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4027732,
+    "roic_ttm": 0.5475382651523159,
     "updated_at": "2026-06-15"
   },
   "SUC": {
@@ -3101,6 +3488,7 @@
     "pe_ttm": 4.572148,
     "div_yield_ttm": 5.5045873,
     "pbv_latest": 0.32469854,
+    "roic_ttm": 3.602445884772112,
     "updated_at": "2026-06-15"
   },
   "LHRREIT": {
@@ -3109,6 +3497,7 @@
     "pe_ttm": 7.180328,
     "div_yield_ttm": 46.757993,
     "pbv_latest": 0.39890712,
+    "roic_ttm": 0.2770989101931642,
     "updated_at": "2026-06-15"
   },
   "ROCK": {
@@ -3117,6 +3506,7 @@
     "pe_ttm": 3.0630631,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.42054918,
+    "roic_ttm": 0.5756540564269802,
     "updated_at": "2026-06-15"
   },
   "BTSGIF": {
@@ -3125,6 +3515,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TIDLOR": {
@@ -3133,6 +3524,7 @@
     "pe_ttm": 9.72973,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.511208,
+    "roic_ttm": 7.465280967956171,
     "updated_at": "2026-06-15"
   },
   "3BBIF": {
@@ -3141,14 +3533,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NEX": {
-    "market_cap_m": 6109.187072,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.4488636,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "LPH": {
@@ -3157,6 +3551,7 @@
     "pe_ttm": 13.111111,
     "div_yield_ttm": 5.084746,
     "pbv_latest": 1.2688172,
+    "roic_ttm": 8.00550602989274,
     "updated_at": "2026-06-15"
   },
   "BAFS": {
@@ -3165,6 +3560,7 @@
     "pe_ttm": 34.62963,
     "div_yield_ttm": 3.606558,
     "pbv_latest": 1.3370514,
+    "roic_ttm": 5.741734205178805,
     "updated_at": "2026-06-15"
   },
   "ICC": {
@@ -3173,6 +3569,7 @@
     "pe_ttm": 38.153847,
     "div_yield_ttm": 2.8225807,
     "pbv_latest": 0.4145147,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SPC": {
@@ -3181,6 +3578,7 @@
     "pe_ttm": 7.033248,
     "div_yield_ttm": 4.3636367,
     "pbv_latest": 0.63866603,
+    "roic_ttm": 10.51409746145236,
     "updated_at": "2026-06-15"
   },
   "NWR": {
@@ -3189,6 +3587,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -0.030418249,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SHANG": {
@@ -3197,6 +3596,7 @@
     "pe_ttm": 20.506912,
     "div_yield_ttm": 2.2988505999999997,
     "pbv_latest": 0.74408495,
+    "roic_ttm": 20.211715930367788,
     "updated_at": "2026-06-15"
   },
   "CV": {
@@ -3205,6 +3605,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.027051399,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PQS": {
@@ -3213,6 +3614,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.56666666,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ROH": {
@@ -3221,6 +3623,7 @@
     "pe_ttm": 40.333336,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6415695,
+    "roic_ttm": 3.1922439818615573,
     "updated_at": "2026-06-15"
   },
   "TMAN": {
@@ -3229,6 +3632,7 @@
     "pe_ttm": 8.307693,
     "div_yield_ttm": 2.9629630000000002,
     "pbv_latest": 2.0408165,
+    "roic_ttm": 19.2792798724492,
     "updated_at": "2026-06-15"
   },
   "SINO": {
@@ -3237,6 +3641,7 @@
     "pe_ttm": 22.5,
     "div_yield_ttm": 6.4444445,
     "pbv_latest": 1.0440835,
+    "roic_ttm": 6.1332045836520015,
     "updated_at": "2026-06-15"
   },
   "TPCS": {
@@ -3245,6 +3650,7 @@
     "pe_ttm": 11.511627,
     "div_yield_ttm": 7.070707499999999,
     "pbv_latest": 0.39088717,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NFC": {
@@ -3253,6 +3659,7 @@
     "pe_ttm": 24.6,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.73301554,
+    "roic_ttm": 3.765987495267368,
     "updated_at": "2026-06-15"
   },
   "GSTEEL": {
@@ -3261,6 +3668,7 @@
     "pe_ttm": 1.9565219,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.45000002,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MNRF": {
@@ -3269,6 +3677,7 @@
     "pe_ttm": 43.404255,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.26838574,
+    "roic_ttm": 1.958806058951553,
     "updated_at": "2026-06-15"
   },
   "KWI": {
@@ -3277,6 +3686,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.08163265,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BLISS": {
@@ -3285,6 +3695,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.2879167,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PB": {
@@ -3293,6 +3704,7 @@
     "pe_ttm": 17.843866,
     "div_yield_ttm": 3.0927835,
     "pbv_latest": 1.6414185,
+    "roic_ttm": 17.865584795748088,
     "updated_at": "2026-06-15"
   },
   "KKC": {
@@ -3301,6 +3713,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -0.026845638,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PREB": {
@@ -3309,6 +3722,7 @@
     "pe_ttm": 4.7887325,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3930636,
+    "roic_ttm": 12.013761154632258,
     "updated_at": "2026-06-15"
   },
   "ASIA": {
@@ -3317,6 +3731,7 @@
     "pe_ttm": 267.5,
     "div_yield_ttm": 2.504673,
     "pbv_latest": 0.29527017,
+    "roic_ttm": 2.2840523350661277,
     "updated_at": "2026-06-15"
   },
   "AIT": {
@@ -3325,6 +3740,7 @@
     "pe_ttm": 12.368421,
     "div_yield_ttm": 7.627119,
     "pbv_latest": 1.7349575,
+    "roic_ttm": 27.098168284391527,
     "updated_at": "2026-06-15"
   },
   "XPG": {
@@ -3333,6 +3749,7 @@
     "pe_ttm": 23.0,
     "div_yield_ttm": 2.2222223,
     "pbv_latest": 0.41366908,
+    "roic_ttm": 1.0205934382715889,
     "updated_at": "2026-06-15"
   },
   "TSTE": {
@@ -3341,14 +3758,16 @@
     "pe_ttm": 27.17949,
     "div_yield_ttm": 1.5094339,
     "pbv_latest": 1.1286201,
+    "roic_ttm": 4.0216416776544515,
     "updated_at": "2026-06-15"
   },
   "SIRIPRT": {
-    "market_cap_m": 1173.000064,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 14.375001,
-    "div_yield_ttm": 0.0,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TAN": {
@@ -3357,6 +3776,7 @@
     "pe_ttm": 25.199999,
     "div_yield_ttm": 6.994819,
     "pbv_latest": 0.7324162,
+    "roic_ttm": 7.611562206994648,
     "updated_at": "2026-06-15"
   },
   "SA": {
@@ -3365,6 +3785,7 @@
     "pe_ttm": 720.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 13.138686,
+    "roic_ttm": 2.0007380344138372,
     "updated_at": "2026-06-15"
   },
   "MTI": {
@@ -3373,6 +3794,7 @@
     "pe_ttm": 9.204546,
     "div_yield_ttm": 5.0943397,
     "pbv_latest": 1.1200222,
+    "roic_ttm": 15.987714942051367,
     "updated_at": "2026-06-15"
   },
   "UNIQ": {
@@ -3381,6 +3803,7 @@
     "pe_ttm": 2.945055,
     "div_yield_ttm": 2.8985506,
     "pbv_latest": 0.31199068,
+    "roic_ttm": 4.328381448966502,
     "updated_at": "2026-06-15"
   },
   "MINT": {
@@ -3389,6 +3812,7 @@
     "pe_ttm": 18.195488,
     "div_yield_ttm": 3.153153,
     "pbv_latest": 2.302131,
+    "roic_ttm": 4.79680851366859,
     "updated_at": "2026-06-15"
   },
   "NKT": {
@@ -3397,6 +3821,7 @@
     "pe_ttm": 13.857143,
     "div_yield_ttm": 4.687500399999999,
     "pbv_latest": 1.0280869,
+    "roic_ttm": 3.9443170823478964,
     "updated_at": "2026-06-15"
   },
   "JR": {
@@ -3405,6 +3830,7 @@
     "pe_ttm": 13.000001,
     "div_yield_ttm": 3.254438,
     "pbv_latest": 0.72876245,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TR": {
@@ -3413,6 +3839,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.19047619,
     "pbv_latest": 0.19453378,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ISSARA": {
@@ -3421,6 +3848,7 @@
     "pe_ttm": 13.877551,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BEC": {
@@ -3429,6 +3857,7 @@
     "pe_ttm": 22.222221,
     "div_yield_ttm": 5.1020406,
     "pbv_latest": 0.6485084,
+    "roic_ttm": 7.860480007852795,
     "updated_at": "2026-06-15"
   },
   "BEM": {
@@ -3437,6 +3866,7 @@
     "pe_ttm": 22.8,
     "div_yield_ttm": 2.7522938,
     "pbv_latest": 2.2511847,
+    "roic_ttm": 3.3187918336769346,
     "updated_at": "2026-06-15"
   },
   "VNG": {
@@ -3445,6 +3875,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.49492055,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SYNTEC": {
@@ -3453,6 +3884,7 @@
     "pe_ttm": 4.5135136,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4287548,
+    "roic_ttm": 9.37735037020717,
     "updated_at": "2026-06-15"
   },
   "MIPF": {
@@ -3461,6 +3893,7 @@
     "pe_ttm": 16.38889,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.72893506,
+    "roic_ttm": 5.427026882156575,
     "updated_at": "2026-06-15"
   },
   "JCK": {
@@ -3469,6 +3902,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.19662921,
+    "roic_ttm": 1.6284436856806788,
     "updated_at": "2026-06-15"
   },
   "TFMAMA": {
@@ -3477,6 +3911,7 @@
     "pe_ttm": 17.062044,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.6573606,
+    "roic_ttm": 11.839062418111844,
     "updated_at": "2026-06-15"
   },
   "CHAO": {
@@ -3485,6 +3920,7 @@
     "pe_ttm": 16.8,
     "div_yield_ttm": 4.047619,
     "pbv_latest": 1.1791128,
+    "roic_ttm": 8.179066723638744,
     "updated_at": "2026-06-15"
   },
   "SCG": {
@@ -3493,6 +3929,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.85186577,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SPG": {
@@ -3501,6 +3938,7 @@
     "pe_ttm": 10.909091,
     "div_yield_ttm": 7.407407500000001,
     "pbv_latest": 0.63209647,
+    "roic_ttm": 22.029751209758704,
     "updated_at": "2026-06-15"
   },
   "GAHREIT": {
@@ -3509,6 +3947,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3678692,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ASIAN": {
@@ -3517,6 +3956,7 @@
     "pe_ttm": 9.266666,
     "div_yield_ttm": 9.697842600000001,
     "pbv_latest": 0.87531483,
+    "roic_ttm": 8.592962249211768,
     "updated_at": "2026-06-15"
   },
   "BRR": {
@@ -3525,6 +3965,7 @@
     "pe_ttm": 25.571428,
     "div_yield_ttm": 4.608939,
     "pbv_latest": 0.7273466,
+    "roic_ttm": 10.725117437520865,
     "updated_at": "2026-06-15"
   },
   "BRRGIF": {
@@ -3533,6 +3974,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SORKON": {
@@ -3541,6 +3983,7 @@
     "pe_ttm": 14.0,
     "div_yield_ttm": 7.1428575,
     "pbv_latest": 0.8333334,
+    "roic_ttm": 0.9907642796618505,
     "updated_at": "2026-06-15"
   },
   "GYT": {
@@ -3549,6 +3992,7 @@
     "pe_ttm": 7.246377,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.33976173,
+    "roic_ttm": 3.5997676208934513,
     "updated_at": "2026-06-15"
   },
   "SUTHA": {
@@ -3557,6 +4001,7 @@
     "pe_ttm": "Infinity",
     "div_yield_ttm": 2.5925925,
     "pbv_latest": 0.99214846,
+    "roic_ttm": 8.38265428091124,
     "updated_at": "2026-06-15"
   },
   "LPN": {
@@ -3565,6 +4010,7 @@
     "pe_ttm": 150.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.18107194,
+    "roic_ttm": 0.467154096653837,
     "updated_at": "2026-06-15"
   },
   "PCE": {
@@ -3573,6 +4019,7 @@
     "pe_ttm": 21.800001,
     "div_yield_ttm": 3.6363635,
     "pbv_latest": 1.1764706,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "WPH": {
@@ -3581,6 +4028,7 @@
     "pe_ttm": 11.470589,
     "div_yield_ttm": 1.4086956,
     "pbv_latest": 1.9448138,
+    "roic_ttm": 16.97849123835599,
     "updated_at": "2026-06-15"
   },
   "WINDOW": {
@@ -3589,6 +4037,7 @@
     "pe_ttm": 17.75,
     "div_yield_ttm": 4.225352,
     "pbv_latest": 0.6960784,
+    "roic_ttm": 4.668452983634337,
     "updated_at": "2026-06-15"
   },
   "TL": {
@@ -3597,6 +4046,7 @@
     "pe_ttm": 18.5,
     "div_yield_ttm": 0.0,
     "pbv_latest": 3.3636365,
+    "roic_ttm": 29.41220180028396,
     "updated_at": "2026-06-15"
   },
   "NL": {
@@ -3605,6 +4055,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.44573644,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TWP": {
@@ -3613,6 +4064,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.24490637,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SJWD": {
@@ -3621,6 +4073,7 @@
     "pe_ttm": 12.666666,
     "div_yield_ttm": 5.4054055,
     "pbv_latest": 0.5804185,
+    "roic_ttm": 3.3692531583426866,
     "updated_at": "2026-06-15"
   },
   "SNP": {
@@ -3629,6 +4082,7 @@
     "pe_ttm": 16.792454,
     "div_yield_ttm": 5.6179777,
     "pbv_latest": 1.7849979,
+    "roic_ttm": 4.974065864332521,
     "updated_at": "2026-06-15"
   },
   "BIG": {
@@ -3637,6 +4091,7 @@
     "pe_ttm": 10.333334,
     "div_yield_ttm": 3.2258064,
     "pbv_latest": 0.5973025,
+    "roic_ttm": 5.886140411996164,
     "updated_at": "2026-06-15"
   },
   "AEONTS": {
@@ -3645,6 +4100,7 @@
     "pe_ttm": 7.6969457,
     "div_yield_ttm": 5.744125299999999,
     "pbv_latest": 0.87142104,
+    "roic_ttm": 4.19558868142241,
     "updated_at": "2026-06-15"
   },
   "MEDEZE": {
@@ -3653,6 +4109,7 @@
     "pe_ttm": 43.571426,
     "div_yield_ttm": 2.6229508,
     "pbv_latest": 2.2360704,
+    "roic_ttm": 8.615790537225761,
     "updated_at": "2026-06-15"
   },
   "SAMART": {
@@ -3661,14 +4118,16 @@
     "pe_ttm": 9.732142,
     "div_yield_ttm": 4.324324,
     "pbv_latest": 0.99325675,
+    "roic_ttm": 13.076942688262863,
     "updated_at": "2026-06-15"
   },
   "BYD": {
-    "market_cap_m": 2501.101568,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.5183585,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CMR": {
@@ -3677,6 +4136,7 @@
     "pe_ttm": 2.064516,
     "div_yield_ttm": 17.165354,
     "pbv_latest": 1.1510792,
+    "roic_ttm": 1.549539383018981,
     "updated_at": "2026-06-15"
   },
   "SFLEX": {
@@ -3685,6 +4145,7 @@
     "pe_ttm": 8.545454,
     "div_yield_ttm": 6.1594203,
     "pbv_latest": 1.9249146,
+    "roic_ttm": 14.468525457592241,
     "updated_at": "2026-06-15"
   },
   "AI": {
@@ -3693,14 +4154,16 @@
     "pe_ttm": 47.666664,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8746177,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "VPO": {
-    "market_cap_m": 432.4,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 15.333334,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.78767127,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AHC": {
@@ -3709,6 +4172,7 @@
     "pe_ttm": 14.705882,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.86320007,
+    "roic_ttm": 6.7928019035832605,
     "updated_at": "2026-06-15"
   },
   "SAK": {
@@ -3717,6 +4181,7 @@
     "pe_ttm": 7.52381,
     "div_yield_ttm": 6.5789476,
     "pbv_latest": 0.96784073,
+    "roic_ttm": 6.359369337029029,
     "updated_at": "2026-06-15"
   },
   "CGD": {
@@ -3725,6 +4190,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.2849741,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PORT": {
@@ -3733,6 +4199,7 @@
     "pe_ttm": 64.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.29130632,
+    "roic_ttm": 0.231629832447186,
     "updated_at": "2026-06-15"
   },
   "WICE": {
@@ -3741,6 +4208,7 @@
     "pe_ttm": 19.538462,
     "div_yield_ttm": 5.426356999999999,
     "pbv_latest": 1.1802974,
+    "roic_ttm": 5.006769288808676,
     "updated_at": "2026-06-15"
   },
   "CHG": {
@@ -3749,6 +4217,7 @@
     "pe_ttm": 16.11111,
     "div_yield_ttm": 4.895105200000001,
     "pbv_latest": 1.9754769,
+    "roic_ttm": 15.461179375871689,
     "updated_at": "2026-06-15"
   },
   "SAM": {
@@ -3757,6 +4226,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.091883615,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NCAP": {
@@ -3765,6 +4235,7 @@
     "pe_ttm": 6.0909095,
     "div_yield_ttm": 1.5648856999999998,
     "pbv_latest": 0.6914345,
+    "roic_ttm": 6.14595242409432,
     "updated_at": "2026-06-15"
   },
   "B": {
@@ -3773,6 +4244,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.10471204,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SSPF": {
@@ -3781,6 +4253,7 @@
     "pe_ttm": 17.883598,
     "div_yield_ttm": 3.9349113,
     "pbv_latest": 0.3067429,
+    "roic_ttm": 0.5232757863112397,
     "updated_at": "2026-06-15"
   },
   "S": {
@@ -3789,6 +4262,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.23820867,
+    "roic_ttm": 3.0316298458468163,
     "updated_at": "2026-06-15"
   },
   "CKP": {
@@ -3797,14 +4271,16 @@
     "pe_ttm": 6.6285715,
     "div_yield_ttm": 3.8260870000000002,
     "pbv_latest": 0.61636555,
+    "roic_ttm": 2.5934560229546855,
     "updated_at": "2026-06-15"
   },
   "THG": {
-    "market_cap_m": 13329.199104,
-    "target_mean_price": 8.75,
-    "pe_ttm": 82.77777,
-    "div_yield_ttm": 1.8666665999999998,
-    "pbv_latest": 0.99214274,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "LANNA": {
@@ -3813,6 +4289,7 @@
     "pe_ttm": 11.818182,
     "div_yield_ttm": 6.896552,
     "pbv_latest": 0.92508733,
+    "roic_ttm": 23.37481604810488,
     "updated_at": "2026-06-15"
   },
   "AMATAV": {
@@ -3821,6 +4298,7 @@
     "pe_ttm": 4.7380953,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.402264,
+    "roic_ttm": 0.06732052605865463,
     "updated_at": "2026-06-15"
   },
   "CM": {
@@ -3829,6 +4307,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 1.9620253,
     "pbv_latest": 0.45785946,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TTLPF": {
@@ -3837,14 +4316,16 @@
     "pe_ttm": 6.0897436,
     "div_yield_ttm": 15.557896,
     "pbv_latest": 0.9474419,
+    "roic_ttm": 21.038032906950843,
     "updated_at": "2026-06-15"
   },
   "WACOAL": {
-    "market_cap_m": 1848.0,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.37146026,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "LH": {
@@ -3853,6 +4334,7 @@
     "pe_ttm": 12.133333,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.9157233,
+    "roic_ttm": 1.1068100043083542,
     "updated_at": "2026-06-15"
   },
   "CPH": {
@@ -3861,6 +4343,7 @@
     "pe_ttm": 6.169355,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.26949906,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "OSP": {
@@ -3869,6 +4352,7 @@
     "pe_ttm": 12.941175,
     "div_yield_ttm": 5.2287582,
     "pbv_latest": 2.776776,
+    "roic_ttm": 34.592677998143046,
     "updated_at": "2026-06-15"
   },
   "SAV": {
@@ -3877,6 +4361,7 @@
     "pe_ttm": 12.470589,
     "div_yield_ttm": 8.256881,
     "pbv_latest": 4.2932363,
+    "roic_ttm": 69.07359277049184,
     "updated_at": "2026-06-15"
   },
   "ZEN": {
@@ -3885,6 +4370,7 @@
     "pe_ttm": 33.75,
     "div_yield_ttm": 1.869159,
     "pbv_latest": 1.1965433,
+    "roic_ttm": 6.835301978513774,
     "updated_at": "2026-06-15"
   },
   "TYCN": {
@@ -3893,6 +4379,7 @@
     "pe_ttm": 9.764706,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.24783517,
+    "roic_ttm": 0.8831809117110441,
     "updated_at": "2026-06-15"
   },
   "CI": {
@@ -3901,6 +4388,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.331384,
+    "roic_ttm": 3.3806679167261127,
     "updated_at": "2026-06-15"
   },
   "ASIMAR": {
@@ -3909,6 +4397,7 @@
     "pe_ttm": 8.866667,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.73318636,
+    "roic_ttm": 2.5162292466687983,
     "updated_at": "2026-06-15"
   },
   "SPALI": {
@@ -3917,6 +4406,7 @@
     "pe_ttm": 7.6076555,
     "div_yield_ttm": 8.01282,
     "pbv_latest": 0.54142404,
+    "roic_ttm": 3.1371392848516,
     "updated_at": "2026-06-15"
   },
   "OR": {
@@ -3925,6 +4415,7 @@
     "pe_ttm": 15.641026,
     "div_yield_ttm": 4.9586777,
     "pbv_latest": 1.2572135,
+    "roic_ttm": 9.785754491975666,
     "updated_at": "2026-06-15"
   },
   "TGH": {
@@ -3933,6 +4424,7 @@
     "pe_ttm": 6.402439,
     "div_yield_ttm": 0.9433962,
     "pbv_latest": 0.7415254,
+    "roic_ttm": 5.404164038090912,
     "updated_at": "2026-06-15"
   },
   "FANCY": {
@@ -3941,6 +4433,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.25203857,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BDMS": {
@@ -3949,6 +4442,7 @@
     "pe_ttm": 18.383839,
     "div_yield_ttm": 5.5555556,
     "pbv_latest": 2.6247478,
+    "roic_ttm": 14.172716720377199,
     "updated_at": "2026-06-15"
   },
   "PT": {
@@ -3957,6 +4451,7 @@
     "pe_ttm": 11.978022,
     "div_yield_ttm": 9.259259,
     "pbv_latest": 3633.3333,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SAPPE": {
@@ -3965,6 +4460,7 @@
     "pe_ttm": 12.656903,
     "div_yield_ttm": 5.8333334,
     "pbv_latest": 2.0760415,
+    "roic_ttm": 25.505917822612705,
     "updated_at": "2026-06-15"
   },
   "KTIS": {
@@ -3973,6 +4469,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 8.064517,
     "pbv_latest": 0.89496,
+    "roic_ttm": 17.940863215725912,
     "updated_at": "2026-06-15"
   },
   "FTI": {
@@ -3981,6 +4478,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 4.4444446,
     "pbv_latest": 1.1780455,
+    "roic_ttm": 9.616820265957367,
     "updated_at": "2026-06-15"
   },
   "PPP": {
@@ -3989,22 +4487,25 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.33140016,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "IHL": {
-    "market_cap_m": 800.287616,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 9.642858,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.4723583,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CRANE": {
-    "market_cap_m": 288.111456,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.4185022,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BBIK": {
@@ -4013,6 +4514,7 @@
     "pe_ttm": 11.034483,
     "div_yield_ttm": 2.5396826,
     "pbv_latest": 1.7345741,
+    "roic_ttm": 16.37320858943337,
     "updated_at": "2026-06-15"
   },
   "ILM": {
@@ -4021,6 +4523,7 @@
     "pe_ttm": 8.741259,
     "div_yield_ttm": 8.0,
     "pbv_latest": 0.9563155,
+    "roic_ttm": 8.65255075938409,
     "updated_at": "2026-06-15"
   },
   "BLAND": {
@@ -4029,6 +4532,7 @@
     "pe_ttm": 11.25,
     "div_yield_ttm": 2.888889,
     "pbv_latest": 0.15811665,
+    "roic_ttm": 0.029021679395785344,
     "updated_at": "2026-06-15"
   },
   "MCS": {
@@ -4037,14 +4541,16 @@
     "pe_ttm": 4.3142858,
     "div_yield_ttm": 12.5,
     "pbv_latest": 0.8608894,
+    "roic_ttm": 12.123653134123671,
     "updated_at": "2026-06-15"
   },
   "LALIN": {
-    "market_cap_m": 3977.4976,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 8.958334,
-    "div_yield_ttm": 6.976744,
-    "pbv_latest": 0.41381967,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AMR": {
@@ -4053,14 +4559,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.33117932,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NEP": {
-    "market_cap_m": 441.822304,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": "Infinity",
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.75396824,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DEMCO": {
@@ -4069,6 +4577,7 @@
     "pe_ttm": 36.250004,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.6014102,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PTG": {
@@ -4077,6 +4586,7 @@
     "pe_ttm": 19.868422,
     "div_yield_ttm": 4.7619050000000005,
     "pbv_latest": 1.2824868,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SPA": {
@@ -4085,6 +4595,7 @@
     "pe_ttm": 20.533333,
     "div_yield_ttm": 3.3557046,
     "pbv_latest": 3.08,
+    "roic_ttm": 10.540334527961214,
     "updated_at": "2026-06-15"
   },
   "MAJOR": {
@@ -4093,22 +4604,25 @@
     "pe_ttm": 7.4444447,
     "div_yield_ttm": 3.7037037,
     "pbv_latest": 1.078384,
+    "roic_ttm": 3.4700917625991945,
     "updated_at": "2026-06-15"
   },
   "PERM": {
-    "market_cap_m": 183.99808,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.63829786,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BSBM": {
-    "market_cap_m": 661.493248,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.41114983,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "KCAR": {
@@ -4117,6 +4631,7 @@
     "pe_ttm": 7.2121215,
     "div_yield_ttm": 6.932773,
     "pbv_latest": 0.46137443,
+    "roic_ttm": 5.748587397840976,
     "updated_at": "2026-06-15"
   },
   "SUSCO": {
@@ -4125,6 +4640,7 @@
     "pe_ttm": 14.714285,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.046516877,
+    "roic_ttm": 1.127046475447937,
     "updated_at": "2026-06-15"
   },
   "SCI": {
@@ -4133,6 +4649,7 @@
     "pe_ttm": 96.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.9846153,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DOHOME": {
@@ -4141,6 +4658,7 @@
     "pe_ttm": 20.0,
     "div_yield_ttm": 0.11764707,
     "pbv_latest": 0.87538624,
+    "roic_ttm": 3.6598172514181564,
     "updated_at": "2026-06-15"
   },
   "UPF": {
@@ -4149,6 +4667,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.50572693,
+    "roic_ttm": 4.223999431840009,
     "updated_at": "2026-06-15"
   },
   "HMPRO": {
@@ -4157,6 +4676,7 @@
     "pe_ttm": 13.636364,
     "div_yield_ttm": 6.333333,
     "pbv_latest": 2.8341992,
+    "roic_ttm": 12.951208144467309,
     "updated_at": "2026-06-15"
   },
   "NEO": {
@@ -4165,6 +4685,7 @@
     "pe_ttm": 13.283581,
     "div_yield_ttm": 7.6271184000000005,
     "pbv_latest": 1.0165039,
+    "roic_ttm": 5.623992647000378,
     "updated_at": "2026-06-15"
   },
   "TU": {
@@ -4173,6 +4694,7 @@
     "pe_ttm": 9.421487,
     "div_yield_ttm": 6.140351,
     "pbv_latest": 0.9830976,
+    "roic_ttm": 3.6369777101899854,
     "updated_at": "2026-06-15"
   },
   "PM": {
@@ -4181,14 +4703,16 @@
     "pe_ttm": 10.918367,
     "div_yield_ttm": 8.773585,
     "pbv_latest": 3.0933795,
+    "roic_ttm": 18.595075169318285,
     "updated_at": "2026-06-15"
   },
   "PRINC": {
-    "market_cap_m": 6436.484608,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.74712646,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TNR": {
@@ -4197,14 +4721,16 @@
     "pe_ttm": 10.4,
     "div_yield_ttm": 7.692308000000001,
     "pbv_latest": 1.2639767,
+    "roic_ttm": 5.622054138149146,
     "updated_at": "2026-06-15"
   },
   "ACC": {
-    "market_cap_m": 695.723584,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.4015151,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NAM": {
@@ -4213,6 +4739,7 @@
     "pe_ttm": 35.6,
     "div_yield_ttm": 3.6516853,
     "pbv_latest": 1.2408504,
+    "roic_ttm": 3.855291237488541,
     "updated_at": "2026-06-15"
   },
   "SKE": {
@@ -4221,14 +4748,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.37475342,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "THREL": {
-    "market_cap_m": 620.0,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.3774104,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "HENG": {
@@ -4237,38 +4766,43 @@
     "pe_ttm": 46.5,
     "div_yield_ttm": 2.8571429,
     "pbv_latest": 0.6893996,
+    "roic_ttm": 2.700020326772327,
     "updated_at": "2026-06-15"
   },
   "IFS": {
-    "market_cap_m": 898.169984,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 7.28,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.4858516,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SAFE": {
-    "market_cap_m": 1686.910336,
-    "target_mean_price": 8.475,
-    "pe_ttm": 12.906977,
-    "div_yield_ttm": 7.321428500000001,
-    "pbv_latest": 0.9790087,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "JTS": {
-    "market_cap_m": 26027.732992,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 29.919678,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TPIPP": {
-    "market_cap_m": 14700.000256,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 9.722221,
-    "div_yield_ttm": 4.0,
-    "pbv_latest": 0.40369087,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TOA": {
@@ -4277,46 +4811,52 @@
     "pe_ttm": 7.9012346,
     "div_yield_ttm": 6.198347,
     "pbv_latest": 1.5992005,
+    "roic_ttm": 50.35074100591188,
     "updated_at": "2026-06-15"
   },
   "FE": {
-    "market_cap_m": 1263.134976,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 14.266666,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.8547691,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "THIP": {
-    "market_cap_m": 1844.993664,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 12.5,
-    "div_yield_ttm": 7.8048779999999995,
-    "pbv_latest": 0.6506904,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BROCK": {
-    "market_cap_m": 1230.000256,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.99255586,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BCPG": {
-    "market_cap_m": 20221.376512,
-    "target_mean_price": 8.50833,
-    "pe_ttm": 14.0625,
-    "div_yield_ttm": 5.3846154,
-    "pbv_latest": 0.68639416,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "COCOCO": {
-    "market_cap_m": 8232.0,
-    "target_mean_price": 5.83333,
-    "pe_ttm": 29.473684,
-    "div_yield_ttm": 2.1428572,
-    "pbv_latest": 2.3178809,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TCJ": {
@@ -4325,6 +4865,7 @@
     "pe_ttm": 19.833334,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.18593751,
+    "roic_ttm": 5.894732633349229,
     "updated_at": "2026-06-15"
   },
   "SPACK": {
@@ -4333,38 +4874,43 @@
     "pe_ttm": 9.75,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.49201006,
+    "roic_ttm": 4.646733775757241,
     "updated_at": "2026-06-15"
   },
   "PSH": {
-    "market_cap_m": 7486.380032,
-    "target_mean_price": 3.152,
+    "market_cap_m": null,
+    "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 3.1976745,
-    "pbv_latest": 0.18904428,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "APCO": {
-    "market_cap_m": 1548.0,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 25.8,
-    "div_yield_ttm": 3.4732826,
-    "pbv_latest": 2.6903024,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AP": {
-    "market_cap_m": 22335.885312,
-    "target_mean_price": 9.62692,
-    "pe_ttm": 5.1079135,
-    "div_yield_ttm": 7.222222,
-    "pbv_latest": 0.47545704,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TKT": {
-    "market_cap_m": 245.546,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.37919828,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AAV": {
@@ -4373,22 +4919,25 @@
     "pe_ttm": 8.071428,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.0080285,
+    "roic_ttm": 8.24811424099616,
     "updated_at": "2026-06-15"
   },
   "NEW": {
-    "market_cap_m": 970.0,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 23.832922,
-    "div_yield_ttm": 1.5841584999999998,
-    "pbv_latest": 1.8278779,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CPL": {
-    "market_cap_m": 277.101888,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.4670126,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TH": {
@@ -4397,30 +4946,34 @@
     "pe_ttm": 23.5,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.27630806,
+    "roic_ttm": 6.216410926017357,
     "updated_at": "2026-06-15"
   },
   "TKN": {
-    "market_cap_m": 5459.999744,
-    "target_mean_price": 7.33333,
-    "pe_ttm": 13.333333,
-    "div_yield_ttm": 6.281407,
-    "pbv_latest": 2.57566,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CPNCG": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 5.268199,
-    "div_yield_ttm": 18.618183,
-    "pbv_latest": 0.6418485,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "WORK": {
-    "market_cap_m": 1563.124096,
-    "target_mean_price": 8.45,
+    "market_cap_m": null,
+    "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.3797061,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PRIME": {
@@ -4429,38 +4982,43 @@
     "pe_ttm": 2.5,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.108459875,
+    "roic_ttm": 2.239219876937079,
     "updated_at": "2026-06-15"
   },
   "MATI": {
-    "market_cap_m": 537.512704,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.41732624,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MALEE": {
-    "market_cap_m": 2204.754176,
-    "target_mean_price": 4.2,
-    "pe_ttm": 14.962962,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.8932125,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CPF": {
-    "market_cap_m": 143733.80096,
-    "target_mean_price": 22.75714,
-    "pe_ttm": 7.132075,
-    "div_yield_ttm": 6.544503,
-    "pbv_latest": 0.66278577,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CBG": {
-    "market_cap_m": 40749.99808,
-    "target_mean_price": 45.26786,
-    "pe_ttm": 18.778801,
-    "div_yield_ttm": 3.25,
-    "pbv_latest": 2.7640235,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DUSIT": {
@@ -4469,14 +5027,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.7219181,
+    "roic_ttm": 5.246550623525978,
     "updated_at": "2026-06-15"
   },
   "STI": {
-    "market_cap_m": 1043.184896,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 21.625,
-    "div_yield_ttm": 1.5028902,
-    "pbv_latest": 1.2123336,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AJA": {
@@ -4485,14 +5045,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.460674,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SKN": {
-    "market_cap_m": 4200.0,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 13.461539,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.9688134,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "M": {
@@ -4501,22 +5063,25 @@
     "pe_ttm": 25.294117,
     "div_yield_ttm": 4.8309177000000005,
     "pbv_latest": 1.4919158,
+    "roic_ttm": 6.356500519172946,
     "updated_at": "2026-06-15"
   },
   "UV": {
-    "market_cap_m": 1606.018176,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.1500804,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SAWANG": {
-    "market_cap_m": 147.6,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.5956417,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BAM": {
@@ -4525,14 +5090,16 @@
     "pe_ttm": 11.785714,
     "div_yield_ttm": 7.462687,
     "pbv_latest": 0.4742742,
+    "roic_ttm": 0.42748383451835636,
     "updated_at": "2026-06-15"
   },
   "WGE": {
-    "market_cap_m": 420.0,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 3.1818182,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.7918552,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "HUMAN": {
@@ -4541,30 +5108,34 @@
     "pe_ttm": 11.804878,
     "div_yield_ttm": 6.61157,
     "pbv_latest": 1.2054795,
+    "roic_ttm": 10.14752752014164,
     "updated_at": "2026-06-15"
   },
   "RSP": {
-    "market_cap_m": 690.990016,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 46.5,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.43215615,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BJC": {
-    "market_cap_m": 56910.712832,
-    "target_mean_price": 16.03333,
-    "pe_ttm": 14.343434,
-    "div_yield_ttm": 3.6170210000000003,
-    "pbv_latest": 0.46636888,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SYNEX": {
-    "market_cap_m": 7753.354752,
-    "target_mean_price": 11.725,
-    "pe_ttm": 9.631578,
-    "div_yield_ttm": 5.2459016,
-    "pbv_latest": 1.6089326,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ANI": {
@@ -4573,70 +5144,79 @@
     "pe_ttm": 9.466666,
     "div_yield_ttm": 7.1428575,
     "pbv_latest": 0.64122826,
+    "roic_ttm": 7.529576822910916,
     "updated_at": "2026-06-15"
   },
   "CPAXT": {
-    "market_cap_m": 154329.382912,
-    "target_mean_price": 16.36471,
-    "pe_ttm": 16.444445,
-    "div_yield_ttm": 4.8630132999999995,
-    "pbv_latest": 0.5092736,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "KAMART": {
-    "market_cap_m": 9295.95904,
-    "target_mean_price": 12.0,
-    "pe_ttm": 13.773586,
-    "div_yield_ttm": 6.068965400000001,
-    "pbv_latest": 2.5650036,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BCH": {
-    "market_cap_m": 23067.168768,
-    "target_mean_price": 11.46429,
-    "pe_ttm": 18.137255,
-    "div_yield_ttm": 4.918033,
-    "pbv_latest": 1.7135977,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "GFPT": {
-    "market_cap_m": 10782.861312,
-    "target_mean_price": 9.775,
-    "pe_ttm": 4.6486487,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.48894197,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ZAA": {
-    "market_cap_m": 1098.600704,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 4.828572,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CHASE": {
-    "market_cap_m": 973.278976,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": "Infinity",
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.28144744,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PATO": {
-    "market_cap_m": 868.469184,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 13.863636,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.6749039,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MASTER": {
-    "market_cap_m": 2594.721024,
-    "target_mean_price": 9.1,
-    "pe_ttm": 12.647059,
-    "div_yield_ttm": 4.7619052,
-    "pbv_latest": 0.7387682,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PRIN": {
@@ -4645,22 +5225,25 @@
     "pe_ttm": 23.166666,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.311869,
+    "roic_ttm": 1.292974824554876,
     "updated_at": "2026-06-15"
   },
   "CH": {
-    "market_cap_m": 1216.0,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 2.0134227,
-    "pbv_latest": 0.96263456,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "VARO": {
-    "market_cap_m": 399.60848,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 5.970149,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.3983667,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NOBLE": {
@@ -4669,54 +5252,61 @@
     "pe_ttm": 4.3170733,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.35663915,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "THRE": {
-    "market_cap_m": 1475.247872,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 11.666667,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.39548022,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MK": {
-    "market_cap_m": 754.830144,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.15935056,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "OGC": {
-    "market_cap_m": 190.909904,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.106647916,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "EP": {
-    "market_cap_m": 1007.107648,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.45859873,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "OHTL": {
-    "market_cap_m": 4242.48192,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 13.548698,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.4187691,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CHAYO": {
-    "market_cap_m": 1480.328192,
-    "target_mean_price": 2.22667,
+    "market_cap_m": null,
+    "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.47654784,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TTT": {
@@ -4725,62 +5315,70 @@
     "pe_ttm": 37.5,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.35279486,
+    "roic_ttm": 3.3788318060495106,
     "updated_at": "2026-06-15"
   },
   "NSL": {
-    "market_cap_m": 6449.999872,
-    "target_mean_price": 28.625,
-    "pe_ttm": 10.858585,
-    "div_yield_ttm": 4.816514000000001,
-    "pbv_latest": 2.7546446,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NC": {
-    "market_cap_m": 265.34984,
+    "market_cap_m": 265.34982049435234,
     "target_mean_price": null,
-    "pe_ttm": 87.0,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.5544933,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SISB": {
-    "market_cap_m": 9118.000128,
-    "target_mean_price": 13.05,
-    "pe_ttm": 9.7,
-    "div_yield_ttm": 5.3124998,
-    "pbv_latest": 2.3095238,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DCON": {
-    "market_cap_m": 1077.268096,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": "Infinity",
-    "div_yield_ttm": 1.5,
-    "pbv_latest": 0.4032258,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SNNP": {
-    "market_cap_m": 5985.03424,
-    "target_mean_price": 8.36667,
-    "pe_ttm": 14.456522,
-    "div_yield_ttm": 9.015152,
-    "pbv_latest": 2.3835125,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AAI": {
-    "market_cap_m": 7535.273984,
-    "target_mean_price": 4.95,
-    "pe_ttm": 12.275863,
-    "div_yield_ttm": 9.682081,
-    "pbv_latest": 1.5200683,
+    "market_cap_m": 7535.273878884315,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PF": {
-    "market_cap_m": 500.554048,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.06281407,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SAMTEL": {
@@ -4789,6 +5387,7 @@
     "pe_ttm": 29.272728,
     "div_yield_ttm": 3.5714287,
     "pbv_latest": 0.5492069,
+    "roic_ttm": 3.3039571926516955,
     "updated_at": "2026-06-15"
   },
   "AS": {
@@ -4797,6 +5396,7 @@
     "pe_ttm": 8.444444,
     "div_yield_ttm": 8.849557500000001,
     "pbv_latest": 0.8131241,
+    "roic_ttm": 11.911766069484077,
     "updated_at": "2026-06-15"
   },
   "NOVA": {
@@ -4805,6 +5405,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.68573666,
+    "roic_ttm": 2.8257215132955915,
     "updated_at": "2026-06-15"
   },
   "MILL": {
@@ -4813,6 +5414,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 2.4999998,
+    "roic_ttm": 0.574741424418992,
     "updated_at": "2026-06-15"
   },
   "J": {
@@ -4821,14 +5423,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3482587,
+    "roic_ttm": 1.9915345828837316,
     "updated_at": "2026-06-15"
   },
   "PEACE": {
-    "market_cap_m": 786.236352,
+    "market_cap_m": 786.2363410410218,
     "target_mean_price": null,
-    "pe_ttm": 52.0,
-    "div_yield_ttm": 3.8216557,
-    "pbv_latest": 0.35302103,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PHG": {
@@ -4837,6 +5441,7 @@
     "pe_ttm": 11.086956,
     "div_yield_ttm": 6.9306925,
     "pbv_latest": 1.3580081,
+    "roic_ttm": 16.390598981049067,
     "updated_at": "2026-06-15"
   },
   "ORI": {
@@ -4845,14 +5450,16 @@
     "pe_ttm": 5.6896553,
     "div_yield_ttm": 4.2424243,
     "pbv_latest": 0.19879517,
+    "roic_ttm": 1.2193847859091642,
     "updated_at": "2026-06-15"
   },
   "TNL": {
-    "market_cap_m": 6336.15104,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 15.877863,
-    "div_yield_ttm": 2.8846156,
-    "pbv_latest": 0.5837613,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BEAUTY": {
@@ -4861,14 +5468,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 2.341772,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SAWAD": {
-    "market_cap_m": 36054.700032,
-    "target_mean_price": 29.01562,
-    "pe_ttm": 6.845426,
-    "div_yield_ttm": 3.4313727000000003,
-    "pbv_latest": 0.9280247,
+    "market_cap_m": 36054.701626929185,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "INSURE": {
@@ -4877,14 +5486,16 @@
     "pe_ttm": 24.449339,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.47405106,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NTV": {
-    "market_cap_m": 3008.0,
+    "market_cap_m": 3007.9998779296875,
     "target_mean_price": null,
-    "pe_ttm": 12.287581,
-    "div_yield_ttm": 5.6216214,
-    "pbv_latest": 1.1161907,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "RICHY": {
@@ -4893,38 +5504,43 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.09101942,
+    "roic_ttm": 1.549712802694295,
     "updated_at": "2026-06-15"
   },
   "MFC": {
-    "market_cap_m": 2424.383232,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 9.554455,
-    "div_yield_ttm": 6.544503,
-    "pbv_latest": 1.6419942,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PR9": {
-    "market_cap_m": 13288.470528,
-    "target_mean_price": 22.92308,
-    "pe_ttm": 16.407766,
-    "div_yield_ttm": 3.0674849,
-    "pbv_latest": 2.1928117,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NCH": {
-    "market_cap_m": 485.66064,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.1670951,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "FMT": {
-    "market_cap_m": 950.399936,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.70019096,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NKI": {
@@ -4933,14 +5549,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.32580608,
+    "roic_ttm": 3.1260223249035715,
     "updated_at": "2026-06-15"
   },
   "PDJ": {
-    "market_cap_m": 581.070208,
+    "market_cap_m": 581.0702196292191,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.30827305,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MJD": {
@@ -4949,14 +5567,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.117462814,
+    "roic_ttm": 2.6234395523263108,
     "updated_at": "2026-06-15"
   },
   "TNPF": {
     "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.16699411,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BRI": {
@@ -4965,22 +5585,25 @@
     "pe_ttm": 12.4,
     "div_yield_ttm": 2.7777778,
     "pbv_latest": 0.26416704,
+    "roic_ttm": 0.9008430635027345,
     "updated_at": "2026-06-15"
   },
   "MTC": {
-    "market_cap_m": 62009.99936,
-    "target_mean_price": 41.71875,
-    "pe_ttm": 8.890577,
-    "div_yield_ttm": 1.0357142,
-    "pbv_latest": 1.3804333,
+    "market_cap_m": 62010.0,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MENA": {
-    "market_cap_m": 484.440032,
+    "market_cap_m": 484.4400192499161,
     "target_mean_price": null,
-    "pe_ttm": 7.3333335,
-    "div_yield_ttm": 2.3076923999999996,
-    "pbv_latest": 0.48493758,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CWT": {
@@ -4989,14 +5612,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.27056673,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "JAS": {
-    "market_cap_m": 9950.4896,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.6282226,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DDD": {
@@ -5005,6 +5630,7 @@
     "pe_ttm": 52.88889,
     "div_yield_ttm": 3.75,
     "pbv_latest": 0.33568406,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TGE": {
@@ -5013,14 +5639,16 @@
     "pe_ttm": 11.444444,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.8313156,
+    "roic_ttm": 5.901166933205021,
     "updated_at": "2026-06-15"
   },
   "WIN": {
-    "market_cap_m": 157.12032,
+    "market_cap_m": 157.1203262689358,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.42360058,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "MATCH": {
@@ -5029,6 +5657,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.59720457,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PK": {
@@ -5037,6 +5666,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.19882512,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SUN": {
@@ -5045,6 +5675,7 @@
     "pe_ttm": 13.444445,
     "div_yield_ttm": 6.147541,
     "pbv_latest": 1.3282108,
+    "roic_ttm": 4.174270125185214,
     "updated_at": "2026-06-15"
   },
   "TIPCO": {
@@ -5053,6 +5684,7 @@
     "pe_ttm": 10.909091,
     "div_yield_ttm": 1.6666668,
     "pbv_latest": 0.78114825,
+    "roic_ttm": 2.3274459060791757,
     "updated_at": "2026-06-15"
   },
   "TCMC": {
@@ -5061,6 +5693,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.2849003,
+    "roic_ttm": 8.828717222057945,
     "updated_at": "2026-06-15"
   },
   "RML": {
@@ -5069,6 +5702,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3003003,
+    "roic_ttm": 0.021072161735574094,
     "updated_at": "2026-06-15"
   },
   "CITY": {
@@ -5077,6 +5711,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.295421,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SVI": {
@@ -5085,22 +5720,25 @@
     "pe_ttm": 13.095239,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.5337423,
+    "roic_ttm": 10.558543233484258,
     "updated_at": "2026-06-15"
   },
   "MSC": {
-    "market_cap_m": 2285.999872,
+    "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 16.710526,
-    "div_yield_ttm": 5.46875,
-    "pbv_latest": 0.972286,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "THAI": {
-    "market_cap_m": 202368.548864,
-    "target_mean_price": 7.58929,
-    "pe_ttm": 6.5,
-    "div_yield_ttm": 3.0434782,
-    "pbv_latest": 2.2858057,
+    "market_cap_m": null,
+    "target_mean_price": null,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ANAN": {
@@ -5109,6 +5747,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.119180635,
+    "roic_ttm": 4.530952226645666,
     "updated_at": "2026-06-15"
   },
   "TGPRO": {
@@ -5117,6 +5756,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.090909086,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "APURE": {
@@ -5125,6 +5765,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.89499336,
+    "roic_ttm": 0.10210828235972232,
     "updated_at": "2026-06-15"
   },
   "VGI": {
@@ -5133,6 +5774,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.54720384,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AIMCG": {
@@ -5141,22 +5783,25 @@
     "pe_ttm": null,
     "div_yield_ttm": 5.147059,
     "pbv_latest": 0.1709295,
+    "roic_ttm": 0.9524498790255896,
     "updated_at": "2026-06-15"
   },
   "AMANAH": {
     "market_cap_m": 781.520448,
-    "target_mean_price": 0.64,
+    "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.47756878,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "DTCI": {
-    "market_cap_m": 183.0,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 1.3661203,
-    "pbv_latest": 0.47662455,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "BTS": {
@@ -5165,6 +5810,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.56780595,
+    "roic_ttm": 0.5977863294914117,
     "updated_at": "2026-06-15"
   },
   "KUN": {
@@ -5173,6 +5819,7 @@
     "pe_ttm": 55.000004,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.53037614,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NV": {
@@ -5181,6 +5828,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.26604068,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PTECH": {
@@ -5189,6 +5837,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.6775885,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "GRAMMY": {
@@ -5197,6 +5846,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5568962,
+    "roic_ttm": 16.353177930163103,
     "updated_at": "2026-06-15"
   },
   "TRITN": {
@@ -5205,6 +5855,7 @@
     "pe_ttm": 2.0,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.19999999,
+    "roic_ttm": 29.0404851106839,
     "updated_at": "2026-06-15"
   },
   "B52": {
@@ -5213,6 +5864,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 2.8395061,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CMC": {
@@ -5221,6 +5873,7 @@
     "pe_ttm": 5.8333335,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.18022656,
+    "roic_ttm": 0.8025987327536461,
     "updated_at": "2026-06-15"
   },
   "SCM": {
@@ -5229,6 +5882,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.16105416,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "KC": {
@@ -5237,6 +5891,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.4285713,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SST": {
@@ -5245,6 +5900,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4431513,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NVD": {
@@ -5253,6 +5909,7 @@
     "pe_ttm": 6.8750005,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.18086156,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "A": {
@@ -5261,6 +5918,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 4.050279,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AQUA": {
@@ -5269,14 +5927,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.15214385,
+    "roic_ttm": 0.5005471820138506,
     "updated_at": "2026-06-15"
   },
   "OKJ": {
-    "market_cap_m": 2326.380032,
-    "target_mean_price": 4.4250937,
+    "market_cap_m": null,
+    "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 1.3589469,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "CEN": {
@@ -5285,6 +5945,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.3736542,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PLE": {
@@ -5293,6 +5954,7 @@
     "pe_ttm": 9.000001,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.09698276,
+    "roic_ttm": 5.7218945434374975,
     "updated_at": "2026-06-15"
   },
   "TFI": {
@@ -5301,6 +5963,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.39999998,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "RS": {
@@ -5309,6 +5972,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.18413597,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PRECHA": {
@@ -5317,6 +5981,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5354559,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "FNS": {
@@ -5325,6 +5990,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.22862369,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "NRF": {
@@ -5333,6 +5999,7 @@
     "pe_ttm": 0.4423077,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4129264,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "AE": {
@@ -5341,6 +6008,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.22500001,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SQ": {
@@ -5349,6 +6017,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.13194443,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PLUS": {
@@ -5357,6 +6026,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.68090016,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "XYZ": {
@@ -5365,6 +6035,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.9385114,
+    "roic_ttm": 12.558197188449505,
     "updated_at": "2026-06-15"
   },
   "MADAME": {
@@ -5373,6 +6044,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.5141658,
+    "roic_ttm": 9.178163571584978,
     "updated_at": "2026-06-15"
   },
   "MONO": {
@@ -5381,6 +6053,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 224.99998,
+    "roic_ttm": 5.078768249682357,
     "updated_at": "2026-06-15"
   },
   "GRAND": {
@@ -5389,6 +6062,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.46511626,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "ETL": {
@@ -5397,14 +6071,16 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.41845492,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "GEL": {
-    "market_cap_m": 258.361456,
+    "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
-    "pbv_latest": 0.1090909,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "EMC": {
@@ -5413,6 +6089,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.29411763,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "SDC": {
@@ -5421,6 +6098,7 @@
     "pe_ttm": "Infinity",
     "div_yield_ttm": 0.0,
     "pbv_latest": 1.8181818,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "PPPM": {
@@ -5429,6 +6107,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.47297296,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TWZ": {
@@ -5437,6 +6116,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.11363636,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TPOLY": {
@@ -5445,6 +6125,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.4819277,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TTCL": {
@@ -5453,6 +6134,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -0.012720623,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "TSR": {
@@ -5461,6 +6143,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -0.09779951,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "XBIO": {
@@ -5469,6 +6152,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": 2.5925925,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   },
   "WSOL": {
@@ -5477,6 +6161,7 @@
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": -0.022404779,
+    "roic_ttm": null,
     "updated_at": "2026-06-15"
   }
 }

@@ -322,10 +322,10 @@ def fetch_indices_data(max_workers=12):
 
 def fetch_market_caps(tickers, max_workers=15):
     """
-    Downloads market capitalization, IAA consensus mean price, trailing PE, dividend yield, and PBV for tickers in parallel,
+    Downloads market capitalization, IAA consensus mean price, trailing PE, dividend yield, PBV, and calculates ROIC TTM for tickers in parallel,
     utilizing a local cache to avoid Yahoo Finance rate limits.
     Returns:
-        tuple: (mcaps_dict, consensus_dict, pe_ttm_dict, div_yields_dict, pbv_latest_dict)
+        tuple: (mcaps_dict, consensus_dict, pe_ttm_dict, div_yields_dict, pbv_latest_dict, roic_ttm_dict)
     """
     cache = load_mcap_cache()
     today_str = datetime.now().strftime('%Y-%m-%d')
@@ -336,6 +336,7 @@ def fetch_market_caps(tickers, max_workers=15):
     pe_ttm = {}
     div_yields = {}
     pbv_latest = {}
+    roic_ttms = {}
     tickers_to_fetch = []
     
     # 1. Identify which tickers need fetching
@@ -350,25 +351,27 @@ def fetch_market_caps(tickers, max_workers=15):
                     "target_mean_price" in cached_data and
                     "pe_ttm" in cached_data and
                     "div_yield_ttm" in cached_data and
-                    "pbv_latest" in cached_data):
+                    "pbv_latest" in cached_data and
+                    "roic_ttm" in cached_data):
                     
                     mcaps[t] = cached_data.get("market_cap_m")
                     consensus[t] = cached_data.get("target_mean_price")
                     pe_ttm[t] = cached_data.get("pe_ttm")
                     div_yields[t] = cached_data.get("div_yield_ttm")
                     pbv_latest[t] = cached_data.get("pbv_latest")
+                    roic_ttms[t] = cached_data.get("roic_ttm")
                     continue
             except Exception:
                 pass
         tickers_to_fetch.append(t)
 
     if not tickers_to_fetch:
-        print(f"[INFO] All {len(tickers)} market caps, consensus target prices, PE, Yields, and PBV loaded from local cache.")
-        return mcaps, consensus, pe_ttm, div_yields, pbv_latest
+        print(f"[INFO] All {len(tickers)} market caps, consensus target prices, PE, Yields, PBV, and ROIC loaded from local cache.")
+        return mcaps, consensus, pe_ttm, div_yields, pbv_latest, roic_ttms
 
     print(f"[INFO] Cache status: {len(mcaps)} from cache, need to fetch {len(tickers_to_fetch)} from Yahoo Finance...")
 
-    # 2. Fetch missing market caps, consensus prices, PE, Yields, and PBV in parallel with throttling
+    # 2. Fetch missing market caps, consensus prices, PE, Yields, PBV, and ROIC in parallel with throttling
     formatted_tickers = [t + ".BK" if not t.endswith(".BK") and not t.startswith("^") else t for t in tickers_to_fetch]
     
     new_data = {}
@@ -397,48 +400,82 @@ def fetch_market_caps(tickers, max_workers=15):
                 else:
                     div_yield = None
             
+            # Calculate ROIC TTM
+            roic = None
+            try:
+                revenue = info.get("totalRevenue")
+                op_margin = info.get("operatingMargins")
+                ebit = None
+                if revenue is not None and op_margin is not None:
+                    ebit = revenue * op_margin
+                else:
+                    ebitda = info.get("ebitda")
+                    if ebitda is not None:
+                        ebit = ebitda * 0.8
+                
+                if ebit is not None and ebit > 0:
+                    nopat = ebit * 0.8  # 20% corporate tax rate proxy
+                    debt = info.get("totalDebt") or 0
+                    cash = info.get("totalCash") or 0
+                    book_val = info.get("bookValue")
+                    shares = info.get("sharesOutstanding")
+                    equity = None
+                    if book_val is not None and shares is not None:
+                        equity = book_val * shares
+                    else:
+                        equity = mcap
+                    
+                    if equity is not None and equity > 0:
+                        invested_capital = debt + equity - cash
+                        if invested_capital > 0:
+                            roic = (nopat / invested_capital) * 100
+            except Exception:
+                pass
+            
             # Fallback to fast_info for market cap if not in info
             if mcap is None:
                 mcap = t_obj.fast_info.market_cap
                 
             mcap_m = mcap / 1e6 if mcap is not None else None
-            return clean_t, mcap_m, target_mean, pe, div_yield, pbv
+            return clean_t, mcap_m, target_mean, pe, div_yield, pbv, roic
         except Exception:
             # Full fallback to fast_info for market cap
             try:
                 t_obj = yf.Ticker(ticker)
                 mcap = t_obj.fast_info.market_cap
                 if mcap is not None:
-                    return clean_t, mcap / 1e6, None, None, None, None
+                    return clean_t, mcap / 1e6, None, None, None, None, None
             except Exception:
                 pass
-            return clean_t, None, None, None, None, None
+            return clean_t, None, None, None, None, None, None
 
     # We use fewer workers (max_workers=15) to prevent API rate limiting
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(get_single_stock_data, t): t for t in formatted_tickers}
         for future in as_completed(futures):
-            symbol, mcap_m, target_mean, pe, div_yield, pbv = future.result()
-            new_data[symbol] = (mcap_m, target_mean, pe, div_yield, pbv)
+            symbol, mcap_m, target_mean, pe, div_yield, pbv, roic = future.result()
+            new_data[symbol] = (mcap_m, target_mean, pe, div_yield, pbv, roic)
 
     # 3. Update cache
-    for symbol, (mcap_m, target_mean, pe, div_yield, pbv) in new_data.items():
+    for symbol, (mcap_m, target_mean, pe, div_yield, pbv, roic) in new_data.items():
         mcaps[symbol] = mcap_m
         consensus[symbol] = target_mean
         pe_ttm[symbol] = pe
         div_yields[symbol] = div_yield
         pbv_latest[symbol] = pbv
+        roic_ttms[symbol] = roic
         cache[symbol] = {
             "market_cap_m": mcap_m,
             "target_mean_price": target_mean,
             "pe_ttm": pe,
             "div_yield_ttm": div_yield,
             "pbv_latest": pbv,
+            "roic_ttm": roic,
             "updated_at": today_str
         }
         
     save_mcap_cache(cache)
-    return mcaps, consensus, pe_ttm, div_yields, pbv_latest
+    return mcaps, consensus, pe_ttm, div_yields, pbv_latest, roic_ttms
 
 def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
     """
@@ -588,6 +625,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             return 'N/A'
         try:
             return f"{float(val):.2f}"
+        except (ValueError, TypeError):
+            return 'N/A'
+
+    def get_roic_html(row):
+        val = row.get('ROIC_TTM')
+        if pd.isna(val):
+            return 'N/A'
+        try:
+            return f"{float(val):.2f}%"
         except (ValueError, TypeError):
             return 'N/A'
             
@@ -1134,6 +1180,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             width: 60px;
         }}
 
+        .roic-cell {{
+            font-weight: 500;
+            color: var(--text-main);
+            width: 60px;
+        }}
+
         .div-cell {{
             font-weight: 500;
             color: var(--text-main);
@@ -1636,8 +1688,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                         <th onclick="sortTable(5)">Consensus ↕</th>
                                         <th onclick="sortTable(6)">P/E ↕</th>
                                         <th onclick="sortTable(7)">P/BV ↕</th>
-                                        <th onclick="sortTable(8)">Div Yield ↕</th>
-                                        <th onclick="sortTable(9)">Mansfield RS ↕</th>
+                                        <th onclick="sortTable(8)">ROIC ↕</th>
+                                        <th onclick="sortTable(9)">Div Yield ↕</th>
+                                        <th onclick="sortTable(10)">Mansfield RS ↕</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1660,6 +1713,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                         </td>
                                         <td class="pbv-cell">
                                             {get_pbv_html(x)}
+                                        </td>
+                                        <td class="roic-cell">
+                                            {get_roic_html(x)}
                                         </td>
                                         <td class="div-cell">
                                             {get_div_yield_html(x)}
@@ -1753,7 +1809,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             document.getElementById("visibleCount").innerText = count;
         }}
 
-        let sortDirections = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column (10 columns total)
+        let sortDirections = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column (11 columns total)
         
         function sortTable(columnIndex) {{
             let table = document.getElementById("rankingTable");
@@ -2132,12 +2188,13 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
     if progress_callback:
         progress_callback(f"RS calculated for {len(succeeded_symbols)} stocks. Fetching market capitalization...", 0.6)
         
-    mcaps, consensus, pe_ttm, div_yields, pbv_latest = fetch_market_caps(succeeded_symbols)
+    mcaps, consensus, pe_ttm, div_yields, pbv_latest, roic_ttm = fetch_market_caps(succeeded_symbols)
     ranking_df['Market_Cap_M'] = ranking_df['Symbol'].map(mcaps)
     ranking_df['Target_Mean_Price'] = ranking_df['Symbol'].map(consensus)
     ranking_df['PE_TTM'] = ranking_df['Symbol'].map(pe_ttm)
     ranking_df['Div_Yield_TTM'] = ranking_df['Symbol'].map(div_yields)
     ranking_df['PBV_Latest'] = ranking_df['Symbol'].map(pbv_latest)
+    ranking_df['ROIC_TTM'] = ranking_df['Symbol'].map(roic_ttm)
     
     if min_mcap > 0:
         if progress_callback:
