@@ -322,10 +322,10 @@ def fetch_indices_data(max_workers=12):
 
 def fetch_market_caps(tickers, max_workers=15):
     """
-    Downloads market capitalization, IAA consensus mean price, trailing PE, and dividend yield for tickers in parallel,
+    Downloads market capitalization, IAA consensus mean price, trailing PE, dividend yield, and PBV for tickers in parallel,
     utilizing a local cache to avoid Yahoo Finance rate limits.
     Returns:
-        tuple: (mcaps_dict, consensus_dict, pe_ttm_dict, div_yields_dict)
+        tuple: (mcaps_dict, consensus_dict, pe_ttm_dict, div_yields_dict, pbv_latest_dict)
     """
     cache = load_mcap_cache()
     today_str = datetime.now().strftime('%Y-%m-%d')
@@ -335,6 +335,7 @@ def fetch_market_caps(tickers, max_workers=15):
     consensus = {}
     pe_ttm = {}
     div_yields = {}
+    pbv_latest = {}
     tickers_to_fetch = []
     
     # 1. Identify which tickers need fetching
@@ -348,24 +349,26 @@ def fetch_market_caps(tickers, max_workers=15):
                     cached_data.get("market_cap_m") is not None and 
                     "target_mean_price" in cached_data and
                     "pe_ttm" in cached_data and
-                    "div_yield_ttm" in cached_data):
+                    "div_yield_ttm" in cached_data and
+                    "pbv_latest" in cached_data):
                     
                     mcaps[t] = cached_data.get("market_cap_m")
                     consensus[t] = cached_data.get("target_mean_price")
                     pe_ttm[t] = cached_data.get("pe_ttm")
                     div_yields[t] = cached_data.get("div_yield_ttm")
+                    pbv_latest[t] = cached_data.get("pbv_latest")
                     continue
             except Exception:
                 pass
         tickers_to_fetch.append(t)
 
     if not tickers_to_fetch:
-        print(f"[INFO] All {len(tickers)} market caps, consensus target prices, PE, and Yields loaded from local cache.")
-        return mcaps, consensus, pe_ttm, div_yields
+        print(f"[INFO] All {len(tickers)} market caps, consensus target prices, PE, Yields, and PBV loaded from local cache.")
+        return mcaps, consensus, pe_ttm, div_yields, pbv_latest
 
     print(f"[INFO] Cache status: {len(mcaps)} from cache, need to fetch {len(tickers_to_fetch)} from Yahoo Finance...")
 
-    # 2. Fetch missing market caps, consensus prices, PE, and Yields in parallel with throttling
+    # 2. Fetch missing market caps, consensus prices, PE, Yields, and PBV in parallel with throttling
     formatted_tickers = [t + ".BK" if not t.endswith(".BK") and not t.startswith("^") else t for t in tickers_to_fetch]
     
     new_data = {}
@@ -381,6 +384,7 @@ def fetch_market_caps(tickers, max_workers=15):
             mcap = info.get("marketCap")
             target_mean = info.get("targetMeanPrice")
             pe = info.get("trailingPE")
+            pbv = info.get("priceToBook")
             
             # Fetch dividend yield and convert to percentage
             dy = info.get("trailingAnnualDividendYield")
@@ -398,41 +402,43 @@ def fetch_market_caps(tickers, max_workers=15):
                 mcap = t_obj.fast_info.market_cap
                 
             mcap_m = mcap / 1e6 if mcap is not None else None
-            return clean_t, mcap_m, target_mean, pe, div_yield
+            return clean_t, mcap_m, target_mean, pe, div_yield, pbv
         except Exception:
             # Full fallback to fast_info for market cap
             try:
                 t_obj = yf.Ticker(ticker)
                 mcap = t_obj.fast_info.market_cap
                 if mcap is not None:
-                    return clean_t, mcap / 1e6, None, None, None
+                    return clean_t, mcap / 1e6, None, None, None, None
             except Exception:
                 pass
-            return clean_t, None, None, None, None
+            return clean_t, None, None, None, None, None
 
     # We use fewer workers (max_workers=15) to prevent API rate limiting
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(get_single_stock_data, t): t for t in formatted_tickers}
         for future in as_completed(futures):
-            symbol, mcap_m, target_mean, pe, div_yield = future.result()
-            new_data[symbol] = (mcap_m, target_mean, pe, div_yield)
+            symbol, mcap_m, target_mean, pe, div_yield, pbv = future.result()
+            new_data[symbol] = (mcap_m, target_mean, pe, div_yield, pbv)
 
     # 3. Update cache
-    for symbol, (mcap_m, target_mean, pe, div_yield) in new_data.items():
+    for symbol, (mcap_m, target_mean, pe, div_yield, pbv) in new_data.items():
         mcaps[symbol] = mcap_m
         consensus[symbol] = target_mean
         pe_ttm[symbol] = pe
         div_yields[symbol] = div_yield
+        pbv_latest[symbol] = pbv
         cache[symbol] = {
             "market_cap_m": mcap_m,
             "target_mean_price": target_mean,
             "pe_ttm": pe,
             "div_yield_ttm": div_yield,
+            "pbv_latest": pbv,
             "updated_at": today_str
         }
         
     save_mcap_cache(cache)
-    return mcaps, consensus, pe_ttm, div_yields
+    return mcaps, consensus, pe_ttm, div_yields, pbv_latest
 
 def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
     """
@@ -569,6 +575,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
     
     def get_pe_html(row):
         val = row.get('PE_TTM')
+        if pd.isna(val):
+            return 'N/A'
+        try:
+            return f"{float(val):.2f}"
+        except (ValueError, TypeError):
+            return 'N/A'
+
+    def get_pbv_html(row):
+        val = row.get('PBV_Latest')
         if pd.isna(val):
             return 'N/A'
         try:
@@ -1072,7 +1087,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         }}
 
         .rs-cell {{
-            width: 90px;
+            width: 100px;
+            vertical-align: middle;
+        }}
+
+        .rs-container {{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
         }}
 
         .rs-pill-value {{
@@ -1100,6 +1123,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         }}
 
         .pe-cell {{
+            font-weight: 500;
+            color: var(--text-main);
+            width: 60px;
+        }}
+
+        .pbv-cell {{
             font-weight: 500;
             color: var(--text-main);
             width: 60px;
@@ -1136,9 +1165,6 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             color: var(--text-muted);
         }}
 
-        .status-cell {{
-            width: 80px;
-        }}
 
         .status-badge {{
             padding: 0.2rem 0.45rem;
@@ -1604,9 +1630,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                         <th onclick="sortTable(4)">Mkt Cap ↕</th>
                                         <th onclick="sortTable(5)">Consensus ↕</th>
                                         <th onclick="sortTable(6)">P/E ↕</th>
-                                        <th onclick="sortTable(7)">Div Yield ↕</th>
-                                        <th onclick="sortTable(8)">Mansfield RS ↕</th>
-                                        <th>Status</th>
+                                        <th onclick="sortTable(7)">P/BV ↕</th>
+                                        <th onclick="sortTable(8)">Div Yield ↕</th>
+                                        <th onclick="sortTable(9)">Mansfield RS ↕</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1627,18 +1653,21 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                         <td class="pe-cell">
                                             {get_pe_html(x)}
                                         </td>
+                                        <td class="pbv-cell">
+                                            {get_pbv_html(x)}
+                                        </td>
                                         <td class="div-cell">
                                             {get_div_yield_html(x)}
                                         </td>
                                         <td class="rs-cell">
-                                            <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
-                                                {x['Mansfield_RS']:.2f}
-                                            </span>
-                                        </td>
-                                        <td class="status-cell">
-                                            <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
-                                                {('Bullish' if x['Mansfield_RS'] > 0 else ('Bearish' if x['Mansfield_RS'] < -10 else 'Neutral'))}
-                                            </span>
+                                            <div class="rs-container">
+                                                <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
+                                                    {x['Mansfield_RS']:.2f}
+                                                </span>
+                                                <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
+                                                    {('Bullish' if x['Mansfield_RS'] > 0 else ('Bearish' if x['Mansfield_RS'] < -10 else 'Neutral'))}
+                                                </span>
+                                            </div>
                                         </td>
                                     </tr>
                                     ''' for i, x in enumerate(all_stocks)])}
@@ -1725,7 +1754,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             let table = document.getElementById("rankingTable");
             let tbody = table.tBodies[0];
             let rows = Array.from(tbody.rows);
-            let isNumeric = (columnIndex !== 1 && columnIndex !== 9); // All columns are numeric except Symbol (1) and Status (9)
+            let isNumeric = (columnIndex !== 1); // All columns are numeric except Symbol (1)
             
             let direction = sortDirections[columnIndex];
             
@@ -1754,9 +1783,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             let ths = table.getElementsByTagName("th");
             for(let i=0; i<ths.length; i++) {{
                 let baseText = ths[i].textContent.replace(/[▲▼↕]/g, "").trim();
-                if(i === 9) {{
-                    ths[i].innerHTML = baseText; // No arrow for Status (index 9)
-                }} else if(i === columnIndex) {{
+                if(i === columnIndex) {{
                     ths[i].innerHTML = baseText + (direction === 1 ? " ▲" : " ▼");
                 }} else {{
                     ths[i].innerHTML = baseText + " ↕";
@@ -2090,11 +2117,12 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
     if progress_callback:
         progress_callback(f"RS calculated for {len(succeeded_symbols)} stocks. Fetching market capitalization...", 0.6)
         
-    mcaps, consensus, pe_ttm, div_yields = fetch_market_caps(succeeded_symbols)
+    mcaps, consensus, pe_ttm, div_yields, pbv_latest = fetch_market_caps(succeeded_symbols)
     ranking_df['Market_Cap_M'] = ranking_df['Symbol'].map(mcaps)
     ranking_df['Target_Mean_Price'] = ranking_df['Symbol'].map(consensus)
     ranking_df['PE_TTM'] = ranking_df['Symbol'].map(pe_ttm)
     ranking_df['Div_Yield_TTM'] = ranking_df['Symbol'].map(div_yields)
+    ranking_df['PBV_Latest'] = ranking_df['Symbol'].map(pbv_latest)
     
     if min_mcap > 0:
         if progress_callback:

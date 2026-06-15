@@ -4,6 +4,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.000001,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.86590505,
     "updated_at": "2026-06-15"
   },
   "EASTW": {
@@ -11,6 +12,7 @@
     "target_mean_price": null,
     "pe_ttm": 108.00001,
     "div_yield_ttm": 0.2283105,
+    "pbv_latest": 0.62608695,
     "updated_at": "2026-06-15"
   },
   "FORTH": {
@@ -18,6 +20,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.555555,
     "div_yield_ttm": 1.4189188,
+    "pbv_latest": 4.9044585,
     "updated_at": "2026-06-15"
   },
   "ASAP": {
@@ -25,6 +28,7 @@
     "target_mean_price": null,
     "pe_ttm": 43.600002,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.8288591,
     "updated_at": "2026-06-15"
   },
   "CCET": {
@@ -32,6 +36,7 @@
     "target_mean_price": 8.425,
     "pe_ttm": 51.84211,
     "div_yield_ttm": 2.3958332999999996,
+    "pbv_latest": 3.8794801,
     "updated_at": "2026-06-15"
   },
   "CTW": {
@@ -39,6 +44,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.465518,
     "div_yield_ttm": 1.1510791,
+    "pbv_latest": 0.65215266,
     "updated_at": "2026-06-15"
   },
   "HANA": {
@@ -46,6 +52,7 @@
     "target_mean_price": 38.92857,
     "pe_ttm": 111.02941,
     "div_yield_ttm": 2.739726,
+    "pbv_latest": 1.250704,
     "updated_at": "2026-06-15"
   },
   "SMT": {
@@ -53,6 +60,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.7936507,
+    "pbv_latest": 1.7053528,
     "updated_at": "2026-06-15"
   },
   "TEAM": {
@@ -60,6 +68,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.787879,
     "div_yield_ttm": 4.0650405,
+    "pbv_latest": 2.0783646,
     "updated_at": "2026-06-15"
   },
   "EPG": {
@@ -67,6 +76,7 @@
     "target_mean_price": 7.65,
     "pe_ttm": 12.5,
     "div_yield_ttm": 3.5087720000000004,
+    "pbv_latest": 1.2014209,
     "updated_at": "2026-06-15"
   },
   "GUNKUL": {
@@ -74,6 +84,7 @@
     "target_mean_price": 3.665,
     "pe_ttm": 18.0,
     "div_yield_ttm": 3.448276,
+    "pbv_latest": 2.309038,
     "updated_at": "2026-06-15"
   },
   "STECON": {
@@ -81,6 +92,7 @@
     "target_mean_price": 16.07273,
     "pe_ttm": 13.206107,
     "div_yield_ttm": 3.2352943,
+    "pbv_latest": 1.5799086,
     "updated_at": "2026-06-15"
   },
   "DELTA": {
@@ -88,6 +100,7 @@
     "target_mean_price": 325.8889,
     "pe_ttm": 157.64192,
     "div_yield_ttm": 0.16528927,
+    "pbv_latest": 42.276615,
     "updated_at": "2026-06-15"
   },
   "ML": {
@@ -95,6 +108,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.77613515,
     "updated_at": "2026-06-15"
   },
   "TFG": {
@@ -102,6 +116,7 @@
     "target_mean_price": 10.46667,
     "pe_ttm": 7.12,
     "div_yield_ttm": 7.977528,
+    "pbv_latest": 2.5804582,
     "updated_at": "2026-06-15"
   },
   "INSET": {
@@ -109,6 +124,7 @@
     "target_mean_price": 5.27,
     "pe_ttm": 44.75,
     "div_yield_ttm": 1.1363636,
+    "pbv_latest": 2.039886,
     "updated_at": "2026-06-15"
   },
   "MGC": {
@@ -116,6 +132,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.676259,
     "div_yield_ttm": 3.787879,
+    "pbv_latest": 1.3510705,
     "updated_at": "2026-06-15"
   },
   "ASEFA": {
@@ -123,6 +140,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.357143,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4449427,
     "updated_at": "2026-06-15"
   },
   "TSE": {
@@ -130,6 +148,7 @@
     "target_mean_price": null,
     "pe_ttm": 72.00001,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.50209206,
     "updated_at": "2026-06-15"
   },
   "KCE": {
@@ -137,6 +156,7 @@
     "target_mean_price": 31.875,
     "pe_ttm": 51.760567,
     "div_yield_ttm": 3.2653064,
+    "pbv_latest": 3.2444603,
     "updated_at": "2026-06-15"
   },
   "SRICHA": {
@@ -144,6 +164,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.912037,
     "div_yield_ttm": 6.097561,
+    "pbv_latest": 2.6076221,
     "updated_at": "2026-06-15"
   },
   "CNT": {
@@ -151,6 +172,7 @@
     "target_mean_price": null,
     "pe_ttm": 23.857141,
     "div_yield_ttm": 2.9239766,
+    "pbv_latest": 0.960322,
     "updated_at": "2026-06-15"
   },
   "AMATA": {
@@ -158,6 +180,7 @@
     "target_mean_price": 26.41429,
     "pe_ttm": 8.307453,
     "div_yield_ttm": 4.1904762,
+    "pbv_latest": 1.2265579,
     "updated_at": "2026-06-15"
   },
   "CIVIL": {
@@ -165,6 +188,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.42814592,
     "updated_at": "2026-06-15"
   },
   "STELLA": {
@@ -172,6 +196,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.1278195,
     "updated_at": "2026-06-15"
   },
   "SCAP": {
@@ -179,6 +204,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.3125,
     "div_yield_ttm": 4.2424243,
+    "pbv_latest": 0.957632,
     "updated_at": "2026-06-15"
   },
   "IT": {
@@ -186,6 +212,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.75,
     "div_yield_ttm": 5.2252248,
+    "pbv_latest": 1.5761328,
     "updated_at": "2026-06-15"
   },
   "BKGI": {
@@ -193,6 +220,7 @@
     "target_mean_price": null,
     "pe_ttm": 26.25,
     "div_yield_ttm": 2.4038462,
+    "pbv_latest": 2.1627188,
     "updated_at": "2026-06-15"
   },
   "IRPC": {
@@ -200,6 +228,7 @@
     "target_mean_price": 1.62714,
     "pe_ttm": 6.214286,
     "div_yield_ttm": 0.5586591999999999,
+    "pbv_latest": 0.4813278,
     "updated_at": "2026-06-15"
   },
   "BAY": {
@@ -207,6 +236,7 @@
     "target_mean_price": 30.75,
     "pe_ttm": 8.464126,
     "div_yield_ttm": 3.3986926,
+    "pbv_latest": 0.6558602,
     "updated_at": "2026-06-15"
   },
   "STA": {
@@ -214,6 +244,7 @@
     "target_mean_price": 21.575,
     "pe_ttm": null,
     "div_yield_ttm": 2.617801,
+    "pbv_latest": 0.58775204,
     "updated_at": "2026-06-15"
   },
   "SGC": {
@@ -221,6 +252,7 @@
     "target_mean_price": null,
     "pe_ttm": 18.000002,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.182266,
     "updated_at": "2026-06-15"
   },
   "TITLE": {
@@ -228,6 +260,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.058823,
     "div_yield_ttm": 0.5194805,
+    "pbv_latest": 3.1161473,
     "updated_at": "2026-06-15"
   },
   "STGT": {
@@ -235,6 +268,7 @@
     "target_mean_price": 12.36667,
     "pe_ttm": null,
     "div_yield_ttm": 4.6728972,
+    "pbv_latest": 0.7827059,
     "updated_at": "2026-06-15"
   },
   "ALT": {
@@ -242,6 +276,7 @@
     "target_mean_price": null,
     "pe_ttm": 22.714287,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.0481213,
     "updated_at": "2026-06-15"
   },
   "MCOT": {
@@ -249,6 +284,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5862388,
     "updated_at": "2026-06-15"
   },
   "TRC": {
@@ -256,6 +292,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -13.043479,
     "updated_at": "2026-06-15"
   },
   "ACG": {
@@ -263,6 +300,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.166667,
     "div_yield_ttm": 5.333333,
+    "pbv_latest": 0.58823526,
     "updated_at": "2026-06-15"
   },
   "WHAUP": {
@@ -270,6 +308,7 @@
     "target_mean_price": 6.16071,
     "pe_ttm": 21.206898,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.7036012,
     "updated_at": "2026-06-15"
   },
   "WHA": {
@@ -277,6 +316,7 @@
     "target_mean_price": 4.90588,
     "pe_ttm": 16.064516,
     "div_yield_ttm": 4.2369477,
+    "pbv_latest": 2.017011,
     "updated_at": "2026-06-15"
   },
   "BGC": {
@@ -284,6 +324,7 @@
     "target_mean_price": null,
     "pe_ttm": 79.44444,
     "div_yield_ttm": 2.1126762,
+    "pbv_latest": 0.924848,
     "updated_at": "2026-06-15"
   },
   "FTE": {
@@ -291,6 +332,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.428573,
     "div_yield_ttm": 7.2033904,
+    "pbv_latest": 1.7391305,
     "updated_at": "2026-06-15"
   },
   "BIZ": {
@@ -298,6 +340,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.015151,
     "div_yield_ttm": 8.4033616,
+    "pbv_latest": 3.3110738,
     "updated_at": "2026-06-15"
   },
   "KKP": {
@@ -305,6 +348,7 @@
     "target_mean_price": 79.42857,
     "pe_ttm": 10.705669,
     "div_yield_ttm": 6.4589229999999995,
+    "pbv_latest": 1.084844,
     "updated_at": "2026-06-15"
   },
   "PROSPECT": {
@@ -312,6 +356,7 @@
     "target_mean_price": 9.8,
     "pe_ttm": 9.845361,
     "div_yield_ttm": 8.808511,
+    "pbv_latest": 1.1055801,
     "updated_at": "2026-06-15"
   },
   "PYLON": {
@@ -319,6 +364,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.333333,
     "div_yield_ttm": 7.1856290000000005,
+    "pbv_latest": 2.0973783,
     "updated_at": "2026-06-15"
   },
   "SEAFCO": {
@@ -326,6 +372,7 @@
     "target_mean_price": 2.8,
     "pe_ttm": 0.010555595,
     "div_yield_ttm": 4.0,
+    "pbv_latest": 1.4375911,
     "updated_at": "2026-06-15"
   },
   "JDF": {
@@ -333,6 +380,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.588235,
     "div_yield_ttm": 9.1836736,
+    "pbv_latest": 1.6471572,
     "updated_at": "2026-06-15"
   },
   "GABLE": {
@@ -340,6 +388,7 @@
     "target_mean_price": 4.2,
     "pe_ttm": 7.052632,
     "div_yield_ttm": 8.080808000000001,
+    "pbv_latest": 1.186891,
     "updated_at": "2026-06-15"
   },
   "INGRS": {
@@ -347,6 +396,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 6.3888885,
+    "pbv_latest": 0.49861497,
     "updated_at": "2026-06-15"
   },
   "SYMC": {
@@ -354,6 +404,7 @@
     "target_mean_price": 6.0,
     "pe_ttm": 18.923079,
     "div_yield_ttm": 1.9958848000000002,
+    "pbv_latest": 0.68772715,
     "updated_at": "2026-06-15"
   },
   "ITD": {
@@ -361,6 +412,7 @@
     "target_mean_price": 0.54,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.59931505,
     "updated_at": "2026-06-15"
   },
   "LHFG": {
@@ -368,6 +420,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.666666,
     "div_yield_ttm": 5.2173913,
+    "pbv_latest": 0.5796371,
     "updated_at": "2026-06-15"
   },
   "AJ": {
@@ -375,6 +428,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.44329396,
     "updated_at": "2026-06-15"
   },
   "GULF": {
@@ -382,6 +436,7 @@
     "target_mean_price": 73.3125,
     "pe_ttm": 36.723164,
     "div_yield_ttm": 2.1875,
+    "pbv_latest": 2.8034158,
     "updated_at": "2026-06-15"
   },
   "CSS": {
@@ -389,6 +444,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.166667,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6293223,
     "updated_at": "2026-06-15"
   },
   "BIOTEC": {
@@ -396,6 +452,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.333334,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.66844916,
     "updated_at": "2026-06-15"
   },
   "QTC": {
@@ -403,6 +460,7 @@
     "target_mean_price": null,
     "pe_ttm": 113.5,
     "div_yield_ttm": 4.3478259999999995,
+    "pbv_latest": 0.9995597,
     "updated_at": "2026-06-15"
   },
   "BBGI": {
@@ -410,6 +468,7 @@
     "target_mean_price": 5.8,
     "pe_ttm": 13.724138,
     "div_yield_ttm": 3.5714287,
+    "pbv_latest": 0.5942072,
     "updated_at": "2026-06-15"
   },
   "TSTH": {
@@ -417,6 +476,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.9130433,
     "div_yield_ttm": 6.6666669999999995,
+    "pbv_latest": 0.5050505,
     "updated_at": "2026-06-15"
   },
   "SGP": {
@@ -424,6 +484,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.381578,
     "div_yield_ttm": 2.2727273,
+    "pbv_latest": 1.0361763,
     "updated_at": "2026-06-15"
   },
   "KTB": {
@@ -431,6 +492,7 @@
     "target_mean_price": 35.96316,
     "pe_ttm": 10.214286,
     "div_yield_ttm": 5.87234,
+    "pbv_latest": 1.0629442,
     "updated_at": "2026-06-15"
   },
   "PTTGC": {
@@ -438,6 +500,7 @@
     "target_mean_price": 36.97778,
     "pe_ttm": null,
     "div_yield_ttm": 1.4705882,
+    "pbv_latest": 0.48619658,
     "updated_at": "2026-06-15"
   },
   "PRM": {
@@ -445,6 +508,7 @@
     "target_mean_price": 9.075,
     "pe_ttm": 9.086021,
     "div_yield_ttm": 5.91716,
+    "pbv_latest": 1.5154232,
     "updated_at": "2026-06-15"
   },
   "SPRC": {
@@ -452,6 +516,7 @@
     "target_mean_price": 8.49231,
     "pe_ttm": 3.2863848,
     "div_yield_ttm": 6.428571,
+    "pbv_latest": 0.6498329,
     "updated_at": "2026-06-15"
   },
   "SCGP": {
@@ -459,6 +524,7 @@
     "target_mean_price": 25.14706,
     "pe_ttm": 22.727272,
     "div_yield_ttm": 2.419355,
+    "pbv_latest": 1.4083714,
     "updated_at": "2026-06-15"
   },
   "SINGER": {
@@ -466,6 +532,7 @@
     "target_mean_price": 6.8,
     "pe_ttm": 30.322578,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.57090795,
     "updated_at": "2026-06-15"
   },
   "NYT": {
@@ -473,6 +540,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.2307696,
     "div_yield_ttm": 13.513513,
+    "pbv_latest": 1.2295618,
     "updated_at": "2026-06-15"
   },
   "MII": {
@@ -480,6 +548,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.2151895,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "PAP": {
@@ -487,6 +556,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.695652,
     "div_yield_ttm": 3.2520324000000005,
+    "pbv_latest": 0.806293,
     "updated_at": "2026-06-15"
   },
   "ALUCON": {
@@ -494,6 +564,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.441543,
     "div_yield_ttm": 6.808510399999999,
+    "pbv_latest": 1.2937251,
     "updated_at": "2026-06-15"
   },
   "ONEE": {
@@ -501,6 +572,7 @@
     "target_mean_price": 3.17,
     "pe_ttm": 12.454546,
     "div_yield_ttm": 6.766917599999999,
+    "pbv_latest": 0.90458894,
     "updated_at": "2026-06-15"
   },
   "UMI": {
@@ -508,6 +580,7 @@
     "target_mean_price": null,
     "pe_ttm": 1.9333334,
     "div_yield_ttm": 4.597701,
+    "pbv_latest": 0.3661616,
     "updated_at": "2026-06-15"
   },
   "CPTREIT": {
@@ -515,6 +588,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 11.8769236,
+    "pbv_latest": 0.69031435,
     "updated_at": "2026-06-15"
   },
   "CHARAN": {
@@ -522,6 +596,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.543081,
     "div_yield_ttm": 5.1724136,
+    "pbv_latest": 0.33778536,
     "updated_at": "2026-06-15"
   },
   "HTECH": {
@@ -529,6 +604,7 @@
     "target_mean_price": null,
     "pe_ttm": 35.2,
     "div_yield_ttm": 4.9418606,
+    "pbv_latest": 0.7985481,
     "updated_at": "2026-06-15"
   },
   "QHHRREIT": {
@@ -536,6 +612,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.290323,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "WHAIR": {
@@ -543,6 +620,7 @@
     "target_mean_price": 8.6,
     "pe_ttm": 22.727272,
     "div_yield_ttm": 7.8389265,
+    "pbv_latest": 0.90252703,
     "updated_at": "2026-06-15"
   },
   "GJS": {
@@ -550,6 +628,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3291139,
     "updated_at": "2026-06-15"
   },
   "CK": {
@@ -557,6 +636,7 @@
     "target_mean_price": 22.42,
     "pe_ttm": 9.701492,
     "div_yield_ttm": 2.3936170999999997,
+    "pbv_latest": 1.1486129,
     "updated_at": "2026-06-15"
   },
   "RBF": {
@@ -564,6 +644,7 @@
     "target_mean_price": 4.1,
     "pe_ttm": 19.166666,
     "div_yield_ttm": 4.70852,
+    "pbv_latest": 1.8691589,
     "updated_at": "2026-06-15"
   },
   "TRUBB": {
@@ -571,6 +652,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.27522936,
+    "pbv_latest": 0.30626985,
     "updated_at": "2026-06-15"
   },
   "TTA": {
@@ -578,6 +660,7 @@
     "target_mean_price": 5.3,
     "pe_ttm": 10.212767,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.30600536,
     "updated_at": "2026-06-15"
   },
   "2S": {
@@ -585,6 +668,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.6,
     "div_yield_ttm": 6.5789476,
+    "pbv_latest": 0.76670873,
     "updated_at": "2026-06-15"
   },
   "AMARIN": {
@@ -592,6 +676,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.59681404,
     "updated_at": "2026-06-15"
   },
   "RPC": {
@@ -599,6 +684,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 2.8571429,
+    "pbv_latest": 0.19954391,
     "updated_at": "2026-06-15"
   },
   "SVOA": {
@@ -606,6 +692,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.481481,
     "div_yield_ttm": 4.6783622,
+    "pbv_latest": 0.61859316,
     "updated_at": "2026-06-15"
   },
   "UVAN": {
@@ -613,6 +700,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.2959185,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 2.413502,
     "updated_at": "2026-06-15"
   },
   "TKS": {
@@ -620,6 +708,7 @@
     "target_mean_price": 6.7,
     "pe_ttm": 10.138888,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.0458453,
     "updated_at": "2026-06-15"
   },
   "KISS": {
@@ -627,6 +716,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.4,
     "div_yield_ttm": 5.8479533,
+    "pbv_latest": 1.9464998,
     "updated_at": "2026-06-15"
   },
   "S11": {
@@ -634,6 +724,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.246154,
     "div_yield_ttm": 6.188119,
+    "pbv_latest": 0.66470206,
     "updated_at": "2026-06-15"
   },
   "ESTAR": {
@@ -641,6 +732,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.3333335,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.22199798,
     "updated_at": "2026-06-15"
   },
   "SCP": {
@@ -648,6 +740,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.181818,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.1553273,
     "updated_at": "2026-06-15"
   },
   "ETC": {
@@ -655,6 +748,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.173913,
     "div_yield_ttm": 6.666666,
+    "pbv_latest": 0.4643766,
     "updated_at": "2026-06-15"
   },
   "ROJNA": {
@@ -662,6 +756,7 @@
     "target_mean_price": 6.95,
     "pe_ttm": 4.269231,
     "div_yield_ttm": 9.090909,
+    "pbv_latest": 0.524426,
     "updated_at": "2026-06-15"
   },
   "LOXLEY": {
@@ -669,6 +764,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.8148146,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.55752844,
     "updated_at": "2026-06-15"
   },
   "METCO": {
@@ -676,6 +772,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.3669224,
     "div_yield_ttm": 10.169491,
+    "pbv_latest": 0.85585535,
     "updated_at": "2026-06-15"
   },
   "GENCO": {
@@ -683,6 +780,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.250001,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.33400813,
     "updated_at": "2026-06-15"
   },
   "DITTO": {
@@ -690,6 +788,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.227272,
     "div_yield_ttm": 3.7037037,
+    "pbv_latest": 2.346349,
     "updated_at": "2026-06-15"
   },
   "JMART": {
@@ -697,6 +796,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.7485151,
     "updated_at": "2026-06-15"
   },
   "BKIH": {
@@ -704,6 +804,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.707129,
     "div_yield_ttm": 3.6764707,
+    "pbv_latest": 1.2651762,
     "updated_at": "2026-06-15"
   },
   "BWG": {
@@ -711,6 +812,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.625,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3670886,
     "updated_at": "2026-06-15"
   },
   "BLA": {
@@ -718,6 +820,7 @@
     "target_mean_price": 29.1,
     "pe_ttm": 5.5477853,
     "div_yield_ttm": 3.4959350000000002,
+    "pbv_latest": 0.7659136,
     "updated_at": "2026-06-15"
   },
   "EA": {
@@ -725,6 +828,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6703418,
     "updated_at": "2026-06-15"
   },
   "STPI": {
@@ -732,6 +836,7 @@
     "target_mean_price": null,
     "pe_ttm": 93.333336,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.1470709,
     "updated_at": "2026-06-15"
   },
   "STANLY": {
@@ -739,6 +844,7 @@
     "target_mean_price": 215.325,
     "pe_ttm": 9.514331,
     "div_yield_ttm": 8.438819,
+    "pbv_latest": 0.86546534,
     "updated_at": "2026-06-15"
   },
   "MICRO": {
@@ -746,6 +852,7 @@
     "target_mean_price": 0.83,
     "pe_ttm": 20.0,
     "div_yield_ttm": 2.783505,
+    "pbv_latest": 0.51493305,
     "updated_at": "2026-06-15"
   },
   "CPW": {
@@ -753,6 +860,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.916667,
     "div_yield_ttm": 8.189655,
+    "pbv_latest": 1.5404532,
     "updated_at": "2026-06-15"
   },
   "ICN": {
@@ -760,6 +868,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.2,
     "div_yield_ttm": 7.3529415,
+    "pbv_latest": 1.5632185,
     "updated_at": "2026-06-15"
   },
   "QHBREIT": {
@@ -767,6 +876,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 9.920635,
+    "pbv_latest": 0.46306503,
     "updated_at": "2026-06-15"
   },
   "PSL": {
@@ -774,6 +884,7 @@
     "target_mean_price": 6.93333,
     "pe_ttm": 16.39535,
     "div_yield_ttm": 4.1666668,
+    "pbv_latest": 0.6986424,
     "updated_at": "2026-06-15"
   },
   "AOT": {
@@ -781,6 +892,7 @@
     "target_mean_price": 59.71429,
     "pe_ttm": 46.45669,
     "div_yield_ttm": 1.3965517,
+    "pbv_latest": 6.500661,
     "updated_at": "2026-06-15"
   },
   "MIDA": {
@@ -788,6 +900,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.28499582,
     "updated_at": "2026-06-15"
   },
   "CFRESH": {
@@ -795,6 +908,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.37632298,
     "updated_at": "2026-06-15"
   },
   "CREDIT": {
@@ -802,6 +916,7 @@
     "target_mean_price": 27.5,
     "pe_ttm": 5.4335256,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8450957,
     "updated_at": "2026-06-15"
   },
   "LHSC": {
@@ -809,6 +924,7 @@
     "target_mean_price": 16.5,
     "pe_ttm": 9.192547,
     "div_yield_ttm": 8.170068,
+    "pbv_latest": 1.1594203,
     "updated_at": "2026-06-15"
   },
   "ADVICE": {
@@ -816,6 +932,7 @@
     "target_mean_price": 7.0,
     "pe_ttm": 12.45098,
     "div_yield_ttm": 5.511811,
+    "pbv_latest": 3.5494688,
     "updated_at": "2026-06-15"
   },
   "CIMBT": {
@@ -823,6 +940,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.285714,
     "div_yield_ttm": 15.945946,
+    "pbv_latest": 0.25101766,
     "updated_at": "2026-06-15"
   },
   "TMT": {
@@ -830,6 +948,7 @@
     "target_mean_price": null,
     "pe_ttm": 20.875,
     "div_yield_ttm": 2.994012,
+    "pbv_latest": 0.88289714,
     "updated_at": "2026-06-15"
   },
   "TOP": {
@@ -837,6 +956,7 @@
     "target_mean_price": 52.66316,
     "pe_ttm": 3.190718,
     "div_yield_ttm": 4.0449437,
+    "pbv_latest": 0.5054741,
     "updated_at": "2026-06-15"
   },
   "PTTEP": {
@@ -844,6 +964,7 @@
     "target_mean_price": 165.90475,
     "pe_ttm": 9.68549,
     "div_yield_ttm": 0.19438597000000002,
+    "pbv_latest": 1.0024679,
     "updated_at": "2026-06-15"
   },
   "POPF": {
@@ -851,6 +972,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.342556,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.7947757,
     "updated_at": "2026-06-15"
   },
   "AYUD": {
@@ -858,6 +980,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.582865,
     "div_yield_ttm": 5.836478,
+    "pbv_latest": 1.1049032,
     "updated_at": "2026-06-15"
   },
   "SKY": {
@@ -865,6 +988,7 @@
     "target_mean_price": 17.3,
     "pe_ttm": 14.181818,
     "div_yield_ttm": 1.9607843999999999,
+    "pbv_latest": 1.8700552,
     "updated_at": "2026-06-15"
   },
   "PCC": {
@@ -872,6 +996,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.787879,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.0492041,
     "updated_at": "2026-06-15"
   },
   "ASW": {
@@ -879,6 +1004,7 @@
     "target_mean_price": 8.31667,
     "pe_ttm": 5.5241933,
     "div_yield_ttm": 7.2463766,
+    "pbv_latest": 0.6720957,
     "updated_at": "2026-06-15"
   },
   "RCL": {
@@ -886,6 +1012,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.4078805,
     "div_yield_ttm": 7.407407500000001,
+    "pbv_latest": 0.4641381,
     "updated_at": "2026-06-15"
   },
   "BEYOND": {
@@ -893,6 +1020,7 @@
     "target_mean_price": null,
     "pe_ttm": 41.904762,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3811669,
     "updated_at": "2026-06-15"
   },
   "ASK": {
@@ -900,6 +1028,7 @@
     "target_mean_price": 11.5,
     "pe_ttm": 11.547619,
     "div_yield_ttm": 4.1666663999999995,
+    "pbv_latest": 0.5655647,
     "updated_at": "2026-06-15"
   },
   "TRUE": {
@@ -907,6 +1036,7 @@
     "target_mean_price": 16.73333,
     "pe_ttm": 33.90244,
     "div_yield_ttm": 3.2142855,
+    "pbv_latest": 6.361556,
     "updated_at": "2026-06-15"
   },
   "HPF": {
@@ -914,6 +1044,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.162909,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.65525836,
     "updated_at": "2026-06-15"
   },
   "BJCHI": {
@@ -921,6 +1052,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 2.1794873999999997,
+    "pbv_latest": 0.4110997,
     "updated_at": "2026-06-15"
   },
   "WFX": {
@@ -928,6 +1060,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.2631579,
     "updated_at": "2026-06-15"
   },
   "COM7": {
@@ -935,6 +1068,7 @@
     "target_mean_price": 30.5625,
     "pe_ttm": 14.779006,
     "div_yield_ttm": 4.1121498,
+    "pbv_latest": 5.9723153,
     "updated_at": "2026-06-15"
   },
   "TTB": {
@@ -942,6 +1076,7 @@
     "target_mean_price": 2.27556,
     "pe_ttm": 10.260869,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.9496982,
     "updated_at": "2026-06-15"
   },
   "MFEC": {
@@ -949,6 +1084,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.535714,
     "div_yield_ttm": 8.620688999999999,
+    "pbv_latest": 0.9688013,
     "updated_at": "2026-06-15"
   },
   "JMT": {
@@ -956,6 +1092,7 @@
     "target_mean_price": 10.27857,
     "pe_ttm": 16.923077,
     "div_yield_ttm": 6.2616825,
+    "pbv_latest": 0.5865103,
     "updated_at": "2026-06-15"
   },
   "AKS": {
@@ -963,6 +1100,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -0.19607843,
     "updated_at": "2026-06-15"
   },
   "TPP": {
@@ -970,6 +1108,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.2289157,
     "div_yield_ttm": 8.4033616,
+    "pbv_latest": 0.46625483,
     "updated_at": "2026-06-15"
   },
   "AMATAR": {
@@ -977,6 +1116,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.963414,
     "div_yield_ttm": 8.191780999999999,
+    "pbv_latest": 0.7143552,
     "updated_at": "2026-06-15"
   },
   "KBANK": {
@@ -984,6 +1124,7 @@
     "target_mean_price": 211.16316,
     "pe_ttm": 9.532798,
     "div_yield_ttm": 5.91133,
+    "pbv_latest": 0.80914575,
     "updated_at": "2026-06-15"
   },
   "QHOP": {
@@ -991,6 +1132,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.428572,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "CMAN": {
@@ -998,6 +1140,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.8095236,
     "div_yield_ttm": 5.357143300000001,
+    "pbv_latest": 0.9489051,
     "updated_at": "2026-06-15"
   },
   "CPN": {
@@ -1005,6 +1148,7 @@
     "target_mean_price": 73.2785,
     "pe_ttm": 14.988559,
     "div_yield_ttm": 3.6641220000000003,
+    "pbv_latest": 2.5619965,
     "updated_at": "2026-06-15"
   },
   "SAMCO": {
@@ -1012,6 +1156,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.7272727,
     "div_yield_ttm": 2.4691358,
+    "pbv_latest": 0.2148847,
     "updated_at": "2026-06-15"
   },
   "TSI": {
@@ -1019,6 +1164,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.44776118,
     "updated_at": "2026-06-15"
   },
   "ERW": {
@@ -1026,6 +1172,7 @@
     "target_mean_price": 3.45688,
     "pe_ttm": 16.666666,
     "div_yield_ttm": 2.4305554,
+    "pbv_latest": 1.5649452,
     "updated_at": "2026-06-15"
   },
   "SAT": {
@@ -1033,6 +1180,7 @@
     "target_mean_price": 15.85,
     "pe_ttm": 8.870056,
     "div_yield_ttm": 10.2564104,
+    "pbv_latest": 0.79853517,
     "updated_at": "2026-06-15"
   },
   "KBSPIF": {
@@ -1040,6 +1188,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "CPNREIT": {
@@ -1047,6 +1196,7 @@
     "target_mean_price": 12.15833,
     "pe_ttm": 13.655913,
     "div_yield_ttm": 8.692913500000001,
+    "pbv_latest": 1.093602,
     "updated_at": "2026-06-15"
   },
   "SNC": {
@@ -1054,6 +1204,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.553398,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.44189852,
     "updated_at": "2026-06-15"
   },
   "UP": {
@@ -1061,6 +1212,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.147287,
     "div_yield_ttm": 10.59322,
+    "pbv_latest": 0.95161295,
     "updated_at": "2026-06-15"
   },
   "EVER": {
@@ -1068,6 +1220,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.17492712,
     "updated_at": "2026-06-15"
   },
   "IVL": {
@@ -1075,6 +1228,7 @@
     "target_mean_price": 26.71429,
     "pe_ttm": null,
     "div_yield_ttm": 2.3230087,
+    "pbv_latest": 1.1217453,
     "updated_at": "2026-06-15"
   },
   "THCOM": {
@@ -1082,6 +1236,7 @@
     "target_mean_price": 14.0625,
     "pe_ttm": 24.680853,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.2605956,
     "updated_at": "2026-06-15"
   },
   "SPRIME": {
@@ -1089,6 +1244,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.633333,
     "div_yield_ttm": 10.10101,
+    "pbv_latest": 0.3814453,
     "updated_at": "2026-06-15"
   },
   "KCG": {
@@ -1096,6 +1252,7 @@
     "target_mean_price": 11.8,
     "pe_ttm": 10.510204,
     "div_yield_ttm": 4.8571426,
+    "pbv_latest": 1.6753417,
     "updated_at": "2026-06-15"
   },
   "BTNC": {
@@ -1103,6 +1260,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.6299214,
     "div_yield_ttm": 10.416667,
+    "pbv_latest": 0.3368193,
     "updated_at": "2026-06-15"
   },
   "KTBSTMR": {
@@ -1110,6 +1268,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.727273,
     "div_yield_ttm": 10.288135,
+    "pbv_latest": 0.5778082,
     "updated_at": "2026-06-15"
   },
   "FM": {
@@ -1117,6 +1276,7 @@
     "target_mean_price": 4.4,
     "pe_ttm": 5.9710145,
     "div_yield_ttm": 8.5784316,
+    "pbv_latest": 1.0367388,
     "updated_at": "2026-06-15"
   },
   "ORN": {
@@ -1124,6 +1284,7 @@
     "target_mean_price": 1.0,
     "pe_ttm": 5.2,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.44167608,
     "updated_at": "2026-06-15"
   },
   "BANPU": {
@@ -1131,6 +1292,7 @@
     "target_mean_price": 6.83333,
     "pe_ttm": null,
     "div_yield_ttm": 0.18348624,
+    "pbv_latest": 0.44592103,
     "updated_at": "2026-06-15"
   },
   "TCOAT": {
@@ -1138,6 +1300,7 @@
     "target_mean_price": null,
     "pe_ttm": 83.870964,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5279617,
     "updated_at": "2026-06-15"
   },
   "PTT": {
@@ -1145,6 +1308,7 @@
     "target_mean_price": 39.51579,
     "pe_ttm": 10.769231,
     "div_yield_ttm": 5.8333330000000005,
+    "pbv_latest": 0.8442075,
     "updated_at": "2026-06-15"
   },
   "WAVE": {
@@ -1152,6 +1316,7 @@
     "target_mean_price": null,
     "pe_ttm": 0.59999996,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.71428573,
     "updated_at": "2026-06-15"
   },
   "GVREIT": {
@@ -1159,6 +1324,7 @@
     "target_mean_price": null,
     "pe_ttm": 44.375,
     "div_yield_ttm": 11.171429,
+    "pbv_latest": 0.6934948,
     "updated_at": "2026-06-15"
   },
   "NNCL": {
@@ -1166,6 +1332,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.571428,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8490566,
     "updated_at": "2026-06-15"
   },
   "TVH": {
@@ -1173,6 +1340,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.6111116,
     "div_yield_ttm": 4.3999999999999995,
+    "pbv_latest": 0.7189124,
     "updated_at": "2026-06-15"
   },
   "GC": {
@@ -1180,6 +1348,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.823529,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 3.0,
     "updated_at": "2026-06-15"
   },
   "TKC": {
@@ -1187,6 +1356,7 @@
     "target_mean_price": null,
     "pe_ttm": 21.250002,
     "div_yield_ttm": 2.0833331999999998,
+    "pbv_latest": 0.8884455,
     "updated_at": "2026-06-15"
   },
   "TLI": {
@@ -1194,6 +1364,7 @@
     "target_mean_price": 15.9,
     "pe_ttm": 10.090909,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8225269,
     "updated_at": "2026-06-15"
   },
   "BA": {
@@ -1201,6 +1372,7 @@
     "target_mean_price": 19.62222,
     "pe_ttm": 9.157895,
     "div_yield_ttm": 7.1428575,
+    "pbv_latest": 2.3822563,
     "updated_at": "2026-06-15"
   },
   "AIMIRT": {
@@ -1208,6 +1380,7 @@
     "target_mean_price": 12.2,
     "pe_ttm": 12.921349,
     "div_yield_ttm": 7.130433999999999,
+    "pbv_latest": 0.92839265,
     "updated_at": "2026-06-15"
   },
   "ADVANC": {
@@ -1215,6 +1388,7 @@
     "target_mean_price": 394.55557,
     "pe_ttm": 21.06495,
     "div_yield_ttm": 4.1803278,
+    "pbv_latest": 8.886914,
     "updated_at": "2026-06-15"
   },
   "GLOBAL": {
@@ -1222,6 +1396,7 @@
     "target_mean_price": 7.41456,
     "pe_ttm": 18.428572,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.3856068,
     "updated_at": "2026-06-15"
   },
   "TCAP": {
@@ -1229,6 +1404,7 @@
     "target_mean_price": 59.2,
     "pe_ttm": 7.850708,
     "div_yield_ttm": 5.7613168,
+    "pbv_latest": 0.7737288,
     "updated_at": "2026-06-15"
   },
   "TC": {
@@ -1236,6 +1412,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.90625,
     "div_yield_ttm": 5.263158300000001,
+    "pbv_latest": 0.6591119,
     "updated_at": "2026-06-15"
   },
   "INETREIT": {
@@ -1243,6 +1420,7 @@
     "target_mean_price": 14.6,
     "pe_ttm": 16.447369,
     "div_yield_ttm": 6.4838715,
+    "pbv_latest": 1.1218811,
     "updated_at": "2026-06-15"
   },
   "CRC": {
@@ -1250,6 +1428,7 @@
     "target_mean_price": 22.287,
     "pe_ttm": 18.376068,
     "div_yield_ttm": 2.4999998999999997,
+    "pbv_latest": 1.8558481,
     "updated_at": "2026-06-15"
   },
   "BBL": {
@@ -1257,6 +1436,7 @@
     "target_mean_price": 174.73685,
     "pe_ttm": 7.419355,
     "div_yield_ttm": 5.7971016,
+    "pbv_latest": 0.5697601,
     "updated_at": "2026-06-15"
   },
   "FSX": {
@@ -1264,6 +1444,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3511012,
     "updated_at": "2026-06-15"
   },
   "TIF1": {
@@ -1271,6 +1452,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.000001,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.74963963,
     "updated_at": "2026-06-15"
   },
   "KGI": {
@@ -1278,6 +1460,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.816327,
     "div_yield_ttm": 7.242990000000001,
+    "pbv_latest": 1.0193489,
     "updated_at": "2026-06-15"
   },
   "TNPC": {
@@ -1285,6 +1468,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8238387,
     "updated_at": "2026-06-15"
   },
   "CPI": {
@@ -1292,6 +1476,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.8857145,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6142242,
     "updated_at": "2026-06-15"
   },
   "MEGA": {
@@ -1299,6 +1484,7 @@
     "target_mean_price": 41.14286,
     "pe_ttm": 14.40678,
     "div_yield_ttm": 4.7058824,
+    "pbv_latest": 2.9020145,
     "updated_at": "2026-06-15"
   },
   "SCC": {
@@ -1306,6 +1492,7 @@
     "target_mean_price": 215.3158,
     "pe_ttm": 15.0625,
     "div_yield_ttm": 2.1097047,
+    "pbv_latest": 0.82450104,
     "updated_at": "2026-06-15"
   },
   "ALLY": {
@@ -1313,6 +1500,7 @@
     "target_mean_price": 5.0,
     "pe_ttm": 6.5833325,
     "div_yield_ttm": 9.385593,
+    "pbv_latest": 0.4733846,
     "updated_at": "2026-06-15"
   },
   "SSP": {
@@ -1320,6 +1508,7 @@
     "target_mean_price": 4.8,
     "pe_ttm": 8.042553,
     "div_yield_ttm": 5.5107526,
+    "pbv_latest": 0.62376237,
     "updated_at": "2026-06-15"
   },
   "SPI": {
@@ -1327,6 +1516,7 @@
     "target_mean_price": null,
     "pe_ttm": 27.350428,
     "div_yield_ttm": 1.875,
+    "pbv_latest": 0.82200927,
     "updated_at": "2026-06-15"
   },
   "BPP": {
@@ -1334,6 +1524,7 @@
     "target_mean_price": 11.5,
     "pe_ttm": 4.065934,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.60195225,
     "updated_at": "2026-06-15"
   },
   "SOLAR": {
@@ -1341,6 +1532,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4444443,
     "updated_at": "2026-06-15"
   },
   "FTREIT": {
@@ -1348,6 +1540,7 @@
     "target_mean_price": 11.85,
     "pe_ttm": 12.020202,
     "div_yield_ttm": 0.5555555,
+    "pbv_latest": 1.0618364,
     "updated_at": "2026-06-15"
   },
   "BTG": {
@@ -1355,6 +1548,7 @@
     "target_mean_price": 23.30625,
     "pe_ttm": 6.744186,
     "div_yield_ttm": 7.5,
+    "pbv_latest": 1.1755168,
     "updated_at": "2026-06-15"
   },
   "AIE": {
@@ -1362,6 +1556,7 @@
     "target_mean_price": null,
     "pe_ttm": 22.6,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.74933684,
     "updated_at": "2026-06-15"
   },
   "SO": {
@@ -1369,6 +1564,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.428571,
     "div_yield_ttm": 8.225109,
+    "pbv_latest": 1.8719611,
     "updated_at": "2026-06-15"
   },
   "SLP": {
@@ -1376,6 +1572,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.666667,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.62583226,
     "updated_at": "2026-06-15"
   },
   "DMT": {
@@ -1383,6 +1580,7 @@
     "target_mean_price": 13.1,
     "pe_ttm": 12.608696,
     "div_yield_ttm": 7.678261,
+    "pbv_latest": 1.5587208,
     "updated_at": "2026-06-15"
   },
   "TPIPL": {
@@ -1390,6 +1588,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.25709516,
     "updated_at": "2026-06-15"
   },
   "BKD": {
@@ -1397,6 +1596,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.906977,
     "div_yield_ttm": 4.5045044,
+    "pbv_latest": 0.832084,
     "updated_at": "2026-06-15"
   },
   "GBX": {
@@ -1404,6 +1604,7 @@
     "target_mean_price": null,
     "pe_ttm": 19.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4589372,
     "updated_at": "2026-06-15"
   },
   "GGC": {
@@ -1411,6 +1612,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4203925,
     "updated_at": "2026-06-15"
   },
   "TWPC": {
@@ -1418,6 +1620,7 @@
     "target_mean_price": 3.58,
     "pe_ttm": 11.916666,
     "div_yield_ttm": 3.9860140000000004,
+    "pbv_latest": 0.5224698,
     "updated_at": "2026-06-15"
   },
   "KLINIQ": {
@@ -1425,6 +1628,7 @@
     "target_mean_price": 29.56667,
     "pe_ttm": 14.22652,
     "div_yield_ttm": 5.631068,
+    "pbv_latest": 2.9903612,
     "updated_at": "2026-06-15"
   },
   "KSL": {
@@ -1432,6 +1636,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 2.7586204999999997,
+    "pbv_latest": 0.33238176,
     "updated_at": "2026-06-15"
   },
   "SPREME": {
@@ -1439,6 +1644,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.727273,
     "div_yield_ttm": 8.053691,
+    "pbv_latest": 1.0578985,
     "updated_at": "2026-06-15"
   },
   "TFM": {
@@ -1446,6 +1652,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.9878054,
     "div_yield_ttm": 9.2307694,
+    "pbv_latest": 2.5817897,
     "updated_at": "2026-06-15"
   },
   "GROREIT": {
@@ -1453,6 +1660,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.777779,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.7740346,
     "updated_at": "2026-06-15"
   },
   "PRG": {
@@ -1460,6 +1668,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.5625,
     "div_yield_ttm": 8.306011,
+    "pbv_latest": 0.7491698,
     "updated_at": "2026-06-15"
   },
   "IMPACT": {
@@ -1467,6 +1676,7 @@
     "target_mean_price": 12.2,
     "pe_ttm": 14.02439,
     "div_yield_ttm": 6.052632,
+    "pbv_latest": 1.0321306,
     "updated_at": "2026-06-15"
   },
   "INET": {
@@ -1474,6 +1684,7 @@
     "target_mean_price": 5.475,
     "pe_ttm": 8.638298,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.67779636,
     "updated_at": "2026-06-15"
   },
   "GPSC": {
@@ -1481,6 +1692,7 @@
     "target_mean_price": 44.61538,
     "pe_ttm": 16.834677,
     "div_yield_ttm": 3.5365853000000005,
+    "pbv_latest": 1.1087211,
     "updated_at": "2026-06-15"
   },
   "ROCTEC": {
@@ -1488,6 +1700,7 @@
     "target_mean_price": 0.835,
     "pe_ttm": 11.166667,
     "div_yield_ttm": 4.1791044,
+    "pbv_latest": 0.8302355,
     "updated_at": "2026-06-15"
   },
   "TPAC": {
@@ -1495,6 +1708,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.4934216,
     "div_yield_ttm": 5.2771084,
+    "pbv_latest": 0.9395747,
     "updated_at": "2026-06-15"
   },
   "RATCH": {
@@ -1502,6 +1716,7 @@
     "target_mean_price": 33.475,
     "pe_ttm": 10.751749,
     "div_yield_ttm": 5.3333335,
+    "pbv_latest": 0.6737216,
     "updated_at": "2026-06-15"
   },
   "TISCO": {
@@ -1509,6 +1724,7 @@
     "target_mean_price": 106.6,
     "pe_ttm": 13.625593,
     "div_yield_ttm": 6.768559000000001,
+    "pbv_latest": 2.1228287,
     "updated_at": "2026-06-15"
   },
   "SUPER": {
@@ -1516,6 +1732,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.16853932,
     "updated_at": "2026-06-15"
   },
   "PROUD": {
@@ -1523,6 +1740,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.875,
     "div_yield_ttm": 9.574468399999999,
+    "pbv_latest": 0.51226157,
     "updated_at": "2026-06-15"
   },
   "SE": {
@@ -1530,6 +1748,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.8333335,
     "div_yield_ttm": 5.531915,
+    "pbv_latest": 0.6601123,
     "updated_at": "2026-06-15"
   },
   "BOFFICE": {
@@ -1537,6 +1756,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.612245,
     "div_yield_ttm": 10.6730774,
+    "pbv_latest": 0.53925127,
     "updated_at": "2026-06-15"
   },
   "KTC": {
@@ -1544,6 +1764,7 @@
     "target_mean_price": 36.07143,
     "pe_ttm": 9.633758,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.683736,
     "updated_at": "2026-06-15"
   },
   "TPRIME": {
@@ -1551,6 +1772,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.0,
     "div_yield_ttm": 5.3419355,
+    "pbv_latest": 0.64402807,
     "updated_at": "2026-06-15"
   },
   "MBK": {
@@ -1558,6 +1780,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.7753625,
     "div_yield_ttm": 5.9139784,
+    "pbv_latest": 1.0750216,
     "updated_at": "2026-06-15"
   },
   "AH": {
@@ -1565,6 +1788,7 @@
     "target_mean_price": 15.03333,
     "pe_ttm": 6.425339,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.43793368,
     "updated_at": "2026-06-15"
   },
   "DTCENT": {
@@ -1572,6 +1796,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.625,
     "div_yield_ttm": 6.451613,
+    "pbv_latest": 0.7692308,
     "updated_at": "2026-06-15"
   },
   "TQM": {
@@ -1579,6 +1804,7 @@
     "target_mean_price": 16.5,
     "pe_ttm": 11.724138,
     "div_yield_ttm": 8.208956,
+    "pbv_latest": 2.777778,
     "updated_at": "2026-06-15"
   },
   "GPI": {
@@ -1586,6 +1812,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.687501,
     "div_yield_ttm": 9.941520500000001,
+    "pbv_latest": 1.1422846,
     "updated_at": "2026-06-15"
   },
   "UPOIC": {
@@ -1593,6 +1820,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.3950615,
     "div_yield_ttm": 4.9635038,
+    "pbv_latest": 1.2497703,
     "updated_at": "2026-06-15"
   },
   "UTP": {
@@ -1600,6 +1828,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.294118,
     "div_yield_ttm": 7.54717,
+    "pbv_latest": 1.0301212,
     "updated_at": "2026-06-15"
   },
   "ILINK": {
@@ -1607,6 +1836,7 @@
     "target_mean_price": 6.9,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.67933214,
     "updated_at": "2026-06-15"
   },
   "RABBIT": {
@@ -1614,6 +1844,7 @@
     "target_mean_price": null,
     "pe_ttm": 1.9444443,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -1.0174417,
     "updated_at": "2026-06-15"
   },
   "INOX": {
@@ -1621,6 +1852,7 @@
     "target_mean_price": null,
     "pe_ttm": 21.099998,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 3.5976129,
     "updated_at": "2026-06-15"
   },
   "SAUCE": {
@@ -1628,6 +1860,7 @@
     "target_mean_price": null,
     "pe_ttm": 18.835615,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 4.509675,
     "updated_at": "2026-06-15"
   },
   "IP": {
@@ -1635,6 +1868,7 @@
     "target_mean_price": null,
     "pe_ttm": 20.272728,
     "div_yield_ttm": 1.6367713,
+    "pbv_latest": 1.2886449,
     "updated_at": "2026-06-15"
   },
   "TVO": {
@@ -1642,6 +1876,7 @@
     "target_mean_price": 27.75,
     "pe_ttm": 9.962406,
     "div_yield_ttm": 7.5047619999999995,
+    "pbv_latest": 2.0378346,
     "updated_at": "2026-06-15"
   },
   "TEKA": {
@@ -1649,6 +1884,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.375,
     "div_yield_ttm": 8.670521,
+    "pbv_latest": 0.5575365,
     "updated_at": "2026-06-15"
   },
   "TSC": {
@@ -1656,6 +1892,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.729927,
     "div_yield_ttm": 8.163266,
+    "pbv_latest": 2.4676852,
     "updated_at": "2026-06-15"
   },
   "SPCG": {
@@ -1663,6 +1900,7 @@
     "target_mean_price": null,
     "pe_ttm": 25.882353,
     "div_yield_ttm": 7.4576270000000005,
+    "pbv_latest": 0.57456255,
     "updated_at": "2026-06-15"
   },
   "CSR": {
@@ -1670,6 +1908,7 @@
     "target_mean_price": null,
     "pe_ttm": 20.692091,
     "div_yield_ttm": 2.7619047,
+    "pbv_latest": 1.1772363,
     "updated_at": "2026-06-15"
   },
   "BH": {
@@ -1677,6 +1916,7 @@
     "target_mean_price": 201.54546,
     "pe_ttm": 21.337946,
     "div_yield_ttm": 2.8089888,
+    "pbv_latest": 4.5031886,
     "updated_at": "2026-06-15"
   },
   "AWC": {
@@ -1684,6 +1924,7 @@
     "target_mean_price": 2.55167,
     "pe_ttm": 12.9,
     "div_yield_ttm": 3.2520324000000005,
+    "pbv_latest": 0.84479374,
     "updated_at": "2026-06-15"
   },
   "PTL": {
@@ -1691,6 +1932,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 1.2,
+    "pbv_latest": 0.46421573,
     "updated_at": "2026-06-15"
   },
   "TCC": {
@@ -1698,6 +1940,7 @@
     "target_mean_price": null,
     "pe_ttm": 33.000004,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.41561714,
     "updated_at": "2026-06-15"
   },
   "SUPEREIF": {
@@ -1705,6 +1948,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "LHHOTEL": {
@@ -1712,6 +1956,7 @@
     "target_mean_price": 14.2,
     "pe_ttm": 10.64,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.0295712,
     "updated_at": "2026-06-15"
   },
   "KIAT": {
@@ -1719,6 +1964,7 @@
     "target_mean_price": null,
     "pe_ttm": 34.0,
     "div_yield_ttm": 6.060606,
+    "pbv_latest": 0.94182825,
     "updated_at": "2026-06-15"
   },
   "AMC": {
@@ -1726,6 +1972,7 @@
     "target_mean_price": null,
     "pe_ttm": 70.666664,
     "div_yield_ttm": 3.6363635,
+    "pbv_latest": 0.33244473,
     "updated_at": "2026-06-15"
   },
   "BAREIT": {
@@ -1733,6 +1980,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.643678,
     "div_yield_ttm": 7.407407500000001,
+    "pbv_latest": 1.093983,
     "updated_at": "2026-06-15"
   },
   "CHOTI": {
@@ -1740,6 +1988,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.2353998,
     "updated_at": "2026-06-15"
   },
   "RT": {
@@ -1747,6 +1996,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.625,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.31728664,
     "updated_at": "2026-06-15"
   },
   "WHART": {
@@ -1754,6 +2004,7 @@
     "target_mean_price": 11.4,
     "pe_ttm": 15.882353,
     "div_yield_ttm": 6.2685184000000005,
+    "pbv_latest": 1.0237938,
     "updated_at": "2026-06-15"
   },
   "DIF": {
@@ -1761,6 +2012,7 @@
     "target_mean_price": 10.45,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "MDX": {
@@ -1768,6 +2020,7 @@
     "target_mean_price": null,
     "pe_ttm": 2.9756098,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.23156497,
     "updated_at": "2026-06-15"
   },
   "SIS": {
@@ -1775,6 +2028,7 @@
     "target_mean_price": 24.0,
     "pe_ttm": 7.969925,
     "div_yield_ttm": 5.7276998,
+    "pbv_latest": 1.533343,
     "updated_at": "2026-06-15"
   },
   "IRC": {
@@ -1782,6 +2036,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.36508,
     "div_yield_ttm": 4.1428573,
+    "pbv_latest": 0.54155767,
     "updated_at": "2026-06-15"
   },
   "PRTR": {
@@ -1789,6 +2044,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.444445,
     "div_yield_ttm": 8.875739600000001,
+    "pbv_latest": 1.1451668,
     "updated_at": "2026-06-15"
   },
   "ALLA": {
@@ -1796,6 +2052,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.545454,
     "div_yield_ttm": 8.62069,
+    "pbv_latest": 0.710349,
     "updated_at": "2026-06-15"
   },
   "TIPH": {
@@ -1803,6 +2060,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.111111,
     "div_yield_ttm": 6.8807339999999995,
+    "pbv_latest": 1.3185749,
     "updated_at": "2026-06-15"
   },
   "HTC": {
@@ -1810,6 +2068,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.821918,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4301231,
     "updated_at": "2026-06-15"
   },
   "AURA": {
@@ -1817,6 +2076,7 @@
     "target_mean_price": 19.36667,
     "pe_ttm": 10.534351,
     "div_yield_ttm": 4.0,
+    "pbv_latest": 2.5109172,
     "updated_at": "2026-06-15"
   },
   "WIIK": {
@@ -1824,6 +2084,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.299999,
     "div_yield_ttm": 5.851064,
+    "pbv_latest": 0.40250096,
     "updated_at": "2026-06-15"
   },
   "TPBI": {
@@ -1831,6 +2092,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.3170733,
     "div_yield_ttm": 7.666667,
+    "pbv_latest": 0.424869,
     "updated_at": "2026-06-15"
   },
   "FUTURERT": {
@@ -1838,6 +2100,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.166667,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.88942796,
     "updated_at": "2026-06-15"
   },
   "CPALL": {
@@ -1845,6 +2108,7 @@
     "target_mean_price": 62.22476,
     "pe_ttm": 13.948171,
     "div_yield_ttm": 3.6263734,
+    "pbv_latest": 2.9483793,
     "updated_at": "2026-06-15"
   },
   "SSSC": {
@@ -1852,6 +2116,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.851851,
     "div_yield_ttm": 7.783019500000001,
+    "pbv_latest": 0.39633575,
     "updated_at": "2026-06-15"
   },
   "VRANDA": {
@@ -1859,6 +2124,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.325582,
     "div_yield_ttm": 4.2045455,
+    "pbv_latest": 0.7199611,
     "updated_at": "2026-06-15"
   },
   "SITHAI": {
@@ -1866,6 +2132,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.2,
     "div_yield_ttm": 5.8252428,
+    "pbv_latest": 0.6542655,
     "updated_at": "2026-06-15"
   },
   "CENTEL": {
@@ -1873,6 +2140,7 @@
     "target_mean_price": 39.57647,
     "pe_ttm": 14.342629,
     "div_yield_ttm": 1.9705882000000001,
+    "pbv_latest": 1.953337,
     "updated_at": "2026-06-15"
   },
   "SCB": {
@@ -1880,6 +2148,7 @@
     "target_mean_price": 140.40788,
     "pe_ttm": 10.424422,
     "div_yield_ttm": 8.057143,
+    "pbv_latest": 0.9517141,
     "updated_at": "2026-06-15"
   },
   "TLHPF": {
@@ -1887,6 +2156,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.9928946,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4742333,
     "updated_at": "2026-06-15"
   },
   "TMD": {
@@ -1894,6 +2164,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.802469,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.1678605,
     "updated_at": "2026-06-15"
   },
   "AFC": {
@@ -1901,6 +2172,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.5072465,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.14503263,
     "updated_at": "2026-06-15"
   },
   "TEGH": {
@@ -1908,6 +2180,7 @@
     "target_mean_price": 4.0,
     "pe_ttm": 7.7499995,
     "div_yield_ttm": 7.096774,
+    "pbv_latest": 0.85258526,
     "updated_at": "2026-06-15"
   },
   "UBE": {
@@ -1915,6 +2188,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 2.6785712999999998,
+    "pbv_latest": 0.37517056,
     "updated_at": "2026-06-15"
   },
   "GREEN": {
@@ -1922,6 +2196,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8277405,
     "updated_at": "2026-06-15"
   },
   "SC": {
@@ -1929,6 +2204,7 @@
     "target_mean_price": 2.2575,
     "pe_ttm": 4.888889,
     "div_yield_ttm": 8.4745765,
+    "pbv_latest": 0.30240548,
     "updated_at": "2026-06-15"
   },
   "CTARAF": {
@@ -1936,6 +2212,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.666666,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8672499,
     "updated_at": "2026-06-15"
   },
   "BCP": {
@@ -1943,6 +2220,7 @@
     "target_mean_price": 44.06923,
     "pe_ttm": 15.745193,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.65649676,
     "updated_at": "2026-06-15"
   },
   "HFT": {
@@ -1950,6 +2228,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.931035,
     "div_yield_ttm": 6.585366,
+    "pbv_latest": 0.71745694,
     "updated_at": "2026-06-15"
   },
   "SSTRT": {
@@ -1957,6 +2236,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.576923,
     "div_yield_ttm": 9.009008999999999,
+    "pbv_latest": 0.5473064,
     "updated_at": "2026-06-15"
   },
   "SCGD": {
@@ -1964,6 +2244,7 @@
     "target_mean_price": 5.6,
     "pe_ttm": 8.62069,
     "div_yield_ttm": 6.800000000000001,
+    "pbv_latest": 0.44802868,
     "updated_at": "2026-06-15"
   },
   "NATION": {
@@ -1971,6 +2252,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 9.999999,
     "updated_at": "2026-06-15"
   },
   "MOSHI": {
@@ -1978,6 +2260,7 @@
     "target_mean_price": 48.81818,
     "pe_ttm": 17.172895,
     "div_yield_ttm": 3.3197280000000005,
+    "pbv_latest": 4.1511354,
     "updated_at": "2026-06-15"
   },
   "LHK": {
@@ -1985,6 +2268,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.096774,
     "div_yield_ttm": 7.5581394,
+    "pbv_latest": 0.9739524,
     "updated_at": "2026-06-15"
   },
   "KBS": {
@@ -1992,6 +2276,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.785714,
     "div_yield_ttm": 8.695651999999999,
+    "pbv_latest": 0.6912442,
     "updated_at": "2026-06-15"
   },
   "SELIC": {
@@ -1999,6 +2284,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.923077,
     "div_yield_ttm": 1.1258279,
+    "pbv_latest": 1.5593561,
     "updated_at": "2026-06-15"
   },
   "AXTRART": {
@@ -2006,6 +2292,7 @@
     "target_mean_price": 14.2,
     "pe_ttm": 11.415929,
     "div_yield_ttm": 6.8571426,
+    "pbv_latest": 1.0240533,
     "updated_at": "2026-06-15"
   },
   "ITEL": {
@@ -2013,6 +2300,7 @@
     "target_mean_price": 1.39,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5386513,
     "updated_at": "2026-06-15"
   },
   "SIRI": {
@@ -2020,6 +2308,7 @@
     "target_mean_price": 1.687,
     "pe_ttm": 5.9166665,
     "div_yield_ttm": 9.219858,
+    "pbv_latest": 0.4899931,
     "updated_at": "2026-06-15"
   },
   "SEAOIL": {
@@ -2027,6 +2316,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.105263,
     "div_yield_ttm": 5.7692309999999996,
+    "pbv_latest": 0.8165429,
     "updated_at": "2026-06-15"
   },
   "DCC": {
@@ -2034,6 +2324,7 @@
     "target_mean_price": 1.56,
     "pe_ttm": 13.400001,
     "div_yield_ttm": 5.2631575999999995,
+    "pbv_latest": 1.6813049,
     "updated_at": "2026-06-15"
   },
   "SCCC": {
@@ -2041,6 +2332,7 @@
     "target_mean_price": 172.5,
     "pe_ttm": 11.270333,
     "div_yield_ttm": 7.508533000000001,
+    "pbv_latest": 1.2614878,
     "updated_at": "2026-06-15"
   },
   "APCS": {
@@ -2048,6 +2340,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8464682,
     "updated_at": "2026-06-15"
   },
   "PIN": {
@@ -2055,6 +2348,7 @@
     "target_mean_price": 5.39,
     "pe_ttm": 7.288136,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.1472787,
     "updated_at": "2026-06-15"
   },
   "MC": {
@@ -2062,6 +2356,7 @@
     "target_mean_price": 12.2,
     "pe_ttm": 11.956522,
     "div_yield_ttm": 2.7027028,
+    "pbv_latest": 2.2854767,
     "updated_at": "2026-06-15"
   },
   "SSF": {
@@ -2069,6 +2364,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.978261,
     "div_yield_ttm": 7.3999999999999995,
+    "pbv_latest": 0.71357924,
     "updated_at": "2026-06-15"
   },
   "TTW": {
@@ -2076,6 +2372,7 @@
     "target_mean_price": 10.275,
     "pe_ttm": 11.463414,
     "div_yield_ttm": 6.4171119999999995,
+    "pbv_latest": 2.1698985,
     "updated_at": "2026-06-15"
   },
   "MST": {
@@ -2083,6 +2380,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.106382,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.7711524,
     "updated_at": "2026-06-15"
   },
   "QH": {
@@ -2090,6 +2388,7 @@
     "target_mean_price": 1.35,
     "pe_ttm": 7.882353,
     "div_yield_ttm": 6.716418,
+    "pbv_latest": 0.4706709,
     "updated_at": "2026-06-15"
   },
   "OCC": {
@@ -2097,6 +2396,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5831924,
     "updated_at": "2026-06-15"
   },
   "SRIPANWA": {
@@ -2104,6 +2404,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.011905,
     "div_yield_ttm": 8.543689,
+    "pbv_latest": 0.3965761,
     "updated_at": "2026-06-15"
   },
   "AKR": {
@@ -2111,6 +2412,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.714286,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.77056277,
     "updated_at": "2026-06-15"
   },
   "CGH": {
@@ -2118,6 +2420,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.38594073,
     "updated_at": "2026-06-15"
   },
   "TOG": {
@@ -2125,6 +2428,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.513888,
     "div_yield_ttm": 7.2992705,
+    "pbv_latest": 1.2675796,
     "updated_at": "2026-06-15"
   },
   "CPT": {
@@ -2132,6 +2436,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.444444,
     "div_yield_ttm": 2.4271846,
+    "pbv_latest": 0.8758503,
     "updated_at": "2026-06-15"
   },
   "STARM": {
@@ -2139,6 +2444,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.125001,
     "div_yield_ttm": 3.0612243,
+    "pbv_latest": 0.8882784,
     "updated_at": "2026-06-15"
   },
   "EASON": {
@@ -2146,6 +2452,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.294118,
     "div_yield_ttm": 7.407407000000001,
+    "pbv_latest": 0.64966613,
     "updated_at": "2026-06-15"
   },
   "THE": {
@@ -2153,6 +2460,7 @@
     "target_mean_price": null,
     "pe_ttm": 76.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.43553007,
     "updated_at": "2026-06-15"
   },
   "KYE": {
@@ -2160,6 +2468,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.839744,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6169465,
     "updated_at": "2026-06-15"
   },
   "STECH": {
@@ -2167,6 +2476,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.2499995,
     "div_yield_ttm": 3.809524,
+    "pbv_latest": 0.44491526,
     "updated_at": "2026-06-15"
   },
   "BR": {
@@ -2174,6 +2484,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.349999,
     "div_yield_ttm": 1.081081,
+    "pbv_latest": 0.34136546,
     "updated_at": "2026-06-15"
   },
   "TRU": {
@@ -2181,6 +2492,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.378378,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6369215,
     "updated_at": "2026-06-15"
   },
   "FPT": {
@@ -2188,6 +2500,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.8333335,
     "div_yield_ttm": 5.03937,
+    "pbv_latest": 0.40040678,
     "updated_at": "2026-06-15"
   },
   "SENA": {
@@ -2195,6 +2508,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.722221,
     "div_yield_ttm": 7.9310339999999995,
+    "pbv_latest": 0.295908,
     "updated_at": "2026-06-15"
   },
   "PRAKIT": {
@@ -2202,6 +2516,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8247591,
     "updated_at": "2026-06-15"
   },
   "BGRIM": {
@@ -2209,6 +2524,7 @@
     "target_mean_price": 16.13846,
     "pe_ttm": 51.25,
     "div_yield_ttm": 2.7651008,
+    "pbv_latest": 1.2310464,
     "updated_at": "2026-06-15"
   },
   "ICHI": {
@@ -2216,6 +2532,7 @@
     "target_mean_price": 14.47143,
     "pe_ttm": 12.380953,
     "div_yield_ttm": 8.846153,
+    "pbv_latest": 2.9898803,
     "updated_at": "2026-06-15"
   },
   "LRH": {
@@ -2223,6 +2540,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.6804798,
     "div_yield_ttm": 4.2962964999999995,
+    "pbv_latest": 0.30413625,
     "updated_at": "2026-06-15"
   },
   "LST": {
@@ -2230,6 +2548,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.882353,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.693436,
     "updated_at": "2026-06-15"
   },
   "CSP": {
@@ -2237,6 +2556,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.47397768,
     "updated_at": "2026-06-15"
   },
   "JCT": {
@@ -2244,6 +2564,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.093407,
     "div_yield_ttm": 5.962733,
+    "pbv_latest": 0.7538558,
     "updated_at": "2026-06-15"
   },
   "SMPC": {
@@ -2251,6 +2572,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.6694922,
     "div_yield_ttm": 7.692307,
+    "pbv_latest": 1.4787582,
     "updated_at": "2026-06-15"
   },
   "TEAMG": {
@@ -2258,6 +2580,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.5,
     "div_yield_ttm": 5.333333,
+    "pbv_latest": 1.6835017,
     "updated_at": "2026-06-15"
   },
   "SKR": {
@@ -2265,6 +2588,7 @@
     "target_mean_price": null,
     "pe_ttm": 21.81818,
     "div_yield_ttm": 3.5211270000000003,
+    "pbv_latest": 1.875,
     "updated_at": "2026-06-15"
   },
   "NER": {
@@ -2272,6 +2596,7 @@
     "target_mean_price": 5.7375,
     "pe_ttm": 4.3333335,
     "div_yield_ttm": 7.013574,
+    "pbv_latest": 0.841424,
     "updated_at": "2026-06-15"
   },
   "PAF": {
@@ -2279,6 +2604,7 @@
     "target_mean_price": null,
     "pe_ttm": 19.5,
     "div_yield_ttm": 1.2820513,
+    "pbv_latest": 0.67474043,
     "updated_at": "2026-06-15"
   },
   "SHR": {
@@ -2286,6 +2612,7 @@
     "target_mean_price": 2.66667,
     "pe_ttm": null,
     "div_yield_ttm": 4.4585984000000005,
+    "pbv_latest": 0.44880408,
     "updated_at": "2026-06-15"
   },
   "ITC": {
@@ -2293,6 +2620,7 @@
     "target_mean_price": 19.73077,
     "pe_ttm": 15.523809,
     "div_yield_ttm": 5.2147243,
+    "pbv_latest": 2.0066476,
     "updated_at": "2026-06-15"
   },
   "PSP": {
@@ -2300,6 +2628,7 @@
     "target_mean_price": 7.0,
     "pe_ttm": 9.836065,
     "div_yield_ttm": 4.7457628000000005,
+    "pbv_latest": 1.8844221,
     "updated_at": "2026-06-15"
   },
   "WP": {
@@ -2307,6 +2636,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.354838,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.3907547,
     "updated_at": "2026-06-15"
   },
   "TTI": {
@@ -2314,6 +2644,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 1.8691588,
+    "pbv_latest": 0.63126844,
     "updated_at": "2026-06-15"
   },
   "KDH": {
@@ -2321,6 +2652,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.207824,
     "div_yield_ttm": 3.2335330000000004,
+    "pbv_latest": 1.7882766,
     "updated_at": "2026-06-15"
   },
   "WHABT": {
@@ -2328,6 +2660,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.04762,
     "div_yield_ttm": 10.169492,
+    "pbv_latest": 0.5212935,
     "updated_at": "2026-06-15"
   },
   "VIH": {
@@ -2335,6 +2668,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.25,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.2727845,
     "updated_at": "2026-06-15"
   },
   "SCN": {
@@ -2342,6 +2676,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.21597187,
     "updated_at": "2026-06-15"
   },
   "SIAM": {
@@ -2349,6 +2684,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.17601502,
     "updated_at": "2026-06-15"
   },
   "TFFIF": {
@@ -2356,6 +2692,7 @@
     "target_mean_price": 7.16667,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "LUXF": {
@@ -2363,6 +2700,7 @@
     "target_mean_price": null,
     "pe_ttm": 28.08642,
     "div_yield_ttm": 9.392265,
+    "pbv_latest": 0.72348547,
     "updated_at": "2026-06-15"
   },
   "RJH": {
@@ -2370,6 +2708,7 @@
     "target_mean_price": 15.5,
     "pe_ttm": 11.981982,
     "div_yield_ttm": 4.4776123000000005,
+    "pbv_latest": 1.7662683,
     "updated_at": "2026-06-15"
   },
   "GLAND": {
@@ -2377,6 +2716,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.25,
     "div_yield_ttm": 7.4324325,
+    "pbv_latest": 0.29295328,
     "updated_at": "2026-06-15"
   },
   "MNIT2": {
@@ -2384,6 +2724,7 @@
     "target_mean_price": null,
     "pe_ttm": 30.30303,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.94428706,
     "updated_at": "2026-06-15"
   },
   "TPA": {
@@ -2391,6 +2732,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.9200137,
     "updated_at": "2026-06-15"
   },
   "RPH": {
@@ -2398,6 +2740,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.187501,
     "div_yield_ttm": 5.7377048,
+    "pbv_latest": 1.4776528,
     "updated_at": "2026-06-15"
   },
   "HYDROGEN": {
@@ -2405,6 +2748,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.351351,
     "div_yield_ttm": 6.904762000000001,
+    "pbv_latest": 0.93917704,
     "updated_at": "2026-06-15"
   },
   "CCP": {
@@ -2412,6 +2756,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.666667,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4642857,
     "updated_at": "2026-06-15"
   },
   "PLAT": {
@@ -2419,6 +2764,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.5999994,
     "div_yield_ttm": 1.7391304,
+    "pbv_latest": 0.37000972,
     "updated_at": "2026-06-15"
   },
   "EAST": {
@@ -2426,6 +2772,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.9,
     "div_yield_ttm": 2.9411763,
+    "pbv_latest": 0.40707964,
     "updated_at": "2026-06-15"
   },
   "PCSGH": {
@@ -2433,6 +2780,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.705882,
     "div_yield_ttm": 9.121622,
+    "pbv_latest": 0.8312272,
     "updated_at": "2026-06-15"
   },
   "EGCO": {
@@ -2440,6 +2788,7 @@
     "target_mean_price": 128.83333,
     "pe_ttm": 30.649351,
     "div_yield_ttm": 5.6034483,
+    "pbv_latest": 0.6078307,
     "updated_at": "2026-06-15"
   },
   "PG": {
@@ -2447,6 +2796,7 @@
     "target_mean_price": null,
     "pe_ttm": 215.0,
     "div_yield_ttm": 7.407407500000001,
+    "pbv_latest": 0.47076854,
     "updated_at": "2026-06-15"
   },
   "SMIT": {
@@ -2454,6 +2804,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.862069,
     "div_yield_ttm": 6.9364159999999995,
+    "pbv_latest": 0.6710886,
     "updated_at": "2026-06-15"
   },
   "CSC": {
@@ -2461,6 +2812,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.421842,
     "div_yield_ttm": 5.0847456,
+    "pbv_latest": 0.5293615,
     "updated_at": "2026-06-15"
   },
   "EKH": {
@@ -2468,6 +2820,7 @@
     "target_mean_price": 5.08333,
     "pe_ttm": 15.437501,
     "div_yield_ttm": 6.0728747,
+    "pbv_latest": 1.7406625,
     "updated_at": "2026-06-15"
   },
   "PJW": {
@@ -2475,6 +2828,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.32,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8163265,
     "updated_at": "2026-06-15"
   },
   "KPNREIT": {
@@ -2482,6 +2836,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.166667,
     "div_yield_ttm": 4.568528000000001,
+    "pbv_latest": 0.20521413,
     "updated_at": "2026-06-15"
   },
   "AGE": {
@@ -2489,6 +2844,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.133333,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4651163,
     "updated_at": "2026-06-15"
   },
   "MNIT": {
@@ -2496,6 +2852,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.875,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3740894,
     "updated_at": "2026-06-15"
   },
   "SNPS": {
@@ -2503,6 +2860,7 @@
     "target_mean_price": 6.0,
     "pe_ttm": 15.066666,
     "div_yield_ttm": 4.2035397,
+    "pbv_latest": 2.040632,
     "updated_at": "2026-06-15"
   },
   "SVT": {
@@ -2510,6 +2868,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.214286,
     "div_yield_ttm": 3.937008,
+    "pbv_latest": 0.7288135,
     "updated_at": "2026-06-15"
   },
   "BUI": {
@@ -2517,6 +2876,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.218543,
     "div_yield_ttm": 1.6697248000000002,
+    "pbv_latest": 0.47145325,
     "updated_at": "2026-06-15"
   },
   "TASCO": {
@@ -2524,6 +2884,7 @@
     "target_mean_price": 16.66667,
     "pe_ttm": 19.178082,
     "div_yield_ttm": 7.2463766,
+    "pbv_latest": 1.5794224,
     "updated_at": "2026-06-15"
   },
   "III": {
@@ -2531,6 +2892,7 @@
     "target_mean_price": 5.5,
     "pe_ttm": 8.775511,
     "div_yield_ttm": 5.8685444,
+    "pbv_latest": 0.81485695,
     "updated_at": "2026-06-15"
   },
   "PMTA": {
@@ -2538,6 +2900,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.847826,
     "div_yield_ttm": 7.3298424,
+    "pbv_latest": 0.57954127,
     "updated_at": "2026-06-15"
   },
   "DREIT": {
@@ -2545,6 +2908,7 @@
     "target_mean_price": 6.3,
     "pe_ttm": 10.434783,
     "div_yield_ttm": 8.125,
+    "pbv_latest": 0.5772006,
     "updated_at": "2026-06-15"
   },
   "THANI": {
@@ -2552,6 +2916,7 @@
     "target_mean_price": 2.21667,
     "pe_ttm": 8.842105,
     "div_yield_ttm": 6.6666669999999995,
+    "pbv_latest": 0.72601557,
     "updated_at": "2026-06-15"
   },
   "KWC": {
@@ -2559,6 +2924,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.394434,
     "div_yield_ttm": 4.2435423,
+    "pbv_latest": 1.8525227,
     "updated_at": "2026-06-15"
   },
   "DRT": {
@@ -2566,6 +2932,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.111112,
     "div_yield_ttm": 6.425702599999999,
+    "pbv_latest": 1.7934002,
     "updated_at": "2026-06-15"
   },
   "PL": {
@@ -2573,6 +2940,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.727272,
     "div_yield_ttm": 4.84375,
+    "pbv_latest": 0.23143165,
     "updated_at": "2026-06-15"
   },
   "BCT": {
@@ -2580,6 +2948,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.143323,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.42760625,
     "updated_at": "2026-06-15"
   },
   "RAM": {
@@ -2587,6 +2956,7 @@
     "target_mean_price": 18.85,
     "pe_ttm": 8.035714,
     "div_yield_ttm": 0.55555557,
+    "pbv_latest": 0.9729204,
     "updated_at": "2026-06-15"
   },
   "MODERN": {
@@ -2594,6 +2964,7 @@
     "target_mean_price": null,
     "pe_ttm": 18.727272,
     "div_yield_ttm": 7.3529415,
+    "pbv_latest": 0.7312744,
     "updated_at": "2026-06-15"
   },
   "TK": {
@@ -2601,6 +2972,7 @@
     "target_mean_price": null,
     "pe_ttm": 34.333332,
     "div_yield_ttm": 4.830918,
+    "pbv_latest": 0.38605696,
     "updated_at": "2026-06-15"
   },
   "BLC": {
@@ -2608,6 +2980,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.0,
     "div_yield_ttm": 6.25,
+    "pbv_latest": 1.4224751,
     "updated_at": "2026-06-15"
   },
   "ACE": {
@@ -2615,6 +2988,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.333332,
     "div_yield_ttm": 0.7751938,
+    "pbv_latest": 0.77710843,
     "updated_at": "2026-06-15"
   },
   "FN": {
@@ -2622,6 +2996,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5485714,
     "updated_at": "2026-06-15"
   },
   "TOPP": {
@@ -2629,6 +3004,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.4291825,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4754217,
     "updated_at": "2026-06-15"
   },
   "PLANB": {
@@ -2636,6 +3012,7 @@
     "target_mean_price": 6.0375,
     "pe_ttm": 15.307693,
     "div_yield_ttm": 5.222772,
+    "pbv_latest": 1.3785937,
     "updated_at": "2026-06-15"
   },
   "POLY": {
@@ -2643,6 +3020,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.694916,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 2.335816,
     "updated_at": "2026-06-15"
   },
   "EGATIF": {
@@ -2650,6 +3028,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "SABINA": {
@@ -2657,6 +3036,7 @@
     "target_mean_price": 16.73333,
     "pe_ttm": 12.796611,
     "div_yield_ttm": 7.8145690000000005,
+    "pbv_latest": 2.863645,
     "updated_at": "2026-06-15"
   },
   "LEE": {
@@ -2664,6 +3044,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.714286,
     "div_yield_ttm": 8.196721,
+    "pbv_latest": 0.74209243,
     "updated_at": "2026-06-15"
   },
   "VIBHA": {
@@ -2671,6 +3052,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.642858,
     "div_yield_ttm": 4.4117644,
+    "pbv_latest": 1.5643107,
     "updated_at": "2026-06-15"
   },
   "A5": {
@@ -2678,6 +3060,7 @@
     "target_mean_price": null,
     "pe_ttm": 36.4,
     "div_yield_ttm": 2.7472528,
+    "pbv_latest": 1.3169321,
     "updated_at": "2026-06-15"
   },
   "MANRIN": {
@@ -2685,6 +3068,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.862068,
     "div_yield_ttm": 1.0869564999999999,
+    "pbv_latest": 1.2636669,
     "updated_at": "2026-06-15"
   },
   "UAC": {
@@ -2692,6 +3076,7 @@
     "target_mean_price": null,
     "pe_ttm": 37.142857,
     "div_yield_ttm": 7.633588500000001,
+    "pbv_latest": 1.1674899,
     "updated_at": "2026-06-15"
   },
   "ASP": {
@@ -2699,6 +3084,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.46154,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8953975,
     "updated_at": "2026-06-15"
   },
   "TNITY": {
@@ -2706,6 +3092,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4027732,
     "updated_at": "2026-06-15"
   },
   "SUC": {
@@ -2713,6 +3100,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.572148,
     "div_yield_ttm": 5.5045873,
+    "pbv_latest": 0.32469854,
     "updated_at": "2026-06-15"
   },
   "LHRREIT": {
@@ -2720,6 +3108,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.180328,
     "div_yield_ttm": 46.757993,
+    "pbv_latest": 0.39890712,
     "updated_at": "2026-06-15"
   },
   "ROCK": {
@@ -2727,6 +3116,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.0630631,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.42054918,
     "updated_at": "2026-06-15"
   },
   "BTSGIF": {
@@ -2734,6 +3124,7 @@
     "target_mean_price": 3.0,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "TIDLOR": {
@@ -2741,6 +3132,7 @@
     "target_mean_price": 22.16,
     "pe_ttm": 9.72973,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.511208,
     "updated_at": "2026-06-15"
   },
   "3BBIF": {
@@ -2748,6 +3140,7 @@
     "target_mean_price": 6.78333,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "NEX": {
@@ -2755,6 +3148,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4488636,
     "updated_at": "2026-06-15"
   },
   "LPH": {
@@ -2762,6 +3156,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.111111,
     "div_yield_ttm": 5.084746,
+    "pbv_latest": 1.2688172,
     "updated_at": "2026-06-15"
   },
   "BAFS": {
@@ -2769,6 +3164,7 @@
     "target_mean_price": null,
     "pe_ttm": 34.62963,
     "div_yield_ttm": 3.606558,
+    "pbv_latest": 1.3370514,
     "updated_at": "2026-06-15"
   },
   "ICC": {
@@ -2776,6 +3172,7 @@
     "target_mean_price": null,
     "pe_ttm": 38.153847,
     "div_yield_ttm": 2.8225807,
+    "pbv_latest": 0.4145147,
     "updated_at": "2026-06-15"
   },
   "SPC": {
@@ -2783,6 +3180,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.033248,
     "div_yield_ttm": 4.3636367,
+    "pbv_latest": 0.63866603,
     "updated_at": "2026-06-15"
   },
   "NWR": {
@@ -2790,6 +3188,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -0.030418249,
     "updated_at": "2026-06-15"
   },
   "SHANG": {
@@ -2797,6 +3196,7 @@
     "target_mean_price": null,
     "pe_ttm": 20.506912,
     "div_yield_ttm": 2.2988505999999997,
+    "pbv_latest": 0.74408495,
     "updated_at": "2026-06-15"
   },
   "CV": {
@@ -2804,6 +3204,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.027051399,
     "updated_at": "2026-06-15"
   },
   "PQS": {
@@ -2811,6 +3212,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.56666666,
     "updated_at": "2026-06-15"
   },
   "ROH": {
@@ -2818,6 +3220,7 @@
     "target_mean_price": null,
     "pe_ttm": 40.333336,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6415695,
     "updated_at": "2026-06-15"
   },
   "TMAN": {
@@ -2825,6 +3228,7 @@
     "target_mean_price": 17.4,
     "pe_ttm": 8.307693,
     "div_yield_ttm": 2.9629630000000002,
+    "pbv_latest": 2.0408165,
     "updated_at": "2026-06-15"
   },
   "SINO": {
@@ -2832,6 +3236,7 @@
     "target_mean_price": null,
     "pe_ttm": 22.5,
     "div_yield_ttm": 6.4444445,
+    "pbv_latest": 1.0440835,
     "updated_at": "2026-06-15"
   },
   "TPCS": {
@@ -2839,6 +3244,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.511627,
     "div_yield_ttm": 7.070707499999999,
+    "pbv_latest": 0.39088717,
     "updated_at": "2026-06-15"
   },
   "NFC": {
@@ -2846,6 +3252,7 @@
     "target_mean_price": null,
     "pe_ttm": 24.6,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.73301554,
     "updated_at": "2026-06-15"
   },
   "GSTEEL": {
@@ -2853,6 +3260,7 @@
     "target_mean_price": null,
     "pe_ttm": 1.9565219,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.45000002,
     "updated_at": "2026-06-15"
   },
   "MNRF": {
@@ -2860,6 +3268,7 @@
     "target_mean_price": null,
     "pe_ttm": 43.404255,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.26838574,
     "updated_at": "2026-06-15"
   },
   "KWI": {
@@ -2867,6 +3276,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.08163265,
     "updated_at": "2026-06-15"
   },
   "BLISS": {
@@ -2874,6 +3284,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.2879167,
     "updated_at": "2026-06-15"
   },
   "PB": {
@@ -2881,6 +3292,7 @@
     "target_mean_price": null,
     "pe_ttm": 17.843866,
     "div_yield_ttm": 3.0927835,
+    "pbv_latest": 1.6414185,
     "updated_at": "2026-06-15"
   },
   "KKC": {
@@ -2888,6 +3300,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -0.026845638,
     "updated_at": "2026-06-15"
   },
   "PREB": {
@@ -2895,6 +3308,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.7887325,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3930636,
     "updated_at": "2026-06-15"
   },
   "ASIA": {
@@ -2902,6 +3316,7 @@
     "target_mean_price": null,
     "pe_ttm": 267.5,
     "div_yield_ttm": 2.504673,
+    "pbv_latest": 0.29527017,
     "updated_at": "2026-06-15"
   },
   "AIT": {
@@ -2909,6 +3324,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.368421,
     "div_yield_ttm": 7.627119,
+    "pbv_latest": 1.7349575,
     "updated_at": "2026-06-15"
   },
   "XPG": {
@@ -2916,6 +3332,7 @@
     "target_mean_price": 1.01,
     "pe_ttm": 23.0,
     "div_yield_ttm": 2.2222223,
+    "pbv_latest": 0.41366908,
     "updated_at": "2026-06-15"
   },
   "TSTE": {
@@ -2923,6 +3340,7 @@
     "target_mean_price": null,
     "pe_ttm": 27.17949,
     "div_yield_ttm": 1.5094339,
+    "pbv_latest": 1.1286201,
     "updated_at": "2026-06-15"
   },
   "SIRIPRT": {
@@ -2930,6 +3348,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.375001,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "TAN": {
@@ -2937,6 +3356,7 @@
     "target_mean_price": null,
     "pe_ttm": 25.199999,
     "div_yield_ttm": 6.994819,
+    "pbv_latest": 0.7324162,
     "updated_at": "2026-06-15"
   },
   "SA": {
@@ -2944,6 +3364,7 @@
     "target_mean_price": null,
     "pe_ttm": 720.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 13.138686,
     "updated_at": "2026-06-15"
   },
   "MTI": {
@@ -2951,6 +3372,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.204546,
     "div_yield_ttm": 5.0943397,
+    "pbv_latest": 1.1200222,
     "updated_at": "2026-06-15"
   },
   "UNIQ": {
@@ -2958,6 +3380,7 @@
     "target_mean_price": null,
     "pe_ttm": 2.945055,
     "div_yield_ttm": 2.8985506,
+    "pbv_latest": 0.31199068,
     "updated_at": "2026-06-15"
   },
   "MINT": {
@@ -2965,6 +3388,7 @@
     "target_mean_price": 32.43056,
     "pe_ttm": 18.195488,
     "div_yield_ttm": 3.153153,
+    "pbv_latest": 2.302131,
     "updated_at": "2026-06-15"
   },
   "NKT": {
@@ -2972,6 +3396,7 @@
     "target_mean_price": 4.7,
     "pe_ttm": 13.857143,
     "div_yield_ttm": 4.687500399999999,
+    "pbv_latest": 1.0280869,
     "updated_at": "2026-06-15"
   },
   "JR": {
@@ -2979,6 +3404,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.000001,
     "div_yield_ttm": 3.254438,
+    "pbv_latest": 0.72876245,
     "updated_at": "2026-06-15"
   },
   "TR": {
@@ -2986,6 +3412,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.19047619,
+    "pbv_latest": 0.19453378,
     "updated_at": "2026-06-15"
   },
   "ISSARA": {
@@ -2993,6 +3420,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.877551,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "BEC": {
@@ -3000,6 +3428,7 @@
     "target_mean_price": 2.63667,
     "pe_ttm": 22.222221,
     "div_yield_ttm": 5.1020406,
+    "pbv_latest": 0.6485084,
     "updated_at": "2026-06-15"
   },
   "BEM": {
@@ -3007,6 +3436,7 @@
     "target_mean_price": 8.40909,
     "pe_ttm": 22.8,
     "div_yield_ttm": 2.7522938,
+    "pbv_latest": 2.2511847,
     "updated_at": "2026-06-15"
   },
   "VNG": {
@@ -3014,6 +3444,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.49492055,
     "updated_at": "2026-06-15"
   },
   "SYNTEC": {
@@ -3021,6 +3452,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.5135136,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4287548,
     "updated_at": "2026-06-15"
   },
   "MIPF": {
@@ -3028,6 +3460,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.38889,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.72893506,
     "updated_at": "2026-06-15"
   },
   "JCK": {
@@ -3035,6 +3468,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.19662921,
     "updated_at": "2026-06-15"
   },
   "TFMAMA": {
@@ -3042,6 +3476,7 @@
     "target_mean_price": null,
     "pe_ttm": 17.062044,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.6573606,
     "updated_at": "2026-06-15"
   },
   "CHAO": {
@@ -3049,6 +3484,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.8,
     "div_yield_ttm": 4.047619,
+    "pbv_latest": 1.1791128,
     "updated_at": "2026-06-15"
   },
   "SCG": {
@@ -3056,6 +3492,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.85186577,
     "updated_at": "2026-06-15"
   },
   "SPG": {
@@ -3063,6 +3500,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.909091,
     "div_yield_ttm": 7.407407500000001,
+    "pbv_latest": 0.63209647,
     "updated_at": "2026-06-15"
   },
   "GAHREIT": {
@@ -3070,6 +3508,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3678692,
     "updated_at": "2026-06-15"
   },
   "ASIAN": {
@@ -3077,6 +3516,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.266666,
     "div_yield_ttm": 9.697842600000001,
+    "pbv_latest": 0.87531483,
     "updated_at": "2026-06-15"
   },
   "BRR": {
@@ -3084,6 +3524,7 @@
     "target_mean_price": null,
     "pe_ttm": 25.571428,
     "div_yield_ttm": 4.608939,
+    "pbv_latest": 0.7273466,
     "updated_at": "2026-06-15"
   },
   "BRRGIF": {
@@ -3091,6 +3532,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": null,
     "updated_at": "2026-06-15"
   },
   "SORKON": {
@@ -3098,6 +3540,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.0,
     "div_yield_ttm": 7.1428575,
+    "pbv_latest": 0.8333334,
     "updated_at": "2026-06-15"
   },
   "GYT": {
@@ -3105,6 +3548,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.246377,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.33976173,
     "updated_at": "2026-06-15"
   },
   "SUTHA": {
@@ -3112,6 +3556,7 @@
     "target_mean_price": null,
     "pe_ttm": "Infinity",
     "div_yield_ttm": 2.5925925,
+    "pbv_latest": 0.99214846,
     "updated_at": "2026-06-15"
   },
   "LPN": {
@@ -3119,6 +3564,7 @@
     "target_mean_price": 1.668,
     "pe_ttm": 150.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.18107194,
     "updated_at": "2026-06-15"
   },
   "PCE": {
@@ -3126,6 +3572,7 @@
     "target_mean_price": 2.6,
     "pe_ttm": 21.800001,
     "div_yield_ttm": 3.6363635,
+    "pbv_latest": 1.1764706,
     "updated_at": "2026-06-15"
   },
   "WPH": {
@@ -3133,6 +3580,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.470589,
     "div_yield_ttm": 1.4086956,
+    "pbv_latest": 1.9448138,
     "updated_at": "2026-06-15"
   },
   "WINDOW": {
@@ -3140,6 +3588,7 @@
     "target_mean_price": null,
     "pe_ttm": 17.75,
     "div_yield_ttm": 4.225352,
+    "pbv_latest": 0.6960784,
     "updated_at": "2026-06-15"
   },
   "TL": {
@@ -3147,6 +3596,7 @@
     "target_mean_price": null,
     "pe_ttm": 18.5,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 3.3636365,
     "updated_at": "2026-06-15"
   },
   "NL": {
@@ -3154,6 +3604,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.44573644,
     "updated_at": "2026-06-15"
   },
   "TWP": {
@@ -3161,6 +3612,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.24490637,
     "updated_at": "2026-06-15"
   },
   "SJWD": {
@@ -3168,6 +3620,7 @@
     "target_mean_price": 12.01667,
     "pe_ttm": 12.666666,
     "div_yield_ttm": 5.4054055,
+    "pbv_latest": 0.5804185,
     "updated_at": "2026-06-15"
   },
   "SNP": {
@@ -3175,6 +3628,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.792454,
     "div_yield_ttm": 5.6179777,
+    "pbv_latest": 1.7849979,
     "updated_at": "2026-06-15"
   },
   "BIG": {
@@ -3182,6 +3636,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.333334,
     "div_yield_ttm": 3.2258064,
+    "pbv_latest": 0.5973025,
     "updated_at": "2026-06-15"
   },
   "AEONTS": {
@@ -3189,6 +3644,7 @@
     "target_mean_price": 107.8,
     "pe_ttm": 7.6969457,
     "div_yield_ttm": 5.744125299999999,
+    "pbv_latest": 0.87142104,
     "updated_at": "2026-06-15"
   },
   "MEDEZE": {
@@ -3196,6 +3652,7 @@
     "target_mean_price": 8.2,
     "pe_ttm": 43.571426,
     "div_yield_ttm": 2.6229508,
+    "pbv_latest": 2.2360704,
     "updated_at": "2026-06-15"
   },
   "SAMART": {
@@ -3203,6 +3660,7 @@
     "target_mean_price": 8.7,
     "pe_ttm": 9.732142,
     "div_yield_ttm": 4.324324,
+    "pbv_latest": 0.99325675,
     "updated_at": "2026-06-15"
   },
   "BYD": {
@@ -3210,6 +3668,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5183585,
     "updated_at": "2026-06-15"
   },
   "CMR": {
@@ -3217,6 +3676,7 @@
     "target_mean_price": null,
     "pe_ttm": 2.064516,
     "div_yield_ttm": 17.165354,
+    "pbv_latest": 1.1510792,
     "updated_at": "2026-06-15"
   },
   "SFLEX": {
@@ -3224,6 +3684,7 @@
     "target_mean_price": 3.65,
     "pe_ttm": 8.545454,
     "div_yield_ttm": 6.1594203,
+    "pbv_latest": 1.9249146,
     "updated_at": "2026-06-15"
   },
   "AI": {
@@ -3231,6 +3692,7 @@
     "target_mean_price": null,
     "pe_ttm": 47.666664,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8746177,
     "updated_at": "2026-06-15"
   },
   "VPO": {
@@ -3238,6 +3700,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.333334,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.78767127,
     "updated_at": "2026-06-15"
   },
   "AHC": {
@@ -3245,6 +3708,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.705882,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.86320007,
     "updated_at": "2026-06-15"
   },
   "SAK": {
@@ -3252,6 +3716,7 @@
     "target_mean_price": 4.065,
     "pe_ttm": 7.52381,
     "div_yield_ttm": 6.5789476,
+    "pbv_latest": 0.96784073,
     "updated_at": "2026-06-15"
   },
   "CGD": {
@@ -3259,6 +3724,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.2849741,
     "updated_at": "2026-06-15"
   },
   "PORT": {
@@ -3266,6 +3732,7 @@
     "target_mean_price": null,
     "pe_ttm": 64.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.29130632,
     "updated_at": "2026-06-15"
   },
   "WICE": {
@@ -3273,6 +3740,7 @@
     "target_mean_price": 2.7,
     "pe_ttm": 19.538462,
     "div_yield_ttm": 5.426356999999999,
+    "pbv_latest": 1.1802974,
     "updated_at": "2026-06-15"
   },
   "CHG": {
@@ -3280,6 +3748,7 @@
     "target_mean_price": 1.79455,
     "pe_ttm": 16.11111,
     "div_yield_ttm": 4.895105200000001,
+    "pbv_latest": 1.9754769,
     "updated_at": "2026-06-15"
   },
   "SAM": {
@@ -3287,6 +3756,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.091883615,
     "updated_at": "2026-06-15"
   },
   "NCAP": {
@@ -3294,6 +3764,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.0909095,
     "div_yield_ttm": 1.5648856999999998,
+    "pbv_latest": 0.6914345,
     "updated_at": "2026-06-15"
   },
   "B": {
@@ -3301,6 +3772,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.10471204,
     "updated_at": "2026-06-15"
   },
   "SSPF": {
@@ -3308,6 +3780,7 @@
     "target_mean_price": null,
     "pe_ttm": 17.883598,
     "div_yield_ttm": 3.9349113,
+    "pbv_latest": 0.3067429,
     "updated_at": "2026-06-15"
   },
   "S": {
@@ -3315,6 +3788,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.23820867,
     "updated_at": "2026-06-15"
   },
   "CKP": {
@@ -3322,6 +3796,7 @@
     "target_mean_price": 3.58,
     "pe_ttm": 6.6285715,
     "div_yield_ttm": 3.8260870000000002,
+    "pbv_latest": 0.61636555,
     "updated_at": "2026-06-15"
   },
   "THG": {
@@ -3329,6 +3804,7 @@
     "target_mean_price": 8.75,
     "pe_ttm": 82.77777,
     "div_yield_ttm": 1.8666665999999998,
+    "pbv_latest": 0.99214274,
     "updated_at": "2026-06-15"
   },
   "LANNA": {
@@ -3336,6 +3812,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.818182,
     "div_yield_ttm": 6.896552,
+    "pbv_latest": 0.92508733,
     "updated_at": "2026-06-15"
   },
   "AMATAV": {
@@ -3343,6 +3820,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.7380953,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.402264,
     "updated_at": "2026-06-15"
   },
   "CM": {
@@ -3350,6 +3828,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 1.9620253,
+    "pbv_latest": 0.45785946,
     "updated_at": "2026-06-15"
   },
   "TTLPF": {
@@ -3357,6 +3836,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.0897436,
     "div_yield_ttm": 15.557896,
+    "pbv_latest": 0.9474419,
     "updated_at": "2026-06-15"
   },
   "WACOAL": {
@@ -3364,6 +3844,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.37146026,
     "updated_at": "2026-06-15"
   },
   "LH": {
@@ -3371,6 +3852,7 @@
     "target_mean_price": 3.70769,
     "pe_ttm": 12.133333,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.9157233,
     "updated_at": "2026-06-15"
   },
   "CPH": {
@@ -3378,6 +3860,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.169355,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.26949906,
     "updated_at": "2026-06-15"
   },
   "OSP": {
@@ -3385,6 +3868,7 @@
     "target_mean_price": 18.16667,
     "pe_ttm": 12.941175,
     "div_yield_ttm": 5.2287582,
+    "pbv_latest": 2.776776,
     "updated_at": "2026-06-15"
   },
   "SAV": {
@@ -3392,6 +3876,7 @@
     "target_mean_price": 16.95,
     "pe_ttm": 12.470589,
     "div_yield_ttm": 8.256881,
+    "pbv_latest": 4.2932363,
     "updated_at": "2026-06-15"
   },
   "ZEN": {
@@ -3399,6 +3884,7 @@
     "target_mean_price": 5.8,
     "pe_ttm": 33.75,
     "div_yield_ttm": 1.869159,
+    "pbv_latest": 1.1965433,
     "updated_at": "2026-06-15"
   },
   "TYCN": {
@@ -3406,6 +3892,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.764706,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.24783517,
     "updated_at": "2026-06-15"
   },
   "CI": {
@@ -3413,6 +3900,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.331384,
     "updated_at": "2026-06-15"
   },
   "ASIMAR": {
@@ -3420,6 +3908,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.866667,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.73318636,
     "updated_at": "2026-06-15"
   },
   "SPALI": {
@@ -3427,6 +3916,7 @@
     "target_mean_price": 17.90769,
     "pe_ttm": 7.6076555,
     "div_yield_ttm": 8.01282,
+    "pbv_latest": 0.54142404,
     "updated_at": "2026-06-15"
   },
   "OR": {
@@ -3434,6 +3924,7 @@
     "target_mean_price": 14.20625,
     "pe_ttm": 15.641026,
     "div_yield_ttm": 4.9586777,
+    "pbv_latest": 1.2572135,
     "updated_at": "2026-06-15"
   },
   "TGH": {
@@ -3441,6 +3932,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.402439,
     "div_yield_ttm": 0.9433962,
+    "pbv_latest": 0.7415254,
     "updated_at": "2026-06-15"
   },
   "FANCY": {
@@ -3448,6 +3940,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.25203857,
     "updated_at": "2026-06-15"
   },
   "BDMS": {
@@ -3455,6 +3948,7 @@
     "target_mean_price": 25.30227,
     "pe_ttm": 18.383839,
     "div_yield_ttm": 5.5555556,
+    "pbv_latest": 2.6247478,
     "updated_at": "2026-06-15"
   },
   "PT": {
@@ -3462,6 +3956,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.978022,
     "div_yield_ttm": 9.259259,
+    "pbv_latest": 3633.3333,
     "updated_at": "2026-06-15"
   },
   "SAPPE": {
@@ -3469,6 +3964,7 @@
     "target_mean_price": 31.65625,
     "pe_ttm": 12.656903,
     "div_yield_ttm": 5.8333334,
+    "pbv_latest": 2.0760415,
     "updated_at": "2026-06-15"
   },
   "KTIS": {
@@ -3476,6 +3972,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 8.064517,
+    "pbv_latest": 0.89496,
     "updated_at": "2026-06-15"
   },
   "FTI": {
@@ -3483,6 +3980,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 4.4444446,
+    "pbv_latest": 1.1780455,
     "updated_at": "2026-06-15"
   },
   "PPP": {
@@ -3490,6 +3988,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.33140016,
     "updated_at": "2026-06-15"
   },
   "IHL": {
@@ -3497,6 +3996,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.642858,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4723583,
     "updated_at": "2026-06-15"
   },
   "CRANE": {
@@ -3504,6 +4004,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4185022,
     "updated_at": "2026-06-15"
   },
   "BBIK": {
@@ -3511,6 +4012,7 @@
     "target_mean_price": 26.38,
     "pe_ttm": 11.034483,
     "div_yield_ttm": 2.5396826,
+    "pbv_latest": 1.7345741,
     "updated_at": "2026-06-15"
   },
   "ILM": {
@@ -3518,6 +4020,7 @@
     "target_mean_price": 16.5,
     "pe_ttm": 8.741259,
     "div_yield_ttm": 8.0,
+    "pbv_latest": 0.9563155,
     "updated_at": "2026-06-15"
   },
   "BLAND": {
@@ -3525,6 +4028,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.25,
     "div_yield_ttm": 2.888889,
+    "pbv_latest": 0.15811665,
     "updated_at": "2026-06-15"
   },
   "MCS": {
@@ -3532,6 +4036,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.3142858,
     "div_yield_ttm": 12.5,
+    "pbv_latest": 0.8608894,
     "updated_at": "2026-06-15"
   },
   "LALIN": {
@@ -3539,6 +4044,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.958334,
     "div_yield_ttm": 6.976744,
+    "pbv_latest": 0.41381967,
     "updated_at": "2026-06-15"
   },
   "AMR": {
@@ -3546,6 +4052,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.33117932,
     "updated_at": "2026-06-15"
   },
   "NEP": {
@@ -3553,6 +4060,7 @@
     "target_mean_price": null,
     "pe_ttm": "Infinity",
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.75396824,
     "updated_at": "2026-06-15"
   },
   "DEMCO": {
@@ -3560,6 +4068,7 @@
     "target_mean_price": null,
     "pe_ttm": 36.250004,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.6014102,
     "updated_at": "2026-06-15"
   },
   "PTG": {
@@ -3567,6 +4076,7 @@
     "target_mean_price": 9.175,
     "pe_ttm": 19.868422,
     "div_yield_ttm": 4.7619050000000005,
+    "pbv_latest": 1.2824868,
     "updated_at": "2026-06-15"
   },
   "SPA": {
@@ -3574,6 +4084,7 @@
     "target_mean_price": 4.05,
     "pe_ttm": 20.533333,
     "div_yield_ttm": 3.3557046,
+    "pbv_latest": 3.08,
     "updated_at": "2026-06-15"
   },
   "MAJOR": {
@@ -3581,6 +4092,7 @@
     "target_mean_price": 9.85,
     "pe_ttm": 7.4444447,
     "div_yield_ttm": 3.7037037,
+    "pbv_latest": 1.078384,
     "updated_at": "2026-06-15"
   },
   "PERM": {
@@ -3588,6 +4100,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.63829786,
     "updated_at": "2026-06-15"
   },
   "BSBM": {
@@ -3595,6 +4108,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.41114983,
     "updated_at": "2026-06-15"
   },
   "KCAR": {
@@ -3602,6 +4116,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.2121215,
     "div_yield_ttm": 6.932773,
+    "pbv_latest": 0.46137443,
     "updated_at": "2026-06-15"
   },
   "SUSCO": {
@@ -3609,6 +4124,7 @@
     "target_mean_price": 3.1,
     "pe_ttm": 14.714285,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.046516877,
     "updated_at": "2026-06-15"
   },
   "SCI": {
@@ -3616,6 +4132,7 @@
     "target_mean_price": null,
     "pe_ttm": 96.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.9846153,
     "updated_at": "2026-06-15"
   },
   "DOHOME": {
@@ -3623,6 +4140,7 @@
     "target_mean_price": 3.65635,
     "pe_ttm": 20.0,
     "div_yield_ttm": 0.11764707,
+    "pbv_latest": 0.87538624,
     "updated_at": "2026-06-15"
   },
   "UPF": {
@@ -3630,6 +4148,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.50572693,
     "updated_at": "2026-06-15"
   },
   "HMPRO": {
@@ -3637,6 +4156,7 @@
     "target_mean_price": 7.14895,
     "pe_ttm": 13.636364,
     "div_yield_ttm": 6.333333,
+    "pbv_latest": 2.8341992,
     "updated_at": "2026-06-15"
   },
   "NEO": {
@@ -3644,6 +4164,7 @@
     "target_mean_price": 21.0,
     "pe_ttm": 13.283581,
     "div_yield_ttm": 7.6271184000000005,
+    "pbv_latest": 1.0165039,
     "updated_at": "2026-06-15"
   },
   "TU": {
@@ -3651,6 +4172,7 @@
     "target_mean_price": 13.14167,
     "pe_ttm": 9.421487,
     "div_yield_ttm": 6.140351,
+    "pbv_latest": 0.9830976,
     "updated_at": "2026-06-15"
   },
   "PM": {
@@ -3658,6 +4180,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.918367,
     "div_yield_ttm": 8.773585,
+    "pbv_latest": 3.0933795,
     "updated_at": "2026-06-15"
   },
   "PRINC": {
@@ -3665,6 +4188,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.74712646,
     "updated_at": "2026-06-15"
   },
   "TNR": {
@@ -3672,6 +4196,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.4,
     "div_yield_ttm": 7.692308000000001,
+    "pbv_latest": 1.2639767,
     "updated_at": "2026-06-15"
   },
   "ACC": {
@@ -3679,6 +4204,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4015151,
     "updated_at": "2026-06-15"
   },
   "NAM": {
@@ -3686,6 +4212,7 @@
     "target_mean_price": null,
     "pe_ttm": 35.6,
     "div_yield_ttm": 3.6516853,
+    "pbv_latest": 1.2408504,
     "updated_at": "2026-06-15"
   },
   "SKE": {
@@ -3693,6 +4220,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.37475342,
     "updated_at": "2026-06-15"
   },
   "THREL": {
@@ -3700,6 +4228,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.3774104,
     "updated_at": "2026-06-15"
   },
   "HENG": {
@@ -3707,6 +4236,7 @@
     "target_mean_price": null,
     "pe_ttm": 46.5,
     "div_yield_ttm": 2.8571429,
+    "pbv_latest": 0.6893996,
     "updated_at": "2026-06-15"
   },
   "IFS": {
@@ -3714,6 +4244,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.28,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4858516,
     "updated_at": "2026-06-15"
   },
   "SAFE": {
@@ -3721,6 +4252,7 @@
     "target_mean_price": 8.475,
     "pe_ttm": 12.906977,
     "div_yield_ttm": 7.321428500000001,
+    "pbv_latest": 0.9790087,
     "updated_at": "2026-06-15"
   },
   "JTS": {
@@ -3728,6 +4260,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 29.919678,
     "updated_at": "2026-06-15"
   },
   "TPIPP": {
@@ -3735,6 +4268,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.722221,
     "div_yield_ttm": 4.0,
+    "pbv_latest": 0.40369087,
     "updated_at": "2026-06-15"
   },
   "TOA": {
@@ -3742,6 +4276,7 @@
     "target_mean_price": 15.5,
     "pe_ttm": 7.9012346,
     "div_yield_ttm": 6.198347,
+    "pbv_latest": 1.5992005,
     "updated_at": "2026-06-15"
   },
   "FE": {
@@ -3749,6 +4284,7 @@
     "target_mean_price": null,
     "pe_ttm": 14.266666,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8547691,
     "updated_at": "2026-06-15"
   },
   "THIP": {
@@ -3756,6 +4292,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.5,
     "div_yield_ttm": 7.8048779999999995,
+    "pbv_latest": 0.6506904,
     "updated_at": "2026-06-15"
   },
   "BROCK": {
@@ -3763,6 +4300,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.99255586,
     "updated_at": "2026-06-15"
   },
   "BCPG": {
@@ -3770,6 +4308,7 @@
     "target_mean_price": 8.50833,
     "pe_ttm": 14.0625,
     "div_yield_ttm": 5.3846154,
+    "pbv_latest": 0.68639416,
     "updated_at": "2026-06-15"
   },
   "COCOCO": {
@@ -3777,6 +4316,7 @@
     "target_mean_price": 5.83333,
     "pe_ttm": 29.473684,
     "div_yield_ttm": 2.1428572,
+    "pbv_latest": 2.3178809,
     "updated_at": "2026-06-15"
   },
   "TCJ": {
@@ -3784,6 +4324,7 @@
     "target_mean_price": null,
     "pe_ttm": 19.833334,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.18593751,
     "updated_at": "2026-06-15"
   },
   "SPACK": {
@@ -3791,6 +4332,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.75,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.49201006,
     "updated_at": "2026-06-15"
   },
   "PSH": {
@@ -3798,6 +4340,7 @@
     "target_mean_price": 3.152,
     "pe_ttm": null,
     "div_yield_ttm": 3.1976745,
+    "pbv_latest": 0.18904428,
     "updated_at": "2026-06-15"
   },
   "APCO": {
@@ -3805,6 +4348,7 @@
     "target_mean_price": null,
     "pe_ttm": 25.8,
     "div_yield_ttm": 3.4732826,
+    "pbv_latest": 2.6903024,
     "updated_at": "2026-06-15"
   },
   "AP": {
@@ -3812,6 +4356,7 @@
     "target_mean_price": 9.62692,
     "pe_ttm": 5.1079135,
     "div_yield_ttm": 7.222222,
+    "pbv_latest": 0.47545704,
     "updated_at": "2026-06-15"
   },
   "TKT": {
@@ -3819,6 +4364,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.37919828,
     "updated_at": "2026-06-15"
   },
   "AAV": {
@@ -3826,6 +4372,7 @@
     "target_mean_price": 1.11444,
     "pe_ttm": 8.071428,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.0080285,
     "updated_at": "2026-06-15"
   },
   "NEW": {
@@ -3833,6 +4380,7 @@
     "target_mean_price": null,
     "pe_ttm": 23.832922,
     "div_yield_ttm": 1.5841584999999998,
+    "pbv_latest": 1.8278779,
     "updated_at": "2026-06-15"
   },
   "CPL": {
@@ -3840,6 +4388,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4670126,
     "updated_at": "2026-06-15"
   },
   "TH": {
@@ -3847,6 +4396,7 @@
     "target_mean_price": null,
     "pe_ttm": 23.5,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.27630806,
     "updated_at": "2026-06-15"
   },
   "TKN": {
@@ -3854,6 +4404,7 @@
     "target_mean_price": 7.33333,
     "pe_ttm": 13.333333,
     "div_yield_ttm": 6.281407,
+    "pbv_latest": 2.57566,
     "updated_at": "2026-06-15"
   },
   "CPNCG": {
@@ -3861,6 +4412,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.268199,
     "div_yield_ttm": 18.618183,
+    "pbv_latest": 0.6418485,
     "updated_at": "2026-06-15"
   },
   "WORK": {
@@ -3868,6 +4420,7 @@
     "target_mean_price": 8.45,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3797061,
     "updated_at": "2026-06-15"
   },
   "PRIME": {
@@ -3875,6 +4428,7 @@
     "target_mean_price": null,
     "pe_ttm": 2.5,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.108459875,
     "updated_at": "2026-06-15"
   },
   "MATI": {
@@ -3882,6 +4436,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.41732624,
     "updated_at": "2026-06-15"
   },
   "MALEE": {
@@ -3889,6 +4444,7 @@
     "target_mean_price": 4.2,
     "pe_ttm": 14.962962,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8932125,
     "updated_at": "2026-06-15"
   },
   "CPF": {
@@ -3896,6 +4452,7 @@
     "target_mean_price": 22.75714,
     "pe_ttm": 7.132075,
     "div_yield_ttm": 6.544503,
+    "pbv_latest": 0.66278577,
     "updated_at": "2026-06-15"
   },
   "CBG": {
@@ -3903,6 +4460,7 @@
     "target_mean_price": 45.26786,
     "pe_ttm": 18.778801,
     "div_yield_ttm": 3.25,
+    "pbv_latest": 2.7640235,
     "updated_at": "2026-06-15"
   },
   "DUSIT": {
@@ -3910,6 +4468,7 @@
     "target_mean_price": 13.5,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.7219181,
     "updated_at": "2026-06-15"
   },
   "STI": {
@@ -3917,6 +4476,7 @@
     "target_mean_price": null,
     "pe_ttm": 21.625,
     "div_yield_ttm": 1.5028902,
+    "pbv_latest": 1.2123336,
     "updated_at": "2026-06-15"
   },
   "AJA": {
@@ -3924,6 +4484,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.460674,
     "updated_at": "2026-06-15"
   },
   "SKN": {
@@ -3931,6 +4492,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.461539,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.9688134,
     "updated_at": "2026-06-15"
   },
   "M": {
@@ -3938,6 +4500,7 @@
     "target_mean_price": 21.75,
     "pe_ttm": 25.294117,
     "div_yield_ttm": 4.8309177000000005,
+    "pbv_latest": 1.4919158,
     "updated_at": "2026-06-15"
   },
   "UV": {
@@ -3945,6 +4508,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.1500804,
     "updated_at": "2026-06-15"
   },
   "SAWANG": {
@@ -3952,6 +4516,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5956417,
     "updated_at": "2026-06-15"
   },
   "BAM": {
@@ -3959,6 +4524,7 @@
     "target_mean_price": 7.35,
     "pe_ttm": 11.785714,
     "div_yield_ttm": 7.462687,
+    "pbv_latest": 0.4742742,
     "updated_at": "2026-06-15"
   },
   "WGE": {
@@ -3966,6 +4532,7 @@
     "target_mean_price": null,
     "pe_ttm": 3.1818182,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.7918552,
     "updated_at": "2026-06-15"
   },
   "HUMAN": {
@@ -3973,6 +4540,7 @@
     "target_mean_price": 8.3,
     "pe_ttm": 11.804878,
     "div_yield_ttm": 6.61157,
+    "pbv_latest": 1.2054795,
     "updated_at": "2026-06-15"
   },
   "RSP": {
@@ -3980,6 +4548,7 @@
     "target_mean_price": null,
     "pe_ttm": 46.5,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.43215615,
     "updated_at": "2026-06-15"
   },
   "BJC": {
@@ -3987,6 +4556,7 @@
     "target_mean_price": 16.03333,
     "pe_ttm": 14.343434,
     "div_yield_ttm": 3.6170210000000003,
+    "pbv_latest": 0.46636888,
     "updated_at": "2026-06-15"
   },
   "SYNEX": {
@@ -3994,6 +4564,7 @@
     "target_mean_price": 11.725,
     "pe_ttm": 9.631578,
     "div_yield_ttm": 5.2459016,
+    "pbv_latest": 1.6089326,
     "updated_at": "2026-06-15"
   },
   "ANI": {
@@ -4001,6 +4572,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.466666,
     "div_yield_ttm": 7.1428575,
+    "pbv_latest": 0.64122826,
     "updated_at": "2026-06-15"
   },
   "CPAXT": {
@@ -4008,6 +4580,7 @@
     "target_mean_price": 16.36471,
     "pe_ttm": 16.444445,
     "div_yield_ttm": 4.8630132999999995,
+    "pbv_latest": 0.5092736,
     "updated_at": "2026-06-15"
   },
   "KAMART": {
@@ -4015,6 +4588,7 @@
     "target_mean_price": 12.0,
     "pe_ttm": 13.773586,
     "div_yield_ttm": 6.068965400000001,
+    "pbv_latest": 2.5650036,
     "updated_at": "2026-06-15"
   },
   "BCH": {
@@ -4022,6 +4596,7 @@
     "target_mean_price": 11.46429,
     "pe_ttm": 18.137255,
     "div_yield_ttm": 4.918033,
+    "pbv_latest": 1.7135977,
     "updated_at": "2026-06-15"
   },
   "GFPT": {
@@ -4029,6 +4604,7 @@
     "target_mean_price": 9.775,
     "pe_ttm": 4.6486487,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.48894197,
     "updated_at": "2026-06-15"
   },
   "ZAA": {
@@ -4036,6 +4612,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 4.828572,
     "updated_at": "2026-06-15"
   },
   "CHASE": {
@@ -4043,6 +4620,7 @@
     "target_mean_price": null,
     "pe_ttm": "Infinity",
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.28144744,
     "updated_at": "2026-06-15"
   },
   "PATO": {
@@ -4050,6 +4628,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.863636,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.6749039,
     "updated_at": "2026-06-15"
   },
   "MASTER": {
@@ -4057,6 +4636,7 @@
     "target_mean_price": 9.1,
     "pe_ttm": 12.647059,
     "div_yield_ttm": 4.7619052,
+    "pbv_latest": 0.7387682,
     "updated_at": "2026-06-15"
   },
   "PRIN": {
@@ -4064,6 +4644,7 @@
     "target_mean_price": null,
     "pe_ttm": 23.166666,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.311869,
     "updated_at": "2026-06-15"
   },
   "CH": {
@@ -4071,6 +4652,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 2.0134227,
+    "pbv_latest": 0.96263456,
     "updated_at": "2026-06-15"
   },
   "VARO": {
@@ -4078,6 +4660,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.970149,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3983667,
     "updated_at": "2026-06-15"
   },
   "NOBLE": {
@@ -4085,6 +4668,7 @@
     "target_mean_price": null,
     "pe_ttm": 4.3170733,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.35663915,
     "updated_at": "2026-06-15"
   },
   "THRE": {
@@ -4092,6 +4676,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.666667,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.39548022,
     "updated_at": "2026-06-15"
   },
   "MK": {
@@ -4099,6 +4684,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.15935056,
     "updated_at": "2026-06-15"
   },
   "OGC": {
@@ -4106,6 +4692,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.106647916,
     "updated_at": "2026-06-15"
   },
   "EP": {
@@ -4113,6 +4700,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.45859873,
     "updated_at": "2026-06-15"
   },
   "OHTL": {
@@ -4120,6 +4708,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.548698,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4187691,
     "updated_at": "2026-06-15"
   },
   "CHAYO": {
@@ -4127,6 +4716,7 @@
     "target_mean_price": 2.22667,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.47654784,
     "updated_at": "2026-06-15"
   },
   "TTT": {
@@ -4134,6 +4724,7 @@
     "target_mean_price": null,
     "pe_ttm": 37.5,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.35279486,
     "updated_at": "2026-06-15"
   },
   "NSL": {
@@ -4141,6 +4732,7 @@
     "target_mean_price": 28.625,
     "pe_ttm": 10.858585,
     "div_yield_ttm": 4.816514000000001,
+    "pbv_latest": 2.7546446,
     "updated_at": "2026-06-15"
   },
   "NC": {
@@ -4148,6 +4740,7 @@
     "target_mean_price": null,
     "pe_ttm": 87.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5544933,
     "updated_at": "2026-06-15"
   },
   "SISB": {
@@ -4155,6 +4748,7 @@
     "target_mean_price": 13.05,
     "pe_ttm": 9.7,
     "div_yield_ttm": 5.3124998,
+    "pbv_latest": 2.3095238,
     "updated_at": "2026-06-15"
   },
   "DCON": {
@@ -4162,6 +4756,7 @@
     "target_mean_price": null,
     "pe_ttm": "Infinity",
     "div_yield_ttm": 1.5,
+    "pbv_latest": 0.4032258,
     "updated_at": "2026-06-15"
   },
   "SNNP": {
@@ -4169,6 +4764,7 @@
     "target_mean_price": 8.36667,
     "pe_ttm": 14.456522,
     "div_yield_ttm": 9.015152,
+    "pbv_latest": 2.3835125,
     "updated_at": "2026-06-15"
   },
   "AAI": {
@@ -4176,6 +4772,7 @@
     "target_mean_price": 4.95,
     "pe_ttm": 12.275863,
     "div_yield_ttm": 9.682081,
+    "pbv_latest": 1.5200683,
     "updated_at": "2026-06-15"
   },
   "PF": {
@@ -4183,6 +4780,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.06281407,
     "updated_at": "2026-06-15"
   },
   "SAMTEL": {
@@ -4190,6 +4788,7 @@
     "target_mean_price": null,
     "pe_ttm": 29.272728,
     "div_yield_ttm": 3.5714287,
+    "pbv_latest": 0.5492069,
     "updated_at": "2026-06-15"
   },
   "AS": {
@@ -4197,6 +4796,7 @@
     "target_mean_price": null,
     "pe_ttm": 8.444444,
     "div_yield_ttm": 8.849557500000001,
+    "pbv_latest": 0.8131241,
     "updated_at": "2026-06-15"
   },
   "NOVA": {
@@ -4204,6 +4804,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.68573666,
     "updated_at": "2026-06-15"
   },
   "MILL": {
@@ -4211,6 +4812,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 2.4999998,
     "updated_at": "2026-06-15"
   },
   "J": {
@@ -4218,6 +4820,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3482587,
     "updated_at": "2026-06-15"
   },
   "PEACE": {
@@ -4225,6 +4828,7 @@
     "target_mean_price": null,
     "pe_ttm": 52.0,
     "div_yield_ttm": 3.8216557,
+    "pbv_latest": 0.35302103,
     "updated_at": "2026-06-15"
   },
   "PHG": {
@@ -4232,6 +4836,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.086956,
     "div_yield_ttm": 6.9306925,
+    "pbv_latest": 1.3580081,
     "updated_at": "2026-06-15"
   },
   "ORI": {
@@ -4239,6 +4844,7 @@
     "target_mean_price": 2.045,
     "pe_ttm": 5.6896553,
     "div_yield_ttm": 4.2424243,
+    "pbv_latest": 0.19879517,
     "updated_at": "2026-06-15"
   },
   "TNL": {
@@ -4246,6 +4852,7 @@
     "target_mean_price": null,
     "pe_ttm": 15.877863,
     "div_yield_ttm": 2.8846156,
+    "pbv_latest": 0.5837613,
     "updated_at": "2026-06-15"
   },
   "BEAUTY": {
@@ -4253,6 +4860,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 2.341772,
     "updated_at": "2026-06-15"
   },
   "SAWAD": {
@@ -4260,6 +4868,7 @@
     "target_mean_price": 29.01562,
     "pe_ttm": 6.845426,
     "div_yield_ttm": 3.4313727000000003,
+    "pbv_latest": 0.9280247,
     "updated_at": "2026-06-15"
   },
   "INSURE": {
@@ -4267,6 +4876,7 @@
     "target_mean_price": null,
     "pe_ttm": 24.449339,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.47405106,
     "updated_at": "2026-06-15"
   },
   "NTV": {
@@ -4274,6 +4884,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.287581,
     "div_yield_ttm": 5.6216214,
+    "pbv_latest": 1.1161907,
     "updated_at": "2026-06-15"
   },
   "RICHY": {
@@ -4281,6 +4892,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.09101942,
     "updated_at": "2026-06-15"
   },
   "MFC": {
@@ -4288,6 +4900,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.554455,
     "div_yield_ttm": 6.544503,
+    "pbv_latest": 1.6419942,
     "updated_at": "2026-06-15"
   },
   "PR9": {
@@ -4295,6 +4908,7 @@
     "target_mean_price": 22.92308,
     "pe_ttm": 16.407766,
     "div_yield_ttm": 3.0674849,
+    "pbv_latest": 2.1928117,
     "updated_at": "2026-06-15"
   },
   "NCH": {
@@ -4302,6 +4916,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.1670951,
     "updated_at": "2026-06-15"
   },
   "FMT": {
@@ -4309,6 +4924,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.70019096,
     "updated_at": "2026-06-15"
   },
   "NKI": {
@@ -4316,6 +4932,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.32580608,
     "updated_at": "2026-06-15"
   },
   "PDJ": {
@@ -4323,6 +4940,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.30827305,
     "updated_at": "2026-06-15"
   },
   "MJD": {
@@ -4330,6 +4948,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.117462814,
     "updated_at": "2026-06-15"
   },
   "TNPF": {
@@ -4337,6 +4956,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.16699411,
     "updated_at": "2026-06-15"
   },
   "BRI": {
@@ -4344,6 +4964,7 @@
     "target_mean_price": null,
     "pe_ttm": 12.4,
     "div_yield_ttm": 2.7777778,
+    "pbv_latest": 0.26416704,
     "updated_at": "2026-06-15"
   },
   "MTC": {
@@ -4351,6 +4972,7 @@
     "target_mean_price": 41.71875,
     "pe_ttm": 8.890577,
     "div_yield_ttm": 1.0357142,
+    "pbv_latest": 1.3804333,
     "updated_at": "2026-06-15"
   },
   "MENA": {
@@ -4358,6 +4980,7 @@
     "target_mean_price": null,
     "pe_ttm": 7.3333335,
     "div_yield_ttm": 2.3076923999999996,
+    "pbv_latest": 0.48493758,
     "updated_at": "2026-06-15"
   },
   "CWT": {
@@ -4365,6 +4988,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.27056673,
     "updated_at": "2026-06-15"
   },
   "JAS": {
@@ -4372,6 +4996,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.6282226,
     "updated_at": "2026-06-15"
   },
   "DDD": {
@@ -4379,6 +5004,7 @@
     "target_mean_price": null,
     "pe_ttm": 52.88889,
     "div_yield_ttm": 3.75,
+    "pbv_latest": 0.33568406,
     "updated_at": "2026-06-15"
   },
   "TGE": {
@@ -4386,6 +5012,7 @@
     "target_mean_price": null,
     "pe_ttm": 11.444444,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.8313156,
     "updated_at": "2026-06-15"
   },
   "WIN": {
@@ -4393,6 +5020,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.42360058,
     "updated_at": "2026-06-15"
   },
   "MATCH": {
@@ -4400,6 +5028,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.59720457,
     "updated_at": "2026-06-15"
   },
   "PK": {
@@ -4407,6 +5036,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.19882512,
     "updated_at": "2026-06-15"
   },
   "SUN": {
@@ -4414,6 +5044,7 @@
     "target_mean_price": null,
     "pe_ttm": 13.444445,
     "div_yield_ttm": 6.147541,
+    "pbv_latest": 1.3282108,
     "updated_at": "2026-06-15"
   },
   "TIPCO": {
@@ -4421,6 +5052,7 @@
     "target_mean_price": null,
     "pe_ttm": 10.909091,
     "div_yield_ttm": 1.6666668,
+    "pbv_latest": 0.78114825,
     "updated_at": "2026-06-15"
   },
   "TCMC": {
@@ -4428,6 +5060,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.2849003,
     "updated_at": "2026-06-15"
   },
   "RML": {
@@ -4435,6 +5068,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3003003,
     "updated_at": "2026-06-15"
   },
   "CITY": {
@@ -4442,6 +5076,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.295421,
     "updated_at": "2026-06-15"
   },
   "SVI": {
@@ -4449,6 +5084,7 @@
     "target_mean_price": 6.05,
     "pe_ttm": 13.095239,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.5337423,
     "updated_at": "2026-06-15"
   },
   "MSC": {
@@ -4456,6 +5092,7 @@
     "target_mean_price": null,
     "pe_ttm": 16.710526,
     "div_yield_ttm": 5.46875,
+    "pbv_latest": 0.972286,
     "updated_at": "2026-06-15"
   },
   "THAI": {
@@ -4463,6 +5100,7 @@
     "target_mean_price": 7.58929,
     "pe_ttm": 6.5,
     "div_yield_ttm": 3.0434782,
+    "pbv_latest": 2.2858057,
     "updated_at": "2026-06-15"
   },
   "ANAN": {
@@ -4470,6 +5108,7 @@
     "target_mean_price": 0.5,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.119180635,
     "updated_at": "2026-06-15"
   },
   "TGPRO": {
@@ -4477,6 +5116,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.090909086,
     "updated_at": "2026-06-15"
   },
   "APURE": {
@@ -4484,6 +5124,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.89499336,
     "updated_at": "2026-06-15"
   },
   "VGI": {
@@ -4491,6 +5132,7 @@
     "target_mean_price": 1.25,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.54720384,
     "updated_at": "2026-06-15"
   },
   "AIMCG": {
@@ -4498,6 +5140,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 5.147059,
+    "pbv_latest": 0.1709295,
     "updated_at": "2026-06-15"
   },
   "AMANAH": {
@@ -4505,6 +5148,7 @@
     "target_mean_price": 0.64,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.47756878,
     "updated_at": "2026-06-15"
   },
   "DTCI": {
@@ -4512,6 +5156,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 1.3661203,
+    "pbv_latest": 0.47662455,
     "updated_at": "2026-06-15"
   },
   "BTS": {
@@ -4519,6 +5164,7 @@
     "target_mean_price": 2.83333,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.56780595,
     "updated_at": "2026-06-15"
   },
   "KUN": {
@@ -4526,6 +5172,7 @@
     "target_mean_price": null,
     "pe_ttm": 55.000004,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.53037614,
     "updated_at": "2026-06-15"
   },
   "NV": {
@@ -4533,6 +5180,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.26604068,
     "updated_at": "2026-06-15"
   },
   "PTECH": {
@@ -4540,6 +5188,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.6775885,
     "updated_at": "2026-06-15"
   },
   "GRAMMY": {
@@ -4547,6 +5196,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5568962,
     "updated_at": "2026-06-15"
   },
   "TRITN": {
@@ -4554,6 +5204,7 @@
     "target_mean_price": null,
     "pe_ttm": 2.0,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.19999999,
     "updated_at": "2026-06-15"
   },
   "B52": {
@@ -4561,6 +5212,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 2.8395061,
     "updated_at": "2026-06-15"
   },
   "CMC": {
@@ -4568,6 +5220,7 @@
     "target_mean_price": null,
     "pe_ttm": 5.8333335,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.18022656,
     "updated_at": "2026-06-15"
   },
   "SCM": {
@@ -4575,6 +5228,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.16105416,
     "updated_at": "2026-06-15"
   },
   "KC": {
@@ -4582,6 +5236,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.4285713,
     "updated_at": "2026-06-15"
   },
   "SST": {
@@ -4589,6 +5244,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4431513,
     "updated_at": "2026-06-15"
   },
   "NVD": {
@@ -4596,6 +5252,7 @@
     "target_mean_price": null,
     "pe_ttm": 6.8750005,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.18086156,
     "updated_at": "2026-06-15"
   },
   "A": {
@@ -4603,6 +5260,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 4.050279,
     "updated_at": "2026-06-15"
   },
   "AQUA": {
@@ -4610,6 +5268,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.15214385,
     "updated_at": "2026-06-15"
   },
   "OKJ": {
@@ -4617,6 +5276,7 @@
     "target_mean_price": 4.4250937,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.3589469,
     "updated_at": "2026-06-15"
   },
   "CEN": {
@@ -4624,6 +5284,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.3736542,
     "updated_at": "2026-06-15"
   },
   "PLE": {
@@ -4631,6 +5292,7 @@
     "target_mean_price": null,
     "pe_ttm": 9.000001,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.09698276,
     "updated_at": "2026-06-15"
   },
   "TFI": {
@@ -4638,6 +5300,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.39999998,
     "updated_at": "2026-06-15"
   },
   "RS": {
@@ -4645,6 +5308,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.18413597,
     "updated_at": "2026-06-15"
   },
   "PRECHA": {
@@ -4652,6 +5316,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5354559,
     "updated_at": "2026-06-15"
   },
   "FNS": {
@@ -4659,6 +5324,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.22862369,
     "updated_at": "2026-06-15"
   },
   "NRF": {
@@ -4666,6 +5332,7 @@
     "target_mean_price": null,
     "pe_ttm": 0.4423077,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4129264,
     "updated_at": "2026-06-15"
   },
   "AE": {
@@ -4673,6 +5340,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.22500001,
     "updated_at": "2026-06-15"
   },
   "SQ": {
@@ -4680,6 +5348,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.13194443,
     "updated_at": "2026-06-15"
   },
   "PLUS": {
@@ -4687,6 +5356,7 @@
     "target_mean_price": 6.4,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.68090016,
     "updated_at": "2026-06-15"
   },
   "XYZ": {
@@ -4694,6 +5364,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.9385114,
     "updated_at": "2026-06-15"
   },
   "MADAME": {
@@ -4701,6 +5372,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.5141658,
     "updated_at": "2026-06-15"
   },
   "MONO": {
@@ -4708,6 +5380,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 224.99998,
     "updated_at": "2026-06-15"
   },
   "GRAND": {
@@ -4715,6 +5388,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.46511626,
     "updated_at": "2026-06-15"
   },
   "ETL": {
@@ -4722,6 +5396,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.41845492,
     "updated_at": "2026-06-15"
   },
   "GEL": {
@@ -4729,6 +5404,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.1090909,
     "updated_at": "2026-06-15"
   },
   "EMC": {
@@ -4736,6 +5412,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.29411763,
     "updated_at": "2026-06-15"
   },
   "SDC": {
@@ -4743,6 +5420,7 @@
     "target_mean_price": null,
     "pe_ttm": "Infinity",
     "div_yield_ttm": 0.0,
+    "pbv_latest": 1.8181818,
     "updated_at": "2026-06-15"
   },
   "PPPM": {
@@ -4750,6 +5428,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.47297296,
     "updated_at": "2026-06-15"
   },
   "TWZ": {
@@ -4757,6 +5436,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.11363636,
     "updated_at": "2026-06-15"
   },
   "TPOLY": {
@@ -4764,6 +5444,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 0.4819277,
     "updated_at": "2026-06-15"
   },
   "TTCL": {
@@ -4771,6 +5452,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -0.012720623,
     "updated_at": "2026-06-15"
   },
   "TSR": {
@@ -4778,6 +5460,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -0.09779951,
     "updated_at": "2026-06-15"
   },
   "XBIO": {
@@ -4785,6 +5468,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": 2.5925925,
     "updated_at": "2026-06-15"
   },
   "WSOL": {
@@ -4792,6 +5476,7 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
+    "pbv_latest": -0.022404779,
     "updated_at": "2026-06-15"
   }
 }
