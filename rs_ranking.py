@@ -876,6 +876,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             border-bottom: 1px solid var(--border-color);
             transition: color 0.2s;
             white-space: nowrap;
+            text-align: center;
+        }}
+
+        th:nth-child(2) {{
+            text-align: left;
         }}
 
         th:hover {{
@@ -887,6 +892,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
             font-size: 0.92rem;
             vertical-align: middle;
+            text-align: center;
+        }}
+
+        td.symbol-cell {{
+            text-align: left;
         }}
 
         tr {{
