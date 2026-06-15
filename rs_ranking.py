@@ -1570,7 +1570,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                             </div>
                             <div>
                                 <div class="rs-badge">{x['Mansfield_RS']:.2f}</div>
-                                <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
+                                <div class="mcap-subtext">{f"Market Cap {x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
                             </div>
                         </div>
                         ''' for i, x in enumerate(top_18)])}
