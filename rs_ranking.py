@@ -1542,8 +1542,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             <div class="main-left-column">
                 <!-- Tabs Container -->
                 <div class="tabs-container">
-                    <button class="tab-btn active" onclick="openTab('weinstein-tab')">Weinstein RS Ranking</button>
-                    <button class="tab-btn" onclick="openTab('rrg-tab')">SET Sector RRG</button>
+                    <button class="tab-btn active" onclick="openTab(event, 'weinstein-tab')">Weinstein RS Ranking</button>
+                    <button class="tab-btn" onclick="openTab(event, 'rrg-tab')">SET Sector RRG</button>
                 </div>
                 
                 <!-- Tab 1: Weinstein RS Ranking -->
@@ -1759,7 +1759,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             window.parent.location.href = window.location.origin + "/?scan=true";
         }}
 
-        function openTab(tabId) {{
+        function openTab(evt, tabId) {{
             document.querySelectorAll('.tab-content').forEach(content => {{
                 content.classList.remove('active');
             }});
@@ -1767,7 +1767,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                 btn.classList.remove('active');
             }});
             document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            if (evt && evt.currentTarget) {{
+                evt.currentTarget.classList.add('active');
+            }}
         }}
 
         // RRG Chart Initialization

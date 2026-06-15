@@ -888,7 +888,7 @@
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
                 <span class="badge">Benchmark: <strong style="color:white">SET INDEX</strong></span>
-                <span class="badge highlight">Updated: 2026-06-15 20:19</span>
+                <span class="badge highlight">Updated: 2026-06-15 20:24</span>
             </div>
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
@@ -899,8 +899,8 @@
             <div class="main-left-column">
                 <!-- Tabs Container -->
                 <div class="tabs-container">
-                    <button class="tab-btn active" onclick="openTab('weinstein-tab')">Weinstein RS Ranking</button>
-                    <button class="tab-btn" onclick="openTab('rrg-tab')">SET Sector RRG</button>
+                    <button class="tab-btn active" onclick="openTab(event, 'weinstein-tab')">Weinstein RS Ranking</button>
+                    <button class="tab-btn" onclick="openTab(event, 'rrg-tab')">SET Sector RRG</button>
                 </div>
                 
                 <!-- Tab 1: Weinstein RS Ranking -->
@@ -22639,7 +22639,7 @@
             window.parent.location.href = window.location.origin + "/?scan=true";
         }
 
-        function openTab(tabId) {
+        function openTab(evt, tabId) {
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
@@ -22647,7 +22647,9 @@
                 btn.classList.remove('active');
             });
             document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            }
         }
 
         // RRG Chart Initialization
