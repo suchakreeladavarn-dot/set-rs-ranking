@@ -3,10 +3,12 @@ import streamlit as st
 import streamlit.components.v1 as components
 import os
 import sys
+import importlib
 
 # Ensure current directory is in the path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import rs_ranking
+importlib.reload(rs_ranking)
 
 # Configure Streamlit page layout
 st.set_page_config(
