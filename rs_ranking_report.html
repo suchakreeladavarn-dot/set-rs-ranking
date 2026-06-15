@@ -908,7 +908,7 @@
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
                 <span class="badge">Benchmark: <strong style="color:white">SET INDEX</strong></span>
-                <span class="badge highlight">Updated: 2026-06-15 20:57</span>
+                <span class="badge highlight">Updated: 2026-06-15 21:11</span>
             </div>
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
@@ -24741,6 +24741,16 @@
             document.getElementById(tabId).classList.add('active');
             if (evt && evt.currentTarget) {
                 evt.currentTarget.classList.add('active');
+            }
+            
+            // Dynamically change header title text based on tab
+            const headerTitle = document.querySelector('header h1');
+            if (headerTitle) {
+                if (tabId === 'rrg-tab') {
+                    headerTitle.textContent = "SET Sector RRG";
+                } else {
+                    headerTitle.textContent = "Stan Weinstein RS Ranking";
+                }
             }
         }
 

@@ -1825,6 +1825,16 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             if (evt && evt.currentTarget) {{
                 evt.currentTarget.classList.add('active');
             }}
+            
+            // Dynamically change header title text based on tab
+            const headerTitle = document.querySelector('header h1');
+            if (headerTitle) {{
+                if (tabId === 'rrg-tab') {{
+                    headerTitle.textContent = "SET Sector RRG";
+                }} else {{
+                    headerTitle.textContent = "Stan Weinstein RS Ranking";
+                }}
+            }}
         }}
 
         // RRG Chart Initialization
