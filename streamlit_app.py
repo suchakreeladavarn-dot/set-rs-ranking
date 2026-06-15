@@ -35,8 +35,8 @@ st.markdown("""
         display: none !important;
     }
     
-    /* Lock html, body, and all Streamlit main containers from scrolling to keep the button perfectly fixed */
-    html, body, .stApp, div[data-testid="stAppViewContainer"], div[data-testid="stAppViewBlockContainer"] {
+    /* Lock html, body, and all Streamlit main containers from scrolling to keep the layout static */
+    html, body, .stApp, div[data-testid="stAppViewContainer"] {
         overflow: hidden !important;
         height: 100vh !important;
         width: 100vw !important;
@@ -51,22 +51,23 @@ st.markdown("""
         padding: 0 !important;
     }
     
-    /* Remove padding of main block container to allow full-screen iframe */
+    /* Set up main block container as a flex column to stack header row and iframe */
     [data-testid="stAppViewBlockContainer"] {
-        padding: 0 !important;
+        padding: 0.5rem 1.5rem 0 1.5rem !important;
         margin: 0 !important;
         max-width: 100vw !important;
         height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
         overflow: hidden !important;
+        gap: 0.5rem !important;
     }
     
-    /* Force the iframe to occupy full screen, positioned absolutely to the viewport */
+    /* Force the iframe to occupy the remaining screen height, positioned in the flex flow */
     iframe {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
+        position: relative !important;
+        width: 100% !important;
+        height: calc(100vh - 65px) !important;
         border: none !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -76,17 +77,15 @@ st.markdown("""
     
     /* Make sure Streamlit wrapper divs don't block the layout */
     div[data-testid="stHtml"] {
-        height: 100vh !important;
+        height: calc(100vh - 65px) !important;
     }
     
-    /* Style the floating Scan button to be truly fixed at top-right and prevent any shift */
+    /* Style the Scan button with the premium gradient design, positioned normally inside the header row */
     div.stButton {
-        position: fixed !important;
-        top: 1.5rem !important;
-        right: 2rem !important;
-        z-index: 999999 !important;
         margin: 0 !important;
         padding: 0 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
     }
     
     div.stButton > button {
@@ -94,7 +93,7 @@ st.markdown("""
         color: white !important;
         font-weight: 600 !important;
         border: none !important;
-        padding: 0.5rem 1.2rem !important;
+        padding: 0.5rem 1.5rem !important;
         border-radius: 8px !important;
         box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
         width: auto !important;
