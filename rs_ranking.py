@@ -862,8 +862,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
 
         th {{
             background: rgba(17, 24, 39, 0.85);
-            padding: 1rem;
-            font-size: 0.85rem;
+            padding: 1rem 0.6rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--text-muted);
             text-transform: uppercase;
@@ -883,9 +883,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         td {{
-            padding: 0.85rem 1rem;
+            padding: 0.85rem 0.6rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             vertical-align: middle;
         }}
 
@@ -900,7 +900,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .rank-cell {{
             font-weight: 600;
             color: var(--text-muted);
-            width: 80px;
+            width: 50px;
         }}
 
         .symbol-cell {{
@@ -927,12 +927,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .price-cell {{
             font-weight: 600;
             color: #ffffff;
-            width: 120px;
+            width: 90px;
         }}
 
         .chg-cell {{
             font-weight: 600;
-            width: 120px;
+            width: 90px;
         }}
 
         .chg-positive {{
@@ -948,7 +948,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .rs-cell {{
-            width: 160px;
+            width: 110px;
         }}
 
         .rs-pill-value {{
@@ -965,26 +965,26 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .mcap-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 160px;
+            width: 100px;
         }}
 
         .consensus-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 150px;
+            width: 130px;
             vertical-align: middle;
         }}
 
         .pe-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 110px;
+            width: 80px;
         }}
 
         .div-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 150px;
+            width: 110px;
         }}
 
         .consensus-target {{
@@ -1013,7 +1013,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .status-cell {{
-            width: 140px;
+            width: 100px;
         }}
 
         .status-badge {{
@@ -1124,7 +1124,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .main-left-column {{
-            flex: 2.5;
+            flex: 1;
             min-width: 0;
             display: flex;
             flex-direction: column;
@@ -1132,8 +1132,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .main-right-column {{
-            flex: 1;
-            min-width: 320px;
+            width: 320px;
+            flex-shrink: 0;
             position: -webkit-sticky;
             position: sticky;
             top: 2rem;
