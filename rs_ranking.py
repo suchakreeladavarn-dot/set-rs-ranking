@@ -443,7 +443,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     display_benchmark = "SET INDEX" if benchmark == "^SET.BK" else benchmark
     bg_colors, text_colors = generate_color_map(ranking_df)
     
-    top_15 = ranking_df.head(15).to_dict('records')
+    top_18 = ranking_df.head(18).to_dict('records')
     all_stocks = ranking_df.to_dict('records')
     
     def get_consensus_html(row):
@@ -1322,7 +1322,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                             <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
                         </div>
                     </div>
-                    ''' for i, x in enumerate(top_15)])}
+                    ''' for i, x in enumerate(top_18)])}
                 </div>
 
                 <!-- Full Interactive Table -->
@@ -1638,9 +1638,9 @@ def main():
         return
 
     # Output basic text stats to console
-    print("\n=== TOP 15 STOCKS ===")
+    print("\n=== TOP 18 STOCKS ===")
     print("-" * 70)
-    console_df = result.head(15).copy()
+    console_df = result.head(18).copy()
     console_df['Market_Cap_M'] = console_df['Market_Cap_M'].apply(lambda val: f"{val:,.0f}M" if pd.notna(val) else 'N/A')
     print(console_df.to_string(index=True))
     print("-" * 70)
