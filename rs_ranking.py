@@ -231,10 +231,10 @@ def fetch_indices_data(max_workers=12):
 
 def fetch_market_caps(tickers, max_workers=15):
     """
-    Downloads market capitalization and IAA consensus mean price for tickers in parallel,
+    Downloads market capitalization, IAA consensus mean price, trailing PE, and dividend yield for tickers in parallel,
     utilizing a local cache to avoid Yahoo Finance rate limits.
     Returns:
-        tuple: (mcaps_dict, consensus_dict)
+        tuple: (mcaps_dict, consensus_dict, pe_ttm_dict, div_yields_dict)
     """
     cache = load_mcap_cache()
     today_str = datetime.now().strftime('%Y-%m-%d')
@@ -242,6 +242,8 @@ def fetch_market_caps(tickers, max_workers=15):
     
     mcaps = {}
     consensus = {}
+    pe_ttm = {}
+    div_yields = {}
     tickers_to_fetch = []
     
     # 1. Identify which tickers need fetching
@@ -250,30 +252,36 @@ def fetch_market_caps(tickers, max_workers=15):
         if cached_data:
             try:
                 updated_date = datetime.strptime(cached_data.get("updated_at", "2000-01-01"), "%Y-%m-%d")
-                # We also check that "target_mean_price" key is in the cached data (even if its value is None/null)
-                # to trigger migration for old cache records that only have "market_cap_m"
-                if updated_date >= cache_expiry_date and cached_data.get("market_cap_m") is not None and "target_mean_price" in cached_data:
+                # Trigger fetch if updated_at is expired or key fields are missing from cache record
+                if (updated_date >= cache_expiry_date and 
+                    cached_data.get("market_cap_m") is not None and 
+                    "target_mean_price" in cached_data and
+                    "pe_ttm" in cached_data and
+                    "div_yield_ttm" in cached_data):
+                    
                     mcaps[t] = cached_data.get("market_cap_m")
                     consensus[t] = cached_data.get("target_mean_price")
+                    pe_ttm[t] = cached_data.get("pe_ttm")
+                    div_yields[t] = cached_data.get("div_yield_ttm")
                     continue
             except Exception:
                 pass
         tickers_to_fetch.append(t)
 
     if not tickers_to_fetch:
-        print(f"[INFO] All {len(tickers)} market caps and consensus target prices loaded from local cache.")
-        return mcaps, consensus
+        print(f"[INFO] All {len(tickers)} market caps, consensus target prices, PE, and Yields loaded from local cache.")
+        return mcaps, consensus, pe_ttm, div_yields
 
     print(f"[INFO] Cache status: {len(mcaps)} from cache, need to fetch {len(tickers_to_fetch)} from Yahoo Finance...")
 
-    # 2. Fetch missing market caps and consensus prices in parallel with throttling
+    # 2. Fetch missing market caps, consensus prices, PE, and Yields in parallel with throttling
     formatted_tickers = [t + ".BK" if not t.endswith(".BK") and not t.startswith("^") else t for t in tickers_to_fetch]
     
     new_data = {}
     
     def get_single_stock_data(ticker):
         # Add a tiny delay between thread starts to avoid hitting Yahoo at the exact same millisecond
-        time.sleep(0.05)
+        time.sleep(0.02)
         clean_t = ticker.replace('.BK', '')
         try:
             t_obj = yf.Ticker(ticker)
@@ -281,45 +289,59 @@ def fetch_market_caps(tickers, max_workers=15):
             info = t_obj.info
             mcap = info.get("marketCap")
             target_mean = info.get("targetMeanPrice")
+            pe = info.get("trailingPE")
+            
+            # Fetch dividend yield and convert to percentage
+            dy = info.get("trailingAnnualDividendYield")
+            if dy is not None:
+                div_yield = float(dy) * 100
+            else:
+                dy_val = info.get("dividendYield")
+                if dy_val is not None:
+                    div_yield = float(dy_val)
+                else:
+                    div_yield = None
             
             # Fallback to fast_info for market cap if not in info
             if mcap is None:
                 mcap = t_obj.fast_info.market_cap
                 
-            if mcap is not None:
-                mcap_m = mcap / 1e6
-                return clean_t, mcap_m, target_mean
-            return clean_t, None, target_mean
+            mcap_m = mcap / 1e6 if mcap is not None else None
+            return clean_t, mcap_m, target_mean, pe, div_yield
         except Exception:
             # Full fallback to fast_info for market cap
             try:
                 t_obj = yf.Ticker(ticker)
                 mcap = t_obj.fast_info.market_cap
                 if mcap is not None:
-                    return clean_t, mcap / 1e6, None
+                    return clean_t, mcap / 1e6, None, None, None
             except Exception:
                 pass
-            return clean_t, None, None
+            return clean_t, None, None, None, None
 
     # We use fewer workers (max_workers=15) to prevent API rate limiting
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(get_single_stock_data, t): t for t in formatted_tickers}
         for future in as_completed(futures):
-            symbol, mcap_m, target_mean = future.result()
-            new_data[symbol] = (mcap_m, target_mean)
+            symbol, mcap_m, target_mean, pe, div_yield = future.result()
+            new_data[symbol] = (mcap_m, target_mean, pe, div_yield)
 
     # 3. Update cache
-    for symbol, (mcap_m, target_mean) in new_data.items():
+    for symbol, (mcap_m, target_mean, pe, div_yield) in new_data.items():
         mcaps[symbol] = mcap_m
         consensus[symbol] = target_mean
+        pe_ttm[symbol] = pe
+        div_yields[symbol] = div_yield
         cache[symbol] = {
             "market_cap_m": mcap_m,
             "target_mean_price": target_mean,
+            "pe_ttm": pe,
+            "div_yield_ttm": div_yield,
             "updated_at": today_str
         }
         
     save_mcap_cache(cache)
-    return mcaps, consensus
+    return mcaps, consensus, pe_ttm, div_yields
 
 def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
     """
@@ -441,6 +463,24 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
         else:
             return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-neutral">0.00%</div>'
+    
+    def get_pe_html(row):
+        val = row.get('PE_TTM')
+        if pd.isna(val):
+            return 'N/A'
+        try:
+            return f"{float(val):.2f}"
+        except (ValueError, TypeError):
+            return 'N/A'
+            
+    def get_div_yield_html(row):
+        val = row.get('Div_Yield_TTM')
+        if pd.isna(val):
+            return 'N/A'
+        try:
+            return f"{float(val):.2f}%"
+        except (ValueError, TypeError):
+            return 'N/A'
     
     
     # Fetch indices data
@@ -935,6 +975,18 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             vertical-align: middle;
         }}
 
+        .pe-cell {{
+            font-weight: 500;
+            color: var(--text-main);
+            width: 110px;
+        }}
+
+        .div-cell {{
+            font-weight: 500;
+            color: var(--text-main);
+            width: 150px;
+        }}
+
         .consensus-target {{
             font-weight: 600;
             font-size: 1.05rem;
@@ -1289,7 +1341,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                                     <th onclick="sortTable(3)">Chg (%) ↕</th>
                                     <th onclick="sortTable(4)">Market Cap ↕</th>
                                     <th onclick="sortTable(5)">IAA Consensus ↕</th>
-                                    <th onclick="sortTable(6)">Mansfield RS ↕</th>
+                                    <th onclick="sortTable(6)">P/E TTM ↕</th>
+                                    <th onclick="sortTable(7)">Dividends Yield TTM ↕</th>
+                                    <th onclick="sortTable(8)">Mansfield RS ↕</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -1307,6 +1361,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                                     </td>
                                     <td class="consensus-cell">
                                         {get_consensus_html(x)}
+                                    </td>
+                                    <td class="pe-cell">
+                                        {get_pe_html(x)}
+                                    </td>
+                                    <td class="div-cell">
+                                        {get_div_yield_html(x)}
                                     </td>
                                     <td class="rs-cell">
                                         <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
@@ -1375,13 +1435,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             document.getElementById("visibleCount").innerText = count;
         }}
 
-        let sortDirections = [1, 1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column (8 columns total)
+        let sortDirections = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // Toggle direction for each column (10 columns total)
         
         function sortTable(columnIndex) {{
             let table = document.getElementById("rankingTable");
             let tbody = table.tBodies[0];
             let rows = Array.from(tbody.rows);
-            let isNumeric = (columnIndex === 0 || columnIndex === 2 || columnIndex === 3 || columnIndex === 4 || columnIndex === 5 || columnIndex === 6); // Rank, Last Price, Chg %, Market Cap, IAA Consensus, or Mansfield RS
+            let isNumeric = (columnIndex !== 1 && columnIndex !== 9); // All columns are numeric except Symbol (1) and Status (9)
             
             let direction = sortDirections[columnIndex];
             
@@ -1410,8 +1470,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             let ths = table.getElementsByTagName("th");
             for(let i=0; i<ths.length; i++) {{
                 let baseText = ths[i].textContent.replace(/[▲▼↕]/g, "").trim();
-                if(i === 7) {{
-                    ths[i].innerHTML = baseText; // No arrow for Status (index 7)
+                if(i === 9) {{
+                    ths[i].innerHTML = baseText; // No arrow for Status (index 9)
                 }} else if(i === columnIndex) {{
                     ths[i].innerHTML = baseText + (direction === 1 ? " ▲" : " ▼");
                 }} else {{
@@ -1493,9 +1553,11 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
     if progress_callback:
         progress_callback(f"RS calculated for {len(succeeded_symbols)} stocks. Fetching market capitalization...", 0.6)
         
-    mcaps, consensus = fetch_market_caps(succeeded_symbols)
+    mcaps, consensus, pe_ttm, div_yields = fetch_market_caps(succeeded_symbols)
     ranking_df['Market_Cap_M'] = ranking_df['Symbol'].map(mcaps)
     ranking_df['Target_Mean_Price'] = ranking_df['Symbol'].map(consensus)
+    ranking_df['PE_TTM'] = ranking_df['Symbol'].map(pe_ttm)
+    ranking_df['Div_Yield_TTM'] = ranking_df['Symbol'].map(div_yields)
     
     if min_mcap > 0:
         if progress_callback:
