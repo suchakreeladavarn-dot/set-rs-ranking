@@ -35,6 +35,15 @@ st.markdown("""
         display: none !important;
     }
     
+    /* Lock html, body, and all Streamlit main containers from scrolling to keep the button perfectly fixed */
+    html, body, .stApp, div[data-testid="stAppViewContainer"], div[data-testid="stAppViewBlockContainer"] {
+        overflow: hidden !important;
+        height: 100vh !important;
+        width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
     /* Make page take full width and height with zero padding */
     .stApp {
         background-color: #090d16 !important;
@@ -68,6 +77,35 @@ st.markdown("""
     /* Make sure Streamlit wrapper divs don't block the layout */
     div[data-testid="stHtml"] {
         height: 100vh !important;
+    }
+    
+    /* Style the floating Scan button to be truly fixed at top-right and prevent any shift */
+    div.stButton {
+        position: fixed !important;
+        top: 1.5rem !important;
+        right: 2rem !important;
+        z-index: 999999 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    div.stButton > button {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+        color: white !important;
+        font-weight: 600 !important;
+        border: none !important;
+        padding: 0.5rem 1.2rem !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+        width: auto !important;
+        cursor: pointer !important;
+        transition: all 0.2s !important;
+        font-size: 0.85rem !important;
+    }
+    
+    div.stButton > button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -110,6 +148,10 @@ if "scan" in st.query_params:
 
 # Render Area: Load and show report as full screen in the main panel
 if os.path.exists(output_filename):
+    # Render native Streamlit Scan button at the top right (floats over iframe)
+    if st.button("🚀 Scan Now"):
+        st.query_params["scan"] = "true"
+        st.rerun()
 
     try:
         with open(output_filename, "r", encoding="utf-8") as f:

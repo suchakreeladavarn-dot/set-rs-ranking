@@ -888,7 +888,7 @@
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
                 <span class="badge">Benchmark: <strong style="color:white">SET INDEX</strong></span>
-                <span class="badge highlight">Updated: 2026-06-15 20:38</span>
+                <span class="badge highlight">Updated: 2026-06-15 20:40</span>
             </div>
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
@@ -22632,6 +22632,14 @@
                 } else {
                     ths[i].innerHTML = baseText + " ↕";
                 }
+            }
+        }
+
+        // Hide scan button if inside iframe (Streamlit Cloud sandbox)
+        if (window.self !== window.top) {
+            const scanBtn = document.querySelector('.scan-btn');
+            if (scanBtn) {
+                scanBtn.style.display = 'none';
             }
         }
 
