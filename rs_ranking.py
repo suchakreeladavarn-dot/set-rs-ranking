@@ -1143,7 +1143,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .main-right-column {{
-            width: 270px;
+            width: 280px;
             flex-shrink: 0;
             position: -webkit-sticky;
             position: sticky;
@@ -1170,7 +1170,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             backdrop-filter: blur(12px);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 1.25rem;
+            padding: 1rem 0.75rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
@@ -1189,11 +1189,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .index-row-header span:nth-child(1) {{
-            width: 50%;
+            width: 42%;
         }}
 
         .index-row-header span:nth-child(2) {{
-            width: 25%;
+            width: 33%;
             text-align: right;
         }}
 
@@ -1224,8 +1224,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .index-info {{
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            width: 50%;
+            gap: 0.5rem;
+            width: 42%;
         }}
 
         .flag-icon {{
@@ -1243,7 +1243,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
 
         .index-display-name {{
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             color: #ffffff;
             font-family: 'Outfit', sans-serif;
             text-decoration: none;
@@ -1262,15 +1262,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
 
         .index-price {{
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             color: #ffffff;
-            width: 25%;
+            width: 33%;
             text-align: right;
         }}
 
         .index-chg {{
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.80rem;
             width: 25%;
             text-align: right;
         }}
