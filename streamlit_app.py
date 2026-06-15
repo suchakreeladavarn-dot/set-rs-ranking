@@ -35,39 +35,35 @@ st.markdown("""
         display: none !important;
     }
     
-    /* Lock html, body, and all Streamlit main containers from scrolling to keep the layout static */
-    html, body, .stApp, div[data-testid="stAppViewContainer"] {
+    /* Lock html, body, and all Streamlit main containers from scrolling and match background gradient exactly */
+    html, body, .stApp, div[data-testid="stAppViewContainer"], div[data-testid="stAppViewBlockContainer"] {
         overflow: hidden !important;
         height: 100vh !important;
         width: 100vw !important;
         margin: 0 !important;
         padding: 0 !important;
-    }
-    
-    /* Make page take full width and height with zero padding */
-    .stApp {
         background-color: #090d16 !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        background-image: 
+            radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.15) 0px, transparent 50%),
+            radial-gradient(at 50% 0%, rgba(76, 29, 149, 0.1) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.8) 0px, transparent 50%) !important;
+        background-attachment: fixed !important;
+        -ms-overflow-style: none !important;  /* IE and Edge */
+        scrollbar-width: none !important;  /* Firefox */
     }
     
-    /* Set up main block container as a flex column to stack header row and iframe */
-    [data-testid="stAppViewBlockContainer"] {
-        padding: 0.5rem 1.5rem 0 1.5rem !important;
-        margin: 0 !important;
-        max-width: 100vw !important;
-        height: 100vh !important;
-        display: flex !important;
-        flex-direction: column !important;
-        overflow: hidden !important;
-        gap: 0.5rem !important;
+    /* Hide scrollbars for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        display: none !important;
     }
     
-    /* Force the iframe to occupy the remaining screen height, positioned in the flex flow */
+    /* Force the iframe to occupy full screen, positioned absolutely to the viewport */
     iframe {
-        position: relative !important;
-        width: 100% !important;
-        height: calc(100vh - 65px) !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
         border: none !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -75,17 +71,26 @@ st.markdown("""
         z-index: 1 !important;
     }
     
-    /* Make sure Streamlit wrapper divs don't block the layout */
-    div[data-testid="stHtml"] {
-        height: calc(100vh - 65px) !important;
+    iframe::-webkit-scrollbar {
+        display: none !important;
     }
     
-    /* Style the Scan button with the premium gradient design, positioned normally inside the header row */
-    div.stButton {
+    /* Make sure Streamlit wrapper HTML block doesn't add padding or overflow */
+    div[data-testid="stHtml"] {
+        height: 100vh !important;
         margin: 0 !important;
         padding: 0 !important;
-        display: flex !important;
-        justify-content: flex-end !important;
+    }
+    
+    /* Style the Scan button to float at the top-right of the screen and stay completely fixed */
+    div.stButton {
+        position: fixed !important;
+        top: 1.5rem !important;
+        right: 2rem !important;
+        z-index: 999999 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
     }
     
     div.stButton > button {
@@ -93,7 +98,7 @@ st.markdown("""
         color: white !important;
         font-weight: 600 !important;
         border: none !important;
-        padding: 0.5rem 1.5rem !important;
+        padding: 0.5rem 1.2rem !important;
         border-radius: 8px !important;
         box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
         width: auto !important;

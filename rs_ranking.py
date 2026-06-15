@@ -681,6 +681,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             box-sizing: border-box;
         }}
 
+        /* Hide scrollbars completely for the document */
+        html::-webkit-scrollbar, body::-webkit-scrollbar {{
+            display: none !important;
+        }}
+        html, body {{
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }}
+
         body {{
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);

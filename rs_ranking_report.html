@@ -38,6 +38,15 @@
             box-sizing: border-box;
         }
 
+        /* Hide scrollbars completely for the document */
+        html::-webkit-scrollbar, body::-webkit-scrollbar {
+            display: none !important;
+        }
+        html, body {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);
@@ -888,7 +897,7 @@
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
                 <span class="badge">Benchmark: <strong style="color:white">SET INDEX</strong></span>
-                <span class="badge highlight">Updated: 2026-06-15 20:40</span>
+                <span class="badge highlight">Updated: 2026-06-15 20:48</span>
             </div>
             <button class="scan-btn" onclick="triggerParentScan()">🚀 Scan Now</button>
         </header>
