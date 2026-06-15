@@ -446,12 +446,30 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     # Fetch indices data
     indices_data = fetch_indices_data()
     indices_html = []
+    
+    tv_symbol_map = {
+        "^GSPC": "SP:SPX",
+        "^DJI": "DJ:DJI",
+        "^IXIC": "NASDAQ:IXIC",
+        "^SET.BK": "SET:SET",
+        "^SET50.BK": "SET:SET50",
+        "^MAI.BK": "SET:MAI",
+        "^N225": "TVC:NI225",
+        "^HSI": "HSI:HSI",
+        "^KS11": "KRX:KOSPI",
+        "^STI": "TVC:STI",
+        "^GDAXI": "XETR:DAX",
+        "^FTSE": "FTSE:UKX"
+    }
+    
     for item in indices_data:
         name = item["name"]
         ticker = item["ticker"]
         flag = item["flag_code"]
         price = item["price"]
         chg = item["chg_pct"]
+        
+        tv_symbol = tv_symbol_map.get(ticker, ticker.replace("^", "").replace(".BK", ""))
         
         if price is None:
             price_str = "N/A"
@@ -467,7 +485,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             <div class="index-info">
                 <img src="https://flagcdn.com/w40/{flag}.png" class="flag-icon" alt="{flag.upper()}">
                 <div class="index-name-ticker">
-                    <span class="index-display-name">{name}</span>
+                    <a href="https://www.tradingview.com/chart/?symbol={tv_symbol}" target="_blank" class="index-display-name">{name}</a>
                 </div>
             </div>
             <span class="index-price">{price_str}</span>
@@ -1165,6 +1183,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             font-size: 0.9rem;
             color: #ffffff;
             font-family: 'Outfit', sans-serif;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }}
+
+        a.index-display-name:hover {{
+            color: #60a5fa;
+            text-decoration: underline;
         }}
 
         .index-ticker-code {{
@@ -1392,6 +1417,14 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                 }} else {{
                     ths[i].innerHTML = baseText + " ↕";
                 }}
+            }}
+        }}
+
+        // Hide scan button if inside iframe (Streamlit Cloud sandbox)
+        if (window.self !== window.top) {{
+            const scanBtn = document.querySelector('.scan-btn');
+            if (scanBtn) {{
+                scanBtn.style.display = 'none';
             }}
         }}
 

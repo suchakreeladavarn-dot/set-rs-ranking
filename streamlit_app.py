@@ -134,6 +134,11 @@ if "scan" in st.query_params:
 
 # Render Area: Load and show report as full screen in the main panel
 if os.path.exists(output_filename):
+    # Render native Streamlit Scan button at the top right (floats over iframe)
+    if st.button("🚀 Scan Now"):
+        st.query_params["scan"] = "true"
+        st.rerun()
+
     try:
         with open(output_filename, "r", encoding="utf-8") as f:
             html_content = f.read()
