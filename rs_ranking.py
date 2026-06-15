@@ -1755,16 +1755,19 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             }}
         }}
 
-        // Hide scan button if inside iframe (Streamlit Cloud sandbox)
-        if (window.self !== window.top) {{
-            const scanBtn = document.querySelector('.scan-btn');
-            if (scanBtn) {{
-                scanBtn.style.display = 'none';
-            }}
-        }}
-
+        // Handle parent redirect for scanning
         function triggerParentScan() {{
-            window.parent.location.href = window.location.origin + "/?scan=true";
+            try {{
+                const referrer = document.referrer;
+                if (referrer) {{
+                    const base = referrer.split('?')[0].replace(/\/$/, '');
+                    window.top.location.href = base + "/?scan=true";
+                }} else {{
+                    window.top.location.href = "https://set-rs-ranking-future0127.streamlit.app/?scan=true";
+                }}
+            }} catch(e) {{
+                window.top.location.href = "https://set-rs-ranking-future0127.streamlit.app/?scan=true";
+            }}
         }}
 
         function openTab(evt, tabId) {{

@@ -69,30 +69,6 @@ st.markdown("""
     div[data-testid="stHtml"] {
         height: 100vh !important;
     }
-    
-    /* Style the floating Scan button at the top-right corner */
-    div.stButton > button {
-        position: fixed !important;
-        top: 1.5rem !important;
-        right: 2rem !important;
-        z-index: 999999 !important;
-        background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
-        color: white !important;
-        font-weight: 600 !important;
-        border: none !important;
-        padding: 0.5rem 1.2rem !important;
-        border-radius: 8px !important;
-        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
-        width: auto !important;
-        cursor: pointer !important;
-        transition: all 0.2s !important;
-        font-size: 0.85rem !important;
-    }
-    
-    div.stButton > button:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5) !important;
-    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -134,10 +110,6 @@ if "scan" in st.query_params:
 
 # Render Area: Load and show report as full screen in the main panel
 if os.path.exists(output_filename):
-    # Render native Streamlit Scan button at the top right (floats over iframe)
-    if st.button("🚀 Scan Now"):
-        st.query_params["scan"] = "true"
-        st.rerun()
 
     try:
         with open(output_filename, "r", encoding="utf-8") as f:
