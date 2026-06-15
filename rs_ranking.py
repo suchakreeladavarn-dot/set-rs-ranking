@@ -1650,6 +1650,14 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                             <div class="rrg-sectors-list"></div>
                         </div>
                     </div>
+                    
+                    <!-- Methodology Note -->
+                    <div class="rrg-explanation-card" style="margin-top: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; font-size: 0.82rem; line-height: 1.6; color: var(--text-muted); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+                        <strong style="color: #60a5fa; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">
+                            <span>💡</span> วิธีการคำนวณและเกณฑ์การถ่วงน้ำหนักกลุ่มอุตสาหกรรม (Methodology Note)
+                        </strong>
+                        เนื่องจากข้อมูลดัชนีกลุ่มอุตสาหกรรมของตลาดหลักทรัพย์ไทย (SET) ในฐานข้อมูล Yahoo Finance มีข้อจำกัดด้านความครบถ้วนและความต่อเนื่องของข้อมูลประวัติ ระบบจึงใช้วิธีคำนวณแบบ <strong>Equally-Weighted Index</strong> โดยสกัดข้อมูลราคาปิดรายวันของหุ้นแกนนำหลักกลุ่มละ 3–5 บริษัท (แสดงรายชื่อระบุใต้รหัสกลุ่มอุตสาหกรรมในตัวเลือกขวามือ) นำมา resample เป็นรายสัปดาห์ (Weekly Close) และคำนวณค่าเฉลี่ยถ่วงน้ำหนักเพื่อใช้เป็นดัชนีกลุ่มอุตสาหกรรมสังเคราะห์ จากนั้นนำไปคำนวณความแข็งแกร่งสัมพัทธ์เปรียบเทียบกับดัชนีอ้างอิง SET Index เพื่อแปลงเป็นพิกัด RRG ที่ถูกต้อง รวดเร็ว และสะท้อนการหมุนเวียนกลุ่มอุตสาหกรรมตามเวลาจริง
+                    </div>
                 </div>
             </div>
 
@@ -1948,19 +1956,46 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             plugins: [rrgQuadrantsPlugin]
         }});
 
+        const sectorConstituentsMap = {{
+            "BANK": ["KBANK", "BBL", "SCB", "KTB", "BAY"],
+            "HELTH": ["BDMS", "BH", "BCH", "CHG", "PR9"],
+            "ENERG": ["PTT", "PTTEP", "GULF", "GPSC", "BGRIM"],
+            "FIN": ["MTC", "SAWAD", "TIDLOR", "KTC", "AEONTS"],
+            "ICT": ["ADVANC", "TRUE", "JAS", "DIF"],
+            "TRANS": ["AOT", "BEM", "BTS", "AAV", "BA"],
+            "TOURISM": ["MINT", "CENTEL", "ERW", "SHR"],
+            "TECH": ["JTS", "DITTO", "HUMAN", "NETBAY", "SYNEX"],
+            "AGRI": ["STA", "NER", "TRUBB", "TEGH", "GFPT"],
+            "ETRON": ["DELTA", "HANA", "KCE", "CCET", "SMT"],
+            "COMM": ["CPALL", "CPAXT", "CRC", "BJC", "HMPRO"],
+            "AGRO": ["STA", "NER", "GFPT", "TEGH"],
+            "FOOD": ["CPF", "TU", "CBG", "OSP", "BTG", "SNNP"],
+            "PROP": ["CPN", "LH", "SPALI", "AP", "SIRI"],
+            "INSUR": ["TLI", "BLA", "TQM", "TIPH"],
+            "CONMAT": ["SCC", "TOA", "TASCO", "TPIPL"],
+            "AUTO": ["AH", "SAT", "STANLY"],
+            "CONS": ["CK", "STECON", "ITD"],
+            "STEEL": ["TSTH", "MCS", "BSBM"]
+        }};
+
         const rrgListContainer = document.querySelector('.rrg-sectors-list');
         Object.keys(rrgData).forEach(sector => {{
             const isChecked = defaultEnabledSectors.includes(sector);
             const color = sectorColors[sector] || '#ffffff';
+            const consts = sectorConstituentsMap[sector] ? sectorConstituentsMap[sector].join(', ') : '';
             
             const div = document.createElement('div');
             div.className = 'sector-checkbox-item';
+            div.style.padding = '0.4rem 0';
             div.innerHTML = `
-                <label>
-                    <input type="checkbox" id="chk-${{sector}}" ${{isChecked ? 'checked' : ''}} onchange="toggleSector('${{sector}}')">
-                    <span class="color-dot" style="background-color: ${{color}};"></span>
-                    <span style="font-weight: 600; font-size: 0.82rem; color: #ffffff;">${{sector}}</span>
-                </label>
+                <div style="display: flex; flex-direction: column; width: 100%;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; width: 100%;">
+                        <input type="checkbox" id="chk-${{sector}}" ${{isChecked ? 'checked' : ''}} onchange="toggleSector('${{sector}}')" style="accent-color: #60a5fa; width: 15px; height: 15px; cursor: pointer;">
+                        <span class="color-dot" style="background-color: ${{color}}; display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;"></span>
+                        <span style="font-weight: 600; font-size: 0.82rem; color: #ffffff;">${{sector}}</span>
+                    </label>
+                    <span style="font-size: 0.68rem; color: #9ca3af; margin-left: 2rem; margin-top: 3px; font-family: 'Inter', sans-serif;">${{consts}}</span>
+                </div>
             `;
             rrgListContainer.appendChild(div);
         }});
