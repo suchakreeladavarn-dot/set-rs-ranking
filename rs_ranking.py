@@ -582,7 +582,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
             background-color: var(--bg-primary);
             color: var(--text-main);
             line-height: 1.5;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem 1rem;
             min-height: 100vh;
             background-image: 
                 radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.15) 0px, transparent 50%),
@@ -594,7 +594,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .container {{
             max-width: 1600px;
             margin: 0 auto;
-            width: 95%;
+            width: 98%;
         }}
 
         /* Header Styling */
@@ -862,8 +862,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
 
         th {{
             background: rgba(17, 24, 39, 0.85);
-            padding: 1rem 0.6rem;
-            font-size: 0.8rem;
+            padding: 0.8rem 0.35rem;
+            font-size: 0.72rem;
             font-weight: 600;
             color: var(--text-muted);
             text-transform: uppercase;
@@ -888,9 +888,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         td {{
-            padding: 0.85rem 0.6rem;
+            padding: 0.7rem 0.35rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-            font-size: 0.92rem;
+            font-size: 0.84rem;
             vertical-align: middle;
             text-align: center;
         }}
@@ -910,14 +910,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .rank-cell {{
             font-weight: 600;
             color: var(--text-muted);
-            width: 50px;
+            width: 35px;
         }}
 
         .symbol-cell {{
             font-weight: 700;
             font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
+            font-size: 0.92rem;
             color: #ffffff;
+            width: 65px;
         }}
 
         .tv-link {{
@@ -937,12 +938,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .price-cell {{
             font-weight: 600;
             color: #ffffff;
-            width: 90px;
+            width: 70px;
         }}
 
         .chg-cell {{
             font-weight: 600;
-            width: 90px;
+            width: 70px;
         }}
 
         .chg-positive {{
@@ -958,53 +959,53 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .rs-cell {{
-            width: 110px;
+            width: 90px;
         }}
 
         .rs-pill-value {{
             display: inline-block;
-            padding: 0.35rem 0.75rem;
+            padding: 0.25rem 0.5rem;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-align: center;
-            min-width: 80px;
+            min-width: 65px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }}
 
         .mcap-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 100px;
+            width: 80px;
         }}
 
         .consensus-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 130px;
+            width: 110px;
             vertical-align: middle;
         }}
 
         .pe-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 80px;
+            width: 60px;
         }}
 
         .div-cell {{
             font-weight: 500;
             color: var(--text-main);
-            width: 110px;
+            width: 80px;
         }}
 
         .consensus-target {{
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: #ffffff;
         }}
 
         .consensus-upside {{
-            font-size: 0.78rem;
+            font-size: 0.72rem;
             font-weight: 600;
             margin-top: 0.2rem;
             display: inline-block;
@@ -1023,13 +1024,13 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .status-cell {{
-            width: 100px;
+            width: 80px;
         }}
 
         .status-badge {{
-            padding: 0.25rem 0.6rem;
+            padding: 0.2rem 0.45rem;
             border-radius: 6px;
-            font-size: 0.8rem;
+            font-size: 0.72rem;
             font-weight: 600;
             text-transform: uppercase;
             display: inline-flex;
@@ -1128,7 +1129,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         /* Main Layout Row (Content + Sidebar) */
         .main-layout-row {{
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             width: 100%;
             align-items: flex-start;
         }}
@@ -1142,7 +1143,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         }}
 
         .main-right-column {{
-            width: 320px;
+            width: 270px;
             flex-shrink: 0;
             position: -webkit-sticky;
             position: sticky;
@@ -1347,12 +1348,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
                                 <tr>
                                     <th onclick="sortTable(0)">Rank ↕</th>
                                     <th onclick="sortTable(1)">Symbol ↕</th>
-                                    <th onclick="sortTable(2)">Last Price ↕</th>
+                                    <th onclick="sortTable(2)">Price ↕</th>
                                     <th onclick="sortTable(3)">Chg (%) ↕</th>
-                                    <th onclick="sortTable(4)">Market Cap ↕</th>
-                                    <th onclick="sortTable(5)">IAA Consensus ↕</th>
-                                    <th onclick="sortTable(6)">P/E TTM ↕</th>
-                                    <th onclick="sortTable(7)">Dividends Yield TTM ↕</th>
+                                    <th onclick="sortTable(4)">Mkt Cap ↕</th>
+                                    <th onclick="sortTable(5)">Consensus ↕</th>
+                                    <th onclick="sortTable(6)">P/E ↕</th>
+                                    <th onclick="sortTable(7)">Div Yield ↕</th>
                                     <th onclick="sortTable(8)">Mansfield RS ↕</th>
                                     <th>Status</th>
                                 </tr>
