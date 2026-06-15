@@ -1561,7 +1561,12 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
     <div class="container">
         <header>
             <div class="logo-area">
-                <div class="logo-icon">RS</div>
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                        <polyline points="16 7 22 7 22 13"></polyline>
+                    </svg>
+                </div>
             </div>
             <h1>Stan Weinstein RS Ranking</h1>
             <div class="subtitle">
