@@ -26,6 +26,97 @@ warnings.filterwarnings('ignore')
 CACHE_FILE = "market_caps_cache.json"
 INDICES_CACHE_FILE = "indices_cache.json"
 
+SECTOR_CONSTITUENTS = {
+    "BANK": ["KBANK.BK", "BBL.BK", "SCB.BK", "KTB.BK", "BAY.BK"],
+    "HELTH": ["BDMS.BK", "BH.BK", "BCH.BK", "CHG.BK", "PR9.BK"],
+    "ENERG": ["PTT.BK", "PTTEP.BK", "GULF.BK", "GPSC.BK", "BGRIM.BK"],
+    "FIN": ["MTC.BK", "SAWAD.BK", "TIDLOR.BK", "KTC.BK", "AEONTS.BK"],
+    "ICT": ["ADVANC.BK", "TRUE.BK", "JAS.BK", "DIF.BK"],
+    "TRANS": ["AOT.BK", "BEM.BK", "BTS.BK", "AAV.BK", "BA.BK"],
+    "TOURISM": ["MINT.BK", "CENTEL.BK", "ERW.BK", "SHR.BK"],
+    "TECH": ["JTS.BK", "DITTO.BK", "HUMAN.BK", "NETBAY.BK", "SYNEX.BK"],
+    "AGRI": ["STA.BK", "NER.BK", "TRUBB.BK", "TEGH.BK", "GFPT.BK"],
+    "ETRON": ["DELTA.BK", "HANA.BK", "KCE.BK", "CCET.BK", "SMT.BK"],
+    "COMM": ["CPALL.BK", "CPAXT.BK", "CRC.BK", "BJC.BK", "HMPRO.BK"],
+    "AGRO": ["STA.BK", "NER.BK", "GFPT.BK", "TEGH.BK"],
+    "FOOD": ["CPF.BK", "TU.BK", "CBG.BK", "OSP.BK", "BTG.BK", "SNNP.BK"],
+    "PROP": ["CPN.BK", "LH.BK", "SPALI.BK", "AP.BK", "SIRI.BK"],
+    "INSUR": ["TLI.BK", "BLA.BK", "TQM.BK", "TIPH.BK"],
+    "CONMAT": ["SCC.BK", "TOA.BK", "TASCO.BK", "TPIPL.BK"],
+    "AUTO": ["AH.BK", "SAT.BK", "STANLY.BK"],
+    "CONS": ["CK.BK", "STECON.BK", "ITD.BK"],
+    "STEEL": ["TSTH.BK", "MCS.BK", "BSBM.BK"]
+}
+
+def calculate_rrg_coordinates(data, benchmark_ticker):
+    """
+    Calculates RRG coordinates (RS-Ratio and RS-Momentum) for all sectors.
+    Uses daily Close data already downloaded and resamples to weekly.
+    """
+    if data.empty:
+        return {}
+        
+    # Resample to weekly close
+    data_weekly = data.resample('W').last().ffill()
+    if benchmark_ticker not in data_weekly.columns:
+        return {}
+        
+    bench_series = data_weekly[benchmark_ticker]
+    
+    ma_length = 12
+    rrg_results = {}
+    
+    for sector, constituents in SECTOR_CONSTITUENTS.items():
+        valid_consts = [c for c in constituents if c in data_weekly.columns]
+        if not valid_consts:
+            continue
+        
+        try:
+            const_prices = data_weekly[valid_consts]
+            first_valid_idx = const_prices.first_valid_index()
+            if first_valid_idx is None:
+                continue
+            first_row = const_prices.loc[first_valid_idx]
+            first_row = first_row.replace(0, np.nan)
+            normalized_prices = const_prices.div(first_row, axis=1) * 100
+            sector_series = normalized_prices.mean(axis=1)
+            
+            bench_first = bench_series.loc[first_valid_idx] if first_valid_idx in bench_series.index else bench_series.iloc[0]
+            bench_norm = (bench_series / (bench_first if bench_first != 0 else 1.0)) * 100
+            ratio = (sector_series / bench_norm.replace(0, np.nan)) * 100
+            
+            ma_ratio = ratio.rolling(window=ma_length).mean()
+            mean_dev = (ratio - ma_ratio).abs().rolling(window=ma_length).mean()
+            z_score = (ratio - ma_ratio) / mean_dev.replace(0, np.nan)
+            rs_ratio = 100 + z_score * 3.5
+            rs_ratio_smoothed = rs_ratio.rolling(window=ma_length).mean()
+            
+            ma_rs_ratio = rs_ratio_smoothed.rolling(window=ma_length).mean()
+            mean_dev_rs_ratio = (rs_ratio_smoothed - ma_rs_ratio).abs().rolling(window=ma_length).mean()
+            z_score_momentum = (rs_ratio_smoothed - ma_rs_ratio) / mean_dev_rs_ratio.replace(0, np.nan)
+            rs_momentum = 100 + z_score_momentum * 3.5
+            rs_momentum_smoothed = rs_momentum.rolling(window=ma_length).mean()
+            
+            coords = pd.DataFrame({
+                "RS_Ratio": rs_ratio_smoothed,
+                "RS_Momentum": rs_momentum_smoothed
+            }).dropna()
+            
+            if len(coords) >= 5:
+                coords.index = coords.index.strftime('%Y-%m-%d')
+                coords_list = []
+                for dt, row in coords.tail(5).iterrows():
+                    coords_list.append({
+                        "date": dt,
+                        "x": round(float(row["RS_Ratio"]), 2),
+                        "y": round(float(row["RS_Momentum"]), 2)
+                    })
+                rrg_results[sector] = coords_list
+        except Exception as e:
+            print(f"[WARNING] Error calculating RRG for sector {sector}: {e}")
+            
+    return rrg_results
+
 def clean_stock_list(file_path):
     """
     Reads the CSV and extracts a cleaned list of stock symbols.
@@ -351,23 +442,28 @@ def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
     formatted_tickers = [t + ".BK" if not t.endswith(".BK") and not t.startswith("^") else t for t in tickers]
     bench_ticker = benchmark_symbol + ".BK" if not benchmark_symbol.endswith(".BK") and not benchmark_symbol.startswith("^") else benchmark_symbol
 
-    print(f"[INFO] Downloading historical data for {len(formatted_tickers)} stocks + benchmark ({bench_ticker})...")
+    # Ensure all sector constituents are downloaded for RRG calculations
+    sector_tickers = []
+    for c_list in SECTOR_CONSTITUENTS.values():
+        sector_tickers.extend(c_list)
+    
+    all_tickers = list(set(formatted_tickers + sector_tickers + [bench_ticker]))
+    print(f"[INFO] Downloading historical data for {len(all_tickers)} tickers (stocks, sector constituents + benchmark)...")
     
     start_date = datetime.now() - timedelta(days=365 + ma_length + 50)
-    all_tickers = formatted_tickers + [bench_ticker]
     
     # yf.download is called in bulk and handles rate limits internally with cookies/sessions
     try:
         data = yf.download(all_tickers, start=start_date, progress=True)['Close']
     except Exception as e:
         print(f"[ERROR] Error downloading data: {e}")
-        return pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame()
 
     data = data.dropna(axis=1, how='all')
 
     if bench_ticker not in data.columns:
         print(f"[ERROR] Benchmark '{bench_ticker}' data not available.")
-        return pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame()
 
     bench_data = data[bench_ticker].ffill()
     stock_data = data.drop(columns=[bench_ticker]).ffill()
@@ -395,9 +491,15 @@ def calculate_rs_ranking(tickers, benchmark_symbol, ma_length):
     ranking_df['Chg_Pct'] = ranking_df['Symbol'].map(pct_changes)
     
     ranking_df['Symbol'] = ranking_df['Symbol'].str.replace('.BK', '', regex=False)
+    
+    # Filter to only keep requested stocks
+    orig_symbols = [t.replace('.BK', '') for t in formatted_tickers]
+    ranking_df = ranking_df[ranking_df['Symbol'].isin(orig_symbols)]
+    
+    ranking_df.reset_index(drop=True, inplace=True)
     ranking_df.index = ranking_df.index + 1
     
-    return ranking_df
+    return ranking_df, data
 
 def generate_color_map(df):
     """
@@ -436,7 +538,7 @@ def generate_color_map(df):
             
     return bg_colors, text_colors
 
-def build_html_report(ranking_df, benchmark, ma_length, output_path):
+def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=None):
     """
     Creates a premium, responsive HTML report.
     """
@@ -445,6 +547,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     
     top_18 = ranking_df.head(18).to_dict('records')
     all_stocks = ranking_df.to_dict('records')
+    rrg_json = json.dumps(rrg_data) if rrg_data else "{}"
     
     def get_consensus_html(row):
         target = row.get('Target_Mean_Price')
@@ -559,6 +662,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {{
             --bg-primary: #090d16;
@@ -1286,6 +1390,136 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         .index-chg.neutral {{
             color: var(--text-muted);
         }}
+
+        /* Tabs Styling */
+        .tabs-container {{
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0px;
+        }}
+
+        .tab-btn {{
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.75rem 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            font-family: 'Outfit', sans-serif;
+        }}
+
+        .tab-btn:hover {{
+            color: #ffffff;
+        }}
+
+        .tab-btn.active {{
+            color: #60a5fa;
+        }}
+
+        .tab-btn.active::after {{
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #60a5fa;
+            border-radius: 3px 3px 0 0;
+        }}
+
+        .tab-content {{
+            display: none;
+        }}
+
+        .tab-content.active {{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }}
+
+        /* RRG Container Card */
+        .rrg-container-card {{
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1.5rem;
+            min-height: 580px;
+        }}
+
+        .rrg-chart-area {{
+            flex: 1;
+            position: relative;
+            background: rgba(10, 15, 30, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            height: 520px;
+        }}
+
+        .rrg-sidebar {{
+            width: 180px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-height: 520px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }}
+
+        .rrg-sidebar-title {{
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }}
+
+        .rrg-sectors-list {{
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }}
+
+        .sector-checkbox-item {{
+            display: flex;
+            align-items: center;
+            padding: 0.2rem 0;
+        }}
+
+        .sector-checkbox-item label {{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+        }}
+
+        .sector-checkbox-item input[type="checkbox"] {{
+            accent-color: #60a5fa;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }}
+
+        .color-dot {{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }}
     </style>
 </head>
 <body>
@@ -1304,95 +1538,117 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
 
         <!-- Main Layout Row (Left: Leaderboard + Table, Right: Market Indices Sidebar) -->
         <div class="main-layout-row">
-            <!-- Left Column: Top Leaderboard and Table -->
+            <!-- Left Column: Top Leaderboard and Table OR RRG -->
             <div class="main-left-column">
-                <!-- Top Leaderboard -->
-                <div class="section-title">
-                    <span>⚡</span> Top Leaderboard
+                <!-- Tabs Container -->
+                <div class="tabs-container">
+                    <button class="tab-btn active" onclick="openTab('weinstein-tab')">Weinstein RS Ranking</button>
+                    <button class="tab-btn" onclick="openTab('rrg-tab')">SET Sector RRG</button>
                 </div>
-                <div class="top-grid">
-                    {"".join([f'''
-                    <div class="top-card" style="--card-accent-color: {bg_colors.get(x['Symbol'], '#1e293b')}; --card-text-color: {text_colors.get(x['Symbol'], '#ffffff')};">
-                        <div class="card-header">
-                            <span class="ticker-name">{x['Symbol']}</span>
-                            <span class="rank-badge">{i+1}</span>
-                        </div>
-                        <div>
-                            <div class="rs-badge">{x['Mansfield_RS']:.2f}</div>
-                            <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
-                        </div>
+                
+                <!-- Tab 1: Weinstein RS Ranking -->
+                <div id="weinstein-tab" class="tab-content active">
+                    <!-- Top Leaderboard -->
+                    <div class="section-title">
+                        <span>⚡</span> Top Leaderboard
                     </div>
-                    ''' for i, x in enumerate(top_18)])}
-                </div>
+                    <div class="top-grid">
+                        {"".join([f'''
+                        <div class="top-card" style="--card-accent-color: {bg_colors.get(x['Symbol'], '#1e293b')}; --card-text-color: {text_colors.get(x['Symbol'], '#ffffff')};">
+                            <div class="card-header">
+                                <span class="ticker-name">{x['Symbol']}</span>
+                                <span class="rank-badge">{i+1}</span>
+                            </div>
+                            <div>
+                                <div class="rs-badge">{x['Mansfield_RS']:.2f}</div>
+                                <div class="mcap-subtext">{f"{x['Market_Cap_M']:,.0f}M Baht" if pd.notna(x['Market_Cap_M']) else 'N/A'}</div>
+                            </div>
+                        </div>
+                        ''' for i, x in enumerate(top_18)])}
+                    </div>
 
-                <!-- Full Interactive Table -->
-                <div class="table-container-card">
-                    <div class="controls-row">
-                        <div class="search-wrapper">
-                            <!-- SVG Search Icon -->
-                            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                            <input type="text" id="searchInput" class="search-input" onkeyup="filterTable()" placeholder="Search symbol...">
+                    <!-- Full Interactive Table -->
+                    <div class="table-container-card">
+                        <div class="controls-row">
+                            <div class="search-wrapper">
+                                <!-- SVG Search Icon -->
+                                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                                <input type="text" id="searchInput" class="search-input" onkeyup="filterTable()" placeholder="Search symbol...">
+                            </div>
+                            <div class="mcap-filter-wrapper">
+                                <input type="number" id="mcapInput" class="mcap-input" onkeyup="filterTable()" onchange="filterTable()" placeholder="Min Market Cap (M Baht)...">
+                            </div>
+                            <div class="stats-summary">
+                                Showing <strong id="visibleCount">{len(all_stocks)}</strong> of <strong>{len(all_stocks)}</strong> Stocks
+                            </div>
                         </div>
-                        <div class="mcap-filter-wrapper">
-                            <input type="number" id="mcapInput" class="mcap-input" onkeyup="filterTable()" onchange="filterTable()" placeholder="Min Market Cap (M Baht)...">
-                        </div>
-                        <div class="stats-summary">
-                            Showing <strong id="visibleCount">{len(all_stocks)}</strong> of <strong>{len(all_stocks)}</strong> Stocks
+                        <div class="table-responsive">
+                            <table id="rankingTable">
+                                <thead>
+                                    <tr>
+                                        <th onclick="sortTable(0)">Rank ↕</th>
+                                        <th onclick="sortTable(1)">Symbol ↕</th>
+                                        <th onclick="sortTable(2)">Price ↕</th>
+                                        <th onclick="sortTable(3)">Chg (%) ↕</th>
+                                        <th onclick="sortTable(4)">Mkt Cap ↕</th>
+                                        <th onclick="sortTable(5)">Consensus ↕</th>
+                                        <th onclick="sortTable(6)">P/E ↕</th>
+                                        <th onclick="sortTable(7)">Div Yield ↕</th>
+                                        <th onclick="sortTable(8)">Mansfield RS ↕</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {"".join([f'''
+                                    <tr>
+                                        <td class="rank-cell">{i+1}</td>
+                                        <td class="symbol-cell"><a href="https://www.tradingview.com/chart/?symbol=SET:{x['Symbol']}" target="_blank" class="tv-link">{x['Symbol']}</a></td>
+                                        <td class="price-cell">{f"{x['Last_Price']:.2f}" if pd.notna(x['Last_Price']) else 'N/A'}</td>
+                                        <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
+                                            {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
+                                        </td>
+                                        <td class="mcap-cell">
+                                            {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
+                                        </td>
+                                        <td class="consensus-cell">
+                                            {get_consensus_html(x)}
+                                        </td>
+                                        <td class="pe-cell">
+                                            {get_pe_html(x)}
+                                        </td>
+                                        <td class="div-cell">
+                                            {get_div_yield_html(x)}
+                                        </td>
+                                        <td class="rs-cell">
+                                            <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
+                                                {x['Mansfield_RS']:.2f}
+                                            </span>
+                                        </td>
+                                        <td class="status-cell">
+                                            <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
+                                                {('Bullish' if x['Mansfield_RS'] > 0 else ('Bearish' if x['Mansfield_RS'] < -10 else 'Neutral'))}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    ''' for i, x in enumerate(all_stocks)])}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table id="rankingTable">
-                            <thead>
-                                <tr>
-                                    <th onclick="sortTable(0)">Rank ↕</th>
-                                    <th onclick="sortTable(1)">Symbol ↕</th>
-                                    <th onclick="sortTable(2)">Price ↕</th>
-                                    <th onclick="sortTable(3)">Chg (%) ↕</th>
-                                    <th onclick="sortTable(4)">Mkt Cap ↕</th>
-                                    <th onclick="sortTable(5)">Consensus ↕</th>
-                                    <th onclick="sortTable(6)">P/E ↕</th>
-                                    <th onclick="sortTable(7)">Div Yield ↕</th>
-                                    <th onclick="sortTable(8)">Mansfield RS ↕</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {"".join([f'''
-                                <tr>
-                                    <td class="rank-cell">{i+1}</td>
-                                    <td class="symbol-cell"><a href="https://www.tradingview.com/chart/?symbol=SET:{x['Symbol']}" target="_blank" class="tv-link">{x['Symbol']}</a></td>
-                                    <td class="price-cell">{f"{x['Last_Price']:.2f}" if pd.notna(x['Last_Price']) else 'N/A'}</td>
-                                    <td class="chg-cell {('chg-positive' if x['Chg_Pct'] > 0 else ('chg-negative' if x['Chg_Pct'] < 0 else 'chg-zero')) if pd.notna(x['Chg_Pct']) else 'chg-zero'}">
-                                        {f"{'+' if x['Chg_Pct'] > 0 else ''}{x['Chg_Pct']:.2f}%" if pd.notna(x['Chg_Pct']) else 'N/A'}
-                                    </td>
-                                    <td class="mcap-cell">
-                                        {f"{x['Market_Cap_M']:,.0f}M" if pd.notna(x['Market_Cap_M']) else 'N/A'}
-                                    </td>
-                                    <td class="consensus-cell">
-                                        {get_consensus_html(x)}
-                                    </td>
-                                    <td class="pe-cell">
-                                        {get_pe_html(x)}
-                                    </td>
-                                    <td class="div-cell">
-                                        {get_div_yield_html(x)}
-                                    </td>
-                                    <td class="rs-cell">
-                                        <span class="rs-pill-value" style="background-color: {bg_colors.get(x['Symbol'], '#1e293b')}; color: {text_colors.get(x['Symbol'], '#ffffff')};">
-                                            {x['Mansfield_RS']:.2f}
-                                        </span>
-                                    </td>
-                                    <td class="status-cell">
-                                        <span class="status-badge {('status-bullish' if x['Mansfield_RS'] > 0 else ('status-bearish' if x['Mansfield_RS'] < -10 else 'status-neutral'))}">
-                                            {('Bullish' if x['Mansfield_RS'] > 0 else ('Bearish' if x['Mansfield_RS'] < -10 else 'Neutral'))}
-                                        </span>
-                                    </td>
-                                </tr>
-                                ''' for i, x in enumerate(all_stocks)])}
-                            </tbody>
-                        </table>
+                </div>
+                
+                <!-- Tab 2: SET Sector RRG -->
+                <div id="rrg-tab" class="tab-content">
+                    <div class="rrg-container-card">
+                        <div class="rrg-chart-area">
+                            <canvas id="rrgChart"></canvas>
+                        </div>
+                        <div class="rrg-sidebar">
+                            <div class="rrg-sidebar-title">SET Sectors</div>
+                            <div class="rrg-sectors-list"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1502,6 +1758,219 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path):
         function triggerParentScan() {{
             window.parent.location.href = window.location.origin + "/?scan=true";
         }}
+
+        function openTab(tabId) {{
+            document.querySelectorAll('.tab-content').forEach(content => {{
+                content.classList.remove('active');
+            }});
+            document.querySelectorAll('.tab-btn').forEach(btn => {{
+                btn.classList.remove('active');
+            }});
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }}
+
+        // RRG Chart Initialization
+        const rrgData = {rrg_json};
+        const sectorColors = {{
+            "BANK": "#3b82f6",
+            "HELTH": "#10b981",
+            "ENERG": "#f59e0b",
+            "FIN": "#ec4899",
+            "ICT": "#8b5cf6",
+            "TRANS": "#f97316",
+            "TOURISM": "#06b6d4",
+            "TECH": "#14b8a6",
+            "AGRI": "#84cc16",
+            "ETRON": "#ef4444",
+            "COMM": "#a855f7",
+            "AGRO": "#22c55e",
+            "FOOD": "#eab308",
+            "PROP": "#6366f1",
+            "INSUR": "#38bdf8",
+            "CONMAT": "#94a3b8",
+            "AUTO": "#fb7185",
+            "CONS": "#475569",
+            "STEEL": "#b45309"
+        }};
+
+        const defaultEnabledSectors = ["BANK", "ENERG", "HELTH", "COMM", "ICT", "ETRON", "FOOD", "PROP"];
+
+        // Prepare datasets
+        const rrgDatasets = [];
+        
+        // Calculate dynamic symmetric bounds around 100
+        let maxDeviation = 3.0; // Default minimum deviation
+        Object.keys(rrgData).forEach(sector => {{
+            rrgData[sector].forEach(pt => {{
+                const devX = Math.abs(pt.x - 100);
+                const devY = Math.abs(pt.y - 100);
+                if (devX > maxDeviation) maxDeviation = devX;
+                if (devY > maxDeviation) maxDeviation = devY;
+            }});
+        }});
+        const margin = 0.5;
+        const limit = Math.ceil(maxDeviation + margin);
+        const minVal = 100 - limit;
+        const maxVal = 100 + limit;
+
+        Object.keys(rrgData).forEach(sector => {{
+            const color = sectorColors[sector] || '#ffffff';
+            const history = rrgData[sector];
+            const isChecked = defaultEnabledSectors.includes(sector);
+            const points = history.map(h => ({{x: h.x, y: h.y}}));
+            const pointRadii = Array(points.length - 1).fill(2).concat([6]);
+            const pointHoverRadii = Array(points.length - 1).fill(4).concat([8]);
+            
+            rrgDatasets.push({{
+                label: sector,
+                data: points,
+                borderColor: color,
+                backgroundColor: color,
+                borderWidth: 2,
+                showLine: true,
+                borderDash: [3, 3],
+                pointRadius: pointRadii,
+                pointHoverRadius: pointHoverRadii,
+                hidden: !isChecked,
+                dates: history.map(h => h.date)
+            }});
+        }});
+
+        const rrgQuadrantsPlugin = {{
+            id: 'rrgQuadrants',
+            beforeDraw: (chart) => {{
+                const {{ ctx, chartArea: {{ left, top, right, bottom }}, scales: {{ x, y }} }} = chart;
+                const centerX = x.getPixelForValue(100);
+                const centerY = y.getPixelForValue(100);
+                
+                if (centerX >= left && centerX <= right && centerY >= top && centerY <= bottom) {{
+                    ctx.fillStyle = 'rgba(52, 211, 153, 0.04)';
+                    ctx.fillRect(centerX, top, right - centerX, centerY - top);
+                    
+                    ctx.fillStyle = 'rgba(96, 165, 250, 0.04)';
+                    ctx.fillRect(left, top, centerX - left, centerY - top);
+                    
+                    ctx.fillStyle = 'rgba(248, 113, 113, 0.04)';
+                    ctx.fillRect(left, centerY, centerX - left, bottom - centerY);
+                    
+                    ctx.fillStyle = 'rgba(251, 191, 36, 0.04)';
+                    ctx.fillRect(centerX, centerY, right - centerX, bottom - centerY);
+                }}
+                
+                ctx.font = 'bold 12px "Inter", sans-serif';
+                ctx.fillStyle = 'rgba(96, 165, 250, 0.5)';
+                ctx.fillText('IMPROVING', left + 15, top + 25);
+                
+                ctx.fillStyle = 'rgba(52, 211, 153, 0.5)';
+                ctx.fillText('LEADING', right - 75, top + 25);
+                
+                ctx.fillStyle = 'rgba(248, 113, 113, 0.5)';
+                ctx.fillText('LAGGING', left + 15, bottom - 15);
+                
+                ctx.fillStyle = 'rgba(251, 191, 36, 0.5)';
+                ctx.fillText('WEAKENING', right - 85, bottom - 15);
+                
+                ctx.save();
+                ctx.lineWidth = 1.5;
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+                ctx.setLineDash([5, 5]);
+                
+                if (centerX >= left && centerX <= right) {{
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, top);
+                    ctx.lineTo(centerX, bottom);
+                    ctx.stroke();
+                }}
+                
+                if (centerY >= top && centerY <= bottom) {{
+                    ctx.beginPath();
+                    ctx.moveTo(left, centerY);
+                    ctx.lineTo(right, centerY);
+                    ctx.stroke();
+                }}
+                ctx.restore();
+            }}
+        }};
+
+        const rrgCtx = document.getElementById('rrgChart').getContext('2d');
+        const rrgChart = new Chart(rrgCtx, {{
+            type: 'scatter',
+            data: {{
+                datasets: rrgDatasets
+            }},
+            options: {{
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {{
+                    x: {{
+                        title: {{
+                            display: true,
+                            text: 'Relative Strength (RS-Ratio)',
+                            color: '#9ca3af',
+                            font: {{ family: 'Inter', size: 10, weight: '600' }}
+                        }},
+                        grid: {{ color: 'rgba(255, 255, 255, 0.03)' }},
+                        ticks: {{ color: '#9ca3af', font: {{ size: 9 }} }},
+                        min: minVal,
+                        max: maxVal
+                    }},
+                    y: {{
+                        title: {{
+                            display: true,
+                            text: 'Relative Momentum (RS-Momentum)',
+                            color: '#9ca3af',
+                            font: {{ family: 'Inter', size: 10, weight: '600' }}
+                        }},
+                        grid: {{ color: 'rgba(255, 255, 255, 0.03)' }},
+                        ticks: {{ color: '#9ca3af', font: {{ size: 9 }} }},
+                        min: minVal,
+                        max: maxVal
+                    }}
+                }},
+                plugins: {{
+                    legend: {{ display: false }},
+                    tooltip: {{
+                        callbacks: {{
+                            label: function(context) {{
+                                const ds = context.dataset;
+                                const idx = context.dataIndex;
+                                const date = ds.dates[idx];
+                                const isLatest = idx === ds.data.length - 1;
+                                return `${{ds.label}} (${{date}}${{isLatest ? ' - Latest' : ''}}): Ratio=${{context.raw.x.toFixed(2)}}, Momentum=${{context.raw.y.toFixed(2)}}`;
+                            }}
+                        }}
+                    }}
+                }}
+            }},
+            plugins: [rrgQuadrantsPlugin]
+        }});
+
+        const rrgListContainer = document.querySelector('.rrg-sectors-list');
+        Object.keys(rrgData).forEach(sector => {{
+            const isChecked = defaultEnabledSectors.includes(sector);
+            const color = sectorColors[sector] || '#ffffff';
+            
+            const div = document.createElement('div');
+            div.className = 'sector-checkbox-item';
+            div.innerHTML = `
+                <label>
+                    <input type="checkbox" id="chk-${{sector}}" ${{isChecked ? 'checked' : ''}} onchange="toggleSector('${{sector}}')">
+                    <span class="color-dot" style="background-color: ${{color}};"></span>
+                    <span style="font-weight: 600; font-size: 0.82rem; color: #ffffff;">${{sector}}</span>
+                </label>
+            `;
+            rrgListContainer.appendChild(div);
+        }});
+
+        function toggleSector(sector) {{
+            const chk = document.getElementById(`chk-${{sector}}`);
+            const chartDataset = rrgChart.data.datasets.find(ds => ds.label === sector);
+            if (chartDataset) {{
+                chartDataset.hidden = !chk.checked;
+                rrgChart.update();
+            }}
+        }}
     </script>
 </body>
 </html>
@@ -1555,7 +2024,7 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
     if progress_callback:
         progress_callback(f"Successfully loaded {len(symbols)} stocks. Downloading price data and calculating RS...", 0.3)
         
-    ranking_df = calculate_rs_ranking(symbols, benchmark, ma_length)
+    ranking_df, raw_data = calculate_rs_ranking(symbols, benchmark, ma_length)
     if ranking_df.empty:
         return False, "Failed to download price data or calculate RS."
         
@@ -1583,10 +2052,18 @@ def run_scan(stock_source, benchmark, ma_length, min_mcap, output_path, progress
         if ranking_df.empty:
             return False, "No stocks passed the market cap filter."
 
+    # Compute RRG coordinates
+    rrg_data = {}
+    if not raw_data.empty:
+        if progress_callback:
+            progress_callback("Calculating SET Sector RRG coordinates...", 0.85)
+        bench_ticker = benchmark + ".BK" if not benchmark.endswith(".BK") and not benchmark.startswith("^") else benchmark
+        rrg_data = calculate_rrg_coordinates(raw_data, bench_ticker)
+
     if progress_callback:
         progress_callback("Generating HTML dashboard...", 0.9)
         
-    success = build_html_report(ranking_df, benchmark, ma_length, output_path)
+    success = build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=rrg_data)
     
     if progress_callback:
         progress_callback("Scan completed!", 1.0)
