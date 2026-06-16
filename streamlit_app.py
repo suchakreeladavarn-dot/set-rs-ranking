@@ -239,9 +239,24 @@ def show_pe_band_page(symbol):
                     plot_bgcolor="rgba(0,0,0,0)",
                     paper_bgcolor="rgba(0,0,0,0)",
                     font=dict(color="#ffffff"),
-                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-                    yaxis=dict(showgrid=False),
-                    xaxis=dict(showgrid=False)
+                    legend=dict(
+                        orientation="h", 
+                        yanchor="bottom", 
+                        y=1.02, 
+                        xanchor="right", 
+                        x=1,
+                        font=dict(color="#ffffff")
+                    ),
+                    yaxis=dict(
+                        showgrid=False,
+                        title_font=dict(color="#ffffff"),
+                        tickfont=dict(color="#ffffff")
+                    ),
+                    xaxis=dict(
+                        showgrid=False,
+                        title_font=dict(color="#ffffff"),
+                        tickfont=dict(color="#ffffff")
+                    )
                 )
                 st.plotly_chart(fig1, use_container_width=True)
                 
@@ -256,11 +271,11 @@ def show_pe_band_page(symbol):
                 fig2.add_shape(type="line", x0=pe_weekly.index[0], y0=pe_m2, x1=pe_weekly.index[-1], y1=pe_m2, line=dict(color="#10b981", width=1, dash="dash"))
                 
                 # Annotate lines
-                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_p2, text=f"+2 SD ({pe_p2:.1f}x)", showarrow=False, xshift=10)
-                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_p1, text=f"+1 SD ({pe_p1:.1f}x)", showarrow=False, xshift=10)
-                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_avg, text=f"AVG ({pe_avg:.1f}x)", showarrow=False, xshift=10)
-                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_m1, text=f"-1 SD ({pe_m1:.1f}x)", showarrow=False, xshift=10)
-                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_m2, text=f"-2 SD ({pe_m2:.1f}x)", showarrow=False, xshift=10)
+                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_p2, text=f"+2 SD ({pe_p2:.1f}x)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_p1, text=f"+1 SD ({pe_p1:.1f}x)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_avg, text=f"AVG ({pe_avg:.1f}x)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_m1, text=f"-1 SD ({pe_m1:.1f}x)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+                fig2.add_annotation(x=pe_weekly.index[-1], y=pe_m2, text=f"-2 SD ({pe_m2:.1f}x)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
                 
                 fig2.update_layout(
                     template="plotly_dark",
@@ -270,8 +285,16 @@ def show_pe_band_page(symbol):
                     paper_bgcolor="rgba(0,0,0,0)",
                     font=dict(color="#ffffff"),
                     showlegend=False,
-                    yaxis=dict(showgrid=False),
-                    xaxis=dict(showgrid=False)
+                    yaxis=dict(
+                        showgrid=False,
+                        title_font=dict(color="#ffffff"),
+                        tickfont=dict(color="#ffffff")
+                    ),
+                    xaxis=dict(
+                        showgrid=False,
+                        title_font=dict(color="#ffffff"),
+                        tickfont=dict(color="#ffffff")
+                    )
                 )
                 st.plotly_chart(fig2, use_container_width=True)
                 
