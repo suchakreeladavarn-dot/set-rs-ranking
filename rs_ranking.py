@@ -1815,8 +1815,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                     <div class="filter-controls">
                                         <select id="mcapCond" class="filter-select" onchange="onConditionChange('mcap')">
                                             <option value="any">Any</option>
-                                            <option value="gt">&gt;</option>
-                                            <option value="lt">&lt;</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
                                             <option value="between">Between</option>
                                         </select>
                                         <input type="number" id="mcapVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
@@ -1831,8 +1831,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                     <div class="filter-controls">
                                         <select id="chgCond" class="filter-select" onchange="onConditionChange('chg')">
                                             <option value="any">Any</option>
-                                            <option value="gt">&gt;</option>
-                                            <option value="lt">&lt;</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
                                             <option value="between">Between</option>
                                         </select>
                                         <input type="number" id="chgVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
@@ -1847,8 +1847,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                     <div class="filter-controls">
                                         <select id="peCond" class="filter-select" onchange="onConditionChange('pe')">
                                             <option value="any">Any</option>
-                                            <option value="gt">&gt;</option>
-                                            <option value="lt">&lt;</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
                                             <option value="between">Between</option>
                                         </select>
                                         <input type="number" id="peVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
@@ -1863,8 +1863,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                     <div class="filter-controls">
                                         <select id="pbvCond" class="filter-select" onchange="onConditionChange('pbv')">
                                             <option value="any">Any</option>
-                                            <option value="gt">&gt;</option>
-                                            <option value="lt">&lt;</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
                                             <option value="between">Between</option>
                                         </select>
                                         <input type="number" id="pbvVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
@@ -1879,8 +1879,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                     <div class="filter-controls">
                                         <select id="roicCond" class="filter-select" onchange="onConditionChange('roic')">
                                             <option value="any">Any</option>
-                                            <option value="gt">&gt;</option>
-                                            <option value="lt">&lt;</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
                                             <option value="between">Between</option>
                                         </select>
                                         <input type="number" id="roicVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
@@ -1895,8 +1895,8 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                     <div class="filter-controls">
                                         <select id="divCond" class="filter-select" onchange="onConditionChange('div')">
                                             <option value="any">Any</option>
-                                            <option value="gt">&gt;</option>
-                                            <option value="lt">&lt;</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
                                             <option value="between">Between</option>
                                         </select>
                                         <input type="number" id="divVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
@@ -2036,7 +2036,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                 val2.style.display = "none";
                 val1.value = "";
                 val2.value = "";
-            }} else if (cond === "gt" || cond === "lt") {{
+            }} else if (cond === "gte" || cond === "lte") {{
                 val1.style.display = "block";
                 span.style.display = "none";
                 val2.style.display = "none";
@@ -2114,11 +2114,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                         let num = parseFloat(text.replace(/,/g, '').replace('M', '').replace('%', '').replace('+', '').replace('x', ''));
                         if (isNaN(num)) return false;
                         
-                        if (cond === "gt") {{
-                            return !isNaN(val1) ? num > val1 : true;
+                        if (cond === "gte") {{
+                            return !isNaN(val1) ? num >= val1 : true;
                         }}
-                        if (cond === "lt") {{
-                            return !isNaN(val1) ? num < val1 : true;
+                        if (cond === "lte") {{
+                            return !isNaN(val1) ? num <= val1 : true;
                         }}
                         if (cond === "between") {{
                             let ok = true;
