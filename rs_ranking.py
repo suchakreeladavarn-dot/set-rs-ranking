@@ -1607,6 +1607,132 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             border-radius: 50%;
             flex-shrink: 0;
         }}
+
+        .advanced-filter-toggle {{
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            border-radius: 12px;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }}
+
+        .advanced-filter-toggle:hover {{
+            color: white;
+            border-color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+        }}
+
+        .advanced-filter-toggle.active {{
+            color: white;
+            border-color: var(--accent);
+            background: rgba(59, 130, 246, 0.15);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+        }}
+
+        .advanced-filters-panel {{
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }}
+
+        .filter-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }}
+
+        .filter-group {{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background: rgba(30, 41, 59, 0.3);
+            padding: 0.85rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }}
+
+        .filter-label {{
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #94a3b8;
+            letter-spacing: 0.05em;
+        }}
+
+        .filter-controls {{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }}
+
+        .filter-select {{
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.85rem;
+            padding: 0.5rem;
+            outline: none;
+            cursor: pointer;
+            min-width: 90px;
+            transition: all 0.2s;
+        }}
+
+        .filter-select:focus {{
+            border-color: var(--accent);
+        }}
+
+        .filter-input {{
+            width: 100%;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.85rem;
+            padding: 0.5rem;
+            outline: none;
+            transition: all 0.2s;
+        }}
+
+        .filter-input:focus {{
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+        }}
+
+        .filter-span {{
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 0 0.15rem;
+        }}
+
+        .clear-filters-btn {{
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }}
+
+        .clear-filters-btn:hover {{
+            background: rgba(239, 68, 68, 0.2);
+            color: white;
+            border-color: #ef4444;
+        }}
     </style>
 </head>
 <body>
@@ -1672,8 +1798,103 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                             <div class="mcap-filter-wrapper">
                                 <input type="number" id="mcapInput" class="mcap-input" onkeyup="filterTable()" onchange="filterTable()" placeholder="Min Market Cap (M Baht)...">
                             </div>
+                            <button class="advanced-filter-toggle" onclick="toggleAdvancedFilters()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                                </svg>
+                                Filters / ตัวกรอง
+                            </button>
                             <div class="stats-summary">
                                 Showing <strong id="visibleCount">{len(all_stocks)}</strong> of <strong>{len(all_stocks)}</strong> Stocks
+                            </div>
+                        </div>
+
+                        <!-- Advanced Filters Panel -->
+                        <div id="advancedFiltersPanel" class="advanced-filters-panel" style="display: none;">
+                            <div class="filter-grid">
+                                <!-- Chg (%) Filter -->
+                                <div class="filter-group">
+                                    <label class="filter-label">Chg (%)</label>
+                                    <div class="filter-controls">
+                                        <select id="chgCond" class="filter-select" onchange="onConditionChange('chg')">
+                                            <option value="any">Any / ทั้งหมด</option>
+                                            <option value="gt">&gt;</option>
+                                            <option value="lt">&lt;</option>
+                                            <option value="between">Between / ระหว่าง</option>
+                                        </select>
+                                        <input type="number" id="chgVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                        <span id="chgSpan" class="filter-span" style="display:none;">to</span>
+                                        <input type="number" id="chgVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                    </div>
+                                </div>
+
+                                <!-- P/E Filter -->
+                                <div class="filter-group">
+                                    <label class="filter-label">P/E</label>
+                                    <div class="filter-controls">
+                                        <select id="peCond" class="filter-select" onchange="onConditionChange('pe')">
+                                            <option value="any">Any / ทั้งหมด</option>
+                                            <option value="gt">&gt;</option>
+                                            <option value="lt">&lt;</option>
+                                            <option value="between">Between / ระหว่าง</option>
+                                        </select>
+                                        <input type="number" id="peVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                        <span id="peSpan" class="filter-span" style="display:none;">to</span>
+                                        <input type="number" id="peVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                    </div>
+                                </div>
+
+                                <!-- P/BV Filter -->
+                                <div class="filter-group">
+                                    <label class="filter-label">P/BV</label>
+                                    <div class="filter-controls">
+                                        <select id="pbvCond" class="filter-select" onchange="onConditionChange('pbv')">
+                                            <option value="any">Any / ทั้งหมด</option>
+                                            <option value="gt">&gt;</option>
+                                            <option value="lt">&lt;</option>
+                                            <option value="between">Between / ระหว่าง</option>
+                                        </select>
+                                        <input type="number" id="pbvVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                        <span id="pbvSpan" class="filter-span" style="display:none;">to</span>
+                                        <input type="number" id="pbvVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                    </div>
+                                </div>
+
+                                <!-- ROIC Filter -->
+                                <div class="filter-group">
+                                    <label class="filter-label">ROIC (%)</label>
+                                    <div class="filter-controls">
+                                        <select id="roicCond" class="filter-select" onchange="onConditionChange('roic')">
+                                            <option value="any">Any / ทั้งหมด</option>
+                                            <option value="gt">&gt;</option>
+                                            <option value="lt">&lt;</option>
+                                            <option value="between">Between / ระหว่าง</option>
+                                        </select>
+                                        <input type="number" id="roicVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                        <span id="roicSpan" class="filter-span" style="display:none;">to</span>
+                                        <input type="number" id="roicVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                    </div>
+                                </div>
+
+                                <!-- Div Yield Filter -->
+                                <div class="filter-group">
+                                    <label class="filter-label">Div Yield (%)</label>
+                                    <div class="filter-controls">
+                                        <select id="divCond" class="filter-select" onchange="onConditionChange('div')">
+                                            <option value="any">Any / ทั้งหมด</option>
+                                            <option value="gt">&gt;</option>
+                                            <option value="lt">&lt;</option>
+                                            <option value="between">Between / ระหว่าง</option>
+                                        </select>
+                                        <input type="number" id="divVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                        <span id="divSpan" class="filter-span" style="display:none;">to</span>
+                                        <input type="number" id="divVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+                                <button class="clear-filters-btn" onclick="clearAllFilters()">Reset Filters / ล้างตัวกรองทั้งหมด</button>
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -1778,6 +1999,56 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             </div>
         </div>
     <script>
+        function toggleAdvancedFilters() {{
+            let panel = document.getElementById("advancedFiltersPanel");
+            let btn = document.querySelector(".advanced-filter-toggle");
+            if (panel.style.display === "none") {{
+                panel.style.display = "block";
+                btn.classList.add("active");
+            }} else {{
+                panel.style.display = "none";
+                btn.classList.remove("active");
+            }}
+        }}
+
+        function onConditionChange(prefix) {{
+            let cond = document.getElementById(prefix + "Cond").value;
+            let val1 = document.getElementById(prefix + "Val1");
+            let span = document.getElementById(prefix + "Span");
+            let val2 = document.getElementById(prefix + "Val2");
+
+            if (cond === "any") {{
+                val1.style.display = "none";
+                span.style.display = "none";
+                val2.style.display = "none";
+                val1.value = "";
+                val2.value = "";
+            }} else if (cond === "gt" || cond === "lt") {{
+                val1.style.display = "block";
+                span.style.display = "none";
+                val2.style.display = "none";
+                val2.value = "";
+            }} else if (cond === "between") {{
+                val1.style.display = "block";
+                span.style.display = "block";
+                val2.style.display = "block";
+            }}
+            filterTable();
+        }}
+
+        function clearAllFilters() {{
+            let prefixes = ["chg", "pe", "pbv", "roic", "div"];
+            prefixes.forEach(prefix => {{
+                document.getElementById(prefix + "Cond").value = "any";
+                document.getElementById(prefix + "Val1").value = "";
+                document.getElementById(prefix + "Val2").value = "";
+                onConditionChange(prefix);
+            }});
+            document.getElementById("searchInput").value = "";
+            document.getElementById("mcapInput").value = "";
+            filterTable();
+        }}
+
         function filterTable() {{
             let searchInput = document.getElementById("searchInput").value.toUpperCase();
             let mcapInput = parseFloat(document.getElementById("mcapInput").value) || 0;
@@ -1785,9 +2056,35 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             let tr = table.getElementsByTagName("tr");
             let count = 0;
             
+            // Advanced Filters data
+            let chgCond = document.getElementById("chgCond").value;
+            let chgVal1 = parseFloat(document.getElementById("chgVal1").value);
+            let chgVal2 = parseFloat(document.getElementById("chgVal2").value);
+
+            let peCond = document.getElementById("peCond").value;
+            let peVal1 = parseFloat(document.getElementById("peVal1").value);
+            let peVal2 = parseFloat(document.getElementById("peVal2").value);
+
+            let pbvCond = document.getElementById("pbvCond").value;
+            let pbvVal1 = parseFloat(document.getElementById("pbvVal1").value);
+            let pbvVal2 = parseFloat(document.getElementById("pbvVal2").value);
+
+            let roicCond = document.getElementById("roicCond").value;
+            let roicVal1 = parseFloat(document.getElementById("roicVal1").value);
+            let roicVal2 = parseFloat(document.getElementById("roicVal2").value);
+
+            let divCond = document.getElementById("divCond").value;
+            let divVal1 = parseFloat(document.getElementById("divVal1").value);
+            let divVal2 = parseFloat(document.getElementById("divVal2").value);
+
             for (let i = 1; i < tr.length; i++) {{
                 let symbolTd = tr[i].getElementsByTagName("td")[1]; // Symbol column
-                let mcapTd = tr[i].getElementsByTagName("td")[4]; // Market Cap column is now index 4
+                let chgTd = tr[i].getElementsByTagName("td")[3];
+                let mcapTd = tr[i].getElementsByTagName("td")[4];
+                let peTd = tr[i].getElementsByTagName("td")[6];
+                let pbvTd = tr[i].getElementsByTagName("td")[7];
+                let roicTd = tr[i].getElementsByTagName("td")[8];
+                let divTd = tr[i].getElementsByTagName("td")[9];
                 
                 if (symbolTd && mcapTd) {{
                     let symbolText = symbolTd.textContent || symbolTd.innerText;
@@ -1798,7 +2095,37 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                     let matchesSearch = symbolText.toUpperCase().indexOf(searchInput) > -1;
                     let matchesMcap = mcapValue >= mcapInput;
                     
-                    if (matchesSearch && matchesMcap) {{
+                    // Match helper function
+                    function checkFilter(cond, val1, val2, tdElement) {{
+                        if (cond === "any") return true;
+                        if (!tdElement) return false;
+                        let text = tdElement.textContent.trim();
+                        if (text === "N/A" || text === "") return false;
+                        let num = parseFloat(text.replace(/,/g, '').replace('%', '').replace('+', '').replace('x', ''));
+                        if (isNaN(num)) return false;
+                        
+                        if (cond === "gt") {{
+                            return !isNaN(val1) ? num > val1 : true;
+                        }}
+                        if (cond === "lt") {{
+                            return !isNaN(val1) ? num < val1 : true;
+                        }}
+                        if (cond === "between") {{
+                            let ok = true;
+                            if (!isNaN(val1)) ok = ok && (num >= val1);
+                            if (!isNaN(val2)) ok = ok && (num <= val2);
+                            return ok;
+                        }}
+                        return true;
+                    }}
+                    
+                    let matchesChg = checkFilter(chgCond, chgVal1, chgVal2, chgTd);
+                    let matchesPe = checkFilter(peCond, peVal1, peVal2, peTd);
+                    let matchesPbv = checkFilter(pbvCond, pbvVal1, pbvVal2, pbvTd);
+                    let matchesRoic = checkFilter(roicCond, roicVal1, roicVal2, roicTd);
+                    let matchesDiv = checkFilter(divCond, divVal1, divVal2, divTd);
+                    
+                    if (matchesSearch && matchesMcap && matchesChg && matchesPe && matchesPbv && matchesRoic && matchesDiv) {{
                         tr[i].style.display = "";
                         count++;
                     }} else {{
