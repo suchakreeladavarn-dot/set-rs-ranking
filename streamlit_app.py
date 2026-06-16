@@ -141,19 +141,26 @@ def show_pe_band_page(symbol):
                 else:
                     eps_series = pd.Series([current_price / 15.0], index=[pd.Timestamp(datetime.now())])
                     
-            # Remove timezone info from both prices and eps_chrono to prevent timezone conflicts (e.g. "Cannot losslessly convert units")
-            if prices.index.tz is not None:
-                prices.index = prices.index.tz_localize(None)
+            # Normalize all index datetimes to timezone-naive datetime64[ns] to avoid resolution (s, ms, us vs ns) and timezone mismatches.
+            def to_naive_ns(index):
+                dt_index = pd.to_datetime(index)
+                if dt_index.tz is not None:
+                    dt_index = dt_index.tz_localize(None)
+                return dt_index.astype('datetime64[ns]')
+
+            prices.index = to_naive_ns(prices.index)
                 
             eps_chrono = eps_series.sort_index()
-            if eps_chrono.index.tz is not None:
-                eps_chrono.index = eps_chrono.index.tz_localize(None)
+            eps_chrono.index = to_naive_ns(eps_chrono.index)
                 
             today = pd.Timestamp(datetime.now())
             if today not in eps_chrono.index:
                 today_eps = fallback_eps if fallback_eps is not None else eps_chrono.iloc[-1]
                 eps_chrono[today] = today_eps
+                
+            # Re-normalize to naive ns in case pandas assignment altered index dtype/resolution
             eps_chrono = eps_chrono.sort_index()
+            eps_chrono.index = to_naive_ns(eps_chrono.index)
             
             combined_index = eps_chrono.index.union(prices.index)
             eps_combined = eps_chrono.reindex(combined_index)
