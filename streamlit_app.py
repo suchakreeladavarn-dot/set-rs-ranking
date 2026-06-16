@@ -8,11 +8,25 @@ import pandas as pd
 import yfinance as yf
 import plotly.graph_objects as go
 from datetime import datetime
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util import Retry
+import json
 
 # Ensure current directory is in the path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import rs_ranking
 importlib.reload(rs_ranking)
+
+def get_yfinance_session():
+    session = requests.Session()
+    session.headers.update({
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+    })
+    retries = Retry(total=5, backoff_factor=0.3, status_forcelist=[500, 502, 503, 504, 429])
+    session.mount('https://', HTTPAdapter(max_retries=retries))
+    return session
+
 
 # Configure Streamlit page layout
 st.set_page_config(
@@ -67,7 +81,8 @@ def show_pe_band_page(symbol):
     
     with st.spinner(f"Fetching financial history for {ticker} from Yahoo Finance..."):
         try:
-            t_obj = yf.Ticker(ticker)
+            session = get_yfinance_session()
+            t_obj = yf.Ticker(ticker, session=session)
             
             # Fetch weekly prices
             prices_df = t_obj.history(period="5y", interval="1wk")
@@ -95,10 +110,19 @@ def show_pe_band_page(symbol):
                 except Exception:
                     pass
             
-            # Info for fallback
-            info = t_obj.info
-            current_pe = info.get("trailingPE")
-            current_price = info.get("currentPrice") or prices.iloc[-1]
+            # Use cached PE value from market_caps_cache.json to avoid rate limiting
+            current_pe = None
+            try:
+                cache_file = "market_caps_cache.json"
+                if os.path.exists(cache_file):
+                    with open(cache_file, "r", encoding="utf-8") as f:
+                        cache = json.load(f)
+                        if symbol in cache:
+                            current_pe = cache[symbol].get("pe_ttm")
+            except Exception:
+                pass
+                
+            current_price = prices.iloc[-1]
             
             fallback_eps = None
             if current_pe and current_pe > 0:
