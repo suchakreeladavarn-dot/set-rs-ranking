@@ -391,14 +391,17 @@ def fetch_market_caps(tickers, max_workers=15):
             
             # Fetch dividend yield and convert to percentage
             dy = info.get("trailingAnnualDividendYield")
-            if dy is not None:
+            dy_val = info.get("dividendYield")
+            if dy is not None and dy > 0:
                 div_yield = float(dy) * 100
+            elif dy_val is not None and dy_val > 0:
+                div_yield = float(dy_val)
+            elif dy is not None:
+                div_yield = float(dy) * 100
+            elif dy_val is not None:
+                div_yield = float(dy_val)
             else:
-                dy_val = info.get("dividendYield")
-                if dy_val is not None:
-                    div_yield = float(dy_val)
-                else:
-                    div_yield = None
+                div_yield = None
             
             # Calculate ROIC TTM
             roic = None
