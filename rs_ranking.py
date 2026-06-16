@@ -595,6 +595,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
     def get_consensus_html(row):
         target = row.get('Target_Mean_Price')
         last = row.get('Last_Price')
+        symbol = row.get('Symbol')
         if pd.isna(target) or target <= 0 or pd.isna(last) or last <= 0:
             return '<div class="consensus-target">N/A</div>'
         
@@ -603,12 +604,17 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         last_rounded = round(float(last), 2)
         
         diff_pct = ((target_rounded - last_rounded) / last_rounded) * 100
+        
+        # Link to Settrade consensus page
+        link_url = f"https://www.settrade.com/th/equities/quote/{symbol}/analyst-consensus"
+        target_html = f'<a href="{link_url}" target="_blank" class="consensus-link">{target_rounded:.2f}</a>'
+        
         if diff_pct > 0:
-            return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-positive">Upside +{diff_pct:.2f}%</div>'
+            return f'<div class="consensus-target">{target_html}</div><div class="consensus-upside upside-positive">Upside +{diff_pct:.2f}%</div>'
         elif diff_pct < 0:
-            return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
+            return f'<div class="consensus-target">{target_html}</div><div class="consensus-upside upside-negative">Downside {diff_pct:.2f}%</div>'
         else:
-            return f'<div class="consensus-target">{target_rounded:.2f}</div><div class="consensus-upside upside-neutral">0.00%</div>'
+            return f'<div class="consensus-target">{target_html}</div><div class="consensus-upside upside-neutral">0.00%</div>'
     
     def get_pe_html(row):
         val = row.get('PE_TTM')
@@ -1196,6 +1202,20 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             font-weight: 600;
             font-size: 0.95rem;
             color: #ffffff;
+        }}
+
+        .consensus-link {{
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.15s, border-bottom 0.15s;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+            padding-bottom: 1px;
+            display: inline-block;
+        }}
+
+        .consensus-link:hover {{
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
         }}
 
         .consensus-upside {{
