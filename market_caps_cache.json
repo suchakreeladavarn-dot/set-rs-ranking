@@ -3035,10 +3035,10 @@
   "LUXF": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 28.08642,
-    "div_yield_ttm": 9.3406595,
-    "pbv_latest": 0.72348547,
-    "roic_ttm": 6.532363878712891,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-16"
   },
   "RJH": {
@@ -3405,7 +3405,7 @@
     "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": null,
-    "div_yield_ttm": 0.0,
+    "div_yield_ttm": null,
     "pbv_latest": null,
     "roic_ttm": null,
     "updated_at": "2026-06-16"
@@ -4250,10 +4250,10 @@
   "SSPF": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 16.402117,
-    "div_yield_ttm": 3.9349113,
-    "pbv_latest": 0.28133222,
-    "roic_ttm": 0.5232757863112397,
+    "pe_ttm": null,
+    "div_yield_ttm": null,
+    "pbv_latest": null,
+    "roic_ttm": null,
     "updated_at": "2026-06-16"
   },
   "S": {
