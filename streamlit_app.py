@@ -45,23 +45,47 @@ def show_pe_band_page(symbol):
             height: auto !important;
             width: auto !important;
             background-color: #090d16 !important;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 0%, rgba(76, 29, 149, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.8) 0px, transparent 50%) !important;
+            background-attachment: fixed !important;
+        }
+        
+        /* Force bright white text color for readability */
+        h1, h2, h3, h4, h5, h6, .stMarkdown, p, li, span {
+            color: #ffffff !important;
+        }
+        
+        /* Target metric value text and labels */
+        div[data-testid="stMetricValue"], div[data-testid="stMetricValue"] > div {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        div[data-testid="stMetricLabel"] p {
+            color: #94a3b8 !important; /* slightly softer white/grey for labels */
+        }
+        
+        /* Style Streamlit Tabs headers */
+        button[data-baseweb="tab"] p {
+            color: #ffffff !important;
         }
         
         /* Premium Back Button Style */
         div.back-btn-wrapper > button {
             background: rgba(30, 41, 59, 0.6) !important;
-            color: #9ca3af !important;
-            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
             border-radius: 8px !important;
             padding: 0.5rem 1rem !important;
-            font-weight: 500 !important;
+            font-weight: 600 !important;
             cursor: pointer !important;
             transition: all 0.2s !important;
         }
         div.back-btn-wrapper > button:hover {
             color: white !important;
             border-color: #3b82f6 !important;
-            background: rgba(59, 130, 246, 0.1) !important;
+            background: rgba(59, 130, 246, 0.2) !important;
         }
     </style>
     """, unsafe_allow_html=True)
@@ -212,8 +236,9 @@ def show_pe_band_page(symbol):
                     template="plotly_dark",
                     xaxis_title="Date",
                     yaxis_title="Stock Price (THB)",
-                    plot_bgcolor="#090d16",
-                    paper_bgcolor="#090d16",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    font=dict(color="#ffffff"),
                     legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
                     yaxis=dict(showgrid=False),
                     xaxis=dict(showgrid=False)
@@ -241,8 +266,9 @@ def show_pe_band_page(symbol):
                     template="plotly_dark",
                     xaxis_title="Date",
                     yaxis_title="P/E Multiple (x)",
-                    plot_bgcolor="#090d16",
-                    paper_bgcolor="#090d16",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    font=dict(color="#ffffff"),
                     showlegend=False,
                     yaxis=dict(showgrid=False),
                     xaxis=dict(showgrid=False)
