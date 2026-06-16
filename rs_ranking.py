@@ -628,10 +628,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
 
     def get_pbv_html(row):
         val = row.get('PBV_Latest')
+        symbol = row.get('Symbol')
         if pd.isna(val):
             return 'N/A'
         try:
-            return f"{float(val):.2f}"
+            return f'<a href="?pbv_band={symbol}" target="_top" class="pbv-link">{float(val):.2f}</a>'
         except (ValueError, TypeError):
             return 'N/A'
 
@@ -1229,6 +1230,20 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         }}
 
         .pe-link:hover {{
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }}
+
+        .pbv-link {{
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.15s, border-bottom 0.15s;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+            padding-bottom: 1px;
+            display: inline-block;
+        }}
+
+        .pbv-link:hover {{
             color: #3b82f6;
             border-bottom-color: #3b82f6;
         }}
