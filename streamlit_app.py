@@ -735,102 +735,42 @@ def show_div_band_page(symbol):
             col4.metric("Current 10Y Bond Yield", f"{current_bond:.2f}%")
             col5.metric("Current SD Level", f"{curr_sd_level:+.2f} SD")
             
-            # Implied yields (clamped to positive values to avoid division by zero or negative prices)
-            import numpy as np
-            implied_y_p2 = np.clip(spread_p2 + bond_weekly, 0.5, None) 
-            implied_y_p1 = np.clip(spread_p1 + bond_weekly, 0.5, None)
-            implied_y_avg = np.clip(spread_avg + bond_weekly, 0.5, None)
-            implied_y_m1 = np.clip(spread_m1 + bond_weekly, 0.5, None)
-            implied_y_m2 = np.clip(spread_m2 + bond_weekly, 0.5, None)
+            # Yield Spread over time vs SD lines (Direct rendering, no price bands tab)
+            fig2 = go.Figure()
+            fig2.add_trace(go.Scatter(x=spread_weekly.index, y=spread_weekly, name="Weekly Yield Spread", line=dict(color="#ffffff", width=2)))
+            fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_p2, x1=spread_weekly.index[-1], y1=spread_p2, line=dict(color="#f87171", width=1, dash="dash"))
+            fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_p1, x1=spread_weekly.index[-1], y1=spread_p1, line=dict(color="#fb7185", width=1, dash="dash"))
+            fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_avg, x1=spread_weekly.index[-1], y1=spread_avg, line=dict(color="#94a3b8", width=1.5))
+            fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_m1, x1=spread_weekly.index[-1], y1=spread_m1, line=dict(color="#34d399", width=1, dash="dash"))
+            fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_m2, x1=spread_weekly.index[-1], y1=spread_m2, line=dict(color="#10b981", width=1, dash="dash"))
             
-            # Implied price bands: Price = TTM_Div * 100 / Implied_Yield
-            # Mapping Target Yield Spreads to Price Bands:
-            # Low spread (-2 SD) -> High price band (+2 SD Price Band)
-            # High spread (+2 SD) -> Low price band (-2 SD Price Band)
-            price_p2 = (ttm_div_series * 100.0) / implied_y_m2
-            price_p1 = (ttm_div_series * 100.0) / implied_y_m1
-            price_avg = (ttm_div_series * 100.0) / implied_y_avg
-            price_m1 = (ttm_div_series * 100.0) / implied_y_p1
-            price_m2 = (ttm_div_series * 100.0) / implied_y_p2
+            # Annotate lines
+            fig2.add_annotation(x=spread_weekly.index[-1], y=spread_p2, text=f"+2 SD ({spread_p2:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+            fig2.add_annotation(x=spread_weekly.index[-1], y=spread_p1, text=f"+1 SD ({spread_p1:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+            fig2.add_annotation(x=spread_weekly.index[-1], y=spread_avg, text=f"AVG ({spread_avg:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+            fig2.add_annotation(x=spread_weekly.index[-1], y=spread_m1, text=f"-1 SD ({spread_m1:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
+            fig2.add_annotation(x=spread_weekly.index[-1], y=spread_m2, text=f"-2 SD ({spread_m2:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
             
-            # Tabs for both views
-            tab1, tab2 = st.tabs(["📊 Price Chart with Div Yield Valuation Bands", "📉 Yield Spread with Standard Deviation Lines"])
-            
-            with tab1:
-                # Price vs implied price bands
-                fig1 = go.Figure()
-                fig1.add_trace(go.Scatter(x=prices.index, y=prices, name=f"Stock Price ({symbol})", line=dict(color="#ffffff", width=2)))
-                fig1.add_trace(go.Scatter(x=prices.index, y=price_p2, name=f"+2 SD Valuation Band (implied by -2 SD Spread)", line=dict(color="#f87171", width=1, dash="dash")))
-                fig1.add_trace(go.Scatter(x=prices.index, y=price_p1, name=f"+1 SD Valuation Band (implied by -1 SD Spread)", line=dict(color="#fb7185", width=1, dash="dash")))
-                fig1.add_trace(go.Scatter(x=prices.index, y=price_avg, name=f"Average Valuation Band (implied by AVG Spread)", line=dict(color="#94a3b8", width=1.5)))
-                fig1.add_trace(go.Scatter(x=prices.index, y=price_m1, name=f"-1 SD Valuation Band (implied by +1 SD Spread)", line=dict(color="#34d399", width=1, dash="dash")))
-                fig1.add_trace(go.Scatter(x=prices.index, y=price_m2, name=f"-2 SD Valuation Band (implied by +2 SD Spread)", line=dict(color="#10b981", width=1, dash="dash")))
-                
-                fig1.update_layout(
-                    template="plotly_dark",
-                    xaxis_title="Date",
-                    yaxis_title="Stock Price (THB)",
-                    plot_bgcolor="rgba(0,0,0,0)",
-                    paper_bgcolor="rgba(0,0,0,0)",
-                    font=dict(color="#ffffff"),
-                    legend=dict(
-                        orientation="h", 
-                        yanchor="bottom", 
-                        y=1.02, 
-                        xanchor="right", 
-                        x=1,
-                        font=dict(color="#ffffff")
-                    ),
-                    yaxis=dict(
-                        showgrid=False,
-                        title_font=dict(color="#ffffff"),
-                        tickfont=dict(color="#ffffff")
-                    ),
-                    xaxis=dict(
-                        showgrid=False,
-                        title_font=dict(color="#ffffff"),
-                        tickfont=dict(color="#ffffff")
-                    )
+            fig2.update_layout(
+                template="plotly_dark",
+                xaxis_title="Date",
+                yaxis_title="Yield Spread (%)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                paper_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="#ffffff"),
+                showlegend=False,
+                yaxis=dict(
+                    showgrid=False,
+                    title_font=dict(color="#ffffff"),
+                    tickfont=dict(color="#ffffff")
+                ),
+                xaxis=dict(
+                    showgrid=False,
+                    title_font=dict(color="#ffffff"),
+                    tickfont=dict(color="#ffffff")
                 )
-                st.plotly_chart(fig1, use_container_width=True)
-                
-            with tab2:
-                # Yield Spread over time vs SD lines
-                fig2 = go.Figure()
-                fig2.add_trace(go.Scatter(x=spread_weekly.index, y=spread_weekly, name="Weekly Yield Spread", line=dict(color="#ffffff", width=2)))
-                fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_p2, x1=spread_weekly.index[-1], y1=spread_p2, line=dict(color="#f87171", width=1, dash="dash"))
-                fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_p1, x1=spread_weekly.index[-1], y1=spread_p1, line=dict(color="#fb7185", width=1, dash="dash"))
-                fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_avg, x1=spread_weekly.index[-1], y1=spread_avg, line=dict(color="#94a3b8", width=1.5))
-                fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_m1, x1=spread_weekly.index[-1], y1=spread_m1, line=dict(color="#34d399", width=1, dash="dash"))
-                fig2.add_shape(type="line", x0=spread_weekly.index[0], y0=spread_m2, x1=spread_weekly.index[-1], y1=spread_m2, line=dict(color="#10b981", width=1, dash="dash"))
-                
-                # Annotate lines
-                fig2.add_annotation(x=spread_weekly.index[-1], y=spread_p2, text=f"+2 SD ({spread_p2:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
-                fig2.add_annotation(x=spread_weekly.index[-1], y=spread_p1, text=f"+1 SD ({spread_p1:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
-                fig2.add_annotation(x=spread_weekly.index[-1], y=spread_avg, text=f"AVG ({spread_avg:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
-                fig2.add_annotation(x=spread_weekly.index[-1], y=spread_m1, text=f"-1 SD ({spread_m1:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
-                fig2.add_annotation(x=spread_weekly.index[-1], y=spread_m2, text=f"-2 SD ({spread_m2:.2f}%)", showarrow=False, xshift=10, font=dict(color="#ffffff"))
-                
-                fig2.update_layout(
-                    template="plotly_dark",
-                    xaxis_title="Date",
-                    yaxis_title="Yield Spread (%)",
-                    plot_bgcolor="rgba(0,0,0,0)",
-                    paper_bgcolor="rgba(0,0,0,0)",
-                    font=dict(color="#ffffff"),
-                    showlegend=False,
-                    yaxis=dict(
-                        showgrid=False,
-                        title_font=dict(color="#ffffff"),
-                        tickfont=dict(color="#ffffff")
-                    ),
-                    xaxis=dict(
-                        showgrid=False,
-                        title_font=dict(color="#ffffff"),
-                        tickfont=dict(color="#ffffff")
-                    )
-                )
-                st.plotly_chart(fig2, use_container_width=True)
+            )
+            st.plotly_chart(fig2, use_container_width=True)
                 
         except Exception as e:
             st.error(f"Error calculating Yield Spread: {e}")
