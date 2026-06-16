@@ -263,7 +263,7 @@ def show_pe_band_page(symbol):
             with tab2:
                 # P/E ratio over time vs SD lines
                 fig2 = go.Figure()
-                fig2.add_trace(go.Scatter(x=pe_weekly.index, y=pe_weekly, name="Weekly P/E Ratio", line=dict(color="#3b82f6", width=2)))
+                fig2.add_trace(go.Scatter(x=pe_weekly.index, y=pe_weekly, name="Weekly P/E Ratio", line=dict(color="#ffffff", width=2)))
                 fig2.add_shape(type="line", x0=pe_weekly.index[0], y0=pe_p2, x1=pe_weekly.index[-1], y1=pe_p2, line=dict(color="#f87171", width=1, dash="dash"))
                 fig2.add_shape(type="line", x0=pe_weekly.index[0], y0=pe_p1, x1=pe_weekly.index[-1], y1=pe_p1, line=dict(color="#fb7185", width=1, dash="dash"))
                 fig2.add_shape(type="line", x0=pe_weekly.index[0], y0=pe_avg, x1=pe_weekly.index[-1], y1=pe_avg, line=dict(color="#94a3b8", width=1.5))
