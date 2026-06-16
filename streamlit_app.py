@@ -761,11 +761,13 @@ def show_div_band_page(symbol):
                 showlegend=False,
                 yaxis=dict(
                     showgrid=False,
+                    zeroline=False,
                     title_font=dict(color="#ffffff"),
                     tickfont=dict(color="#ffffff")
                 ),
                 xaxis=dict(
                     showgrid=False,
+                    zeroline=False,
                     title_font=dict(color="#ffffff"),
                     tickfont=dict(color="#ffffff")
                 )
