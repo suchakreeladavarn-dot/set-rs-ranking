@@ -618,10 +618,11 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
     
     def get_pe_html(row):
         val = row.get('PE_TTM')
+        symbol = row.get('Symbol')
         if pd.isna(val):
             return 'N/A'
         try:
-            return f"{float(val):.2f}"
+            return f'<a href="?pe_band={symbol}" target="_top" class="pe-link">{float(val):.2f}</a>'
         except (ValueError, TypeError):
             return 'N/A'
 
@@ -1214,6 +1215,20 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         }}
 
         .consensus-link:hover {{
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }}
+
+        .pe-link {{
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.15s, border-bottom 0.15s;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+            padding-bottom: 1px;
+            display: inline-block;
+        }}
+
+        .pe-link:hover {{
             color: #3b82f6;
             border-bottom-color: #3b82f6;
         }}
