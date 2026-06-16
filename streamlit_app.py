@@ -214,7 +214,9 @@ def show_pe_band_page(symbol):
                     yaxis_title="Stock Price (THB)",
                     plot_bgcolor="#090d16",
                     paper_bgcolor="#090d16",
-                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+                    yaxis=dict(showgrid=False),
+                    xaxis=dict(showgrid=False)
                 )
                 st.plotly_chart(fig1, use_container_width=True)
                 
@@ -241,7 +243,9 @@ def show_pe_band_page(symbol):
                     yaxis_title="P/E Multiple (x)",
                     plot_bgcolor="#090d16",
                     paper_bgcolor="#090d16",
-                    showlegend=False
+                    showlegend=False,
+                    yaxis=dict(showgrid=False),
+                    xaxis=dict(showgrid=False)
                 )
                 st.plotly_chart(fig2, use_container_width=True)
                 
