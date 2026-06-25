@@ -1066,7 +1066,7 @@ def show_roic_page(symbol):
                 </table>
             </div>
             """
-            st.write(table_html, unsafe_allow_html=True)
+            st.markdown(table_html, unsafe_allow_html=True)
             
             st.info("ℹ️ **หมายเหตุ**: ข้อมูลทางการเงินดึงข้อมูลรายปีล่าสุดจาก Yahoo Finance (สูงสุด 4-5 ปี) โดยสูตรคำนวณคือ: ROIC = Net Income / (Total Debt + Stockholders Equity) เพื่อให้สอดคล้องกับมาตรฐาน TradingView")
 
