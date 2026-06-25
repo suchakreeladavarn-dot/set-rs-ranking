@@ -823,6 +823,61 @@ def show_roic_page(symbol):
             border-color: #3b82f6 !important;
             background: rgba(59, 130, 246, 0.2) !important;
         }
+
+        /* Premium Financial Details Table Styling */
+        .financial-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(17, 24, 39, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-family: inherit;
+            color: #ffffff;
+        }
+
+        .financial-table th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #94a3b8;
+            font-weight: 600;
+            padding: 1rem;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .financial-table td {
+            padding: 1rem;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #e2e8f0;
+        }
+
+        .financial-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .financial-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .financial-table td.year-cell {
+            font-weight: 600;
+            color: #3b82f6;
+        }
+
+        .financial-table td.metric-cell {
+            font-family: monospace;
+        }
     </style>
     """, unsafe_allow_html=True)
 
@@ -970,13 +1025,48 @@ def show_roic_page(symbol):
             
             # Display detailed data table
             st.subheader("📋 Financial Details Table")
-            df_display = df_roic.copy()
-            # Format numbers for better readability
-            df_display["ROIC"] = df_display["ROIC"].map(lambda x: f"{x:.2f}%")
-            for col in ["Net Income (M)", "Total Debt (M)", "Equity (M)", "Invested Capital (M)"]:
-                df_display[col] = df_display[col].map(lambda x: f"{x:,.1f}M THB")
             
-            st.dataframe(df_display.set_index("Year"), use_container_width=True)
+            table_rows = []
+            for item in roic_data:
+                y_val = item["Year"]
+                r_val = f"{item['ROIC']:.2f}%"
+                ni_val = f"{item['Net Income (M)']:,.1f}M THB"
+                debt_val = f"{item['Total Debt (M)']:,.1f}M THB"
+                eq_val = f"{item['Equity (M)']:,.1f}M THB"
+                ic_val = f"{item['Invested Capital (M)']:,.1f}M THB"
+                
+                row_html = f"""
+                <tr>
+                    <td class="year-cell">{y_val}</td>
+                    <td class="metric-cell" style="color: #10b981; font-weight: 600;">{r_val}</td>
+                    <td class="metric-cell">{ni_val}</td>
+                    <td class="metric-cell">{debt_val}</td>
+                    <td class="metric-cell">{eq_val}</td>
+                    <td class="metric-cell">{ic_val}</td>
+                </tr>
+                """
+                table_rows.append(row_html)
+                
+            table_html = f"""
+            <div class="financial-table-container">
+                <table class="financial-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>ROIC</th>
+                            <th>Net Income (M)</th>
+                            <th>Total Debt (M)</th>
+                            <th>Equity (M)</th>
+                            <th>Invested Capital (M)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {"".join(table_rows)}
+                    </tbody>
+                </table>
+            </div>
+            """
+            st.write(table_html, unsafe_allow_html=True)
             
             st.info("ℹ️ **หมายเหตุ**: ข้อมูลทางการเงินดึงข้อมูลรายปีล่าสุดจาก Yahoo Finance (สูงสุด 4-5 ปี) โดยสูตรคำนวณคือ: ROIC = Net Income / (Total Debt + Stockholders Equity) เพื่อให้สอดคล้องกับมาตรฐาน TradingView")
 
