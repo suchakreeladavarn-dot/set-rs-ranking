@@ -630,7 +630,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         if pd.isna(val):
             return 'N/A'
         try:
-            return f'<a href="?pe_band={symbol}" target="_top" class="pe-link">{float(val):.2f}</a>'
+            return f'<a href="https://set-rs-ranking-future0127.streamlit.app/?pe_band={symbol}" target="_blank" class="pe-link">{float(val):.2f}</a>'
         except (ValueError, TypeError):
             return 'N/A'
 
@@ -640,7 +640,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         if pd.isna(val):
             return 'N/A'
         try:
-            return f'<a href="?pbv_band={symbol}" target="_top" class="pbv-link">{float(val):.2f}</a>'
+            return f'<a href="https://set-rs-ranking-future0127.streamlit.app/?pbv_band={symbol}" target="_blank" class="pbv-link">{float(val):.2f}</a>'
         except (ValueError, TypeError):
             return 'N/A'
 
@@ -659,7 +659,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         if pd.isna(val):
             return 'N/A'
         try:
-            return f'<a href="?div_band={symbol}" target="_top" class="div-link">{float(val):.2f}%</a>'
+            return f'<a href="https://set-rs-ranking-future0127.streamlit.app/?div_band={symbol}" target="_blank" class="div-link">{float(val):.2f}%</a>'
         except (ValueError, TypeError):
             return 'N/A'
     
