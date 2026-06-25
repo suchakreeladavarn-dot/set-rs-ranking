@@ -1034,38 +1034,10 @@ def show_roic_page(symbol):
                 debt_val = f"{item['Total Debt (M)']:,.1f}M THB"
                 eq_val = f"{item['Equity (M)']:,.1f}M THB"
                 ic_val = f"{item['Invested Capital (M)']:,.1f}M THB"
-                
-                row_html = f"""
-                <tr>
-                    <td class="year-cell">{y_val}</td>
-                    <td class="metric-cell" style="color: #10b981; font-weight: 600;">{r_val}</td>
-                    <td class="metric-cell">{ni_val}</td>
-                    <td class="metric-cell">{debt_val}</td>
-                    <td class="metric-cell">{eq_val}</td>
-                    <td class="metric-cell">{ic_val}</td>
-                </tr>
-                """
+                row_html = f'<tr><td class="year-cell">{y_val}</td><td class="metric-cell" style="color: #10b981; font-weight: 600;">{r_val}</td><td class="metric-cell">{ni_val}</td><td class="metric-cell">{debt_val}</td><td class="metric-cell">{eq_val}</td><td class="metric-cell">{ic_val}</td></tr>'
                 table_rows.append(row_html)
                 
-            table_html = f"""
-            <div class="financial-table-container">
-                <table class="financial-table">
-                    <thead>
-                        <tr>
-                            <th>Year</th>
-                            <th>ROIC</th>
-                            <th>Net Income (M)</th>
-                            <th>Total Debt (M)</th>
-                            <th>Equity (M)</th>
-                            <th>Invested Capital (M)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {"".join(table_rows)}
-                    </tbody>
-                </table>
-            </div>
-            """
+            table_html = f'<div class="financial-table-container"><table class="financial-table"><thead><tr><th>Year</th><th>ROIC</th><th>Net Income (M)</th><th>Total Debt (M)</th><th>Equity (M)</th><th>Invested Capital (M)</th></tr></thead><tbody>{"".join(table_rows)}</tbody></table></div>'
             st.markdown(table_html, unsafe_allow_html=True)
             
             st.info("ℹ️ **หมายเหตุ**: ข้อมูลทางการเงินดึงข้อมูลรายปีล่าสุดจาก Yahoo Finance (สูงสุด 4-5 ปี) โดยสูตรคำนวณคือ: ROIC = Net Income / (Total Debt + Stockholders Equity) เพื่อให้สอดคล้องกับมาตรฐาน TradingView")
