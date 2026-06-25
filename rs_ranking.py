@@ -1992,6 +1992,22 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                                         <input type="number" id="divVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
                                     </div>
                                 </div>
+
+                                <!-- Consensus Upside (%) Filter -->
+                                <div class="filter-group">
+                                    <label class="filter-label">Consensus Upside (%)</label>
+                                    <div class="filter-controls">
+                                        <select id="consensusCond" class="filter-select" onchange="onConditionChange('consensus')">
+                                            <option value="any">Any</option>
+                                            <option value="gte">&gt;=</option>
+                                            <option value="lte">&lt;=</option>
+                                            <option value="between">Between</option>
+                                        </select>
+                                        <input type="number" id="consensusVal1" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                        <span id="consensusSpan" class="filter-span" style="display:none;">to</span>
+                                        <input type="number" id="consensusVal2" class="filter-input" placeholder="Value..." onkeyup="filterTable()" onchange="filterTable()" style="display:none;">
+                                    </div>
+                                </div>
                             </div>
                             
                             <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
@@ -2138,7 +2154,7 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
         }}
 
         function clearAllFilters() {{
-            let prefixes = ["mcap", "chg", "pe", "pbv", "roic", "div"];
+            let prefixes = ["mcap", "chg", "pe", "pbv", "roic", "div", "consensus"];
             prefixes.forEach(prefix => {{
                 document.getElementById(prefix + "Cond").value = "any";
                 document.getElementById(prefix + "Val1").value = "";
@@ -2180,10 +2196,15 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
             let divVal1 = parseFloat(document.getElementById("divVal1").value);
             let divVal2 = parseFloat(document.getElementById("divVal2").value);
 
+            let consensusCond = document.getElementById("consensusCond").value;
+            let consensusVal1 = parseFloat(document.getElementById("consensusVal1").value);
+            let consensusVal2 = parseFloat(document.getElementById("consensusVal2").value);
+
             for (let i = 1; i < tr.length; i++) {{
                 let symbolTd = tr[i].getElementsByTagName("td")[1]; // Symbol column
                 let chgTd = tr[i].getElementsByTagName("td")[3];
                 let mcapTd = tr[i].getElementsByTagName("td")[4];
+                let consensusTd = tr[i].getElementsByTagName("td")[5]; // Consensus column
                 let peTd = tr[i].getElementsByTagName("td")[6];
                 let pbvTd = tr[i].getElementsByTagName("td")[7];
                 let roicTd = tr[i].getElementsByTagName("td")[8];
@@ -2194,12 +2215,31 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                     let matchesSearch = symbolText.toUpperCase().indexOf(searchInput) > -1;
                     
                     // Match helper function
-                    function checkFilter(cond, val1, val2, tdElement) {{
+                    function checkFilter(cond, val1, val2, tdElement, isConsensus = false) {{
                         if (cond === "any") return true;
                         if (!tdElement) return false;
                         let text = tdElement.textContent.trim();
                         if (text === "N/A" || text === "") return false;
-                        let num = parseFloat(text.replace(/,/g, '').replace('M', '').replace('%', '').replace('+', '').replace('x', ''));
+                        
+                        let num;
+                        if (isConsensus) {{
+                            let upsideMatch = text.match(/Upside\s+\+?(-?[\d.]+)/i);
+                            if (upsideMatch) {{
+                                num = parseFloat(upsideMatch[1]);
+                            }} else {{
+                                let downsideMatch = text.match(/Downside\s+-?([\d.]+)/i);
+                                if (downsideMatch) {{
+                                    num = -parseFloat(downsideMatch[1]);
+                                }} else if (text.includes("0.00%")) {{
+                                    num = 0.0;
+                                }} else {{
+                                    num = NaN;
+                                }}
+                            }}
+                        }} else {{
+                            num = parseFloat(text.replace(/,/g, '').replace('M', '').replace('%', '').replace('+', '').replace('x', ''));
+                        }}
+                        
                         if (isNaN(num)) return false;
                         
                         if (cond === "gte") {{
@@ -2223,8 +2263,9 @@ def build_html_report(ranking_df, benchmark, ma_length, output_path, rrg_data=No
                     let matchesPbv = checkFilter(pbvCond, pbvVal1, pbvVal2, pbvTd);
                     let matchesRoic = checkFilter(roicCond, roicVal1, roicVal2, roicTd);
                     let matchesDiv = checkFilter(divCond, divVal1, divVal2, divTd);
+                    let matchesConsensus = checkFilter(consensusCond, consensusVal1, consensusVal2, consensusTd, true);
                     
-                    if (matchesSearch && matchesMcap && matchesChg && matchesPe && matchesPbv && matchesRoic && matchesDiv) {{
+                    if (matchesSearch && matchesMcap && matchesChg && matchesPe && matchesPbv && matchesRoic && matchesDiv && matchesConsensus) {{
                         tr[i].style.display = "";
                         count++;
                     }} else {{
