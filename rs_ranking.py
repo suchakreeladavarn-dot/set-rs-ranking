@@ -392,14 +392,15 @@ def fetch_market_caps(tickers, max_workers=15):
             # Fetch dividend yield and convert to percentage
             dy = info.get("trailingAnnualDividendYield")
             dy_val = info.get("dividendYield")
-            if dy is not None and dy > 0:
-                div_yield = float(dy) * 100
-            elif dy_val is not None and dy_val > 0:
+            # Prioritize dividendYield (indicated/current yield) as it matches TradingView/Settrade
+            if dy_val is not None and dy_val > 0:
                 div_yield = float(dy_val)
-            elif dy is not None:
+            elif dy is not None and dy > 0:
                 div_yield = float(dy) * 100
             elif dy_val is not None:
                 div_yield = float(dy_val)
+            elif dy is not None:
+                div_yield = float(dy) * 100
             else:
                 div_yield = None
             
