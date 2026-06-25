@@ -979,8 +979,9 @@ def show_roic_page(symbol):
                 x=df_roic["Year"],
                 y=df_roic["ROIC"],
                 text=[f"{v:.2f}%" for v in df_roic["ROIC"]],
-                textposition='auto',
+                textposition='outside',
                 marker_color='#10b981', # Green
+                textfont=dict(size=15, color="#ffffff", family="sans-serif"),
                 name="ROIC (%)",
                 hovertemplate="Year %{x}<br>ROIC: %{y:.2f}%<extra></extra>"
             ))
@@ -990,8 +991,8 @@ def show_roic_page(symbol):
                 x=df_roic["Year"],
                 y=df_roic["ROIC"],
                 mode='lines+markers',
-                line=dict(color='#3b82f6', width=3), # Blue
-                marker=dict(size=8, color='#ffffff', line=dict(color='#3b82f6', width=2)),
+                line=dict(color='#3b82f6', width=4), # Blue
+                marker=dict(size=10, color='#ffffff', line=dict(color='#3b82f6', width=2.5)),
                 name="Trend",
                 hoverinfo='skip'
             ))
@@ -1002,21 +1003,23 @@ def show_roic_page(symbol):
                 yaxis_title="Return on Invested Capital (ROIC %)",
                 plot_bgcolor="rgba(0,0,0,0)",
                 paper_bgcolor="rgba(0,0,0,0)",
-                font=dict(color="#ffffff"),
+                height=500,
+                margin=dict(t=30, b=50, l=60, r=30),
+                font=dict(color="#ffffff", size=14),
                 showlegend=False,
                 yaxis=dict(
                     showgrid=True,
                     gridcolor="rgba(255,255,255,0.1)",
                     zeroline=True,
                     zerolinecolor="rgba(255,255,255,0.2)",
-                    title_font=dict(color="#ffffff"),
-                    tickfont=dict(color="#ffffff"),
+                    title_font=dict(size=16, color="#ffffff"),
+                    tickfont=dict(size=14, color="#ffffff"),
                     ticksuffix="%"
                 ),
                 xaxis=dict(
                     showgrid=False,
-                    title_font=dict(color="#ffffff"),
-                    tickfont=dict(color="#ffffff"),
+                    title_font=dict(size=16, color="#ffffff"),
+                    tickfont=dict(size=14, color="#ffffff"),
                     type='category'
                 )
             )
