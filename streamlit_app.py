@@ -777,6 +777,212 @@ def show_div_band_page(symbol):
         except Exception as e:
             st.error(f"Error calculating Yield Spread: {e}")
 
+def show_roic_page(symbol):
+    # Enable scrolling and override the custom full-screen css for this sub-page
+    st.markdown("""
+    <style>
+        html, body, .stApp, div[data-testid="stAppViewContainer"], div[data-testid="stAppViewBlockContainer"] {
+            overflow: auto !important;
+            height: auto !important;
+            width: auto !important;
+            background-color: #090d16 !important;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(29, 78, 216, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 0%, rgba(76, 29, 149, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.8) 0px, transparent 50%) !important;
+            background-attachment: fixed !important;
+        }
+        
+        /* Force bright white text color for readability */
+        h1, h2, h3, h4, h5, h6, .stMarkdown, p, li, span {
+            color: #ffffff !important;
+        }
+        
+        /* Target metric value text and labels */
+        div[data-testid="stMetricValue"], div[data-testid="stMetricValue"] > div {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        div[data-testid="stMetricLabel"] p {
+            color: #94a3b8 !important;
+        }
+        
+        /* Premium Back Button Style */
+        div.back-btn-wrapper > button {
+            background: rgba(30, 41, 59, 0.6) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 8px !important;
+            padding: 0.5rem 1rem !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: all 0.2s !important;
+        }
+        div.back-btn-wrapper > button:hover {
+            color: white !important;
+            border-color: #3b82f6 !important;
+            background: rgba(59, 130, 246, 0.2) !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Header with Back button aligned nicely
+    col_title, col_back = st.columns([4, 1])
+    with col_title:
+        st.title(f"📊 {symbol} Historical ROIC (Annual)")
+    with col_back:
+        st.write("<div class='back-btn-wrapper'>", unsafe_allow_html=True)
+        if st.button("🔙 Back to Dashboard"):
+            st.query_params.pop("roic", None)
+            st.rerun()
+        st.write("</div>", unsafe_allow_html=True)
+        
+    ticker = symbol + ".BK" if not symbol.endswith(".BK") else symbol
+    
+    with st.spinner(f"Fetching financial history for {ticker} from Yahoo Finance..."):
+        try:
+            session = get_yfinance_session()
+            t_obj = yf.Ticker(ticker, session=session)
+            
+            # Fetch financials
+            inc = t_obj.income_stmt
+            bs = t_obj.balance_sheet
+            
+            if inc.empty or bs.empty:
+                st.error(f"Could not find financial statements for {ticker} on Yahoo Finance.")
+                return
+                
+            # Intersect available years
+            years = inc.columns.intersection(bs.columns)
+            years = sorted(list(years)) # sort chronological
+            
+            if not years:
+                st.error("No overlapping annual financial data found for aligning Income Statement and Balance Sheet.")
+                return
+                
+            roic_data = []
+            for y in years:
+                # Net Income
+                ni = None
+                for k in ['Net Income Common Stockholders', 'Net Income', 'Diluted NI Availto Com Stockholders']:
+                    if k in inc.index:
+                        val = inc.loc[k]
+                        ni_val = val.loc[y] if isinstance(val, pd.Series) else val
+                        if pd.notna(ni_val):
+                            ni = ni_val
+                            break
+                            
+                # Debt
+                debt = 0
+                if 'Total Debt' in bs.index:
+                    val = bs.loc['Total Debt']
+                    d_val = val.loc[y] if isinstance(val, pd.Series) else val
+                    debt = d_val if pd.notna(d_val) else 0
+                    
+                # Equity
+                equity = None
+                for k in ['Stockholders Equity', 'Common Stock Equity', 'Total Equity Gross Minority Interest']:
+                    if k in bs.index:
+                        val = bs.loc[k]
+                        eq_val = val.loc[y] if isinstance(val, pd.Series) else val
+                        if pd.notna(eq_val) and eq_val > 0:
+                            equity = eq_val
+                            break
+                            
+                if ni is not None and equity is not None:
+                    ic = debt + equity
+                    if ic > 0:
+                        roic_val = (ni / ic) * 100
+                        year_str = y.strftime('%Y')
+                        roic_data.append({
+                            "Year": year_str,
+                            "ROIC": roic_val,
+                            "Net Income (M)": ni / 1e6,
+                            "Total Debt (M)": debt / 1e6,
+                            "Equity (M)": equity / 1e6,
+                            "Invested Capital (M)": ic / 1e6
+                        })
+            
+            if not roic_data:
+                st.error("Could not compute ROIC from the available financial data.")
+                return
+                
+            df_roic = pd.DataFrame(roic_data)
+            
+            # Show metrics for latest year
+            latest = roic_data[-1]
+            col1, col2, col3, col4 = st.columns(4)
+            col1.metric("Latest ROIC", f"{latest['ROIC']:.2f}%")
+            col2.metric("Net Income (Latest)", f"{latest['Net Income (M)']:.1f}M THB")
+            col3.metric("Invested Capital (Latest)", f"{latest['Invested Capital (M)']:.1f}M THB")
+            col4.metric("Debt / Equity Ratio", f"{(latest['Total Debt (M)']/latest['Equity (M)']):.2f}" if latest['Equity (M)'] > 0 else "N/A")
+            
+            # Add premium plotting with Plotly
+            fig = go.Figure()
+            # Bar chart for ROIC values
+            fig.add_trace(go.Bar(
+                x=df_roic["Year"],
+                y=df_roic["ROIC"],
+                text=[f"{v:.2f}%" for v in df_roic["ROIC"]],
+                textposition='auto',
+                marker_color='#10b981', # Green
+                name="ROIC (%)",
+                hovertemplate="Year %{x}<br>ROIC: %{y:.2f}%<extra></extra>"
+            ))
+            
+            # Line chart on same graph
+            fig.add_trace(go.Scatter(
+                x=df_roic["Year"],
+                y=df_roic["ROIC"],
+                mode='lines+markers',
+                line=dict(color='#3b82f6', width=3), # Blue
+                marker=dict(size=8, color='#ffffff', line=dict(color='#3b82f6', width=2)),
+                name="Trend",
+                hoverinfo='skip'
+            ))
+            
+            fig.update_layout(
+                template="plotly_dark",
+                xaxis_title="Fiscal Year",
+                yaxis_title="Return on Invested Capital (ROIC %)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                paper_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="#ffffff"),
+                showlegend=False,
+                yaxis=dict(
+                    showgrid=True,
+                    gridcolor="rgba(255,255,255,0.1)",
+                    zeroline=True,
+                    zerolinecolor="rgba(255,255,255,0.2)",
+                    title_font=dict(color="#ffffff"),
+                    tickfont=dict(color="#ffffff"),
+                    ticksuffix="%"
+                ),
+                xaxis=dict(
+                    showgrid=False,
+                    title_font=dict(color="#ffffff"),
+                    tickfont=dict(color="#ffffff"),
+                    type='category'
+                )
+            )
+            
+            st.plotly_chart(fig, use_container_width=True)
+            
+            # Display detailed data table
+            st.subheader("📋 Financial Details Table")
+            df_display = df_roic.copy()
+            # Format numbers for better readability
+            df_display["ROIC"] = df_display["ROIC"].map(lambda x: f"{x:.2f}%")
+            for col in ["Net Income (M)", "Total Debt (M)", "Equity (M)", "Invested Capital (M)"]:
+                df_display[col] = df_display[col].map(lambda x: f"{x:,.1f}M THB")
+            
+            st.dataframe(df_display.set_index("Year"), use_container_width=True)
+            
+            st.info("ℹ️ **หมายเหตุ**: ข้อมูลทางการเงินดึงข้อมูลรายปีล่าสุดจาก Yahoo Finance (สูงสุด 4-5 ปี) โดยสูตรคำนวณคือ: ROIC = Net Income / (Total Debt + Stockholders Equity) เพื่อให้สอดคล้องกับมาตรฐาน TradingView")
+
+        except Exception as e:
+            st.error(f"Error fetching/calculating ROIC history: {e}")
+
 # Custom premium styling to make the iframe cover the entire screen and place the floating Scan button
 st.markdown("""
 <style>
@@ -898,6 +1104,12 @@ if "pbv_band" in st.query_params:
 if "div_band" in st.query_params:
     symbol = st.query_params["div_band"]
     show_div_band_page(symbol)
+    st.stop()
+
+# Check if roic query parameter is set to show ROIC details
+if "roic" in st.query_params:
+    symbol = st.query_params["roic"]
+    show_roic_page(symbol)
     st.stop()
 
 # Check if scan query parameter is set to trigger a new calculation
