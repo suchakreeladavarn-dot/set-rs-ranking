@@ -404,35 +404,39 @@ def fetch_market_caps(tickers, max_workers=15):
             else:
                 div_yield = None
             
-            # Calculate ROIC TTM
+            # Calculate ROIC TTM (matching TradingView definition: Net Income / (Debt + Equity))
             roic = None
             try:
-                revenue = info.get("totalRevenue")
-                op_margin = info.get("operatingMargins")
-                ebit = None
-                if revenue is not None and op_margin is not None:
-                    ebit = revenue * op_margin
+                debt = info.get("totalDebt") or 0
+                book_val = info.get("bookValue")
+                shares = info.get("sharesOutstanding")
+                equity = None
+                if book_val is not None and shares is not None:
+                    equity = book_val * shares
                 else:
-                    ebitda = info.get("ebitda")
-                    if ebitda is not None:
-                        ebit = ebitda * 0.8
+                    equity = mcap
                 
-                if ebit is not None and ebit > 0:
-                    nopat = ebit * 0.8  # 20% corporate tax rate proxy
-                    debt = info.get("totalDebt") or 0
-                    cash = info.get("totalCash") or 0
-                    book_val = info.get("bookValue")
-                    shares = info.get("sharesOutstanding")
-                    equity = None
-                    if book_val is not None and shares is not None:
-                        equity = book_val * shares
-                    else:
-                        equity = mcap
-                    
-                    if equity is not None and equity > 0:
-                        invested_capital = debt + equity - cash
-                        if invested_capital > 0:
-                            roic = (nopat / invested_capital) * 100
+                if equity is not None and equity > 0:
+                    invested_capital = debt + equity
+                    if invested_capital > 0:
+                        net_inc = info.get("netIncomeToCommon")
+                        if net_inc is not None and net_inc != 0:
+                            roic = (net_inc / invested_capital) * 100
+                        else:
+                            # Fallback to NOPAT
+                            revenue = info.get("totalRevenue")
+                            op_margin = info.get("operatingMargins")
+                            ebit = None
+                            if revenue is not None and op_margin is not None:
+                                ebit = revenue * op_margin
+                            else:
+                                ebitda = info.get("ebitda")
+                                if ebitda is not None:
+                                    ebit = ebitda * 0.8
+                            
+                            if ebit is not None and ebit > 0:
+                                nopat = ebit * 0.8  # 20% corporate tax rate proxy
+                                roic = (nopat / invested_capital) * 100
             except Exception:
                 pass
             
