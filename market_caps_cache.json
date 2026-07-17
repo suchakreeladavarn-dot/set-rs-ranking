@@ -661,9 +661,9 @@
     "target_mean_price": null,
     "pe_ttm": null,
     "div_yield_ttm": 11.85,
-    "pbv_latest": 0.7048316,
+    "pbv_latest": 0.6994512,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "CHARAN": {
     "market_cap_m": 202.8,
@@ -1091,11 +1091,11 @@
   "POPF": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 11.001318,
-    "div_yield_ttm": 10.5662644,
-    "pbv_latest": 1.0838526,
+    "pe_ttm": 11.067193,
+    "div_yield_ttm": 10.502993,
+    "pbv_latest": 1.0903426,
     "roic_ttm": 16.04572263505357,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "AYUD": {
     "market_cap_m": 15570.67776,
@@ -1173,10 +1173,10 @@
     "market_cap_m": null,
     "target_mean_price": null,
     "pe_ttm": 15.538847,
-    "div_yield_ttm": 6.3839999999999995,
+    "div_yield_ttm": 6.435484,
     "pbv_latest": 0.6715044,
     "roic_ttm": 6.248770391127109,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "BJCHI": {
     "market_cap_m": 1263.656064,
@@ -1338,7 +1338,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "CPNREIT": {
     "market_cap_m": 47436.070912,
@@ -2193,7 +2193,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "LHHOTEL": {
     "market_cap_m": 14789.77024,
@@ -2260,12 +2260,12 @@
   },
   "DIF": {
     "market_cap_m": null,
-    "target_mean_price": 10.45,
+    "target_mean_price": 10.44,
     "pe_ttm": null,
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "MDX": {
     "market_cap_m": 1740.670976,
@@ -2427,7 +2427,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.49859703,
     "roic_ttm": 1.7569885402496748,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "TMD": {
     "market_cap_m": 4049.999872,
@@ -2486,11 +2486,11 @@
   "CTARAF": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 13.055554,
+    "pe_ttm": 13.166665,
     "div_yield_ttm": 0.0,
-    "pbv_latest": 0.89387596,
+    "pbv_latest": 0.9014834,
     "roic_ttm": 8.610290034233548,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "BCP": {
     "market_cap_m": 54861.459456,
@@ -3030,7 +3030,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "LUXF": {
     "market_cap_m": null,
@@ -3039,7 +3039,7 @@
     "div_yield_ttm": 9.037837999999999,
     "pbv_latest": 0.7405925,
     "roic_ttm": 11.661809773518561,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "RJH": {
     "market_cap_m": 4138.046976,
@@ -3066,7 +3066,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.9405099,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "TPA": {
     "market_cap_m": 315.9,
@@ -3408,7 +3408,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "SABINA": {
     "market_cap_m": 5455.750144,
@@ -3516,7 +3516,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "TIDLOR": {
     "market_cap_m": 55525.31456,
@@ -3534,7 +3534,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "NEX": {
     "market_cap_m": 6228.974592,
@@ -3678,7 +3678,7 @@
     "div_yield_ttm": 4.4554457,
     "pbv_latest": 0.26575452,
     "roic_ttm": 1.8340315074821856,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "KWI": {
     "market_cap_m": 116.058992,
@@ -3975,7 +3975,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": null,
     "roic_ttm": null,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "SORKON": {
     "market_cap_m": 1094.682112,
@@ -4250,11 +4250,11 @@
   "SSPF": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 16.402117,
+    "pe_ttm": 17.989418,
     "div_yield_ttm": 4.2903226000000005,
-    "pbv_latest": 0.28087342,
+    "pbv_latest": 0.30805475,
     "roic_ttm": 0.22723544484827568,
-    "updated_at": "2026-07-15"
+    "updated_at": "2026-07-17"
   },
   "S": {
     "market_cap_m": 3975.157248,
@@ -4313,11 +4313,11 @@
   "TTLPF": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 6.0897436,
-    "div_yield_ttm": 15.640213,
-    "pbv_latest": 0.97555965,
+    "pe_ttm": 6.0576925,
+    "div_yield_ttm": 15.557896,
+    "pbv_latest": 0.9704251,
     "roic_ttm": 15.218696971771525,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "WACOAL": {
     "market_cap_m": 1872.0,
@@ -4961,11 +4961,11 @@
   "CPNCG": {
     "market_cap_m": null,
     "target_mean_price": null,
-    "pe_ttm": 5.2203064,
-    "div_yield_ttm": 13.781819,
-    "pbv_latest": 0.6360135,
+    "pe_ttm": 5.268199,
+    "div_yield_ttm": 13.908258000000002,
+    "pbv_latest": 0.6418485,
     "roic_ttm": -2.052913264573756,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "WORK": {
     "market_cap_m": 1563.124096,
@@ -5577,7 +5577,7 @@
     "div_yield_ttm": 0.0,
     "pbv_latest": 0.16650343,
     "roic_ttm": -2.157811150785987,
-    "updated_at": "2026-07-16"
+    "updated_at": "2026-07-17"
   },
   "BRI": {
     "market_cap_m": 1903.706368,
